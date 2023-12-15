@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+DEFAULT COLORS
+
+light
+#538DD7
+#134F9E
+
+dark
+#09264D
+#0E3B75
+#030E1C
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+}
+
+.article-menu {
+    height: 100vh;
+    background-color: #030E1C;
+}
+
+.article-menu ul .li-profile-menu img {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+}
+
+.article-menu ul .li-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.article-menu ul .li-contacts .fa-brands {
+    font-size: 1.9em;
+}
+
+.article-menu ul .li-contacts .img-contacts {
+    height: 30px;
+    width: 30px;
+}
