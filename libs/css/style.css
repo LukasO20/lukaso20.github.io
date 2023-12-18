@@ -25,72 +25,70 @@ main {
     display: flex;
 }
 
-.article-menu {
+.nav-article-menu {
     height: 100vh;
     background-color: #030E1C;
     font-weight: 600;
     color: #fff;
+    box-shadow: 1px 1px 2px 10px #030E1C;
 }
 
-.article-menu ul {
-    height: 95%;
+.nav-article-menu ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     padding: 0px 5px;
     margin: 0px;
 }
 
-.article-menu ul li:first-child {
-    padding: 0px 10px;
-}
-
-.article-menu ul .li-profile-menu img {
+.nav-article-menu ul .li-profile-menu img {
     width: 144px;
     height: 144px;
     border-radius: 50%;
 }
 
-.article-menu ul .li-contacts {
+.nav-article-menu ul .group-li-links {
+    height: 20%;
+}
+
+.nav-article-menu ul .li-contacts {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #fff;
-    padding: 0px;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 10px;
 }
 
-.article-menu ul .li-contacts .fa-brands {
-    font-size: 1.7em;
+.nav-article-menu ul .li-contacts .fa-brands {
+    font-size: 1.3em;
 }
 
-.article-menu ul .li-contacts .img-contacts {
-    height: 27.2px;
-    width: 25.81px;
-}
-
-.article-menu ul li {
+.nav-article-menu ul li {
     list-style: none;
     padding: 10px;
 }
 
-.article-menu ul .li-profile-menu p {
+.nav-article-menu ul .li-profile-menu {
+    margin: 30px 0px 10px 0px;
+}
+
+.nav-article-menu ul .li-profile-menu p {
     text-align: center;
 }
 
-.article-menu ul li .message {
-    font-size: 0.8em;
-}
-
-.article-menu ul .li-links {
+.nav-article-menu ul .li-links {
     transition: .2s ease-in-out;
-    margin: 0px 5px;
+    border-radius: 5px;
+    margin: 10px 0px;
 }
 
-.article-menu ul .li-links span {
+.nav-article-menu ul .li-links span {
     margin-right: 10px;
 }
 
-.article-menu ul .li-links:hover {
+.nav-article-menu ul .li-links:hover {
     cursor: pointer;
     background-color: rgb(19, 79, 158, 0.4);
 }
@@ -102,38 +100,61 @@ section {
     background: url("../img/background_main.png");
     background-size: cover;
     box-shadow: inset 5px 0px 145px 80px #030e1c; /*DEIXAR 120PX DO ÚLTIMO ELEMENTO EM TELAS 1920p*/
-    padding: 20px 20px 0px 20px;
+    padding: 20px 0px 0px 0px;
+}
+
+section .div-section-titles {
+    position: sticky;
+    top: 0;
+    transition: .2s ease-in-out;
 }
 
 section .div-section-content {
-    background-color: white;
     margin-top: 5%; /* Manter 10% tela HD+ */
     transition: .35s ease-in-out;
+    background-color: #030E1C;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
+    color: #fff;
 }
 
+section .div-section-content .h2-section-content {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 20px;
+}
 
+section .footer-section .message {
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
 
 /* GROUP SETTINGS */
 
-section h1, h2 {
+section .div-section-content {
+    padding-bottom: 10em;
+}
+
+section .h1-principal, .h2-principal {
     font-family: 'Play', sans-serif;
     color: #fff;
     margin: 20px;
     text-shadow: 1px 1px 25px #030E1C;
     font-size: 2.5em; /* 3.5em para telas HD+*/
+    transition: .2s ease-in-out;
 }
 
-.article-menu ul .li-contacts .fa-brands:hover, .img-contacts:hover {
+.nav-article-menu ul .li-contacts .fa-brands:hover, .img-contacts:hover {
     cursor: pointer;
 } 
 
-.article-menu ul .li-contacts .fa-brands, .img-contacts {
+.nav-article-menu ul .li-contacts .fa-brands, .img-contacts {
     color:#fff;
 }
 
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
 
-.article-menu ul .li-links {
+.nav-article-menu ul .li-links {
     background: #134F9E;
-    border-radius: 5px;
 }
