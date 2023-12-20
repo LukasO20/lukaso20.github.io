@@ -28,6 +28,7 @@ main {
 
 .nav-article-menu {
     height: 100%;
+    width: max-content;
     background-color: #030E1C;
     font-weight: 600;
     color: #fff;
@@ -43,8 +44,8 @@ main {
 }
 
 .nav-article-menu ul .li-profile-menu img {
-    width: 144px;
-    height: 144px;
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
 }
 
@@ -58,9 +59,9 @@ main {
     justify-content: space-between;
     color: #fff;
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    margin: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0px;
 }
 
 .nav-article-menu ul .li-contacts .fa-brands {
@@ -114,19 +115,6 @@ section .div-section-titles {
     margin-bottom: 5%;
 }
 
-section .div-section-content-t1 {
-    transition: .35s ease-in-out;
-    background-color: #030E1C;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
-    color: #fff;
-}
-
-section .div-section-content-t1 .h2-section-content {
-    text-align: center;
-    font-size: 1.25em;
-    padding: 40px 20%;
-}
-
 section .div-section-content-t2 {
     transition: .35s ease-in-out;
     background-color: #fff;
@@ -148,6 +136,48 @@ section .div-section-content-t2 .div-section-content-skills {
 section .div-section-content-t2 .div-section-content-skills {
     display: flex;
     justify-content: space-between;
+}
+
+section .div-section-content-skills .sub-collum-skills {
+    display: flex;
+}
+
+section .div-section-content-t3 .h2-section-content {
+    text-align: center;
+    font-size: 2em;
+}
+
+section .div-section-content-t3 .h3-section-content {
+    text-align: center;
+    font-size: 1.25em;
+}
+
+section .div-section-content-t3 .div-section-content-works {
+    display: flex;
+    justify-content: center;
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works {
+    background-color: #335E96;
+    width: 15%;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgba(51, 94, 150, 1));
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works h3 {
+    font-size: 1.7em;
+}
+
+section .div-section-content-t3 .h3-section-content-c {
+    text-align: center;
+    margin: 0 20%;
+}
+
+section .div-section-content-t3 .div-section-content-works .p-works-description {
+    font-weight: 600;
 }
 
 footer .message {
@@ -188,6 +218,50 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p,
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3, .collum-skills-t2 h3 {
     font-weight: 500;
     text-align: center;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
+    font-weight: 600;
+    color: #134F9E;
+}
+
+section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
+    margin: 0px 10px;
+    width: 50%;
+}
+
+section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
+    font-weight: 600;
+    color: #134F9E;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ebebeb;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+section .div-section-content-t1, .div-section-content-t3 {
+    transition: .35s ease-in-out;
+    background-color: #030E1C;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
+    color: #fff;
+}
+
+section .div-section-content-t1 .h2-section-content {
+    text-align: center;
+    padding: 40px 20%;
+    font-size: 2em;
+} 
+
+section .div-section-content-t1 .h3-section-content {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 0px 20%;
+}
+
+section .div-section-content-t2, .div-section-content-t3 {
+    padding-bottom: 10em;
 }
 
 .nav-article-menu ul .li-contacts .fa-brands:hover, .img-contacts:hover {
