@@ -155,6 +155,7 @@ section .div-section-content-t3 .h3-section-content {
 section .div-section-content-t3 .div-section-content-works {
     display: flex;
     justify-content: center;
+    padding-bottom: 5em;
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works {
@@ -173,11 +174,57 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works h3 
 
 section .div-section-content-t3 .h3-section-content-c {
     text-align: center;
-    margin: 0 20%;
+    margin: 0% 20%;
+}
+
+section .div-section-content-t3 .h2-section-content-c {
+    text-align: center;
+    margin: 4% 0% 2% 0%;
 }
 
 section .div-section-content-t3 .div-section-content-works .p-works-description {
     font-weight: 600;
+}
+
+section .div-section-content-t3 .div-section-content-works-services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section .div-section-content-t3 .sub-collum-works-services {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 25%;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+section .div-section-content-t3 .sub-collum-works-services label {
+    color: #030e1c;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 10px;    
+    border-bottom: 1px solid #030e1c;
+}
+
+section .div-section-content-t3 .sub-collum-works-services p {
+    color: #292929;
+    text-align: center;
+}
+
+section .div-section-content-t3 .sub-collum-works-services .p-works-services-item {
+    font-weight: 600;
+    background-color: #ebebeb;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 8px auto;
+}
+
+section .div-section-content-t3 .div-contact-works-services {
+    padding-top: 4em;
 }
 
 footer .message {
