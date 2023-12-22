@@ -66,6 +66,13 @@ main {
 
 .nav-article-menu ul .li-contacts .fa-brands {
     font-size: 1.3em;
+    color: #fff;
+    transition: .2s ease-in-out;
+}
+
+.nav-article-menu ul .li-contacts .fa-brands:hover {
+    cursor: pointer;
+    color: #134F9E;
 }
 
 .nav-article-menu ul li {
@@ -225,9 +232,128 @@ section .div-section-content-t3 .sub-collum-works-services .p-works-services-ite
 
 section .div-section-content-t3 .div-contact-works-services {
     padding-top: 4em;
+    padding-bottom: 10em;
+}
+
+section .div-section-content-t3 .div-contact-works-services-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+    margin: 20px auto;
+}
+
+section .div-section-content-t3 .div-contact-works-services-item span {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #134F9E;
+    color: #fff;
+    font-size: 1.5em;
+    transition: .2s ease-in-out;
+    border: 2px solid;
+    margin: 0px 2.5px;
+}
+
+section .div-section-content-t3 .div-contact-works-services-item span:hover {
+    color: #134F9E;
+    cursor: pointer;
+    border-color: #134F9E;
+    background-color: #fff;
+}
+
+section .div-section-content-t4 {
+    background-color: #fff;
+    padding-bottom: 10em;
+}
+
+section .div-section-content-t4 .h2-section-content {
+    color: #030E1C;
+    text-align: center;
+    font-size: 2em;
+}
+
+section .div-section-content-t4 .div-contact-content {
+    color: #292929;
+}
+
+section .div-section-content-t4 .p-contact-description {
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+section .div-section-content-t4 .div-contact-location {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    color: #292929;
+}
+
+section .div-section-content-t4 .div-contact-location label {
+    font-weight: 600;
+    margin: 0px 10px 0px 0px;
+}
+
+section .div-section-content-t4 .div-contact-location label span {
+    margin: 0px !important;
+}
+
+section .div-section-content-t4 .div-contact-content {
+    border: 1px solid rgb(19, 79, 158, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens {
+    display: flex;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgb(41, 41, 41, 0.2);
+}
+
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
+    font-weight: 600;
+    padding: 5px 0px;
+    border-bottom: 2px solid #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .div-section-content-t4 .div-contact-content label span {
+    font-size: 1.2em;
+    margin: 0px 5px;
+}
+
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a {
+    display: block;
+    margin: 10px 0px;
+    color: #134F9E;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+}
+
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a:hover {
+    text-decoration: underline;
+}
+
+section .div-section-content-t4 .div-contact-content .div-contact-item {
+    width: max-content;
+}
+
+footer {
+    padding: 10em 1em 4em 1em;
+    margin: 0px;
+    background-color: #030E1C;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
 }
 
 footer .message {
+    margin: 0px;
     font-size: 0.8em;
     width: 100%;
     text-align: center;
@@ -311,12 +437,8 @@ section .div-section-content-t2, .div-section-content-t3 {
     padding-bottom: 10em;
 }
 
-.nav-article-menu ul .li-contacts .fa-brands:hover, .img-contacts:hover {
-    cursor: pointer;
-} 
-
-.nav-article-menu ul .li-contacts .fa-brands, .img-contacts {
-    color:#fff;
+section .div-section-content-t4 .div-contact-content .p-contact-description, .div-contact-location {
+    padding: 0px 10px;
 }
 
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
