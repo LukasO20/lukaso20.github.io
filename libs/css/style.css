@@ -64,13 +64,17 @@ main {
     margin: 10px 0px;
 }
 
-.nav-article-menu ul .li-contacts .fa-brands {
+.nav-article-menu ul .li-contacts a {
+    margin: 0px 5px;
+}
+
+.nav-article-menu ul .li-contacts .fa-brands, .fa-solid {
     font-size: 1.3em;
     color: #fff;
     transition: .2s ease-in-out;
 }
 
-.nav-article-menu ul .li-contacts .fa-brands:hover {
+.nav-article-menu ul .li-contacts .fa-brands:hover, .fa-solid:hover {
     cursor: pointer;
     color: #134F9E;
 }
@@ -81,7 +85,7 @@ main {
 }
 
 .nav-article-menu ul .li-profile-menu {
-    margin: 30px 0px 10px 0px;
+    margin: 30px auto 10px;
 }
 
 .nav-article-menu ul .li-profile-menu p {
@@ -119,7 +123,7 @@ section .div-section-titles {
     position: sticky;
     top: 0;
     transition: .2s ease-in-out;
-    margin-bottom: 5%;
+    margin-bottom: 10em;
 }
 
 section .div-section-content-t2 {
@@ -346,7 +350,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-item {
 }
 
 footer {
-    padding: 10em 1em 4em 1em;
+    padding: 1em 1em;
     margin: 0px;
     background-color: #030E1C;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
@@ -357,7 +361,17 @@ footer .message {
     font-size: 0.8em;
     width: 100%;
     text-align: center;
-    color: rgba(87, 87, 87, 0.6);
+    color: #fff;
+}
+
+footer .message a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #538dd7;
+}
+
+footer .message a:hover {
+    text-decoration: underline;
 }
 
 /* GROUP SETTINGS */
