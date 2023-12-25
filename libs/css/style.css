@@ -59,13 +59,12 @@ main {
     justify-content: space-between;
     color: #fff;
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: 10px 0px;
 }
 
 .nav-article-menu ul .li-contacts a {
-    margin: 0px 5px;
+    margin: 0px 10px;
 }
 
 .nav-article-menu ul .li-contacts .fa-brands, .fa-solid {
@@ -351,12 +350,12 @@ section .div-section-content-t4 .div-contact-content .div-line div {
 section .div-contact-content .div-contact-content-email {
     display: flex;
     flex-direction: column;
-    margin: 0px 10% 7%;
+    margin: 0px 20% 7%;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data {
@@ -370,10 +369,10 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input {
-    width: 225px;
     border: none;
     border-bottom: 1px solid #538dd7;
-    padding-bottom: 10px;
+    padding: 10px 5px;
+    width: 200px;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input:hover {
@@ -384,10 +383,6 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
     color: #030E1C;
 }
 
-section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input:focus {
-    background-color: rgb(3, 14, 28, 0.0550);
-}
-
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
     display: flex;
     flex-direction: column;
@@ -395,9 +390,7 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea {
     padding: 10px;
-    width: 500px;
     resize: vertical;
-    margin: auto;
     border-color: #538dd7;
 }
 
@@ -406,9 +399,7 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea label {
-    width: 525px;
     display: inline-block;
-    margin: auto;
     margin-bottom: 10px;
 }
 
@@ -464,7 +455,80 @@ footer .message a:hover {
     text-decoration: underline;
 }
 
+footer .div-footer-shortcuts {
+    margin: 8em 5em;
+    display: flex;
+}
 
+footer .div-footer-shortcuts div {
+    margin: 0px 20px;
+}
+
+footer .div-footer-shortcuts span {
+    color: #fff;
+    font-size: 1.3em;
+    margin: 0px 5px 0px 0px;
+    padding: 5px;
+}
+
+footer .div-footer-shortcuts h3 {
+    color: #fff;
+    margin: 0px 40px;
+}
+
+footer .div-footer-shortcuts ul {
+    list-style: none;
+    color: #fff;
+}
+
+footer .div-footer-shortcuts ul .li-links {
+    margin: 10px 0px;
+    transition: .2s ease-in-out;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+footer .div-footer-shortcuts ul .li-links:hover {
+    background-color: rgb(19, 79, 158, 0.4);
+}
+
+footer .div-footer-shortcuts ul .li-links a:hover span {
+    color: rgb(19, 79, 158);
+}
+
+footer .div-footer-shortcuts ul .li-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .div-footer-shortcuts .div-footer-shortcuts-page {
+    margin-top: 25px;
+}
+
+footer .div-footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 5em;
+    color: #fff;
+    padding: 3.5em 0em;
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+footer .div-footer-info .div-footer-location {
+    display: flex;
+    align-items: center;
+}
+
+footer .div-footer-info .div-footer-location span {
+    margin: 0px 5px 0px 0px;
+}
+
+footer .div-footer-info .div-footer-location p {
+    margin: 5px;
+}
 
 /* GROUP SETTINGS */
 
@@ -557,7 +621,15 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 
 /* MEDIA QUERY SETTINGS */
 
+@media (min-width: 1400px) {
+    footer .div-footer-info {
+        margin: 5em 10em;
+    }
 
+    footer .div-footer-shortcuts {
+        margin: 15em 10em;
+    }
+}
 
 
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
