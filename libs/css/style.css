@@ -330,6 +330,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-item {
 
 section .div-section-content-t4 .div-contact-content h3 {
     text-align: center;
+    margin: 2.5em 0em;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line {
@@ -558,8 +559,13 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .
     width: 50%;
 }
 
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span, .collum-skills-t2 span {
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
     font-size: 2.5em;
+    color: #134F9E;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
+    cursor: initial;
 }
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p, .collum-skills-t2 p {
@@ -621,13 +627,17 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 
 /* MEDIA QUERY SETTINGS */
 
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
     footer .div-footer-info {
         margin: 5em 10em;
     }
 
     footer .div-footer-shortcuts {
         margin: 15em 10em;
+    }
+
+    .div-section-content-t4 .div-contact-content .div-contact-content-email {
+        margin: 0px 27% 7%;
     }
 }
 

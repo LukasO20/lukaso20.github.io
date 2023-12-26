@@ -1,5 +1,3 @@
-//const dynamic_title = $('body main section .div-section-titles h1')
-
 const section = $('section')
 const menu = $('main article')
 
@@ -75,3 +73,46 @@ function itemCssDynamic(index) {
             return itemStyle
     }
 }
+
+//
+
+menu.find('.li-links').on('click', function (){
+    const className = $(this).attr('class').split(' ')
+    const classFilter = className[1]
+    const divs = $('section .div-section')
+
+    if (divs.length) {
+        divs.each(function (index){
+            switch (classFilter){
+                case 'li1':
+                    if (index === 1) {
+                        return $('html, body').animate({
+                            scrollTop: divs.eq(index).offset().top 
+                        }, 700)
+                    }
+                    break
+                case 'li2':
+                    if (index === 2) {
+                        return $('html, body').animate({
+                            scrollTop: divs.eq(index).offset().top + 10
+                        }, 700)
+                    }
+                    break
+                case 'li3':
+                    if (index === 3) {
+                        return $('html, body').animate({
+                            scrollTop: divs.eq(index).offset().top + 10
+                        }, 700)
+                    }
+                    break
+                case 'li4':
+                    if (index === 4) {
+                        return $('html, body').animate({
+                            scrollTop: divs.eq(index).offset().top + 10
+                        }, 700)
+                    }
+                    break
+            }
+        })
+    }
+})
