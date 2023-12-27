@@ -9,6 +9,7 @@ light
 #134F9E
 
 dark
+#0A2445
 #09264D
 #0E3B75
 #030E1C
@@ -168,16 +169,60 @@ section .div-section-content-t3 .div-section-content-works {
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works {
     background-color: #335E96;
-    width: 15%;
-    padding: 30px;
+    width: 220px;
+    height: 200px;
+    padding: 45px;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
+    transition: .2s ease-in-out;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgba(51, 94, 150, 1));
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works h3 {
     font-size: 1.7em;
+    transition: .2s ease-in-out;
+}
+
+.div-section-content-works .sub-collum-works .p-works-description1, .div-section-content-works .sub-collum-works .a-link-collum-work {
+    font-size: 0.1em;
+    opacity: 0;
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover .p-works-description1, .div-section-content-works .sub-collum-works:hover .a-link-collum-work {
+    font-size: 1em;
+    opacity: 1;
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover {
+    background-color: #0A2445;
+    background-image: none;
+}
+
+.div-section-content-works .sub-collum-works:hover .p-works-description2, .div-section-content-works .sub-collum-works:hover .p-works-description3 {
+    display: none;
+}
+
+.div-section-content-works .sub-collum-works:hover .h3-title-collum-work {
+    font-size: 1.17em;
+    margin-top: 0px;
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    margin: 10px 25px;
+    transition: .2s ease-in-out;
+}
+
+section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work:hover {
+    background-color: #134F9E;
 }
 
 section .div-section-content-t3 .h3-section-content-c {
@@ -190,7 +235,7 @@ section .div-section-content-t3 .h2-section-content-c {
     margin: 4% 0% 2% 0%;
 }
 
-section .div-section-content-t3 .div-section-content-works .p-works-description {
+section .div-section-content-t3 .div-section-content-works .p-works-description3 {
     font-weight: 600;
 }
 
@@ -638,6 +683,10 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 
     .div-section-content-t4 .div-contact-content .div-contact-content-email {
         margin: 0px 27% 7%;
+    }
+
+    .div-section-content-t3 .div-section-content-works-services .sub-collum-works-services {
+        width: 20%;
     }
 }
 
