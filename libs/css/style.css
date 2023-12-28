@@ -474,6 +474,31 @@ section .div-section-content-t4 .div-contact-content .div-line p {
     color: #030E1C;
 }
 
+section .button-up {
+    display: flex;
+    position: absolute;
+    padding: 15px;
+    background-color: #134F9E;
+    border-radius: 10px;
+    width: max-content;
+    margin: -5% 7%;
+    top: 35em;
+    right: 0;
+    transition: .2s ease-in-out;
+}
+
+section .button-up:hover {
+    cursor: pointer;
+    border-color: #134F9E;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 4px rgb(10, 36, 69, 0.5);
+}
+
+section .button-up:hover span {
+    color: #134F9E;
+}
+
+
 footer {
     height: 100dvh;
     display: flex;

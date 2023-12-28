@@ -18,7 +18,7 @@ $(window).on('scroll', function (){
 
                 if(scrollTop >= divTop && scrollTop < divBottom){
                     const itemDynamic = itemCssDynamic(index)
-
+                  
                     section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
                     section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)
                 
@@ -49,6 +49,9 @@ $(window).on('scroll', function (){
                                 return item.removeClass('li-links-dynamic')       
                         }
                     })
+
+                    const hideButtonup = section.find('.button-up').hide()
+                    const showButtonup = section.find('.button-up').show()
                 }
             })  
         }
@@ -56,7 +59,6 @@ $(window).on('scroll', function (){
 })
 
 function itemCssDynamic(index) {
-
     const itemStyle = {
         textSizeH1: '',
         textSizeH2: '',
@@ -73,8 +75,6 @@ function itemCssDynamic(index) {
             return itemStyle
     }
 }
-
-//
 
 menu.find('.li-links').on('click', function (){
     const className = $(this).attr('class').split(' ')
@@ -115,4 +115,20 @@ menu.find('.li-links').on('click', function (){
             }
         })
     }
+})
+
+section.find('.button-up').on('click', function (){
+    const divs = $('section .div-section')
+
+    if (divs.length){
+        divs.each(function (index) {
+            if (index === 1) {
+                return $('html, body').animate({
+                    scrollTop: divs.eq(index).offset().top 
+                }, 700)
+            }
+        })
+    }
+
+    console.log(divs)
 })
