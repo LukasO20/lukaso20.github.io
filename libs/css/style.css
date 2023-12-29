@@ -481,7 +481,7 @@ section .button-up {
     background-color: #134F9E;
     border-radius: 10px;
     width: max-content;
-    margin: -5% 7%;
+    margin: 0% 10%;
     top: 35em;
     right: 0;
     transition: .2s ease-in-out;
@@ -712,6 +712,13 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 
     .div-section-content-t3 .div-section-content-works-services .sub-collum-works-services {
         width: 20%;
+    }
+}
+
+@media (min-height: 850px) {
+    section .button-up {
+        top: 43em;
+        margin: 8% 12.5%;
     }
 }
 
