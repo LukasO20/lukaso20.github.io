@@ -1,5 +1,5 @@
 const section = $('section')
-const menu = $('main article')
+const menu = $('article')
 const sendEmail = $('section .form-email')
 const contentEmail = $('section .form-email .div-contact-content-email')
 
@@ -22,9 +22,7 @@ $(window).on('scroll', function (){
                     const itemDynamic = itemCssDynamic(index)
                   
                     section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
-                    section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)
-
-                    
+                    section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)  
 
                     menu.find('.li-links').each(function (){
                         let item = $(this)
@@ -135,6 +133,30 @@ section.find('.button-up').on('click', function (){
     }
 })
 
+$('body').find('.fa-envelope').on('click', function (){ 
+    const divs = $('section .div-section')
+
+    if (divs.length){
+        const divScroll = divs.eq(4)
+
+        $('html, body').animate({
+            scrollTop: divScroll.offset().top + 10
+        }, 700)
+    }
+})
+
+$('body footer').find('.click-email-footer').on('click', function(){
+    const divs = $('section .div-section')
+
+    if (divs.length){
+        const divScroll = divs.eq(4)
+
+        $('html, body').animate({
+            scrollTop: divScroll.offset().top + 10
+        }, 700)
+    }
+})
+
 $('section .div-section-content-t4 .a-contact-send-email').on('click', function (e){
     e.preventDefault()
     try {
@@ -142,13 +164,22 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
         let email = contentEmail.find('input[name="email"]').val()
         let message = contentEmail.find('textarea[name="message"]').val()
 
-        if (name !== '' || email !== '' || message !== '') {
-            //sendEmail.submit()
-            console.log('WOW, TUDO CERTO!!')
-            console.log(name)
-            console.log(email)
-            console.log(message)
+        let messageAtention = $('<div class="message-email"><span>Ops!, verifique se todos os campos foram preenchidos, tente novamente.</span></div>')
+        let messageAtentionEmail = $('<div class="message-email-validation"><span>E-mail informado inválido, confira as credenciais digitadas e tente novamente!</span></div>')
+
+        if (name !== '' && email !== '' && message !== '') {
+            var emailPattern =  /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/
+            if (emailPattern.test(email)) {
+                console.log('WOW, TUDO CERTO COM PADRÃO DE E-MAIL!!')
+                console.log('WOW, TUDO CERTO!!')
+                //sendEmail.submit()
+                $('body section .div-section-content-t4 .div-contact-content .div-user-data-textarea').find('.message-email').css('display', 'none')
+                $('body section .div-section-content-t4 .div-contact-content .div-user-data-textarea').find('.message-email-validation').css('display', 'none')
+            } else {
+                $('body section .div-section-content-t4 .div-contact-content .div-user-data-textarea').append(messageAtentionEmail)
+            }
         } else {
+            $('body section .div-section-content-t4 .div-contact-content .div-user-data-textarea').append(messageAtention)
             console.log('OPS, TUDO ERRADO!!')
         }
     } catch (e) {

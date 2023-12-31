@@ -23,7 +23,7 @@ body {
     margin: 0px;
 }
 
-main {
+body .div-flex-container {
     display: flex;
 }
 
@@ -572,6 +572,10 @@ footer .div-footer-shortcuts ul .li-links a {
     align-items: center;
     text-decoration: none;
     color: #fff;
+}
+
+footer .div-footer-shortcuts ul .li-links a {
+    cursor: pointer;
 }
 
 footer .div-footer-shortcuts .div-footer-shortcuts-page {
