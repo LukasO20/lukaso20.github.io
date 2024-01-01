@@ -33,6 +33,7 @@ body .div-flex-container {
     background-color: #030E1C;
     font-weight: 600;
     color: #fff;
+    padding: 0px 15px;
 }
 
 .nav-article-menu ul {
@@ -109,9 +110,8 @@ body .div-flex-container {
 
 section {
     background-color: #030E1C;
-    height: 100%;
     width: 100%;
-    background: url("../img/background_main.png");
+    background: url("../img/background_main.png"); /*DARK url("../img/background_main.png");*/
     background-size: contain;
     box-shadow: inset 5px 0px 145px 80px #030e1c; 
     padding: 20px 0px 0px 0px;
@@ -372,7 +372,7 @@ section .div-section-content-t3 .div-contact-works-services-item span:hover {
 }
 
 section .div-section-content-t4 .h2-section-content {
-    color: #030E1C;
+    color: #fff; /*LIGHT #030E1C*//*DARK #fff*/
     text-align: center;
     font-size: 2em;
 }
@@ -396,7 +396,7 @@ section .div-section-content-t4 .div-contact-location label span {
 }
 
 section .div-section-content-t4 .div-contact-content {
-    border: 1px solid rgb(19, 79, 158, 0.4);
+    border: 1px solid #719edb; /*LIGHT rgb(19, 79, 158, 0.4)*//*DARK #719edb*/
     border-radius: 10px;
     padding: 20px;
     width: 70%;
@@ -412,10 +412,14 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
     align-items: center;
 }
 
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item {
+    color: #719edb; /*SOMENTE DARK*/
+}
+
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
     font-weight: 600;
     padding: 5px 0px;
-    border-bottom: 1.5px solid #292929;
+    border-bottom: 1.5px solid rgb(113, 158, 219, 0.5); /*LIGHT #292929*//*DARK #719edb*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -429,7 +433,7 @@ section .div-section-content-t4 .div-contact-content label span {
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a {
     display: block;
     margin: 10px 0px;
-    color: #134F9E;
+    color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
     text-decoration: none;
     transition: .2s ease-in-out;
 }
@@ -445,6 +449,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-item {
 section .div-section-content-t4 .div-contact-content h3 {
     text-align: center;
     margin: 2.5em 0em;
+    color: #fff; /*SOMENTE DARK*/
 }
 
 section .div-section-content-t4 .div-contact-content .div-line {
@@ -452,12 +457,13 @@ section .div-section-content-t4 .div-contact-content .div-line {
     justify-content: center;
     align-items: center;
     margin: 40px 10%;
+    font-weight: 600;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line div {
     width: 50%;
     padding: 0.5px;
-    background-color: rgb(19, 79, 158, 0.4);
+    background-color: rgb(108, 146, 199); /*LIGHT rgb(19, 79, 158, 0.4)*/ /*DARK */
     height: 1%;
     margin: 20px;
 }
@@ -480,37 +486,42 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data label {
     margin-bottom: 10px;
-    color: #030E1C;
+    color: #fff; /*LIGHT #030E1C*//*DARK #fff*/
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input {
     border: none;
-    border-bottom: 1px solid #538dd7;
+    border-bottom: 1px solid #719edb; /*LIGHT #538dd7*/ /*DARK #719edb*/
     padding: 10px 5px;
     width: 200px;
+    background-color: #292d33; /*SOMENTE DARK */
+    color: #fff; /*SOMENTE DARK */
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input:hover {
-    border-color: #030E1C;
+    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input::placeholder {
-    color: #030E1C;
+    color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
     display: flex;
     flex-direction: column;
+    color: #fff; /* SOMENTE DARK */
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea {
     padding: 10px;
     resize: vertical;
-    border-color: #538dd7;
+    border-color: #719edb; /*LIGHT #538dd7*/ /*DARK #719edb*/
+    background-color: #292d33; /* SOMENTE DARK */
+    color: #fff; /* SOMENTE DARK */
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea:hover {
-    border-color: #030E1C;
+    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .label-textarea {
@@ -523,11 +534,12 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .message-email-inputs, .message-email-validation {
-    background-color: #bb4040;
+    background-color: rgb(187, 64, 64, 0.5); /*DARK rgb(187, 64, 64, 0.5)*/ /*LIGHT rgb(187, 64, 64)*/
     padding: 5px;
     border-radius: 10px;
     color: #fff;
     font-weight: 500;
+    border:1px solid rgb(187, 64, 64);
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email {
@@ -536,9 +548,9 @@ section .div-section-content-t4 .div-contact-content .p-contact-send-email {
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email {
-    border: 1px solid #030E1C;
+    border: 1px solid #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
     font-weight: 600;
-    background-color: #030E1C;
+    background-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
     color: #fff;
     padding: 10px 15px;
     font-size: 1.1em;
@@ -546,21 +558,21 @@ section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-co
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
-    color: #030E1C;
-    border-color: #030E1C;
-    background-color: #fff;
+    color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    background-color: rgb(113, 158, 219, 0.2);
     cursor: pointer;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line p {
-    color: #030E1C;
+    color: #fff; /*LIGHT #030E1C*/ /*DARK #fff*/
 }
 
 section .button-up {
     display: flex;
     position: fixed;
     padding: 15px;
-    background-color: #134F9E;
+    background-color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
     border-radius: 10px;
     margin: 0% 7.5%;
     top: 35em;
@@ -570,13 +582,13 @@ section .button-up {
 
 section .button-up:hover {
     cursor: pointer;
-    border-color: #134F9E;
+    border-color: rgb(113, 158, 219, 0.5); /*LIGHT #134F9E*/ /*DARK #719edb*/
     background-color: #fff;
-    box-shadow: 0px 0px 0px 4px rgb(10, 36, 69, 0.5);
+    box-shadow: 0px 0px 0px 4px rgb(113, 158, 219, 0.5); /*LIGHT #134F9E*/ /*DARK #719edb*/
 }
 
 section .button-up:hover span {
-    color: #134F9E;
+    color: rgb(113, 158, 219); /*LIGHT #134F9E*/ /*DARK #719edb*/
 }
 
 
@@ -600,7 +612,7 @@ footer .message {
 footer .message a {
     font-weight: 700;
     text-decoration: none;
-    color: #538dd7;
+    color: #719edb;
 }
 
 footer .message a:hover {
@@ -641,11 +653,11 @@ footer .div-footer-shortcuts ul .li-links {
 }
 
 footer .div-footer-shortcuts ul .li-links:hover {
-    background-color: rgb(19, 79, 158, 0.4);
+    background-color:  rgb(113, 158, 219, 0.2); /*LIGHT rgb(19, 79, 158)*/ /*DARK */
 }
 
 footer .div-footer-shortcuts ul .li-links a:hover span {
-    color: rgb(19, 79, 158);
+    color: #719edb; /*LIGHT rgb(19, 79, 158)*/ /*DARK */
 }
 
 footer .div-footer-shortcuts ul .li-links a {

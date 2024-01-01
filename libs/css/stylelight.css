@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+.nav-article-menu-light {
+    background-color: #054599;
+}
+
+.nav-article-menu-light img {
+    border: 2px solid #fff;
+}
+
+.nav-article-menu-light ul .li-contacts .fa-brands:hover, .fa-solid:hover {
+    background-color: #09264d;
+}
+
+.nav-article-menu-light ul .li-links {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.5);
+}
+
+.nav-article-menu-light ul .li-links:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+section .theme-light {
+    background: url(../img/background_mainlight.png);
+    box-shadow: inset 0px 100px 200px 140px #D6D6D6;
+}
+
+section .div-section-content-t1-light {
+    background-color: #054599;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.090), rgb(5, 69, 153, 0.5));
+}
+
+section .div-section-content-t2-light {
+    background-color: #fff;
+    color: #054599;
+}
+
+section .div-section-content-t2-light .h2-section-content-skills {
+    color: rgb(116 116 116);
+}
+
+section .div-section-content-t2-light .div-section-content-skills-light {
+    border: 1px solid #054599;
+}
+
+section .div-section-content-t2-light p {
+    color: (52 52 52);
+}
+
+section .div-section-content-t2-light p span {
+    color: #054599;
+}
+
+section .div-section-content-t2-light .div-section-content-skills-light .sub-collum-skills-light label{
+    background-color: rgb(5, 69, 153, 0.8);
+}
+

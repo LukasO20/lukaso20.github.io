@@ -189,3 +189,28 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
         console.log(`Erro ao enviar e-mail: ${e}`)
     }
 })
+
+
+$('section .div-section-titles .buttons-config .switch-type2 .input-switch2').change(function (){
+    localStorage.setItem('language', 'en')
+
+    if ($(this).is(':checked')) {
+        localStorage.language = 'pt-br'
+    } else {
+        localStorage.language = 'en'
+    }
+})
+
+$(document).ready(function(){
+    try {
+        if(localStorage.language === 'pt-br') {
+            $('html').attr('lang', 'pt-br')
+            $('section .div-section-titles .buttons-config .switch-type2 .input-switch2').attr('checked', 'checked')
+        } else {
+            $('html').attr('lang', 'en')
+            $('section .div-section-titles .buttons-config .switch-type2 .input-switch2').removeAttr('checked', 'checked')
+        }
+    } catch(e) {
+        console.log(`Error on language page ${e}`)
+    }
+})
