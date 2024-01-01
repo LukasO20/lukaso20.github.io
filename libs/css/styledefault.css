@@ -60,7 +60,7 @@ body .div-flex-container {
     justify-content: space-between;
     color: #fff;
     padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgb(113, 158, 219, 0.3); /*LIGHT rgb(113, 158, 219)*/ /*DARK rgb(19, 79, 158, 0.4)*/;
     margin: 10px 0px;
 }
 
@@ -76,7 +76,7 @@ body .div-flex-container {
 
 .nav-article-menu ul .li-contacts .fa-brands:hover, .fa-solid:hover {
     cursor: pointer;
-    color: #134F9E;
+    color: rgb(113, 158, 219); /*LIGHT rgb(113, 158, 219)*/ /*DARK rgb(19, 79, 158, 0.4)*/;
 }
 
 .nav-article-menu ul li {
@@ -93,7 +93,7 @@ body .div-flex-container {
 }
 
 .nav-article-menu ul .li-links {
-    border-bottom: 1px solid rgb(19, 79, 158, 0.6);
+    border-bottom: 1px solid rgb(113, 158, 219, 0.3); /*LIGHT rgb(19, 79, 158, 0.6*/ /*DARK #719edb*/
     transition: .2s ease-in-out;
     margin: 10px 0px;
 }
@@ -104,7 +104,7 @@ body .div-flex-container {
 
 .nav-article-menu ul .li-links:hover {
     cursor: pointer;
-    background-color: rgb(19, 79, 158, 0.4);
+    background-color: rgb(113, 158, 219, 0.7); /*LIGHT rgb(113, 158, 219)*/ /*DARK rgb(19, 79, 158, 0.4)*/
 }
 
 section {
@@ -120,26 +120,95 @@ section {
 }
 
 section .div-section-titles {
-    position: sticky;
-    top: 0;
+    display: flex;
+    justify-content: space-between;
     transition: .2s ease-in-out;
     margin-bottom: 10em;
 }
 
+section .div-section-titles .buttons-config {
+    margin: 10px 20px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+section .div-section-titles .buttons-config .title-switch {
+    font-size: 0.9em;
+}
+
+section .div-section-titles .buttons-config .fa-switch {
+    margin: 0px 5px;
+}
+
+section .div-section-titles .buttons-config .fa-switch:hover {
+    color: #fff;
+    cursor: initial;
+}
+
+section .div-section-titles .buttons-config .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px; 
+}
+
+section .div-section-titles .buttons-config .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+section .div-section-titles .buttons-config .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+section .div-section-titles .buttons-config .slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+section .div-section-titles .buttons-config input:checked + .slider {
+    background-color: #134F9E;
+}
+
+section .div-section-titles .buttons-config input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+
+
 section .div-section-content-t2 {
     transition: .35s ease-in-out;
-    color: #030E1C;
+    color: #fff; /*LIGHT #030E1C *//*DARK #fff*/
 }
 
 section .div-section-content-t2 .h2-section-content-skills {
-    color: #030E1C;
     text-align: center;
     font-size: 2em;
 }
 
 section .div-section-content-t2 .div-section-content-skills {
     margin: 5% 15%;
-    border: 1px solid rgb(19, 79, 158, 0.4);
+    border: 1px solid #719edb; /*LIGHT rgb(19, 79, 158, 0.4)*/ /*DARK #719edb*/
     border-radius: 10px;
 }
 
@@ -168,7 +237,7 @@ section .div-section-content-t3 .div-section-content-works {
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works {
-    background-color: #335E96;
+    background-color: rgb(113, 158, 219, 0.7); /*LIGHT #335E96*/ /*DARK rgb(113, 158, 219, 0.7)*/
     width: 220px;
     height: 200px;
     padding: 45px;
@@ -176,7 +245,7 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works {
     margin: 10px;
     text-align: center;
     transition: .2s ease-in-out;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgba(51, 94, 150, 1));
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgb(113, 158, 219, 0.5));
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works h3 {
@@ -195,7 +264,7 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works:hov
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover {
-    background-color: #0A2445;
+    background-color: rgb(113, 158, 219, 0.5); /*LIGHT: #0A2445*/ /*DARK rgb(113, 158, 219, 0.5)*/
     background-image: none;
 }
 
@@ -222,7 +291,7 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work:hover {
-    background-color: #134F9E;
+    background-color: rgb(113, 158, 219, 0.7); /*LIGHT #134F9E*/ /*DARK rgb(113, 158, 219, 0.7)*/
 }
 
 section .div-section-content-t3 .h3-section-content-c {
@@ -287,7 +356,7 @@ section .div-section-content-t3 .div-contact-works-services-item {
 section .div-section-content-t3 .div-contact-works-services-item span {
     padding: 10px;
     border-radius: 50%;
-    background-color: #134F9E;
+    background-color: rgb(113, 158, 219); /*LIGHT #134F9E*/ /*DARK rgb(113, 158, 219, 0.5)*/
     color: #fff;
     font-size: 1.5em;
     transition: .2s ease-in-out;
@@ -296,9 +365,9 @@ section .div-section-content-t3 .div-contact-works-services-item span {
 }
 
 section .div-section-content-t3 .div-contact-works-services-item span:hover {
-    color: #134F9E;
+    color: rgb(108, 146, 199); /*DARK rgb(113, 158, 219)*/ /*LIGHT #134F9E*/
     cursor: pointer;
-    border-color: #134F9E;
+    border-color: rgb(108, 146, 199); /*DARK rgb(113, 158, 219)*/ /*LIGHT #134F9E*/;
     background-color: #fff;
 }
 
@@ -396,7 +465,7 @@ section .div-section-content-t4 .div-contact-content .div-line div {
 section .div-contact-content .div-contact-content-email {
     display: flex;
     flex-direction: column;
-    margin: 0px 20% 7%;
+    margin: 0px 20%;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data {
@@ -444,12 +513,25 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
     border-color: #030E1C;
 }
 
-section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea label {
-    display: inline-block;
+section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .label-textarea {
     margin-bottom: 10px;
 }
 
+section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .message-email-inputs, .message-email-validation {
+    text-align: center;
+    margin: 20px 10px;
+}
+
+section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .message-email-inputs, .message-email-validation {
+    background-color: #bb4040;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+}
+
 section .div-section-content-t4 .div-contact-content .p-contact-send-email {
+    margin: 30px 0px;
     text-align: center;
 }
 
@@ -476,12 +558,11 @@ section .div-section-content-t4 .div-contact-content .div-line p {
 
 section .button-up {
     display: flex;
-    position: absolute;
+    position: fixed;
     padding: 15px;
     background-color: #134F9E;
     border-radius: 10px;
-    width: max-content;
-    margin: 0% 10%;
+    margin: 0% 7.5%;
     top: 35em;
     right: 0;
     transition: .2s ease-in-out;
@@ -608,7 +689,7 @@ footer .div-footer-info .div-footer-location p {
 /* GROUP SETTINGS */
 
 section .div-section-content-t2, .div-section-content-t4 {
-    background-color: #fff;
+    background-color: #292d33; /*LIGHT #fff*/ /*DARK #292D33*/
 }
 
 section .h1-principal, .h2-principal {
@@ -616,8 +697,7 @@ section .h1-principal, .h2-principal {
     color: #fff;
     margin: 20px;
     text-shadow: 1px 1px 25px #030E1C;
-    /*font-size: ; 3.5em para telas HD+*/
-    transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 section .h2-principal {
@@ -635,7 +715,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
     font-size: 2.5em;
-    color: #134F9E;
+    color: #719edb; /*DARK #719edb*/ /*LIGHT #134F9E*/
 }
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
@@ -653,7 +733,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
     font-weight: 600;
-    color: #134F9E;
+    color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
 }
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
@@ -663,13 +743,14 @@ section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
     font-weight: 600;
-    color: #134F9E;
+    color: #719edb; /*LIGHT 134F9E*/ /*DARK #719edb*/
     padding: 5px;
     border-radius: 5px;
-    background-color: #ebebeb;
+    /*background-color: #ebebeb; /*LIGHT*/
     display: inline-block;
     width: 100%;
     text-align: center;
+    border: 1px solid #719edb; /*DARK*/
 }
 
 section .div-section-content-t1, .div-section-content-t3 {
@@ -711,7 +792,7 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
     }
 
     .div-section-content-t4 .div-contact-content .div-contact-content-email {
-        margin: 0px 27% 7%;
+        margin: 0px 27%;
     }
 
     .div-section-content-t3 .div-section-content-works-services .sub-collum-works-services {
@@ -722,7 +803,7 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 @media (min-height: 850px) {
     section .button-up {
         top: 43em;
-        margin: 8% 12.5%;
+        margin: 7% 5%;
     }
 }
 
@@ -730,5 +811,5 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
 
 .nav-article-menu ul .li-links-dynamic {
-    background-color: #134F9E;
+    background-color: rgb(113, 158, 219, 0.5); /*DARK #719edb*/ /*light #134F9E*/
 }

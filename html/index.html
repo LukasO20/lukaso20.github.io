@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Oliveira | Web Developer - C#</title>
-    <link rel="stylesheet" href="../libs/css/style.css">
+    <link rel="stylesheet" href="../libs/css/styledefault.css">
+    <link rel="stylesheet" href="../libs/css/styledark.css">
     <script src="https://kit.fontawesome.com/958084951b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -40,14 +41,32 @@
     
         <main>
             <section>
+                <div class="button-up" title="Go up">
+                    <span class="fa-solid fa-arrow-up"></span>
+                </div>
+
                 <div class="div-section div-section-titles">
-                    <h1 class="h1-principal">Hi, my name is Lucas,</h1>
-                    <h2 class="h2-principal">I'm a web developer</h2>
-                    <div class="buttons-config">
-                            
+                    <div class="div-section-titles-itens">
+                        <h1 class="h1-principal">Hi, my name is Lucas,</h1>
+                        <h2 class="h2-principal">I'm a web developer</h2>
                     </div>
-                    <div class="button-up" title="Go up">
-                        <span class="fa-solid fa-arrow-up"></span>
+                    <div class="buttons-config">
+                        <label class="title-switch">Theme</label>
+                        <p class="switch-type1">
+                            <span class="fa-solid fa-moon fa-switch"></span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                        </p>
+                        <label class="title-switch">Language</label>
+                        <p class="switch-type2">
+                            <span class="fa-switch">EN</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </p>    
                     </div>
                 </div>
                 <div class="div-section div-section-content-t1">
@@ -160,7 +179,7 @@
                                     </p>
                                 </div>
                                 <div class="div-user-data-textarea">
-                                    <label>Your message</label>
+                                    <label class="label-textarea">Your message</label>
                                     <textarea name="message"></textarea>
                                 </div>
                             </div>

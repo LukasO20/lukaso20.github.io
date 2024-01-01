@@ -3,8 +3,6 @@ const menu = $('article')
 const sendEmail = $('section .form-email')
 const contentEmail = $('section .form-email .div-contact-content-email')
 
-
-
 $(window).on('scroll', function (){
     const scrollTop = $(this).scrollTop()
     const screenHeight = $(this).height()
@@ -25,41 +23,39 @@ $(window).on('scroll', function (){
                   
                     section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
                     section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)  
-
+                    
                     menu.find('.li-links').each(function (){
                         let item = $(this)
+
                         switch (index) {
                             case 1:
-                                section.find('.button-up').css('opacity', '0')
                                 if (item.hasClass('li1')){
-                                    return item.addClass('li-links-dynamic')
+                                    item.addClass('li-links-dynamic')
+                                } else {
+                                    item.removeClass('li-links-dynamic')       
                                 }
                                 break
                             case 2:
-                                section.find('.button-up').css('opacity', '1')
-                                if (item.hasClass('li2')){
-                                    return item.addClass('li-links-dynamic')
-                                }
-                                break
                             case 3:
-                                section.find('.button-up').css('opacity', '1')
-                                if (item.hasClass('li3')){
-                                    return item.addClass('li-links-dynamic')
-                                }
-                                break
                             case 4:
-                                section.find('.button-up').css('opacity', '1')
-                                if (item.hasClass('li4')){
-                                    return item.addClass('li-links-dynamic')
+                                if (item.hasClass(`li${index}`)){
+                                    item.addClass('li-links-dynamic')
+                                } else {
+                                    item.removeClass('li-links-dynamic')       
                                 }
                                 break
                             default:
-                                section.find('.button-up').css('opacity', '0')
-                                return item.removeClass('li-links-dynamic')       
+                                item.removeClass('li-links-dynamic')       
+                        }
+
+                        if (index > 1) {
+                            section.find('.button-up').css('opacity', '1')
+                        } else {
+                            section.find('.button-up').css('opacity', '0')
                         }
                     })
                 }
-            })  
+            })
         }
     }
 })
@@ -100,21 +96,21 @@ menu.find('.li-links').on('click', function (){
                 case 'li2':
                     if (index === 2) {
                         return $('html, body').animate({
-                            scrollTop: divs.eq(index).offset().top + 10
+                            scrollTop: divs.eq(index).offset().top + 130
                         }, 700)
                     }
                     break
                 case 'li3':
                     if (index === 3) {
                         return $('html, body').animate({
-                            scrollTop: divs.eq(index).offset().top + 10
+                            scrollTop: divs.eq(index).offset().top + 130
                         }, 700)
                     }
                     break
                 case 'li4':
                     if (index === 4) {
                         return $('html, body').animate({
-                            scrollTop: divs.eq(index).offset().top + 10
+                            scrollTop: divs.eq(index).offset().top + 130
                         }, 700)
                     }
                     break
@@ -127,7 +123,7 @@ section.find('.button-up').on('click', function (){
     const divs = $('section .div-section')
 
     if (divs.length){
-        const divScroll = divs.eq(1)
+        const divScroll = divs.eq(0)
 
         $('html, body').animate({
             scrollTop: divScroll.offset().top
