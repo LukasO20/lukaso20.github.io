@@ -117,6 +117,7 @@ section {
     padding: 20px 0px 0px 0px;
     display: flex;
     flex-direction: column;
+    transition: .2s ease-in-out;
 }
 
 section .div-section-titles {

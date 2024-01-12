@@ -190,27 +190,59 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
     }
 })
 
+//THEMER
 
-$('section .div-section-titles .buttons-config .switch-type2 .input-switch2').change(function (){
-    localStorage.setItem('language', 'en')
+$('section .div-section-titles .buttons-config .switch-type .input-switch').on('click', function (){
+    localStorage.setItem('theme', 'themedark')
 
     if ($(this).is(':checked')) {
-        localStorage.language = 'pt-br'
+        localStorage.theme = 'themeligther'
+        $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
+
     } else {
-        localStorage.language = 'en'
+        localStorage.theme = 'themedark'
+        $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-lightbulb fa-moon')
+
     }
+
+    Theme()
 })
 
 $(document).ready(function(){
     try {
-        if(localStorage.language === 'pt-br') {
-            $('html').attr('lang', 'pt-br')
-            $('section .div-section-titles .buttons-config .switch-type2 .input-switch2').attr('checked', 'checked')
+        if(localStorage.theme === 'themeligther') {
+            $('section .div-section-titles .buttons-config .switch-type .input-switch').attr('checked', 'checked')
+            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
+            $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
+
         } else {
-            $('html').attr('lang', 'en')
-            $('section .div-section-titles .buttons-config .switch-type2 .input-switch2').removeAttr('checked', 'checked')
+            $('section .div-section-titles .buttons-config .switch-type .input-switch').removeAttr('checked', 'checked')
+            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to lighter')
         }
     } catch(e) {
-        console.log(`Error on language page ${e}`)
+        console.log(`Error change theme of page ${e}`)
     }
+
+    Theme()
 })
+
+function Theme() {
+    localStorage.theme === 'themeligther' ? 
+    
+    ($('main section .button-up').addClass('button-up-light'),
+    $('.nav-article-menu').addClass('nav-article-menu-light'),
+    $('section').addClass('section-theme-light'), 
+    $('section .div-section-titles .buttons-config .title-switch').addClass('title-switch-light'),
+    $('section .div-section.div-section-content-t1').addClass('div-section-content-t1-light'),
+    $('section .div-section.div-section-content-t2').addClass('div-section-content-t2-light'))  
+
+    :
+
+    ($('main section .button-up').removeClass('button-up-light'),
+    $('.nav-article-menu').removeClass('nav-article-menu-light'),
+    $('section').removeClass('section-theme-light'),
+    $('section .div-section-titles .buttons-config .title-switch').removeClass('title-switch-light'),
+    $('section .div-section.div-section-content-t1').removeClass('div-section-content-t1-light'),
+    $('section .div-section.div-section-content-t2').removeClass('div-section-content-t2-light'))    
+}
+
