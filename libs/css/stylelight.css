@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
 main section .button-up-light {
-    background-color: #F5A50F;
+    background-color: rgb(245, 165, 15);
 }
 
 main section .button-up-light:hover {
     border-color: rgba(245, 165, 15, 0.5);
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 0px 4px rgba(245, 165, 15, 0.5);
 }
 
@@ -19,13 +19,14 @@ main section .button-up-light:hover span {
     background-color: rgb(5, 69, 153);
 }
 
-.nav-article-menu-light ul .li-contacts .fa-brands:hover, .nav-article-menu-light ul .li-contacts .fa-solid:hover {
-   color: rgb(141 178 229);
+.nav-article-menu-light .fa-brands:hover, .nav-article-menu-light .fa-solid:hover {
+    cursor: pointer;
+    color: rgb(245, 165, 15);
 }
 
-.nav-article-menu-light ul .li-links {
+/* .nav-article-menu-light ul .li-links {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
+} */
 
 .nav-article-menu-light ul .li-links:hover {
     background-color: rgba(255, 255, 255, 0.5);
@@ -33,6 +34,7 @@ main section .button-up-light:hover span {
 
 .section-theme-light {
     background: url(../img/background_mainlight.png);
+    background-size: contain;
     box-shadow: inset 0px 100px 200px 140px rgb(62, 99, 149, 0.7);
 }
 

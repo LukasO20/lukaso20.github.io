@@ -3,6 +3,9 @@ const menu = $('article')
 const sendEmail = $('section .form-email')
 const contentEmail = $('section .form-email .div-contact-content-email')
 
+const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
+const button_expand_menu = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-menu')
+
 $(window).on('scroll', function (){
     const scrollTop = $(this).scrollTop()
     const screenHeight = $(this).height()
@@ -188,6 +191,21 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
     } catch (e) {
         console.log(`Erro ao enviar e-mail: ${e}`)
     }
+})
+
+button_menu_contact.on('click', function(){
+    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
+    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
+
+    !menu_contact.is(':visible') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'))
+})
+
+button_expand_menu.on('click', function(){
+    let menu = $('.article-menu')
+    let menu_items = $('.article-menu .nav-article-menu')
+    let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
+
+    !menu.hasClass('article-menu-expanded') ? (menu.addClass('article-menu-expanded'), menu_items.addClass('nav-article-menu-expanded'), button_status.addClass('expand-menu-open')) : (menu.removeClass('article-menu-expanded'), menu_items.removeClass('nav-article-menu-expanded'), button_status.removeClass('expand-menu-open')) 
 })
 
 //THEMER
