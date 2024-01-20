@@ -197,15 +197,27 @@ button_menu_contact.on('click', function(){
     let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
     let button_status = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
 
-    !menu_contact.is(':visible') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'))
+    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'))
 })
 
 button_expand_menu.on('click', function(){
     let menu = $('.article-menu')
     let menu_items = $('.article-menu .nav-article-menu')
     let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
+    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
 
-    !menu.hasClass('article-menu-expanded') ? (menu.addClass('article-menu-expanded'), menu_items.addClass('nav-article-menu-expanded'), button_status.addClass('expand-menu-open')) : (menu.removeClass('article-menu-expanded'), menu_items.removeClass('nav-article-menu-expanded'), button_status.removeClass('expand-menu-open')) 
+    if (!menu.hasClass('article-menu-expanded')) {
+        menu.addClass('article-menu-expanded') 
+        menu_items.addClass('nav-article-menu-expanded')
+        button_status.addClass('expand-menu-open')
+        menu_contact.addClass('group-li-contacts-expanded')
+
+    } else {
+        menu.removeClass('article-menu-expanded')
+        menu_items.removeClass('nav-article-menu-expanded')
+        button_status.removeClass('expand-menu-open')
+        menu_contact.removeClass('group-li-contacts-expanded')
+    }
 })
 
 //THEMER
@@ -216,11 +228,12 @@ $('section .div-section-titles .buttons-config .switch-type .input-switch').on('
     if ($(this).is(':checked')) {
         localStorage.theme = 'themeligther'
         $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
+        $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
 
     } else {
         localStorage.theme = 'themedark'
         $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-lightbulb fa-moon')
-
+        $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
     }
 
     Theme()
@@ -235,7 +248,7 @@ $(document).ready(function(){
 
         } else {
             $('section .div-section-titles .buttons-config .switch-type .input-switch').removeAttr('checked', 'checked')
-            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to lighter')
+            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
         }
     } catch(e) {
         console.log(`Error change theme of page ${e}`)

@@ -32,6 +32,18 @@ main section .button-up-light:hover span {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.nav-article-menu-light .menu-ul-itens .li-profile-menu .h1-emphasis .span-title-emphasis {
+    color: rgb(245, 165, 15);
+}
+
+.nav-article-menu-light .menu-ul-itens .group-li-contacts{
+    background-color: rgb(5, 69, 153);
+}
+
+.nav-article-menu-light .menu-ul-itens .group-li-contacts-expanded  {
+    border-color: rgb(5, 69, 153);
+}
+
 .section-theme-light {
     background: url(../img/background_mainlight.png);
     background-size: contain;
@@ -41,6 +53,10 @@ main section .button-up-light:hover span {
 .section-theme-light .h1-principal, .h2-principal {
     text-shadow: none;
 } 
+
+.section-theme-light .div-section .div-section-titles-itens .h1-emphasis span, .section-theme-light .div-section .div-section-titles-itens .h2-emphasis span {
+    color: rgb(245, 165, 15);
+}
 
 section .div-section-titles .buttons-config .title-switch-light {
     color: rgb(255, 255, 255);
@@ -55,16 +71,16 @@ section .div-section-content-t1-light {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.090), rgba(5, 69, 153, 0.5));
 }
 
-section .div-section-content-t2-light {
+.section-theme-light .div-section-content-t2 {
     background-color: rgb(255, 255, 255);
     color: rgb(41, 45, 51);
 }
 
-section .div-section-content-t2-light .h2-section-content-skills {
+.section-theme-light .div-section-content-t2 .h2-section-content-skills {
     color: rgb(41, 45, 51);
 }
 
-section .div-section-content-t2-light .div-section-content-skills {
+.section-theme-light .div-section-content-t2 .div-section-content-skills {
     border: 1px solid rgb(5, 69, 153);
 }
 
