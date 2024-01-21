@@ -66,7 +66,7 @@ section .div-section-titles .buttons-config .switch-type span.fa-lightbulb {
     color:rgb(255, 255, 255);
 }
 
-section .div-section-content-t1-light {
+.section-theme-light .div-section-content-t1 {
     background-color: rgb(5, 69, 153);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.090), rgba(5, 69, 153, 0.5));
 }
@@ -84,58 +84,114 @@ section .div-section-content-t1-light {
     border: 1px solid rgb(5, 69, 153);
 }
 
-section .div-section-content-t4-light {
-    background-color: rgb(255, 255, 255);
+.section-theme-light .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .fa-layer-group, .section-theme-light .div-section-content-t2 .div-section-content-skills .collum-skills-t2 .fa-code {
     color: rgb(5, 69, 153);
 }
 
-section .div-section-content-t4-light .div-contact-content {
-    border-color: 1px solid rgba(5, 69, 153, 0.5);
-}
-
-section .div-section-content-t4-light .div-contact-content h3 {
-    color: rgb(41, 45, 51);
-}
-
-section .div-section-content-t4-light .div-contact-content .div-contact-content-email .div-user-data .p-user-data {
-    color: rgba(5, 69, 153, 0.7);
-}
-
-section .div-section-content-t4-light .div-contact-content .div-contact-content-email .div-user-data .p-user-data input {
-    border-bottom: 1px solid rgb(5, 69, 153);
-    background-color: #fff;
-}
-
-section .div-section-content-t4-light .div-contact-content .div-contact-content-email .div-user-data-textarea {
+.section-theme-light .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .section-theme-light .div-section-content-t2 .div-section-content-skills .collum-skills-t2 .p-highlighted {
     color: rgb(5, 69, 153);
 }
 
-section .div-section-content-t4-light .div-contact-content .div-contact-content-email .div-user-data-textarea textarea {
-    background-color: rgb(255, 255, 255);
+.section-theme-light .div-section-content-t2 .div-section-content-skills .sub-collum-skills label {
+    color: rgb(5, 69, 153);
+    border-color: rgba(5, 69, 153, 0.5);
+}
+
+.section-theme-light .div-section-content-t3 {
+    background-color: rgb(5, 69, 153);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.090), rgba(5, 69, 153, 0.5));
+}
+
+.section-theme-light .div-section-content-t3 .div-contact-works-services-item span {
+    background-color: rgb(5, 69, 153);
+}
+
+.section-theme-light .div-section-content-t3 .div-contact-works-services-item span:hover {
+    color: rgb(5, 69, 153); 
     border-color: rgb(5, 69, 153);
 }
 
-section .div-section-content-t4-light .div-contact-content .p-contact-send-email .a-contact-send-email {
+.section-theme-light .div-section-content-t4 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 69, 153);
+}
+
+.section-theme-light .div-section-content-t4 .h2-section-content {
+    color: rgb(41, 45, 51);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content {
+    border-color: 1px solid rgba(5, 69, 153, 0.5);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content h3 {
+    color: rgb(41, 45, 51);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data .p-user-data {
+    color: rgba(5, 69, 153, 0.7);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data .p-user-data input {
+    border-bottom: 1px solid rgb(5, 69, 153);
+    background-color: rgb(255, 255, 255);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data-textarea {
+    color: rgb(5, 69, 153);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data-textarea textarea {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(5, 69, 153);
+    color: rgb(41, 45, 51);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email {
     order: 1px solid #054599;
     background-color: #054599;
 }
 
-section .div-section-content-t4-light .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
+.section-theme-light .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
     color: rgb(5, 69, 153);
     border-color: rgb(5, 69, 153);
-    background-color: rgba(5, 69, 153, 0.5);
+    background-color: rgba(5, 69, 153, 0.4);
 }
 
-section .div-section-content-t4-light .div-contact-content .div-contact-content-itens .div-contact-item label {
+.section-theme-light .div-section-content-t4 .div-contact-content .form-email .div-contact-content-email .div-user-data .p-user-data label {
+    color: rgb(5, 69, 153);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .form-email .div-contact-content-email .div-user-data .p-user-data input {
+    color: rgb(41, 45, 51);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .form-email .div-contact-content-email .div-user-data .p-user-data input::placeholder {
+    color: rgba(44, 47, 51, 0.7);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-line p {
+    color: rgb(5, 69, 153); 
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
     color: rgb(5, 69, 153);
     border-bottom-color: rgba(5, 69, 153, 0.5);
 }
 
-section .div-section-content-t4-light .div-contact-content .div-contact-content-itens .div-contact-item a {
-    color: rgba(5, 69, 153, 0.5);
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label span {
+    color: rgb(5, 69, 153);
 }
 
-section .div-section-content-t4-light .div-contact-content .div-line {
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label span:hover {
+    color: rgb(5, 69, 153);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a {
+    color: rgba(5, 69, 153, 0.7);
+}
+
+.section-theme-light .div-section-content-t4 .div-contact-content .div-line {
     color: rgb(5, 69, 153);
 }
 
@@ -145,11 +201,11 @@ section .div-section-content-t4-light .div-contact-content .div-line {
 }
 
 .footer-light .div-footer-shortcuts .ul-li-links .li-links:hover {
-    background-color: rgba(9, 38, 77, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-light .div-footer-shortcuts .ul-li-links .li-links:hover a span {
-    color: rgb(44, 47, 51);
+    color: rgb(245, 165, 15);
 }
 
 .footer-light .div-footer-info .div-footer-dev .message a {

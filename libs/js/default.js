@@ -264,8 +264,7 @@ function Theme() {
     $('.nav-article-menu').addClass('nav-article-menu-light'),
     $('section').addClass('section-theme-light'), 
     $('section .div-section-titles .buttons-config .title-switch').addClass('title-switch-light'),
-    $('section .div-section.div-section-content-t1').addClass('div-section-content-t1-light'),
-    $('section .div-section.div-section-content-t2').addClass('div-section-content-t2-light'))  
+    $('footer').addClass('footer-light'))  
 
     :
 
@@ -273,7 +272,6 @@ function Theme() {
     $('.nav-article-menu').removeClass('nav-article-menu-light'),
     $('section').removeClass('section-theme-light'),
     $('section .div-section-titles .buttons-config .title-switch').removeClass('title-switch-light'),
-    $('section .div-section.div-section-content-t1').removeClass('div-section-content-t1-light'),
-    $('section .div-section.div-section-content-t2').removeClass('div-section-content-t2-light'))    
+    $('footer').removeClass('footer-light'))    
 }
 

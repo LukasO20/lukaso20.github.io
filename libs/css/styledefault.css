@@ -19,7 +19,7 @@ dark
 /* INDIVIDUAL SETTINGS */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
     margin: 0px;
 }
 
@@ -29,6 +29,10 @@ body .div-flex-container {
 
 article .h1-emphasis {
     font-size: 1.5em;
+}
+
+article .h1-emphasis .span-title-emphasis {
+    font-family: 'Luckiest Guy', cursive;
 }
 
 article .h1-emphasis .span-title-emphasis {
@@ -591,6 +595,11 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
     justify-content: center;
 }
 
+section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label span:hover {
+    cursor: initial;
+    color: #fff;
+}
+
 section .div-section-content-t4 .div-contact-content label span {
     font-size: 1.2em;
     margin: 0px 5px;
@@ -669,7 +678,9 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input::placeholder {
-    color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    color: #719edb;
+    font-weight: 400;
+    font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
@@ -684,6 +695,8 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
     border-color: #719edb; /*LIGHT #538dd7*/ /*DARK #719edb*/
     background-color: #292d33; /* SOMENTE DARK */
     color: #fff; /* SOMENTE DARK */
+    font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
+    font-weight: 500;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea:hover {
@@ -871,7 +884,6 @@ section .div-section-content-t2, .div-section-content-t4 {
 }
 
 body .h1-emphasis, .h2-emphasis {
-    font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
     color: #fff;
     transition: .3s ease-in-out;
 }
