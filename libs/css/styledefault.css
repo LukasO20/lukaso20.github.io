@@ -39,6 +39,10 @@ article .h1-emphasis .span-title-emphasis {
     font-size: 1.5em;
 }
 
+article .h1-emphasis .span-title-emphasis:hover {
+    cursor: context-menu;
+}
+
 body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     color: rgb(113, 158, 219);
 }
@@ -306,12 +310,13 @@ section .div-section-titles .buttons-config {
     align-items: end;
 }
 
-section .div-section-titles .buttons-config .title-switch {
-    font-size: 0.9em;
+section .div-section-titles .buttons-config .switch-type {
+    display: flex;
+    align-items: center;
 }
 
 section .div-section-titles .buttons-config .fa-switch {
-    margin: 0px 5px;
+    margin: 0px 10px;
 }
 
 section .div-section-titles .buttons-config .fa-switch:hover {

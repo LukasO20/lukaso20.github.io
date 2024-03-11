@@ -1,3 +1,5 @@
+//INDEX PAGE
+
 const section = $('section')
 const menu = $('article')
 const sendEmail = $('section .form-email')
@@ -195,9 +197,9 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
 
 button_menu_contact.on('click', function(){
     let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
-    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
+    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .expand-socialmedia')
 
-    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'))
+    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open'), button_status.attr('title', 'Close social media details')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'), button_status.attr('title', 'Open social media details'))
 })
 
 button_expand_menu.on('click', function(){
@@ -212,16 +214,18 @@ button_expand_menu.on('click', function(){
         button_status.addClass('expand-menu-open')
         menu_contact.addClass('group-li-contacts-expanded')
 
+        button_status.attr('title', 'Minimize')
     } else {
         menu.removeClass('article-menu-expanded')
         menu_items.removeClass('nav-article-menu-expanded')
         button_status.removeClass('expand-menu-open')
         menu_contact.removeClass('group-li-contacts-expanded')
+    
+        button_status.attr('title', 'Expand')
     }
 })
 
-//THEMER
-
+//themer
 $('section .div-section-titles .buttons-config .switch-type .input-switch').on('click', function (){
     localStorage.setItem('theme', 'themedark')
 
@@ -275,3 +279,54 @@ function Theme() {
     $('footer').removeClass('footer-light'))    
 }
 
+
+//RESUME PAGE
+
+//download archives
+
+function DownloadResume(resume_details) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(resume_details)
+        })
+    })
+}
+
+const resume = $('.resume-page-body main section .div-section-container .download')
+
+resume.on('click', function(){
+    
+    //Apply modifications to PDF
+    let resume_details = {
+        main: $('main'),
+        section: $('section'),
+        article: $('article'),
+        sc_div_container: $('.div-section-container')
+    }
+
+    resume_details.main.addClass('main-print')
+    resume_details.section.addClass('section-print')
+    resume_details.article.addClass('article-print')
+    resume_details.sc_div_container.addClass('div-section-container-print')
+
+    //Config e Save PDF
+    let body_resume = $('.resume-page-body').html()
+    let resume_pdf = html2pdf()
+
+    let options = {
+        margin: [2, 1, 2, 0],
+        filename: 'Lucas_Oliveira_resume.pdf',
+        image: {type: 'jpeg', quality: 0.98},
+        html2canvas: {scale: 2},
+        jsPDF: {unit: 'em', format: 'a4', orientation: 'portrait'}
+    }
+
+    resume_pdf.set(options).from(body_resume).save()
+
+    DownloadResume(resume_details)
+    .then(
+        resume => (resume.main.removeClass('main-print'), resume.article.removeClass('article-print'),
+         resume.sc_div_container.removeClass('div-section-container-print'), resume.section.removeClass('section-print'))
+    )
+    .catch(e => console.log(`Download Error: ${e}`))
+})
