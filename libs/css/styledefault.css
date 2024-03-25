@@ -1007,6 +1007,6 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
 
-.nav-article-menu ul .li-links-dynamic {
+.nav-article-menu ul .li-links-selected {
     background-color: rgb(113, 158, 219, 0.5); /*DARK #719edb*/ /*light #134F9E*/
 }

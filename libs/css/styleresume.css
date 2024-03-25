@@ -41,7 +41,7 @@ article .article-contacs {
 }
 
 .items-socialmedia a {
-    color: rgb(70, 70, 70);
+    color: rgb(5, 69, 153);
     text-decoration: none;
     margin-right: 0.75em;
 }
@@ -112,8 +112,18 @@ section .div-section-head, .div-section-body {
     border: 2px solid transparent;
 }
 
-.div-section-container span:hover {
+.div-section-container span.download:hover {
     border-color: rgb(190, 190, 190);
+    cursor: pointer;
+}
+
+.div-section-container span.tl-portuguese-content-active, span.tl-english-content-active {
+    font-weight: 600;
+    color: rgb(5, 69, 153);
+}
+
+.div-section-container span.tl-portuguese-content:hover, span.tl-english-content:hover {
+    color: rgb(5, 69, 153);
     cursor: pointer;
 }
 
@@ -126,7 +136,7 @@ section .div-section-head, .div-section-body {
 
 .section-print {
     font-size: 0.9em;
-    padding: 0em;
+    padding: 0.5em 0em;
     width: auto;
 }
 
@@ -151,9 +161,17 @@ section .div-section-head, .div-section-body {
     font-size: 0.9em;
 }
 
+.article-print .title:nth-child(1) {
+    margin-top: 1em;
+}
+
+.article-print .title {
+    margin: 0em 0em 0em 1em;
+}
+
 .article-print ul {
     padding: 0em;
-    margin: 2em;
+    margin: 1em 2em;
 }
 
 .article-print ul li {
@@ -167,7 +185,7 @@ section .div-section-head, .div-section-body {
 .article-print .article-country {
     margin: 0em;
     font-size: 0.9em;
-    margin: 0em 1em;
+    margin: 0em 2.2em;
 }
 
 .div-section-container-print {

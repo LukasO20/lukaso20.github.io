@@ -1,89 +1,41 @@
-//INDEX PAGE
-
-const section = $('section')
-const menu = $('article')
-const sendEmail = $('section .form-email')
-const contentEmail = $('section .form-email .div-contact-content-email')
+// -- MENU FUNCTIONS --
+const menu = $('.article-menu')
+const navegate_itens_menu = menu.find('.li-links')
 
 const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
 const button_expand_menu = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-menu')
 
-$(window).on('scroll', function (){
-    const scrollTop = $(this).scrollTop()
-    const screenHeight = $(this).height()
+button_menu_contact.on('click', function(){
+    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
+    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .expand-socialmedia')
 
-    console.log(screenHeight)
+    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open'), button_status.attr('title', 'Close social media details')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'), button_status.attr('title', 'Open social media details'))
+})
 
-    if (section.length){     
-        const divs = section.children('.div-section') 
+button_expand_menu.on('click', function(){
+    let menu = $('.article-menu')
+    let menu_items = $('.article-menu .nav-article-menu')
+    let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
+    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
 
-        if(divs.length){
-            divs.each(function (index){
-                const divTop = $(this).offset().top
-                const divHeight = $(this).outerHeight()
-                const divBottom = divTop + divHeight
+    if (!menu.hasClass('article-menu-expanded')) {
+        menu.addClass('article-menu-expanded') 
+        menu_items.addClass('nav-article-menu-expanded')
+        button_status.addClass('expand-menu-open')
+        menu_contact.addClass('group-li-contacts-expanded')
 
-                if (scrollTop >= divTop && scrollTop < divBottom){
-                    const itemDynamic = itemCssDynamic(index)
-                  
-                    section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
-                    section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)  
-                    
-                    menu.find('.li-links').each(function (){
-                        let item = $(this)
-
-                        switch (index) {
-                            case 1:
-                                if (item.hasClass('li1')){
-                                    item.addClass('li-links-dynamic')
-                                } else {
-                                    item.removeClass('li-links-dynamic')       
-                                }
-                                break
-                            case 2:
-                            case 3:
-                            case 4:
-                                if (item.hasClass(`li${index}`)){
-                                    item.addClass('li-links-dynamic')
-                                } else {
-                                    item.removeClass('li-links-dynamic')       
-                                }
-                                break
-                            default:
-                                item.removeClass('li-links-dynamic')       
-                        }
-
-                        if (index > 1) {
-                            section.find('.button-up').css('opacity', '1')
-                        } else {
-                            section.find('.button-up').css('opacity', '0')
-                        }
-                    })
-                }
-            })
-        }
+        button_status.attr('title', 'Minimize')
+    } else {
+        menu.removeClass('article-menu-expanded')
+        menu_items.removeClass('nav-article-menu-expanded')
+        button_status.removeClass('expand-menu-open')
+        menu_contact.removeClass('group-li-contacts-expanded')
+    
+        button_status.attr('title', 'Expand')
     }
 })
 
-function itemCssDynamic(index) {
-    const itemStyle = {
-        textSizeH1: '',
-        textSizeH2: '',
-    }
-
-    switch (index) {
-        case 0:
-            itemStyle.textSizeH1 = '2.5em'
-            itemStyle.textSizeH2 = '2.1em'
-            return itemStyle
-        default:
-            itemStyle.textSizeH1 = '0em'
-            itemStyle.textSizeH2 = '0em'
-            return itemStyle
-    }
-}
-
-menu.find('.li-links').on('click', function (){
+navegate_itens_menu.on('click', function (){
     const className = $(this).attr('class').split(' ')
     const classFilter = className[1]
     const divs = $('section .div-section')
@@ -124,7 +76,10 @@ menu.find('.li-links').on('click', function (){
     }
 })
 
-section.find('.button-up').on('click', function (){
+// -- SECTION FUNCTIONS -- 
+const button_up = $('section .button-up')
+
+button_up.on('click', function (){
     const divs = $('section .div-section')
 
     if (divs.length){
@@ -136,7 +91,14 @@ section.find('.button-up').on('click', function (){
     }
 })
 
-$('body').find('.fa-envelope').on('click', function (){ 
+// -- EMAIL FUNCTIONS --
+const navegate_email = $('body .fa-envelope')
+const navegate_email_footer = $('body footer .email-footer')
+const formEmail = $('section .form-email')
+const contentEmail = $('section .form-email .div-contact-content-email')
+const sendEmail = $('section .div-section-content-t4 .a-contact-send-email')
+
+navegate_email.on('click', function (){ 
     const divs = $('section .div-section')
 
     if (divs.length){
@@ -148,7 +110,7 @@ $('body').find('.fa-envelope').on('click', function (){
     }
 })
 
-$('body footer').find('.click-email-footer').on('click', function(){
+navegate_email_footer.on('click', function(){
     const divs = $('section .div-section')
 
     if (divs.length){
@@ -160,9 +122,7 @@ $('body footer').find('.click-email-footer').on('click', function(){
     }
 })
 
-$('section .div-section-content-t4 .a-contact-send-email').on('click', function (e){
-    e.preventDefault()
-
+sendEmail.on('click', function (){
     try {
         let name = contentEmail.find('input[name="name"]').val()
         let email = contentEmail.find('input[name="email"]').val()
@@ -178,6 +138,8 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
                 parentMessage.find('.message-email-inputs').remove()
                 parentMessage.find('.message-email-validation').remove()
                 console.log('Email enviado! (Teste)')
+
+                formEmail.submit()
             } else {
                 if (!parentMessage.find('.message-email-validation').hasClass('message-email-validation')) {
                     parentMessage.append(messageAtentionEmail)
@@ -190,43 +152,71 @@ $('section .div-section-content-t4 .a-contact-send-email').on('click', function 
                 parentMessage.find('.message-email-validation').remove()
             }
         }
+
+
     } catch (e) {
         console.log(`Erro ao enviar e-mail: ${e}`)
     }
 })
 
-button_menu_contact.on('click', function(){
-    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
-    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .expand-socialmedia')
+// -- SCROLL FUNCTIONS --
+const screen_scroll = $(window)
+const section = $('section')
 
-    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open'), button_status.attr('title', 'Close social media details')) : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'), button_status.attr('title', 'Open social media details'))
-})
+screen_scroll.on('scroll', function (){
+    const scrollTop = $(this).scrollTop()
 
-button_expand_menu.on('click', function(){
-    let menu = $('.article-menu')
-    let menu_items = $('.article-menu .nav-article-menu')
-    let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
-    let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
+    if (section.length){     
+        const divs = section.children('.div-section') 
 
-    if (!menu.hasClass('article-menu-expanded')) {
-        menu.addClass('article-menu-expanded') 
-        menu_items.addClass('nav-article-menu-expanded')
-        button_status.addClass('expand-menu-open')
-        menu_contact.addClass('group-li-contacts-expanded')
+        if(divs.length){
+            divs.each(function (index){
+                const divTop = $(this).offset().top
+                const divHeight = $(this).outerHeight()
+                const divBottom = divTop + divHeight
 
-        button_status.attr('title', 'Minimize')
-    } else {
-        menu.removeClass('article-menu-expanded')
-        menu_items.removeClass('nav-article-menu-expanded')
-        button_status.removeClass('expand-menu-open')
-        menu_contact.removeClass('group-li-contacts-expanded')
-    
-        button_status.attr('title', 'Expand')
+                if (scrollTop >= divTop && scrollTop < divBottom){
+                    const itemDynamic = itemCssDynamic(index)
+                  
+                    section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
+                    section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)  
+                    
+                    menu.find('.li-links').each(function (){
+                        let item = $(this)
+
+                        switch (index) {
+                            case 1:
+                                if (item.hasClass('li1')){
+                                    item.addClass('li-links-selected')
+                                } else {
+                                    item.removeClass('li-links-selected')       
+                                }
+                                break
+                            case 2:
+                            case 3:
+                            case 4:
+                                if (item.hasClass(`li${index}`)){
+                                    item.addClass('li-links-selected')
+                                } else {
+                                    item.removeClass('li-links-selected')       
+                                }
+                                break
+                            default:
+                                item.removeClass('li-links-selected')       
+                        }
+
+                        index > 1 ? section.find('.button-up').css('opacity', '1') : section.find('.button-up').css('opacity', '0')
+                    })
+                }
+            })
+        }
     }
 })
 
-//themer
-$('section .div-section-titles .buttons-config .switch-type .input-switch').on('click', function (){
+// -- THEMER FUNCTIONS --
+const switch_theme = $('section .div-section-titles .buttons-config .switch-type .input-switch')
+
+switch_theme.on('click', function (){
     localStorage.setItem('theme', 'themedark')
 
     if ($(this).is(':checked')) {
@@ -238,24 +228,6 @@ $('section .div-section-titles .buttons-config .switch-type .input-switch').on('
         localStorage.theme = 'themedark'
         $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-lightbulb fa-moon')
         $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
-    }
-
-    Theme()
-})
-
-$(document).ready(function(){
-    try {
-        if(localStorage.theme === 'themeligther') {
-            $('section .div-section-titles .buttons-config .switch-type .input-switch').attr('checked', 'checked')
-            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
-            $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
-
-        } else {
-            $('section .div-section-titles .buttons-config .switch-type .input-switch').removeAttr('checked', 'checked')
-            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
-        }
-    } catch(e) {
-        console.log(`Error change theme of page ${e}`)
     }
 
     Theme()
@@ -279,54 +251,38 @@ function Theme() {
     $('footer').removeClass('footer-light'))    
 }
 
+$(document).ready(function(){
+    try {
+        if(localStorage.theme === 'themeligther') {
+            $('section .div-section-titles .buttons-config .switch-type .input-switch').attr('checked', 'checked')
+            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
+            $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
 
-//RESUME PAGE
-
-//download archives
-
-function DownloadResume(resume_details) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(resume_details)
-        })
-    })
-}
-
-const resume = $('.resume-page-body main section .div-section-container .download')
-
-resume.on('click', function(){
-    
-    //Apply modifications to PDF
-    let resume_details = {
-        main: $('main'),
-        section: $('section'),
-        article: $('article'),
-        sc_div_container: $('.div-section-container')
+        } else {
+            $('section .div-section-titles .buttons-config .switch-type .input-switch').removeAttr('checked', 'checked')
+            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
+        }
+    } catch(e) {
+        console.log(`Error change theme of page ${e}`)
     }
 
-    resume_details.main.addClass('main-print')
-    resume_details.section.addClass('section-print')
-    resume_details.article.addClass('article-print')
-    resume_details.sc_div_container.addClass('div-section-container-print')
-
-    //Config e Save PDF
-    let body_resume = $('.resume-page-body').html()
-    let resume_pdf = html2pdf()
-
-    let options = {
-        margin: [2, 1, 2, 0],
-        filename: 'Lucas_Oliveira_resume.pdf',
-        image: {type: 'jpeg', quality: 0.98},
-        html2canvas: {scale: 2},
-        jsPDF: {unit: 'em', format: 'a4', orientation: 'portrait'}
-    }
-
-    resume_pdf.set(options).from(body_resume).save()
-
-    DownloadResume(resume_details)
-    .then(
-        resume => (resume.main.removeClass('main-print'), resume.article.removeClass('article-print'),
-         resume.sc_div_container.removeClass('div-section-container-print'), resume.section.removeClass('section-print'))
-    )
-    .catch(e => console.log(`Download Error: ${e}`))
+    Theme()
 })
+
+function itemCssDynamic(index) {
+    const itemStyle = {
+        textSizeH1: '',
+        textSizeH2: '',
+    }
+
+    switch (index) {
+        case 0:
+            itemStyle.textSizeH1 = '2.5em'
+            itemStyle.textSizeH2 = '2.1em'
+            return itemStyle
+        default:
+            itemStyle.textSizeH1 = '0em'
+            itemStyle.textSizeH2 = '0em'
+            return itemStyle
+    }
+}
