@@ -762,6 +762,7 @@ section .button-up {
     top: 35em;
     right: 0;
     transition: .2s ease-in-out;
+    opacity: 0;
 }
 
 section .button-up:hover {

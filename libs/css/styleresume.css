@@ -135,8 +135,8 @@ section .div-section-head, .div-section-body {
 }
 
 .section-print {
-    font-size: 0.9em;
-    padding: 0.5em 0em;
+    font-size: 0.82em;
+    padding: 3em 0em;
     width: auto;
 }
 
@@ -157,8 +157,8 @@ section .div-section-head, .div-section-body {
 }
 
 .article-print {
-    padding: 0em 0.5em;
-    font-size: 0.9em;
+    padding: 2.5em 1em;
+    font-size: 0.82em;
 }
 
 .article-print .title:nth-child(1) {
@@ -174,17 +174,12 @@ section .div-section-head, .div-section-body {
     margin: 1em 2em;
 }
 
-.article-print ul li {
-    font-size: 0.95em;
-}
-
 .article-print .items-socialmedia {
     display: none;
 }
 
 .article-print .article-country {
     margin: 0em;
-    font-size: 0.9em;
     margin: 0em 2.2em;
 }
 
