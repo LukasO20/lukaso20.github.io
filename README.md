@@ -14,14 +14,14 @@ A página possui um visual focado em apresentação, para navegar entre suas se�
 
 O menu também conta com expansões, se desejar expandir para ver mais detalhes de um determinado item, clique em;
 
-![Expandir menu lateral image](libs/img/image_expand_menu.png.png) - **Expandir o menu lateral**
+![Expandir menu lateral image](libs/img/image_expand_menu.png) - **Expandir o menu lateral**
 
 ![Expandir menu lateral rede social image](libs/img/image_expand_socialmedia.png) - **Expandir redes socias**
 
 ### Links úteis
-**Currículo:** Você pode acessar o meu currículo em <!-- Será inserido em breve -->
+**Currículo:** Você pode acessar o meu currículo em (Será inserido em breve)
 
 ### Contato
 **Mande-me um e-mail:** [lukinhaso2206@gmail.com](mailto:lukinhaso2206@gmail.com)
 
-<!-- Ainda construindo... Ocorrerão breves mudanças e alterações nos detalhes desse documento -->
+!! Ainda construindo... Ocorrerão breves mudanças e alterações nos detalhes desse documento
