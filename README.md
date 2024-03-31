@@ -1,7 +1,7 @@
 # lukaso20.github.io
 Página do meu perfil
 
-# Sobre
+<!-- # Sobre
 Aqui você visualizará uma página com resumos sobre minhas experiências profissionais, serviços e habilidades adquiridas ao longo de minha carreira. 
 ![Página inicial](libs/img/image_one.png)   
 
@@ -24,4 +24,4 @@ O menu também conta com expansões, se desejar expandir para ver mais detalhes 
 ### Contato
 **Mande-me um e-mail:** [lukinhaso2206@gmail.com](mailto:lukinhaso2206@gmail.com)
 
-!! Ainda construindo... Ocorrerão breves mudanças e alterações nos detalhes desse documento
+!! Ainda construindo... Ocorrerão breves mudanças e alterações nos detalhes desse documento -->
