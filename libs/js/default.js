@@ -160,6 +160,11 @@ sendEmail.on('click', function (){
     }
 })
 
+// -- FOOTER FUNCTIONS --
+const footer_year = $('footer .div-footer-info .message .footer-year')
+const data_now = new Date()
+footer_year.text(data_now.getFullYear())
+
 // -- SCROLL FUNCTIONS --
 const screen_scroll = $(window)
 const section = $('section')
