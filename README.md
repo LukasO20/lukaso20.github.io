@@ -14,9 +14,11 @@ A página possui um visual focado em apresentação, para navegar entre suas se�
 
 O menu também conta com expansões, se desejar expandir para ver mais detalhes de um determinado item, clique em;
 
-![Expandir menu lateral image](libs/img/image_expandmenu.png) - **Expandir o menu lateral**
+**- Expandir o menu lateral**
+![Expandir menu lateral image](libs/img/image_expandmenu.png) 
 
-![Expandir menu lateral rede social image](libs/img/image_expand_socialmedia.png) - **Expandir redes socias**
+**- Expandir redes socias**
+![Expandir menu lateral rede social image](libs/img/image_expandsocialmedia.png) 
 
 <!-- ### Links úteis
 **Currículo:** Você pode acessar o meu currículo em (Será inserido em breve) -->
