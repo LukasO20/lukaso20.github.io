@@ -1,9 +1,9 @@
-# lukaso20.github.io
-Página do meu perfil
+# Página do meu perfil - LukasO20
+**https://lukaso20.github.io/html/index.html**
 
 # Sobre
-Aqui você visualizará uma página com resumos sobre minhas experiências profissionais, serviços e habilidades adquiridas ao longo de minha carreira. 
-![Página inicial](libs/img/image_one.png)   
+Aqui você irá conferir sobre uma página com resumos sobre minhas experiências profissionais, serviços e habilidades adquiridas ao longo de minha carreira. 
+![Página inicial](libs/img/image_presentation.png)   
 
 # Instruções de navegação
 

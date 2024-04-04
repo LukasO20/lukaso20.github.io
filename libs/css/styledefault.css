@@ -135,7 +135,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     display: none;
 }
 
-.nav-article-menu .menu-ul-itens .group-li-items{
+.nav-article-menu .menu-ul-itens .group-li-items {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -253,10 +253,12 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     text-align: start;
 }
 
+/* SECTION */
+
 section {
     background-color: #030E1C;
     width: 100%;
-    background: url("../img/background_main.png"); /*DARK url("../img/background_main.png");*/
+    background: url("../img/background_main.png");
     background-size: contain;
     box-shadow: inset 5px 0px 145px 80px #030e1c; 
     padding: 20px 0px 0px 0px;
@@ -343,7 +345,7 @@ section .div-section-titles .buttons-config input:checked + .slider::before {
 
 section .div-section-content-t2 {
     transition: .3s ease-in-out;
-    color: #fff; /*LIGHT #030E1C *//*DARK #fff*/
+    color: #fff;
 }
 
 section .div-section-content-t2 .h2-section-content-skills {
@@ -353,7 +355,7 @@ section .div-section-content-t2 .h2-section-content-skills {
 
 section .div-section-content-t2 .div-section-content-skills {
     margin: 5% 15%;
-    border: 1px solid #719edb; /*LIGHT rgb(19, 79, 158, 0.4)*/ /*DARK #719edb*/
+    border: 1px solid #719edb;
     border-radius: 10px;
 }
 
@@ -382,7 +384,7 @@ section .div-section-content-t3 .div-section-content-works {
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works {
-    background-color: rgb(113, 158, 219, 0.7); /*LIGHT #335E96*/ /*DARK rgb(113, 158, 219, 0.7)*/
+    background-color: rgb(113, 158, 219, 0.7);
     width: 220px;
     height: 200px;
     padding: 45px;
@@ -409,7 +411,7 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works:hov
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover {
-    background-color: rgb(113, 158, 219, 0.5); /*LIGHT: #0A2445*/ /*DARK rgb(113, 158, 219, 0.5)*/
+    background-color: rgb(113, 158, 219, 0.5);
     background-image: none;
 }
 
@@ -436,7 +438,7 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-
 }
 
 section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work:hover {
-    background-color: rgb(113, 158, 219, 0.7); /*LIGHT #134F9E*/ /*DARK rgb(113, 158, 219, 0.7)*/
+    background-color: rgb(113, 158, 219, 0.7);
 }
 
 section .div-section-content-t3 .h3-section-content-c {
@@ -501,7 +503,7 @@ section .div-section-content-t3 .div-contact-works-services-item {
 section .div-section-content-t3 .div-contact-works-services-item span {
     padding: 10px;
     border-radius: 50%;
-    background-color: rgb(113, 158, 219); /*LIGHT #134F9E*/ /*DARK rgb(113, 158, 219, 0.5)*/
+    background-color: rgb(113, 158, 219);
     color: #fff;
     font-size: 1.5em;
     transition: .2s ease-in-out;
@@ -510,14 +512,14 @@ section .div-section-content-t3 .div-contact-works-services-item span {
 }
 
 section .div-section-content-t3 .div-contact-works-services-item span:hover {
-    color: rgb(108, 146, 199); /*DARK rgb(113, 158, 219)*/ /*LIGHT #134F9E*/
+    color: rgb(108, 146, 199);
     cursor: pointer;
-    border-color: rgb(108, 146, 199); /*DARK rgb(113, 158, 219)*/ /*LIGHT #134F9E*/;
+    border-color: rgb(108, 146, 199);
     background-color: #fff;
 }
 
 section .div-section-content-t4 .h2-section-content {
-    color: #fff; /*LIGHT #030E1C*//*DARK #fff*/
+    color: #fff;
     text-align: center;
     font-size: 2em;
 }
@@ -541,7 +543,7 @@ section .div-section-content-t4 .div-contact-location label span {
 }
 
 section .div-section-content-t4 .div-contact-content {
-    border: 1px solid #719edb; /*LIGHT rgb(19, 79, 158, 0.4)*//*DARK #719edb*/
+    border: 1px solid #719edb;
     border-radius: 10px;
     padding: 20px;
     width: 70%;
@@ -558,13 +560,13 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
 }
 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item {
-    color: #719edb; /*SOMENTE DARK*/
+    color: #719edb;
 }
 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
     font-weight: 600;
     padding: 5px 0px;
-    border-bottom: 1.5px solid rgb(113, 158, 219, 0.5); /*LIGHT #292929*//*DARK #719edb*/
+    border-bottom: 1.5px solid rgb(113, 158, 219, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -583,7 +585,7 @@ section .div-section-content-t4 .div-contact-content label span {
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a {
     display: block;
     margin: 10px 0px;
-    color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
+    color: #719edb;
     text-decoration: none;
     transition: .2s ease-in-out;
 }
@@ -599,7 +601,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-item {
 section .div-section-content-t4 .div-contact-content h3 {
     text-align: center;
     margin: 2.5em 0em;
-    color: #fff; /*SOMENTE DARK*/
+    color: #fff;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line {
@@ -613,7 +615,7 @@ section .div-section-content-t4 .div-contact-content .div-line {
 section .div-section-content-t4 .div-contact-content .div-line div {
     width: 50%;
     padding: 0.5px;
-    background-color: rgb(108, 146, 199); /*LIGHT rgb(19, 79, 158, 0.4)*/ /*DARK */
+    background-color: rgb(108, 146, 199);
     height: 1%;
     margin: 20px;
 }
@@ -636,20 +638,20 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data label {
     margin-bottom: 10px;
-    color: #fff; /*LIGHT #030E1C*//*DARK #fff*/
+    color: #fff;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input {
     border: none;
-    border-bottom: 1px solid #719edb; /*LIGHT #538dd7*/ /*DARK #719edb*/
+    border-bottom: 1px solid #719edb;
     padding: 10px 5px;
     width: 200px;
-    background-color: #292d33; /*SOMENTE DARK */
-    color: #fff; /*SOMENTE DARK */
+    background-color: #292d33; 
+    color: #fff;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input:hover {
-    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    border-color: #719edb;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input::placeholder {
@@ -661,21 +663,21 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
     display: flex;
     flex-direction: column;
-    color: #fff; /* SOMENTE DARK */
+    color: #fff;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea {
     padding: 10px;
     resize: vertical;
-    border-color: #719edb; /*LIGHT #538dd7*/ /*DARK #719edb*/
-    background-color: #292d33; /* SOMENTE DARK */
-    color: #fff; /* SOMENTE DARK */
+    border-color: #719edb;
+    background-color: #292d33;
+    color: #fff;
     font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
     font-weight: 500;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea:hover {
-    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    border-color: #719edb;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .label-textarea {
@@ -688,7 +690,7 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .message-email-inputs, .message-email-validation {
-    background-color: rgb(187, 64, 64, 0.5); /*DARK rgb(187, 64, 64, 0.5)*/ /*LIGHT rgb(187, 64, 64)*/
+    background-color: rgb(187, 64, 64, 0.5);
     padding: 5px;
     border-radius: 10px;
     color: #fff;
@@ -702,9 +704,9 @@ section .div-section-content-t4 .div-contact-content .p-contact-send-email {
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email {
-    border: 1px solid #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    border: 1px solid #719edb;
     font-weight: 600;
-    background-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    background-color: #719edb;
     color: #fff;
     padding: 10px 15px;
     font-size: 1.1em;
@@ -712,21 +714,21 @@ section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-co
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
-    color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
-    border-color: #719edb; /*LIGHT #030E1C*//*DARK #719edb*/
+    color: #719edb;
+    border-color: #719edb;
     background-color: rgb(113, 158, 219, 0.2);
     cursor: pointer;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line p {
-    color: #fff; /*LIGHT #030E1C*/ /*DARK #fff*/
+    color: #fff;
 }
 
 section .button-up {
     display: flex;
     position: fixed;
     padding: 15px;
-    background-color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
+    background-color: #719edb;
     border-radius: 10px;
     margin: 0% 7.5%;
     top: 35em;
@@ -737,13 +739,13 @@ section .button-up {
 
 section .button-up:hover {
     cursor: pointer;
-    border-color: rgb(113, 158, 219, 0.5); /*LIGHT #134F9E*/ /*DARK #719edb*/
+    border-color: rgb(113, 158, 219, 0.5);
     background-color: #fff;
-    box-shadow: 0px 0px 0px 4px rgb(113, 158, 219, 0.5); /*LIGHT #134F9E*/ /*DARK #719edb*/
+    box-shadow: 0px 0px 0px 4px rgb(113, 158, 219, 0.5);
 }
 
 section .button-up:hover span {
-    color: rgb(113, 158, 219); /*LIGHT #134F9E*/ /*DARK #719edb*/
+    color: rgb(113, 158, 219);
 }
 
 
@@ -808,11 +810,11 @@ footer .div-footer-shortcuts ul .li-links {
 }
 
 footer .div-footer-shortcuts ul .li-links:hover {
-    background-color:  rgb(113, 158, 219, 0.2); /*LIGHT rgb(19, 79, 158)*/ /*DARK */
+    background-color:  rgb(113, 158, 219, 0.2);
 }
 
 footer .div-footer-shortcuts ul .li-links a:hover span {
-    color: #719edb; /*LIGHT rgb(19, 79, 158)*/ /*DARK */
+    color: #719edb;
 }
 
 footer .div-footer-shortcuts ul .li-links a {
@@ -856,7 +858,7 @@ footer .div-footer-info .div-footer-location p {
 /* GROUP SETTINGS */
 
 section .div-section-content-t2, .div-section-content-t4 {
-    background-color: #292d33; /*LIGHT #fff*/ /*DARK #292D33*/
+    background-color: #292d33;
 }
 
 body .h1-emphasis, .h2-emphasis {
@@ -883,7 +885,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
     font-size: 2.5em;
-    color: #719edb; /*DARK #719edb*/ /*LIGHT #134F9E*/
+    color: #719edb;
 }
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
@@ -901,7 +903,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
     font-weight: 600;
-    color: #719edb; /*LIGHT #134F9E*/ /*DARK #719edb*/
+    color: #719edb;
 }
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
@@ -911,14 +913,13 @@ section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
     font-weight: 600;
-    color: #719edb; /*LIGHT 134F9E*/ /*DARK #719edb*/
+    color: #719edb;
     padding: 5px;
     border-radius: 5px;
-    /*background-color: #ebebeb; /*LIGHT*/
     display: inline-block;
     width: 100%;
     text-align: center;
-    border: 1px solid #719edb; /*DARK*/
+    border: 1px solid #719edb;
 }
 
 section .div-section-content-t1, .div-section-content-t3 {
