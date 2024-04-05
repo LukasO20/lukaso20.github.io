@@ -51,6 +51,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     margin: 5px;
 }
 
+.nav-article-menu .menu-ul-itens, .menu-ul-itens .ul-li-links, .menu-ul-itens .ul-li-items, .menu-ul-itens .ul-li-contacts {
+    margin: 0em;
+    padding: 0em;
+}
+
 .nav-article-menu .h1-emphasis .span-title-emphasis, .span-title-emphasis:hover {
     font-family: 'Luckiest Guy', cursive;
     cursor: context-menu;
@@ -68,21 +73,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 /* individual settings */
 
+/* menu compact */
+
 .article-menu {
     transition: .3s ease-in-out;
     width: 5%;
-}
-
-.article-menu-expanded {
-    transition: .2s ease-in-out;
-    width: 25%;
-}
-
-.article-menu-expanded .separete-line-article {
-    padding: 0.1em;
-    background-color: rgba(113, 158, 219, 0.3);
-    width: 55%;
-    margin: 1em auto;
 }
 
 .nav-article-menu {
@@ -93,35 +88,18 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     transition: .3s ease-in-out;
 }
 
-.nav-article-menu .h1-emphasis {
-    text-align: center;
-    font-size: 2.5em;
-}
-
-.nav-article-menu ul {
-    list-style: none;
-    padding: 0px;
-}
-
-.nav-article-menu .li-contact:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-}
-
 .nav-article-menu .menu-ul-itens {
     position: sticky;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 0em;
-    margin: 0em;
+    list-style: none;
     top: 0;
 }
 
-.nav-article-menu .menu-ul-itens .li-profile-menu .h1-emphasis {
-    margin: 0.5em 0em;
-    padding: 0.5em 0em;
+.nav-article-menu .h1-emphasis {
+    text-align: center;
+    font-size: 2.5em;
 }
 
 .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links {
@@ -129,6 +107,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     flex-direction: column;
     align-items: center;
     height: 100%;
+}
+
+.nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links:hover {
+    cursor: pointer;
+    background-color: rgb(113, 158, 219, 0.7);
 }
 
 .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links label {
@@ -156,6 +139,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     transition: .3s ease-in-out;
 }
 
+.nav-article-menu .menu-ul-itens .group-li-contacts .li-contact:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
 .nav-article-menu .menu-ul-itens .group-li-contacts-open {
     height: 200px;
 }
@@ -166,6 +154,19 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 .nav-article-menu .menu-ul-itens .expand-socialmedia-open span {
     transform: rotate(180deg);
+}
+
+/* menu expanded */
+
+.article-menu-expanded {
+    width: 25%;
+}
+
+.article-menu-expanded .separete-line-article {
+    padding: 0.1em;
+    background-color: rgba(113, 158, 219, 0.3);
+    width: 55%;
+    margin: 1em auto;
 }
 
 .nav-article-menu-expanded .menu-ul-itens {
@@ -232,11 +233,6 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 .nav-article-menu-expanded ul .li-links span {
     margin: 0em 0.9em;
-}
-
-.nav-article-menu ul .li-links:hover {
-    cursor: pointer;
-    background-color: rgb(113, 158, 219, 0.7);
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-links {

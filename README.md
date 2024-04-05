@@ -22,10 +22,8 @@ O menu também conta com expansões, se desejar expandir para ver mais detalhes 
 
 ![Expandir menu lateral rede social image](libs/img/image_expandsocialmedia.png) 
 
-<!-- ### Links úteis
-**Currículo:** Você pode acessar o meu currículo em (Será inserido em breve) -->
+### Links úteis
+**Currículo:** Você pode acessar o meu currículo em https://lukaso20.github.io/html/resume.html
 
 ### Contato
 **Mande-me um e-mail:** [lukinhaso2206@gmail.com](mailto:lukinhaso2206@gmail.com)
-
-!! Ainda construindo... Ocorrerão breves mudanças e alterações nos detalhes desse documento
