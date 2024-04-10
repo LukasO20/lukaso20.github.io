@@ -1,9 +1,11 @@
 // -- MENU FUNCTIONS --
 const menu = $('.article-menu')
 const navegate_itens_menu = menu.find('.li-links')
+const li_profile_details = menu.find('.li-profile-menu')
+const span_item_menu = '<span class="span-item minimize-menu-open"><span class="fa-solid fa-chevron-right"></span></span>'
 
 const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
-const button_expand_menu = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-menu')
+const button_expand_menu = $('body .article-menu .menu-ul-itens .li-profile-menu .icon-expand')
 
 button_menu_contact.on('click', function(){
     let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
@@ -25,7 +27,7 @@ button_expand_menu.on('click', function(){
         button_status.addClass('expand-menu-open')
         menu_contact.addClass('group-li-contacts-expanded')
 
-        button_status.attr('title', 'Minimize')
+        button_status.attr('title', 'Minimize')        
     } else {
         menu.removeClass('article-menu-expanded')
         menu_items.removeClass('nav-article-menu-expanded')
