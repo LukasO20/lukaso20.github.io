@@ -2,6 +2,8 @@
 const menu = $('.article-menu')
 const navegate_itens_menu = menu.find('.li-links')
 const li_profile_details = menu.find('.li-profile-menu')
+const h1_menu = menu.find('.li-profile-menu .h1-emphasis')
+
 const span_item_menu = '<span class="span-item minimize-menu-open"><span class="fa-solid fa-chevron-right"></span></span>'
 
 const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
@@ -16,6 +18,8 @@ button_menu_contact.on('click', function(){
 })
 
 button_expand_menu.on('click', function(){
+    const button_expand_menu = $(this)
+
     let menu = $('.article-menu')
     let menu_items = $('.article-menu .nav-article-menu')
     let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
@@ -26,16 +30,20 @@ button_expand_menu.on('click', function(){
         menu_items.addClass('nav-article-menu-expanded')
         button_status.addClass('expand-menu-open')
         menu_contact.addClass('group-li-contacts-expanded')
+        button_status.attr('title', 'Minimize')     
+        button_expand_menu.attr('title', 'Minimize menu')
 
-        button_status.attr('title', 'Minimize')        
     } else {
         menu.removeClass('article-menu-expanded')
         menu_items.removeClass('nav-article-menu-expanded')
         button_status.removeClass('expand-menu-open')
         menu_contact.removeClass('group-li-contacts-expanded')
-
         button_status.attr('title', 'Expand')
+        button_expand_menu.attr('title', 'Expand menu')
+
     }
+
+    NameStyleMenu(h1_menu)
 })
 
 navegate_itens_menu.on('click', function (){
@@ -292,5 +300,16 @@ function itemCssDynamic(index) {
             itemStyle.textSizeH1 = '0em'
             itemStyle.textSizeH2 = '0em'
             return itemStyle
+    }
+}
+
+function NameStyleMenu(element) {
+    const style_h1 = $(element)
+    const style_h1_span = style_h1.find('.span-title-emphasis')
+
+    if (menu.hasClass('article-menu-expanded')) {
+        style_h1.find('.span-item1-h1-style').length < 1 ? (style_h1_span.append('<span class="span-item1-h1-style">ucas .O</span>'), style_h1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
+    } else {
+        style_h1.find('.span-item1-h1-style').length === 1 ? style_h1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
     }
 }

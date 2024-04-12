@@ -1,9 +1,44 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
+/* MENU */
+/* individual settings */
+
 .article-menu-expanded .nav-article-menu-light .menu-ul-itens .group-li-contacts {
     background-color: rgb(5, 69, 153);
 }
+
+.nav-article-menu-light {
+    background-color: rgb(5, 69, 153);
+}
+
+.nav-article-menu-light .menu-ul-itens .li-profile-menu .icon-expand {
+    background-color: rgba(245, 165, 15, 0.7);
+}
+
+.nav-article-menu-light .menu-ul-itens .li-profile-menu .icon-expand:hover {
+    background-color: rgba(245, 165, 15, 0.9);
+}
+
+.nav-article-menu-light .menu-ul-itens .li-profile-menu .h1-emphasis .span-title-emphasis {
+    color: rgb(245, 165, 15);
+}
+
+.nav-article-menu-light .menu-ul-itens .group-li-contacts .li-contact:hover span.fa-brands {
+    color: rgb(245, 165, 15);
+}
+
+.nav-article-menu-light .menu-ul-itens .group-li-contacts-expanded  {
+    border-color: rgb(5, 69, 153);
+}
+
+.nav-article-menu-light .menu-ul-itens .expand-socialmedia-open span.fa-solid {
+    color: rgb(245, 165, 15);
+}
+
+
+/* MAIN */
+/* individual settings */
 
 main section .button-up-light {
     background-color: rgb(245, 165, 15);
@@ -19,43 +54,24 @@ main section .button-up-light:hover span {
     color: rgb(5, 69, 153);
 }
 
-.nav-article-menu-light {
-    background-color: rgb(5, 69, 153);
-}
+/* SECTION */
 
-.nav-article-menu-light .fa-brands:hover, .nav-article-menu-light .fa-solid:hover {
-    cursor: pointer;
+/* group settings */
+
+.section-theme-light .div-section .div-section-titles-itens .h1-emphasis span, .section-theme-light .div-section .div-section-titles-itens .h2-emphasis span {
     color: rgb(245, 165, 15);
-}
-
-/* .nav-article-menu-light ul .li-links {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-} */
-
-.nav-article-menu-light ul .li-links:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.nav-article-menu-light .menu-ul-itens .li-profile-menu .h1-emphasis .span-title-emphasis {
-    color: rgb(245, 165, 15);
-}
-
-.nav-article-menu-light .menu-ul-itens .group-li-contacts-expanded  {
-    border-color: rgb(5, 69, 153);
-}
-
-.section-theme-light {
-    background: url(../img/background_mainlight.png);
-    background-size: contain;
-    box-shadow: inset 0px 100px 200px 140px rgb(62, 99, 149, 0.7);
 }
 
 .section-theme-light .h1-principal, .h2-principal {
     text-shadow: none;
 } 
 
-.section-theme-light .div-section .div-section-titles-itens .h1-emphasis span, .section-theme-light .div-section .div-section-titles-itens .h2-emphasis span {
-    color: rgb(245, 165, 15);
+/* individual settings */
+
+.section-theme-light {
+    background: url(../img/background_mainlight.png);
+    background-size: contain;
+    box-shadow: inset 0px 100px 200px 140px rgb(62, 99, 149, 0.7);
 }
 
 section .div-section-titles .buttons-config .title-switch-light {
@@ -194,6 +210,10 @@ section .div-section-titles .buttons-config .switch-type span.fa-lightbulb {
 .section-theme-light .div-section-content-t4 .div-contact-content .div-line {
     color: rgb(5, 69, 153);
 }
+
+/* FOOTER */
+
+/* individual settings */
 
 .footer-light {
     background-color: rgb(5, 69, 153);

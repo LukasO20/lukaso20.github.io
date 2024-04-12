@@ -4,19 +4,12 @@
 /*
 DEFAULT COLORS
 
-light
-#538DD7
-#134F9E
-
-dark
-#0A2445
-#09264D
-#0E3B75
-#030E1C
-#04234D
+light - #538DD7 #134F9E
+dark -  #0A2445 #09264D #0E3B75 #030E1C #04234D
 */
 
 /* BODY */
+/* individual settings */
 
 body {
     font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
@@ -34,6 +27,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 /* MENU */
 
+/* menu compact */
 /* group settings */
 
 .nav-article-menu .menu-ul-itens .li-profile-menu, .group-li-contacts, .group-li-links {
@@ -62,9 +56,8 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     transition: .2s ease-in-out;
 }
 
-/* individual settings */
-
 /* menu compact */
+/* individual settings */
 
 .article-menu {
     transition: .3s ease-in-out;
@@ -91,6 +84,9 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .li-profile-menu .h1-emphasis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     font-size: 2.5em;
     width: 100%;
@@ -101,6 +97,10 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.nav-article-menu .menu-ul-itens .li-profile-menu .h1-emphasis .span-item2-h1-style {
+    font-size: 0.6em;
 }
 
 .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
@@ -146,6 +146,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     transition: .2s ease-in-out;
 }
 
+.nav-article-menu .menu-ul-itens .group-li-items .expand-menu-open .fa-chevron-right {
+    transform: scaleX(-1);
+    margin: 0.2em 0.25em;
+}
+
 .nav-article-menu .menu-ul-itens .group-li-items {
     background-color: rgba(255, 255, 255, 0.1);
     width: 100%;
@@ -186,6 +191,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 /* menu expanded */
+/* individual settings */
 
 .article-menu-expanded {
     width: 25%;
@@ -220,11 +226,6 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-items .ul-li-items {
     background-color: rgb(255, 255, 255, 0);
-}
-
-.nav-article-menu .menu-ul-itens .group-li-items .expand-menu-open .fa-chevron-right {
-    transform: scaleX(-1);
-    margin: 0.2em 0.25em;
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts {
@@ -273,6 +274,82 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 /* SECTION */
+/* group settings */
+
+section .div-section-content-t2, .div-section-content-t4 {
+    background-color: #292d33;
+}
+
+body .h1-emphasis, .h2-emphasis {
+    color: #fff;
+    transition: .3s ease-in-out;
+}
+
+body section .h1-emphasis, .h2-emphasis {
+    margin: 0.1rem 3rem;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+    margin: 10%;
+    width: 50%;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
+    font-size: 2.5em;
+    color: #719edb;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
+    cursor: initial;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p, .collum-skills-t2 p {
+    text-align: center;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3, .collum-skills-t2 h3 {
+    font-weight: 500;
+    text-align: center;
+}
+
+section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
+    font-weight: 600;
+    color: #719edb;
+}
+
+section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
+    margin: 0px 10px;
+    width: 50%;
+}
+
+section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
+    font-weight: 600;
+    color: #719edb;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #719edb;
+}
+
+section .div-section-content-t1, .div-section-content-t3 {
+    transition: .3s ease-in-out;
+    background-color: #030E1C;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
+    color: #fff;
+}
+
+section .div-section-content-t1, .div-section-content-t2, .div-section-content-t3, .div-section-content-t4 {
+    padding: 10em 0em;
+}
+
+section .div-section-content-t4 .div-contact-content .p-contact-description, .div-contact-location {
+    padding: 0px 10px;
+}
+
+
+/* individual settings */
 
 section {
     background-color: #030E1C;
@@ -284,6 +361,14 @@ section {
     display: flex;
     flex-direction: column;
     transition: .3s ease-in-out;
+}
+
+section .h2-emphasis {
+    font-size: 2.1em;
+}
+
+section .h1-emphasis {
+    font-size: 2.5em;
 }
 
 section .div-section-titles {
@@ -360,6 +445,18 @@ section .div-section-titles .buttons-config input:checked + .slider {
 
 section .div-section-titles .buttons-config input:checked + .slider::before {
     transform: translateX(20px);
+}
+
+section .div-section-content-t1 .h2-section-content {
+    text-align: center;
+    padding: 40px 20%;
+    font-size: 2em;
+} 
+
+section .div-section-content-t1 .h3-section-content {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 0px 20%;
 }
 
 section .div-section-content-t2 {
@@ -767,6 +864,8 @@ section .button-up:hover span {
     color: rgb(113, 158, 219);
 }
 
+/* FOOTER */
+/* individual settings */
 
 footer {
     height: 100dvh;
@@ -872,100 +971,6 @@ footer .div-footer-info .div-footer-location span {
 
 footer .div-footer-info .div-footer-location p {
     margin: 5px;
-}
-
-/* GROUP SETTINGS */
-
-section .div-section-content-t2, .div-section-content-t4 {
-    background-color: #292d33;
-}
-
-body .h1-emphasis, .h2-emphasis {
-    color: #fff;
-    transition: .3s ease-in-out;
-}
-
-body section .h1-emphasis, .h2-emphasis {
-    margin: 0.1rem 3rem;
-}
-
-section .h2-emphasis {
-    font-size: 2.1em;
-}
-
-section .h1-emphasis {
-    font-size: 2.5em;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
-    margin: 10%;
-    width: 50%;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
-    font-size: 2.5em;
-    color: #719edb;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
-    cursor: initial;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p, .collum-skills-t2 p {
-    text-align: center;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3, .collum-skills-t2 h3 {
-    font-weight: 500;
-    text-align: center;
-}
-
-section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
-    font-weight: 600;
-    color: #719edb;
-}
-
-section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
-    margin: 0px 10px;
-    width: 50%;
-}
-
-section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
-    font-weight: 600;
-    color: #719edb;
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    border: 1px solid #719edb;
-}
-
-section .div-section-content-t1, .div-section-content-t3 {
-    transition: .3s ease-in-out;
-    background-color: #030E1C;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
-    color: #fff;
-}
-
-section .div-section-content-t1 .h2-section-content {
-    text-align: center;
-    padding: 40px 20%;
-    font-size: 2em;
-} 
-
-section .div-section-content-t1 .h3-section-content {
-    text-align: center;
-    font-size: 1.25em;
-    padding: 0px 20%;
-}
-
-section .div-section-content-t1, .div-section-content-t2, .div-section-content-t3, .div-section-content-t4 {
-    padding: 10em 0em;
-}
-
-section .div-section-content-t4 .div-contact-content .p-contact-description, .div-contact-location {
-    padding: 0px 10px;
 }
 
 /* MEDIA QUERY SETTINGS */

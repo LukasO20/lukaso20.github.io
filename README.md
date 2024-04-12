@@ -1,5 +1,5 @@
 # Página do meu perfil - LukasO20
-**https://lukaso20.github.io**
+**(https://lukaso20.github.io){:target="_blank" rel="noopener noreferrer"}**
 
 # Sobre
 Aqui você irá conferir sobre uma página com resumos sobre minhas experiências profissionais, serviços e habilidades adquiridas ao longo de minha carreira. 
@@ -23,7 +23,7 @@ O menu também conta com expansões, se desejar expandir para ver mais detalhes 
 ![Expandir menu lateral rede social image](libs/img/image_expandsocialmedia.png) 
 
 ### Links úteis
-**Currículo:** Você pode acessar o meu currículo em https://lukaso20.github.io/html/resume.html
+**Currículo:** Você pode acessar o meu currículo em (https://lukaso20.github.io/html/resume.html){:target="_blank" rel="noopener noreferrer"}
 
 ### Contato
 **Mande-me um e-mail:** [lukinhaso2206@gmail.com](mailto:lukinhaso2206@gmail.com)

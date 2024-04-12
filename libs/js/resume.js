@@ -35,7 +35,7 @@ resume.on('click', function(){
     let resume_pdf = html2pdf()
 
     let options = {
-        margin: [0.5, 0, 0, 0],
+        margin: [0.5, 0],
         filename: 'Lucas_Oliveira_resume.pdf',
         image: {type: 'jpeg', quality: 0.98},
         html2canvas: {scale: 2},
