@@ -847,7 +847,7 @@ section .button-up {
     background-color: #719edb;
     border-radius: 10px;
     margin: 0% 7.5%;
-    top: 35em;
+    top: 40em;
     right: 0;
     transition: .2s ease-in-out;
     opacity: 0;
@@ -993,10 +993,75 @@ footer .div-footer-info .div-footer-location p {
     }
 }
 
-@media (min-height: 850px) {
-    section .button-up {
-        top: 43em;
-        margin: 7% 5%;
+/* small screen settings */
+
+@media (max-width: 1280px) {
+
+    /* MENU */
+    /* individual settings */
+
+    .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
+        right: -1.2em;
+    }
+
+    /* MAIN */
+    /* individual settings */
+
+    main .div-section-content-t4 .div-contact-content .div-contact-content-email .p-user-data input {
+        width: 180px;   
+    }
+}
+
+@media (max-width: 880px) {
+
+    .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
+        right: -1.2em;
+    }
+
+    /* MAIN */
+    /* individual settings */
+
+    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+        margin: 3em 0.5em;
+    }
+
+    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
+        height: 7em;
+    }
+
+    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .collum-skills-t1-div1 label , .collum-skills-t2 .collum-skills-t1-div2 label {
+        width: 88%;
+    }
+
+    main .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data {
+        flex-direction: column;
+    }
+
+    /* FOOTER */
+    /* individual settings */  
+     footer .div-footer-shortcuts {
+        margin: 8em 0em;
+     }
+}
+
+/* mobile settings */
+
+@media (max-width: 650px) {
+
+    .div-flex-container {
+        flex-direction: column;
+    }
+
+    .div-flex-container .article-menu {
+        width: auto;
+    }
+
+    .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
+        display: none;
+    }
+
+    .article-menu .nav-article-menu .menu-ul-itens .h1-emphasis {
+        font-size: 2em;
     }
 }
 
