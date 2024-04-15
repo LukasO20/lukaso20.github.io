@@ -52,7 +52,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 .nav-article-menu .fa-brands, .fa-solid {
     font-size: 1.3em;
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: .2s ease-in-out;
 }
 
@@ -68,9 +68,9 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 .nav-article-menu {
     height: 100%;
     width: 100%;
-    background-color: #030E1C;
+    background-color: rgb(3, 14, 28);
     font-weight: 600;
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: .3s ease-in-out;
 }
 
@@ -221,7 +221,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     justify-content: center;
     height: auto;
     transition: .3s ease-in-out;
-    background-color: #030E1C;
+    background-color: rgb(3, 14, 28);
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-items .ul-li-items {
@@ -277,11 +277,11 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 /* group settings */
 
 section .div-section-content-t2, .div-section-content-t4 {
-    background-color: #292d33;
+    background-color: rgb(41, 45, 51);
 }
 
 body .h1-emphasis, .h2-emphasis {
-    color: #fff;
+    color: rgb(255, 255, 255);
     transition: .3s ease-in-out;
 }
 
@@ -296,7 +296,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid, .collum-skills-t2 span.fa-solid {
     font-size: 2.5em;
-    color: #719edb;
+    color: rgb(113, 158, 219);
 }
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 span.fa-solid:hover, .collum-skills-t2 span.fa-solid:hover {
@@ -314,7 +314,7 @@ section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 h3
 
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .p-highlighted, .collum-skills-t2 .p-highlighted {
     font-weight: 600;
-    color: #719edb;
+    color: rgb(113, 158, 219);
 }
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2 {
@@ -324,20 +324,20 @@ section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .
 
 section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
     font-weight: 600;
-    color: #719edb;
+    color: rgb(113, 158, 219);
     padding: 5px;
     border-radius: 5px;
     display: inline-block;
     width: 100%;
     text-align: center;
-    border: 1px solid #719edb;
+    border: 1px solid rgb(113, 158, 219);
 }
 
 section .div-section-content-t1, .div-section-content-t3 {
     transition: .3s ease-in-out;
-    background-color: #030E1C;
+    background-color: rgb(3, 14, 28);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t1, .div-section-content-t2, .div-section-content-t3, .div-section-content-t4 {
@@ -352,11 +352,11 @@ section .div-section-content-t4 .div-contact-content .p-contact-description, .di
 /* individual settings */
 
 section {
-    background-color: #030E1C;
+    background-color: rgb(3, 14, 28);
     width: 100%;
     background: url("../img/background_main.png");
     background-size: contain;
-    box-shadow: inset 5px 0px 145px 80px #030e1c; 
+    box-shadow: inset 5px 0px 145px 80px rgb(3, 14, 28); 
     padding: 20px 0px 0px 0px;
     display: flex;
     flex-direction: column;
@@ -381,7 +381,7 @@ section .div-section-titles {
 section .div-section-titles .buttons-config {
     margin: 10px 20px;
     padding: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -398,7 +398,7 @@ section .div-section-titles .buttons-config .fa-switch {
 }
 
 section .div-section-titles .buttons-config .fa-switch:hover {
-    color: #fff;
+    color: rgb(255, 255, 255);
     cursor: initial;
 }
 
@@ -422,7 +422,7 @@ section .div-section-titles .buttons-config .slider {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: rgb(204, 204, 204);
     border-radius: 20px;
     transition: 0.4s;
 }
@@ -440,7 +440,7 @@ section .div-section-titles .buttons-config .slider::before {
 }
 
 section .div-section-titles .buttons-config input:checked + .slider {
-    background-color: #134F9E;
+    background-color: rgb(19, 79, 158);
 }
 
 section .div-section-titles .buttons-config input:checked + .slider::before {
@@ -461,7 +461,7 @@ section .div-section-content-t1 .h3-section-content {
 
 section .div-section-content-t2 {
     transition: .3s ease-in-out;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t2 .h2-section-content-skills {
@@ -471,7 +471,7 @@ section .div-section-content-t2 .h2-section-content-skills {
 
 section .div-section-content-t2 .div-section-content-skills {
     margin: 5% 15%;
-    border: 1px solid #719edb;
+    border: 1px solid rgb(113, 158, 219);
     border-radius: 10px;
 }
 
@@ -543,12 +543,12 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works:hov
 section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work {
     display: inline-block;
     padding: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 700;
     font-size: 1em;
     border-radius: 10px;
-    border: 2px solid #fff;
+    border: 2px solid rgb(255, 255, 255);
     margin: 10px 25px;
     transition: .2s ease-in-out;
 }
@@ -578,7 +578,7 @@ section .div-section-content-t3 .div-section-content-works-services {
 }
 
 section .div-section-content-t3 .sub-collum-works-services {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 25%;
     margin: 0px 10px;
@@ -586,22 +586,22 @@ section .div-section-content-t3 .sub-collum-works-services {
 }
 
 section .div-section-content-t3 .sub-collum-works-services label {
-    color: #030e1c;
+    color: rgb(3, 14, 28);
     font-weight: 600;
     display: block;
     text-align: center;
     padding: 10px;    
-    border-bottom: 1px solid #030e1c;
+    border-bottom: 1px solid rgb(3, 14, 28);
 }
 
 section .div-section-content-t3 .sub-collum-works-services p {
-    color: #292929;
+    color: rgb(41, 41, 41);
     text-align: center;
 }
 
 section .div-section-content-t3 .sub-collum-works-services .p-works-services-item {
     font-weight: 600;
-    background-color: #ebebeb;
+    background-color: rgb(235, 235, 235);
     padding: 5px;
     border-radius: 10px;
     width: 70%;
@@ -609,7 +609,7 @@ section .div-section-content-t3 .sub-collum-works-services .p-works-services-ite
 }
 
 section .div-section-content-t3 .div-contact-works-services-item {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px;
     width: max-content;
@@ -620,7 +620,7 @@ section .div-section-content-t3 .div-contact-works-services-item span {
     padding: 10px;
     border-radius: 50%;
     background-color: rgb(113, 158, 219);
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.5em;
     transition: .2s ease-in-out;
     border: 2px solid;
@@ -631,17 +631,17 @@ section .div-section-content-t3 .div-contact-works-services-item span:hover {
     color: rgb(108, 146, 199);
     cursor: pointer;
     border-color: rgb(108, 146, 199);
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .h2-section-content {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2em;
 }
 
 section .div-section-content-t4 .div-contact-content {
-    color: #292929;
+    color: rgb(41, 41, 41);
 }
 
 section .div-section-content-t4 .p-contact-description {
@@ -659,7 +659,7 @@ section .div-section-content-t4 .div-contact-location label span {
 }
 
 section .div-section-content-t4 .div-contact-content {
-    border: 1px solid #719edb;
+    border: 1px solid rgb(113, 158, 219);
     border-radius: 10px;
     padding: 20px;
     width: 70%;
@@ -676,7 +676,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
 }
 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item {
-    color: #719edb;
+    color: rgb(113, 158, 219);
 }
 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
@@ -690,7 +690,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label span:hover {
     cursor: initial;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .div-contact-content label span {
@@ -701,7 +701,7 @@ section .div-section-content-t4 .div-contact-content label span {
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item a {
     display: block;
     margin: 10px 0px;
-    color: #719edb;
+    color: rgb(113, 158, 219);
     text-decoration: none;
     transition: .2s ease-in-out;
 }
@@ -717,7 +717,7 @@ section .div-section-content-t4 .div-contact-content .div-contact-item {
 section .div-section-content-t4 .div-contact-content h3 {
     text-align: center;
     margin: 2.5em 0em;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .div-contact-content .div-line {
@@ -754,24 +754,24 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data label {
     margin-bottom: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input {
     border: none;
-    border-bottom: 1px solid #719edb;
+    border-bottom: 1px solid rgb(113, 158, 219);
     padding: 10px 5px;
     width: 200px;
-    background-color: #292d33; 
-    color: #fff;
+    background-color: rgb(41, 45, 51); 
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input:hover {
-    border-color: #719edb;
+    border-color: rgb(113, 158, 219);
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data input::placeholder {
-    color: #719edb;
+    color: rgb(113, 158, 219);
     font-weight: 400;
     font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
 }
@@ -779,21 +779,21 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data .p-use
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea {
     padding: 10px;
     resize: vertical;
-    border-color: #719edb;
-    background-color: #292d33;
-    color: #fff;
+    border-color: rgb(113, 158, 219);
+    background-color: rgb(41, 45, 51);
+    color: rgb(255, 255, 255);
     font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
     font-weight: 500;
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea textarea:hover {
-    border-color: #719edb;
+    border-color: rgb(113, 158, 219);
 }
 
 section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea .label-textarea {
@@ -809,7 +809,7 @@ section .div-section-content-t4 .div-contact-content-email .div-user-data-textar
     background-color: rgb(187, 64, 64, 0.5);
     padding: 5px;
     border-radius: 10px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-weight: 500;
     border:1px solid rgb(187, 64, 64);
 }
@@ -820,31 +820,31 @@ section .div-section-content-t4 .div-contact-content .p-contact-send-email {
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email {
-    border: 1px solid #719edb;
+    border: 1px solid rgb(113, 158, 219);
     font-weight: 600;
-    background-color: #719edb;
-    color: #fff;
+    background-color: rgb(113, 158, 219);
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     font-size: 1.1em;
     transition: .2s ease-in-out;
 }
 
 section .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
-    color: #719edb;
-    border-color: #719edb;
+    color: rgb(113, 158, 219);
+    border-color: rgb(113, 158, 219);
     background-color: rgb(113, 158, 219, 0.2);
     cursor: pointer;
 }
 
 section .div-section-content-t4 .div-contact-content .div-line p {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 section .button-up {
     display: flex;
     position: fixed;
     padding: 15px;
-    background-color: #719edb;
+    background-color: rgb(113, 158, 219);
     border-radius: 10px;
     margin: 0% 7.5%;
     top: 40em;
@@ -856,7 +856,7 @@ section .button-up {
 section .button-up:hover {
     cursor: pointer;
     border-color: rgb(113, 158, 219, 0.5);
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 0px 4px rgb(113, 158, 219, 0.5);
 }
 
@@ -868,26 +868,26 @@ section .button-up:hover span {
 /* individual settings */
 
 footer {
-    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1em 1em;
     margin: 0px;
-    background-color: #030E1C;
+    height: 100dvh;
+    background-color: rgb(3, 14, 28);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
 }
 
 footer .message {
     margin: 0px;
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 footer .message a {
     font-weight: 700;
     text-decoration: none;
-    color: #719edb;
+    color: rgb(113, 158, 219);
 }
 
 footer .message a:hover {
@@ -904,20 +904,20 @@ footer .div-footer-shortcuts div {
 }
 
 footer .div-footer-shortcuts span {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 1.3em;
     margin: 0px 5px 0px 0px;
     padding: 5px;
 }
 
 footer .div-footer-shortcuts h3 {
-    color: #fff;
+    color: rgb(255, 255, 255);
     margin: 0px 40px;
 }
 
 footer .div-footer-shortcuts ul {
     list-style: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 footer .div-footer-shortcuts ul .li-links {
@@ -932,14 +932,14 @@ footer .div-footer-shortcuts ul .li-links:hover {
 }
 
 footer .div-footer-shortcuts ul .li-links a:hover span {
-    color: #719edb;
+    color: rgb(113, 158, 219);
 }
 
 footer .div-footer-shortcuts ul .li-links a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 footer .div-footer-shortcuts ul .li-links a {
@@ -955,7 +955,7 @@ footer .div-footer-info {
     align-items: center;
     justify-content: space-between;
     margin: 2em 5em;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 3.5em 0em;
     border-top: 1px solid rgb(255, 255, 255, 0.5);
 }
@@ -975,13 +975,15 @@ footer .div-footer-info .div-footer-location p {
 
 /* MEDIA QUERY SETTINGS */
 
+/* desktop settings */
+
 @media (min-width: 1500px) {
     footer .div-footer-info {
         margin: 5em 10em;
     }
 
     footer .div-footer-shortcuts {
-        margin: 15em 10em;
+        margin: 11em 10em;
     }
 
     .div-section-content-t4 .div-contact-content .div-contact-content-email {
@@ -1062,6 +1064,48 @@ footer .div-footer-info .div-footer-location p {
 
     .article-menu .nav-article-menu .menu-ul-itens .h1-emphasis {
         font-size: 2em;
+    }
+}
+
+/* mobile settings */
+
+@media (max-width: 1024px) {
+
+    .nav-article-menu .menu-ul-itens .group-li-items .li-item, .group-li-contacts .li-contact, .group-li-links .li-links  {
+        height: 2em;
+        width: 2em;
+    }
+
+    .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
+        right: -1.6em;
+    }
+
+    .nav-article-menu .fa-brands, .fa-solid  {
+        font-size: 1em;
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data {
+        justify-content: center;
+
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data {
+        margin: 1em;
+    }
+}
+
+@media (max-width: 960px) {
+
+    section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+        margin: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    footer .div-footer-shortcuts {
+
+        margin: 8em 0em;
     }
 }
 

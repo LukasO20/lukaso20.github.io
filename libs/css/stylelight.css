@@ -164,8 +164,8 @@ section .div-section-titles .buttons-config .switch-type span.fa-lightbulb {
 }
 
 .section-theme-light .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email {
-    order: 1px solid #054599;
-    background-color: #054599;
+    order: 1px solid rgb(5, 69, 153);
+    background-color: rgb(5, 69, 153);
 }
 
 .section-theme-light .div-section-content-t4 .div-contact-content .p-contact-send-email .a-contact-send-email:hover {
