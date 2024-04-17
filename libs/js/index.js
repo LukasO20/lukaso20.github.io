@@ -1,3 +1,6 @@
+// -- GLOBAL VARs --
+var window_user = $(window)
+
 // -- MENU FUNCTIONS --
 const menu = $('.article-menu')
 const navegate_itens_menu = menu.find('.li-links')
@@ -85,6 +88,12 @@ navegate_itens_menu.on('click', function (){
             }
         })
     }
+})
+
+// -- menu mobile settings --
+window_user.resize(function () {
+    const screen = $(this)
+    if (screen.width() <= 650) { NameStyleMenu(h1_menu, true) } else { NameStyleMenu(h1_menu, false) }
 })
 
 // -- SECTION FUNCTIONS -- 
@@ -303,7 +312,7 @@ function itemCssDynamic(index) {
     }
 }
 
-function NameStyleMenu(element) {
+function NameStyleMenu(element, custom_setting = undefined) {
     const style_h1 = $(element)
     const style_h1_span = style_h1.find('.span-title-emphasis')
 
@@ -311,5 +320,16 @@ function NameStyleMenu(element) {
         style_h1.find('.span-item1-h1-style').length < 1 ? (style_h1_span.append('<span class="span-item1-h1-style">ucas .O</span>'), style_h1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
     } else {
         style_h1.find('.span-item1-h1-style').length === 1 ? style_h1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
+    }
+
+    // -- responsive settings
+    if (!menu.hasClass('article-menu-expanded')) {
+        if (custom_setting === true) {
+            style_h1.find('.span-item1-h1-style').length < 1 ? (style_h1_span.append('<span class="span-item1-h1-style">ucas .O</span>'), style_h1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
+        } 
+        
+        if (custom_setting === false) {
+            style_h1.find('.span-item1-h1-style').length === 1 ? style_h1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
+        }
     }
 }
