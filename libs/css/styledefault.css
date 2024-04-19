@@ -689,7 +689,6 @@ section .div-section-content-t4 .div-contact-content .div-contact-content-itens 
 section .div-section-content-t4 .div-contact-content .div-contact-content-itens .div-contact-item label {
     font-weight: 600;
     padding: 5px 0px;
-    border-bottom: 1.5px solid rgb(113, 158, 219, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1021,7 +1020,7 @@ footer .div-footer-info .div-footer-location p {
     }
 }
 
-@media (max-width: 880px) {
+@media (min-width: 651px) and (max-width: 880px) {
 
     .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
         right: -1.2em;
@@ -1055,9 +1054,50 @@ footer .div-footer-info .div-footer-location p {
 
 /* mobile settings */
 
+@media (max-width: 1024px) {
+
+    .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
+        right: -1.6em;
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data {
+        justify-content: center;
+
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data {
+        margin: 1em;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 960px) {
+
+    section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+        margin: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    footer .div-footer-shortcuts {
+
+        margin: 8em 0em;
+    }
+}
+
 @media (max-width: 650px) {
 
     /* MENU */
+    /* group settings */
+    .nav-article-menu .menu-ul-itens .group-li-contacts .li-contact, .group-li-links .li-links {
+        width: 5em;
+        padding: 0em 0.8em;
+    }
+
+    .nav-article-menu .menu-ul-itens .ul-li-contacts, .menu-ul-itens .ul-li-links, .menu-ul-itens .ul-li-items {
+        margin: 0em 0.2em;
+    }
+
     /* individual settings */
     .div-flex-container {
         flex-direction: column;
@@ -1113,57 +1153,78 @@ footer .div-footer-info .div-footer-location p {
         width: auto;
     }
 
-    /* group settings */
-    .nav-article-menu .menu-ul-itens .group-li-contacts .li-contact, .group-li-links .li-links {
-        width: 5em;
-        padding: 0em 0.8em;
-    }
-
-    .nav-article-menu .menu-ul-itens .ul-li-contacts, .menu-ul-itens .ul-li-links, .menu-ul-itens .ul-li-items {
-        margin: 0em 0.2em;
-    }
-
     /* MAIN */
+    /* group settings */
+    section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+        margin: 5% 1%;
+    }
+
+    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
+        height: 9em;
+    }
+
+    section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1, .collum-skills-t1-div2  {
+        margin: 0.5em;
+        height: 7em;
+        width: 75%;
+    }
+
+    section .div-section-content-skills .sub-collum-skills .collum-skills-t1-div1 label, .collum-skills-t1-div2 label  {
+        padding: 5px 7px;
+        width: 90%;
+    }
+    
     /* individual settings */
     section .button-up {
         margin: 0% 2%;
         top: 30em;
     }
-}
 
-/* mobile settings */
-
-@media (max-width: 1024px) {
-
-    .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
-        right: -1.6em;
-    }
-
-    section .div-section-content-t4 .div-contact-content-email .div-user-data {
-        justify-content: center;
-
-    }
-
-    section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data {
-        margin: 1em;
-    }
-}
-
-@media (max-width: 960px) {
-
-    section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
+    section .div-section-content-t2 .div-section-content-skills  {
         margin: 5%;
     }
-}
 
-@media (max-width: 800px) {
+    section .div-section-content-skills .sub-collum-skills  {
+        flex-direction: column;
+        align-items: center;
+    }
 
-    footer .div-footer-shortcuts {
+    section .div-section-content-t3 .h3-section-content {
+        margin: 1em;
+    }
 
-        margin: 8em 0em;
+    section .div-section-content-t3 .sub-collum-works-services {
+        width: 40%;
+    }
+
+    section .div-section-content-t4 .div-contact-content h3  {
+        margin: 2em 0em;
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data  {
+        flex-direction: column;
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data  {
+        align-items: center;
+    }
+
+    main .div-section-content-t4 .div-contact-content .div-contact-content-email .p-user-data input {
+        text-align: center;
+    }
+
+    section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
+        text-align: center;
+    }
+
+    section .div-section-content-t4 .div-contact-content .div-contact-content-itens  {
+        flex-direction: column;
+    }
+
+    section .div-contact-content .div-contact-content-email {
+        margin: 0px;
     }
 }
-
 
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
 
