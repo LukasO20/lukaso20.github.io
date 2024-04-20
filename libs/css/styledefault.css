@@ -611,7 +611,6 @@ section .div-section-content-t3 .sub-collum-works-services .p-works-services-ite
     background-color: rgb(235, 235, 235);
     padding: 5px;
     border-radius: 10px;
-    width: 70%;
     margin: 8px auto;
 }
 
@@ -1090,8 +1089,7 @@ footer .div-footer-info .div-footer-location p {
     /* MENU */
     /* group settings */
     .nav-article-menu .menu-ul-itens .group-li-contacts .li-contact, .group-li-links .li-links {
-        width: 5em;
-        padding: 0em 0.8em;
+        width: 6em;
     }
 
     .nav-article-menu .menu-ul-itens .ul-li-contacts, .menu-ul-itens .ul-li-links, .menu-ul-itens .ul-li-items {
@@ -1130,11 +1128,15 @@ footer .div-footer-info .div-footer-location p {
         background-color: rgb(113, 158, 219, 0.5);
     }
 
+    .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links .fa-solid  {
+        margin-right: 0.3em;
+    }
+
     .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links label {
         opacity: 1;
         width: auto;
         overflow: visible;
-        margin: 0em 0.3em;
+        font-size: 0.85em;
     }
 
     .nav-article-menu .menu-ul-itens .group-li-contacts .ul-li-contacts .li-contact {
@@ -1178,6 +1180,7 @@ footer .div-footer-info .div-footer-location p {
     section .button-up {
         margin: 0% 2%;
         top: 30em;
+        padding: 12px;
     }
 
     section .div-section-content-t2 .div-section-content-skills  {
@@ -1194,7 +1197,7 @@ footer .div-footer-info .div-footer-location p {
     }
 
     section .div-section-content-t3 .sub-collum-works-services {
-        width: 40%;
+        width: 35%;
     }
 
     section .div-section-content-t4 .div-contact-content h3  {
@@ -1215,6 +1218,7 @@ footer .div-footer-info .div-footer-location p {
 
     section .div-section-content-t4 .div-contact-content-email .div-user-data-textarea {
         text-align: center;
+        margin: 1em 0.5em;
     }
 
     section .div-section-content-t4 .div-contact-content .div-contact-content-itens  {
@@ -1223,6 +1227,37 @@ footer .div-footer-info .div-footer-location p {
 
     section .div-contact-content .div-contact-content-email {
         margin: 0px;
+    }
+
+
+    /* FOOTER */
+    /* individual settings */
+    footer .div-footer-shortcuts  {
+        flex-wrap: wrap;
+        margin: 3em 0em;
+    }
+
+    footer .div-footer-shortcuts div {
+        margin: 1em 1em 0em 0em;
+    }
+
+    footer .div-footer-shortcuts .div-footer-shortcuts-page > ul {
+        margin: 2em 1em;
+    }
+
+    footer .div-footer-info {
+        margin: 2em 0em;
+        flex-direction: column;
+        align-items: center;
+        padding: 0em;
+    }
+
+    footer .div-footer-info {
+        margin: 0.5em;
+    }
+
+    footer .div-footer-info p {
+        margin: 1em;
     }
 }
 
