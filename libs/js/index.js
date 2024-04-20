@@ -1,5 +1,7 @@
-// -- GLOBAL VARs --
-var window_user = $(window)
+// -- GLOBAL generic VARs --
+// Global var is namevar_g
+
+var screen_user_g = $(window)
 
 // -- MENU FUNCTIONS --
 const menu = $('.article-menu')
@@ -91,10 +93,19 @@ navegate_itens_menu.on('click', function (){
 })
 
 // -- menu mobile settings --
-window_user.resize(function () {
-    const screen = $(this)
-    if (screen.width() <= 650) { NameStyleMenu(h1_menu, true) } else { NameStyleMenu(h1_menu, false) }
-})
+
+const screen_width = () => {
+
+    let permission = false
+    screen_user_g.resize(function () { permission = true,  ResponsiveComponents($(this).width()) })
+
+    // If user don't move the window and current resolution under 650px
+    !permission ? ResponsiveComponents(screen_user_g.width()) : undefined
+}
+
+screen_width()
+
+
 
 // -- SECTION FUNCTIONS -- 
 const button_up = $('section .button-up')
@@ -309,6 +320,15 @@ function itemCssDynamic(index) {
             itemStyle.textSizeH1 = '0em'
             itemStyle.textSizeH2 = '0em'
             return itemStyle
+    }
+}
+
+function ResponsiveComponents(window_size) {
+
+    //Type Screen
+    if (window_size !== undefined && window_size !== null) {
+        window_size <= 650 ? NameStyleMenu(h1_menu, true) 
+        : NameStyleMenu(h1_menu, false), menu.hasClass('article-menu-expanded') ? menu.removeClass('article-menu-expanded') : undefined, menu.find('.nav-article-menu').hasClass('nav-article-menu-expanded') ? menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded') : undefined
     }
 }
 
