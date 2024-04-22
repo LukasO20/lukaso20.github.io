@@ -51,7 +51,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .fa-brands, .fa-solid {
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: rgb(255, 255, 255);
     transition: .2s ease-in-out;
 }
@@ -106,10 +106,9 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 
 .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
     position: absolute;
-    right: -0.9em;
-    font-size: 1em;
-    width: 2em;
-    height: 2em;
+    right: -1em;
+    width: 2.5em;
+    height: 2.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +123,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand span.fa-solid {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links {
@@ -268,7 +267,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu-expanded ul .li-links span {
-    margin: 0em 0.9em;
+    margin: 0em 0em 0em 1.5em;
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-links {
@@ -395,63 +394,22 @@ section .div-section-titles .buttons-config {
     align-items: end;
 }
 
-section .div-section-titles .buttons-config .switch-type {
+section .div-section-titles .buttons-config .switch-theme {
+    height: 2.5em;
+    width: 2.5em;
     display: flex;
     align-items: center;
-}
-
-section .div-section-titles .buttons-config .fa-switch {
-    margin: 0px 10px;
-}
-
-section .div-section-titles .buttons-config .fa-switch:hover {
+    justify-content: center;
     color: rgb(255, 255, 255);
-    cursor: initial;
-}
-
-section .div-section-titles .buttons-config .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px; 
-}
-
-section .div-section-titles .buttons-config .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-section .div-section-titles .buttons-config .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(204, 204, 204);
-    border-radius: 20px;
-    transition: 0.4s;
-}
-
-section .div-section-titles .buttons-config .slider::before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
+    margin: 0em 0.5em;
+    background-color: rgba(113, 158, 219, 0.5);
     border-radius: 50%;
-    transition: 0.4s;
+    transition: .2s ease-in-out;
 }
 
-section .div-section-titles .buttons-config input:checked + .slider {
-    background-color: rgb(19, 79, 158);
-}
-
-section .div-section-titles .buttons-config input:checked + .slider::before {
-    transform: translateX(20px);
+section .div-section-titles .buttons-config .switch-theme:hover {
+    background-color: rgba(113, 158, 219, 0.8);
+    cursor: pointer;
 }
 
 section .div-section-content-t1 .h2-section-content {
@@ -1055,10 +1013,6 @@ footer .div-footer-info .div-footer-location p {
 
 @media (max-width: 1024px) {
 
-    .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
-        right: -1.6em;
-    }
-
     section .div-section-content-t4 .div-contact-content-email .div-user-data {
         justify-content: center;
 
@@ -1090,10 +1044,11 @@ footer .div-footer-info .div-footer-location p {
     /* group settings */
     .nav-article-menu .menu-ul-itens .group-li-contacts .li-contact, .group-li-links .li-links {
         width: 6em;
+        margin: 0.5em;
     }
 
-    .nav-article-menu .menu-ul-itens .ul-li-contacts, .menu-ul-itens .ul-li-links, .menu-ul-itens .ul-li-items {
-        margin: 0em 0.5em;
+    .nav-article-menu .menu-ul-itens .group-li-contacts .fa-brands, .group-li-links .fa-regular {
+        font-size: 1.2em;
     }
 
     /* individual settings */
@@ -1120,6 +1075,10 @@ footer .div-footer-info .div-footer-location p {
         margin: 0.5em;
     }
 
+    .nav-article-menu .menu-ul-itens .ul-li-items {
+        margin: 0em 0.5em;
+    }
+
     .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links {
         flex-direction: row;
     }
@@ -1128,7 +1087,7 @@ footer .div-footer-info .div-footer-location p {
         background-color: rgb(113, 158, 219, 0.5);
     }
 
-    .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links .fa-solid  {
+    .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links .fa-regular  {
         margin-right: 0.3em;
     }
 
@@ -1152,7 +1111,7 @@ footer .div-footer-info .div-footer-location p {
     }
 
     .nav-article-menu .menu-ul-itens .group-li-contacts-open {
-        height: 52.8px;
+        height: 58px;
     }
 
     .nav-article-menu .menu-ul-itens .group-li-items .li-item {

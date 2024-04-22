@@ -250,32 +250,26 @@ screen_scroll.on('scroll', function (){
 })
 
 // -- THEMER FUNCTIONS --
-const switch_theme = $('section .div-section-titles .buttons-config .switch-type .input-switch')
+const switch_theme = $('section .div-section-titles .buttons-config .switch-theme')
 
 switch_theme.on('click', function (){
-    localStorage.setItem('theme', 'themedark')
+    localStorage.setItem('theme', '')
+    $(this).toggleClass('dark light')
+    switch_theme.find('.icon-current-theme').toggleClass('fa-moon fa-sun')
 
-    if ($(this).is(':checked')) {
-        localStorage.theme = 'themeligther'
-        $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
-        $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
-
-    } else {
-        localStorage.theme = 'themedark'
-        $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-lightbulb fa-moon')
-        $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
-    }
+    if ($(this).hasClass('light')) { localStorage.theme = 'themelight', $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to dark')} 
+    else { localStorage.theme = 'themedark', $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to light')
+}
 
     Theme()
 })
 
 function Theme() {
-    localStorage.theme === 'themeligther' ? 
+    localStorage.theme === 'themelight' ? 
     
     ($('main section .button-up').addClass('button-up-light'),
     $('.nav-article-menu').addClass('nav-article-menu-light'),
     $('section').addClass('section-theme-light'), 
-    $('section .div-section-titles .buttons-config .title-switch').addClass('title-switch-light'),
     $('footer').addClass('footer-light'))  
 
     :
@@ -283,20 +277,19 @@ function Theme() {
     ($('main section .button-up').removeClass('button-up-light'),
     $('.nav-article-menu').removeClass('nav-article-menu-light'),
     $('section').removeClass('section-theme-light'),
-    $('section .div-section-titles .buttons-config .title-switch').removeClass('title-switch-light'),
     $('footer').removeClass('footer-light'))    
 }
 
 $(document).ready(function(){
     try {
-        if(localStorage.theme === 'themeligther') {
-            $('section .div-section-titles .buttons-config .switch-type .input-switch').attr('checked', 'checked')
-            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to dark')
-            $('section .div-section-titles .buttons-config .switch-type span').toggleClass('fa-moon fa-lightbulb')
-
+        if(localStorage.theme === 'themelight') {
+            switch_theme.addClass('light')
+            switch_theme.find('.icon-current-theme').addClass('fa-sun')
+            $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to dark')
         } else {
-            $('section .div-section-titles .buttons-config .switch-type .input-switch').removeAttr('checked', 'checked')
-            $('section .div-section-titles .buttons-config .switch-type .switch').attr('title', 'Change theme to light')
+            switch_theme.addClass('dark')
+            switch_theme.find('.icon-current-theme').addClass('fa-moon')
+            $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to light')
         }
     } catch(e) {
         console.log(`Error change theme of page ${e}`)
