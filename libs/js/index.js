@@ -11,15 +11,15 @@ const h1_menu = menu.find('.li-profile-menu .h1-emphasis')
 
 const span_item_menu = '<span class="span-item minimize-menu-open"><span class="fa-solid fa-chevron-right"></span></span>'
 
-const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.expand-socialmedia')
+const button_menu_contact = $('body .article-menu .menu-ul-itens .group-li-items .li-item.social-media-itens')
 const button_expand_menu = $('body .article-menu .menu-ul-itens .li-profile-menu .icon-expand')
 
 button_menu_contact.on('click', function(){
     let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
-    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .expand-socialmedia')
+    let button_status = $('body .article-menu .menu-ul-itens .group-li-items .social-media-itens')
 
-    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), button_status.addClass('expand-socialmedia-open'), (button_status.find('span').removeClass('fa-up-right-and-down-left-from-center'), button_status.find('span').addClass('fa-down-left-and-up-right-to-center')), button_status.attr('title', 'Close social media details')) 
-    : (menu_contact.removeClass('group-li-contacts-open'), button_status.removeClass('expand-socialmedia-open'), (button_status.find('span').removeClass('fa-down-left-and-up-right-to-center'), button_status.find('span').addClass('fa-up-right-and-down-left-from-center')), button_status.attr('title', 'Open social media details'))
+    !menu_contact.hasClass('group-li-contacts-open') ? (menu_contact.addClass('group-li-contacts-open'), (button_status.addClass('icon-socialmedia-open'), button_status.parents('.group-li-items').addClass('socialmedia-open')), button_status.attr('title', 'Close social media details')) 
+    : (menu_contact.removeClass('group-li-contacts-open'), (button_status.removeClass('icon-socialmedia-open'), button_status.parents('.group-li-items').removeClass('socialmedia-open')), button_status.attr('title', 'Open social media details'))
 })
 
 button_expand_menu.on('click', function(){
@@ -33,17 +33,13 @@ button_expand_menu.on('click', function(){
     if (!menu.hasClass('article-menu-expanded')) {
         menu.addClass('article-menu-expanded') 
         menu_items.addClass('nav-article-menu-expanded')
-        button_status.addClass('expand-menu-open')
         menu_contact.addClass('group-li-contacts-expanded')
-        button_status.attr('title', 'Minimize')     
         button_expand_menu.attr('title', 'Minimize menu')
 
     } else {
         menu.removeClass('article-menu-expanded')
         menu_items.removeClass('nav-article-menu-expanded')
-        button_status.removeClass('expand-menu-open')
         menu_contact.removeClass('group-li-contacts-expanded')
-        button_status.attr('title', 'Expand')
         button_expand_menu.attr('title', 'Expand menu')
 
     }
