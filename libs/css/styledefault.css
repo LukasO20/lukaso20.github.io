@@ -22,8 +22,8 @@ body .div-flex-container {
 
 body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     color: rgb(113, 158, 219);
+    font-size: 2em;
 }
-
 
 /* MENU */
 
@@ -36,8 +36,8 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .menu-ul-itens .group-li-items .li-item, .group-li-contacts .li-contact, .group-li-links .li-links {
-    height: 2.8em;
-    width: 2.8em;
+    height: 3em;
+    width: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,8 +89,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 2.5em;
-    margin: 0.8em;
+    margin: 1.5em 0.8em;
     width: 100%;
 }
 
@@ -102,14 +101,14 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .menu-ul-itens .li-profile-menu .h1-emphasis .span-item2-h1-style {
-    font-size: 0.6em;
+    font-size: 1.2em;
 }
 
 .nav-article-menu .menu-ul-itens .li-profile-menu .icon-expand {
     position: absolute;
     right: -1em;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2em;
+    height: 2.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,14 +186,14 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu .menu-ul-itens .group-li-contacts-open {
-    height: 220px;
+    height: 15em;
 }
 
 /* menu expanded */
 /* individual settings */
 
 .article-menu-expanded {
-    width: 25%;
+    width: 17%;
 }
 
 .article-menu-expanded .separete-line-article {
@@ -235,6 +234,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 .nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts {
     display: flex;
     align-items: center;
+    width: 82%;
     color: rgb(255, 255, 255);
     border: 0px;
     padding: 0px 10px;
@@ -242,7 +242,7 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts .li-contact {
-    margin: 0.5em;
+    margin: 0.5em 0.25em;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -261,16 +261,19 @@ body .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 .nav-article-menu-expanded ul .li-links {
     display: flex;
     align-items: center;
-    width: 92%;
-    justify-content: space-between;
+    width: 80%;
     background-color: rgba(113, 158, 219, 0.3);
     border-radius: 10px;
     transition: .2s ease-in-out;
     margin: 10px 0px;
 }
 
+.nav-article-menu-expanded ul .li-links:hover {
+    cursor: pointer;
+}
+
 .nav-article-menu-expanded ul .li-links span {
-    margin: 0em 0em 0em 1.5em;
+    margin: 0em 1em;
 }
 
 .nav-article-menu-expanded .menu-ul-itens .group-li-links {
@@ -373,11 +376,19 @@ section {
 }
 
 section .h2-emphasis {
-    font-size: 2.1em;
+    font-size: 2em;
+}
+
+section .h2-emphasis .span-title-emphasis {
+    font-size: 1.3em;
 }
 
 section .h1-emphasis {
     font-size: 2.5em;
+}
+
+section .h1-emphasis .span-title-emphasis {
+    font-size: 1.3em;
 }
 
 section .div-section-titles {
@@ -830,6 +841,13 @@ section .button-up:hover span {
     color: rgb(113, 158, 219);
 }
 
+section .div-section-content-works .sub-collum-works .fa-solid.fa-chevron-down {
+    display: none;
+    padding: 0.5em;
+    border-radius: 50%;
+    background-color: rgb(113, 158, 219);
+}
+
 /* FOOTER */
 /* individual settings */
 
@@ -1045,9 +1063,14 @@ footer .div-footer-info .div-footer-location p {
 
     /* MENU */
     /* group settings */
+
+    .nav-article-menu .menu-ul-itens .group-li-items, .group-li-contacts {
+        display: none;
+    }
+
     .nav-article-menu .menu-ul-itens .group-li-contacts .li-contact, .group-li-links .li-links {
-        width: 6.5em;
-        margin: 0.5em;
+        width: 7em;
+        margin: 0.2em;
     }
 
     .nav-article-menu .menu-ul-itens .group-li-contacts .fa-brands, .group-li-links .fa-regular {
@@ -1080,6 +1103,11 @@ footer .div-footer-info .div-footer-location p {
 
     .nav-article-menu .menu-ul-itens .ul-li-items {
         margin: 0em 0.5em;
+    }
+
+    .nav-article-menu .menu-ul-itens .group-li-links {
+        user-select: none;
+        padding: 0.5em 0em;
     }
 
     .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links {
@@ -1195,6 +1223,17 @@ footer .div-footer-info .div-footer-location p {
         margin: 0px;
     }
 
+    section .div-section-content-works .sub-collum-works .p-works-description1 {
+        display: none;
+    }
+
+    section .div-section-content-works .sub-collum-works .h3-title-collum-work {
+        margin: 0.5em;
+    }
+
+    section .div-section-content-works .sub-collum-works .fa-solid.fa-chevron-down {
+        display: inline-block;
+    }
 
     /* FOOTER */
     /* individual settings */
