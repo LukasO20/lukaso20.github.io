@@ -301,6 +301,10 @@ body section .h1-emphasis, .h2-emphasis {
     margin: 0.1rem 3rem;
 }
 
+section .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
+    font-size: 1.2em;
+}
+
 section .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
     margin: 10%;
     width: 50%;
@@ -379,16 +383,8 @@ section .h2-emphasis {
     font-size: 2em;
 }
 
-section .h2-emphasis .span-title-emphasis {
-    font-size: 1.3em;
-}
-
 section .h1-emphasis {
     font-size: 2.5em;
-}
-
-section .h1-emphasis .span-title-emphasis {
-    font-size: 1.3em;
 }
 
 section .div-section-titles {
@@ -843,7 +839,7 @@ section .button-up:hover span {
 
 section .div-section-content-works .sub-collum-works .fa-solid.fa-chevron-down {
     display: none;
-    padding: 0.5em;
+    padding: 0.25em;
     border-radius: 50%;
     background-color: rgb(113, 158, 219);
 }
@@ -1093,10 +1089,6 @@ footer .div-footer-info .div-footer-location p {
         display: none;
     }
 
-    .article-menu .nav-article-menu .menu-ul-itens .h1-emphasis {
-        font-size: 2em;
-    }
-
     .nav-article-menu .menu-ul-itens .li-profile-menu .h1-emphasis {
         margin: 0.5em;
     }
@@ -1112,6 +1104,7 @@ footer .div-footer-info .div-footer-location p {
 
     .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links {
         flex-direction: row;
+        padding: 0.5em;
     }
 
     .nav-article-menu .menu-ul-itens .group-li-links .ul-li-links .li-links {
@@ -1194,6 +1187,11 @@ footer .div-footer-info .div-footer-location p {
         width: 35%;
     }
 
+    section .div-section-content-t3 .div-section-content-works .sub-collum-works {
+        padding: 3em;
+        position: relative;
+    }
+
     section .div-section-content-t4 .div-contact-content h3  {
         margin: 2em 0em;
     }
@@ -1223,16 +1221,15 @@ footer .div-footer-info .div-footer-location p {
         margin: 0px;
     }
 
-    section .div-section-content-works .sub-collum-works .p-works-description1 {
-        display: none;
-    }
-
     section .div-section-content-works .sub-collum-works .h3-title-collum-work {
         margin: 0.5em;
     }
 
     section .div-section-content-works .sub-collum-works .fa-solid.fa-chevron-down {
+        position: absolute;
         display: inline-block;
+        top: 0.5em;
+        left: 46%;
     }
 
     /* FOOTER */
