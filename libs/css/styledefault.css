@@ -33,9 +33,8 @@ body {
 
 /* MENU */
 
-/* Individual Settings */
+/* menu compact - Individual Settings */
 /* block */
-/* menu compact */
 .article-menu {
     transition: .3s ease-in-out;
     width: 10%;
@@ -52,7 +51,6 @@ body {
 }
 
 /* element (nav) */
-/* menu compact */
 .menu-ul-itens {
     position: sticky;
     display: flex;
@@ -130,15 +128,11 @@ body {
 }
 
 
-
 /* modifier (nav) */
-/* menu compact */
-
 .li-profile-menu .icon-expand:hover {
     cursor: pointer;
     background-color: rgb(113, 158, 219, 0.4);
 }
-
 
 
 .li-links:hover {
@@ -147,12 +141,10 @@ body {
 }
 
 
-
 .li-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
-
 
 
 .socialmedia-open {
@@ -178,10 +170,8 @@ body {
     height: 15em;
 }
 
-
-/* Group Settings */
+/* menu compact - Group Settings */
 /* element (nav) */
-/* menu compact */
 .li-profile-menu, .group-li-contacts, .group-li-links, .group-li-items {
     width: 100%;
     transition: .2s ease-in-out;
@@ -209,76 +199,31 @@ body {
     transition: .2s ease-in-out;
 }
 
-/* menu expanded */
-/* individual settings */
+/* menu expanded - Individual Settings */
+/* block */
 
 .article-menu-expanded {
-    width: 17%;
+    width: 20%;
 }
 
-.article-menu-expanded .separete-line-article {
-    padding: 0.1em;
-    background-color: rgba(113, 158, 219, 0.3);
-    width: 55%;
-    margin: 1em auto;
-}
+/* element (nav) */
 
-.nav-article-menu-expanded .menu-ul-itens {
-    height: auto;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-items {
-    background-color: transparent;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-items .social-media-itens {
-    display: none;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts {
-    flex-direction: row;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-contacts-expanded  {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    transition: .3s ease-in-out;
-    background-color: rgb(3, 14, 28);
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-items .ul-li-items {
-    background-color: rgb(255, 255, 255, 0);
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts {
-    display: flex;
-    align-items: center;
-    width: 82%;
-    color: rgb(255, 255, 255);
-    border: 0px;
-    padding: 0px 10px;
-    transition: .3s ease-in-out;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts .li-contact {
-    margin: 0.5em 0.25em;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-contacts .ul-li-contacts .li-contact:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.nav-article-menu-expanded .menu-ul-itens .li-profile-menu .icon-expand span.fa-solid {
+.nav-article-menu-expanded .icon-expand span.fa-solid {
     transform: rotate(180deg);
 }
 
-.nav-article-menu-expanded ul .li-contacts a {
-    margin: 0px 10px;
+
+.nav-article-menu-expanded .social-media-itens {
+    display: none;
 }
 
-.nav-article-menu-expanded ul .li-links {
+
+.nav-article-menu-expanded .menu-ul-itens .group-li-links {
+    margin: 0.5em 0em 0em 0em;
+}
+
+
+.nav-article-menu-expanded .li-links {
     display: flex;
     align-items: center;
     width: 80%;
@@ -288,18 +233,59 @@ body {
     margin: 10px 0px;
 }
 
-.nav-article-menu-expanded ul .li-links span {
+.nav-article-menu-expanded .li-links span {
     margin: 0em 1em;
 }
 
-.nav-article-menu-expanded .menu-ul-itens .group-li-links {
-    margin: 0.5em 0em 0em 0em;
-}
-
-.nav-article-menu-expanded .menu-ul-itens .group-li-links .ul-li-links .li-links label {
+.nav-article-menu-expanded .li-links label {
     width: 10em;
     opacity: 1;
 }
+
+
+.nav-article-menu-expanded .group-li-contacts-expanded  {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    transition: .3s ease-in-out;
+    background-color: rgb(3, 14, 28);
+}
+
+.nav-article-menu-expanded .ul-li-contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 82%;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    padding: 0px 10px;
+    transition: .3s ease-in-out;
+}
+
+.nav-article-menu-expanded .li-contact {
+    margin: 0.5em 0.25em;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-article-menu-expanded .li-contacts a {
+    margin: 0px 10px;
+}
+
+/* modifier (nav) */
+.nav-article-menu-expanded .li-contact:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.nav-article-menu-expanded .li-links:hover {
+    cursor: pointer;
+    background-color: rgb(113, 158, 219, 0.7);
+}
+
+.nav-article-menu-expanded .li-links label:hover {
+    cursor: pointer;
+}
+
 
 /* SECTION */
 /* group settings */
@@ -460,7 +446,7 @@ section .div-section-content-t2 .h2-section-content-skills {
     font-size: 2em;
 }
 
-section .div-section-content-t2 .div-section-content-skills {
+.div-section-content-skills {
     margin: 5% 15%;
     border: 1px solid rgb(113, 158, 219);
     border-radius: 10px;
@@ -945,10 +931,6 @@ footer .div-footer-shortcuts ul .li-links a {
     cursor: pointer;
 }
 
-footer .div-footer-shortcuts .div-footer-shortcuts-page {
-    margin-top: 3.85em;
-}
-
 footer .div-footer-info {
     display: flex;
     align-items: center;
@@ -1068,8 +1050,27 @@ footer .div-footer-info .div-footer-location p {
 
 @media (max-width: 800px) {
 
-    footer .div-footer-shortcuts {
+    /* MENU */
+    /* menu expanded - Individual Settings */
+    /* block */
 
+    .article-menu-expanded {
+        width: 35%;
+    }
+
+
+    /* SECTION */
+    /* Individual Settings */
+    /* element */
+    .div-section-content-skills {
+        margin: 5%;
+    }
+
+
+    /* FOOTER */
+    /* Individual Settings */
+    /* element */
+    .div-footer-shortcuts {
         margin: 8em 0em;
     }
 }
@@ -1254,14 +1255,11 @@ footer .div-footer-info .div-footer-location p {
     footer .div-footer-shortcuts  {
         flex-wrap: wrap;
         margin: 2em 0em;
+        justify-content: space-between;
     }
 
     footer .div-footer-shortcuts div {
         margin: 1em 2em 0em 0em;
-    }
-
-    footer .div-footer-shortcuts .div-footer-shortcuts-page > ul {
-        margin: 1em 0em 0em 0em;
     }
 
     footer .div-footer-info {
@@ -1277,10 +1275,6 @@ footer .div-footer-info .div-footer-location p {
 
     footer .div-footer-info p {
         margin: 1em;
-    }
-
-    footer .div-footer-shortcuts .div-footer-shortcuts-page {
-        margin: 0em;
     }
 }
 
