@@ -906,9 +906,8 @@ footer .div-footer-shortcuts span {
     padding: 5px;
 }
 
-footer .div-footer-shortcuts h3 {
+footer h3 {
     color: rgb(255, 255, 255);
-    margin: 0px 40px;
 }
 
 footer .div-footer-shortcuts ul {
@@ -916,11 +915,14 @@ footer .div-footer-shortcuts ul {
     color: rgb(255, 255, 255);
 }
 
-footer .div-footer-shortcuts ul .li-links {
+footer .li-links {
+    display: flex;
     margin: 10px 0px;
     transition: .2s ease-in-out;
     border-radius: 5px;
     padding: 5px;
+    width: 100%;
+    justify-content: flex-start;
 }
 
 footer .div-footer-shortcuts ul .li-links:hover {
@@ -931,11 +933,12 @@ footer .div-footer-shortcuts ul .li-links a:hover span {
     color: rgb(113, 158, 219);
 }
 
-footer .div-footer-shortcuts ul .li-links a {
+footer .li-links a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 footer .div-footer-shortcuts ul .li-links a {
@@ -943,7 +946,7 @@ footer .div-footer-shortcuts ul .li-links a {
 }
 
 footer .div-footer-shortcuts .div-footer-shortcuts-page {
-    margin-top: 25px;
+    margin-top: 3.85em;
 }
 
 footer .div-footer-info {
@@ -1245,21 +1248,20 @@ footer .div-footer-info .div-footer-location p {
     /* individual settings */
 
     footer {
-        padding: 1em 0em;
+        padding: 1em;
     }
 
     footer .div-footer-shortcuts  {
         flex-wrap: wrap;
-        margin: 3em 0em;
+        margin: 2em 0em;
     }
 
     footer .div-footer-shortcuts div {
-        margin: 1em 1em 0em 0em;
+        margin: 1em 2em 0em 0em;
     }
 
     footer .div-footer-shortcuts .div-footer-shortcuts-page > ul {
-        margin: 2em 0em;
-        padding: 0em 0.5em;
+        margin: 1em 0em 0em 0em;
     }
 
     footer .div-footer-info {
@@ -1275,6 +1277,10 @@ footer .div-footer-info .div-footer-location p {
 
     footer .div-footer-info p {
         margin: 1em;
+    }
+
+    footer .div-footer-shortcuts .div-footer-shortcuts-page {
+        margin: 0em;
     }
 }
 
