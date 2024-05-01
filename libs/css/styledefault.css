@@ -26,10 +26,19 @@ body {
     font-size: 2em;
 }
 
+
 .div-flex-container {
     display: flex;
 }
 
+
+.h1-emphasis {
+    font-size: 2.5em;
+}
+
+.h2-emphasis {
+    font-size: 2em;
+}
 
 /* MENU */
 
@@ -61,27 +70,28 @@ body {
 }
 
 
-.li-profile-menu {
+.article-menu .li-profile-menu {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.li-profile-menu .h1-emphasis {
+.article-menu .li-profile-menu .h1-emphasis {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 1.5em 0.8em;
     width: 100%;
-}
-
-.li-profile-menu .h1-emphasis .span-item2-h1-style {
     font-size: 1.2em;
 }
 
-.li-profile-menu .icon-expand {
+.article-menu .li-profile-menu .span-item2-h1-style {
+    font-size: 1.2em;
+}
+
+.article-menu .li-profile-menu .icon-expand {
     position: absolute;
     right: -1em;
     width: 2.2em;
@@ -94,19 +104,19 @@ body {
     background-color: rgb(113, 158, 219, 0.7);
 }
 
-.li-profile-menu .icon-expand span.fa-solid {
+.article-menu .li-profile-menu .icon-expand span.fa-solid {
     font-size: 1.2em;
 }
 
 
-.ul-li-links {
+.article-menu .ul-li-links {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
 }
 
-.li-links label {
+.article-menu .li-links label {
     opacity: 0;
     overflow: hidden;
     width: 0em;
@@ -115,58 +125,58 @@ body {
 }
 
 
-.group-li-contacts {
+.article-menu .group-li-contacts {
     height: 0px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.1);
     transition: .3s ease-in-out;
 }
 
-.ul-li-contacts {
+.article-menu .ul-li-contacts {
     display: flex;
     flex-direction: column;
 }
 
 
 /* modifier (nav) */
-.li-profile-menu .icon-expand:hover {
+.article-menu .li-profile-menu .icon-expand:hover {
     cursor: pointer;
     background-color: rgb(113, 158, 219, 0.4);
 }
 
 
-.li-links:hover {
+.article-menu .li-links:hover {
     cursor: pointer;
     background-color: rgb(113, 158, 219, 0.7);
 }
 
 
-.li-item:hover {
+.article-menu .li-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
 
-.socialmedia-open {
+.article-menu .socialmedia-open {
     background-color: rgba(255, 255, 255, 0.2)
 }
 
-.icon-socialmedia-open .fa-solid {
+.article-menu .icon-socialmedia-open .fa-solid {
     color: rgb(113, 158, 219);
 }
 
 
-.li-contact:hover {
+.article-menu .li-contact:hover {
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
-.li-contact:hover span.fa-brands {
+.article-menu .li-contact:hover span.fa-brands {
     color: rgb(113, 158, 219);
 }
 
 
-.group-li-contacts-open {
+.article-menu .group-li-contacts-open {
     height: 15em;
 }
 
@@ -202,28 +212,28 @@ body {
 /* menu expanded - Individual Settings */
 /* block */
 
-.article-menu-expanded {
+.article-menu.article-menu-expanded {
     width: 20%;
 }
 
 /* element (nav) */
 
-.nav-article-menu-expanded .icon-expand span.fa-solid {
+.article-menu .nav-article-menu-expanded .icon-expand span.fa-solid {
     transform: rotate(180deg);
 }
 
 
-.nav-article-menu-expanded .social-media-itens {
+.article-menu .nav-article-menu-expanded .social-media-itens {
     display: none;
 }
 
 
-.nav-article-menu-expanded .menu-ul-itens .group-li-links {
+.article-menu .nav-article-menu-expanded .menu-ul-itens .group-li-links {
     margin: 0.5em 0em 0em 0em;
 }
 
 
-.nav-article-menu-expanded .li-links {
+.article-menu .nav-article-menu-expanded .li-links {
     display: flex;
     align-items: center;
     width: 80%;
@@ -233,17 +243,17 @@ body {
     margin: 10px 0px;
 }
 
-.nav-article-menu-expanded .li-links span {
+.article-menu .nav-article-menu-expanded .li-links span {
     margin: 0em 1em;
 }
 
-.nav-article-menu-expanded .li-links label {
+.article-menu .nav-article-menu-expanded .li-links label {
     width: 10em;
     opacity: 1;
 }
 
 
-.nav-article-menu-expanded .group-li-contacts-expanded  {
+.article-menu .nav-article-menu-expanded .group-li-contacts-expanded  {
     display: flex;
     justify-content: center;
     height: auto;
@@ -251,7 +261,7 @@ body {
     background-color: rgb(3, 14, 28);
 }
 
-.nav-article-menu-expanded .ul-li-contacts {
+.article-menu .nav-article-menu-expanded .ul-li-contacts {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -262,27 +272,27 @@ body {
     transition: .3s ease-in-out;
 }
 
-.nav-article-menu-expanded .li-contact {
+.article-menu .nav-article-menu-expanded .li-contact {
     margin: 0.5em 0.25em;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.nav-article-menu-expanded .li-contacts a {
+.article-menu .nav-article-menu-expanded .li-contacts a {
     margin: 0px 10px;
 }
 
 /* modifier (nav) */
-.nav-article-menu-expanded .li-contact:hover {
+.article-menu .nav-article-menu-expanded .li-contact:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 
-.nav-article-menu-expanded .li-links:hover {
+.article-menu .nav-article-menu-expanded .li-links:hover {
     cursor: pointer;
     background-color: rgb(113, 158, 219, 0.8);
 }
 
-.nav-article-menu-expanded .li-links label:hover {
+.article-menu .nav-article-menu-expanded .li-links label:hover {
     cursor: pointer;
 }
 
@@ -380,23 +390,27 @@ section {
 }
 
 
-/* modifier */
-section .h2-emphasis {
+.h2-section-content {
+    text-align: center;
+    padding: 40px 20%;
     font-size: 2em;
+} 
+
+.h3-section-content {
+    text-align: center;
+    font-size: 1.25em;
 }
 
-section .h1-emphasis {
-    font-size: 2.5em;
-}
-
-section .div-section-titles {
+/* element */
+.div-section-titles {
     display: flex;
     justify-content: space-between;
     transition: .2s ease-in-out;
     margin-bottom: 10em;
 }
 
-section .div-section-titles .buttons-config {
+
+.buttons-config {
     margin: 10px 20px;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -406,7 +420,7 @@ section .div-section-titles .buttons-config {
     align-items: end;
 }
 
-section .div-section-titles .buttons-config .switch-theme {
+.switch-theme {
     height: 2.5em;
     width: 2.5em;
     display: flex;
@@ -419,64 +433,41 @@ section .div-section-titles .buttons-config .switch-theme {
     transition: .2s ease-in-out;
 }
 
-section .div-section-titles .buttons-config .switch-theme:hover {
-    background-color: rgba(113, 158, 219, 0.8);
-    cursor: pointer;
+
+.div-section-content-t1 .h3-section-content {
+    padding: 0em 10em;
 }
 
-section .div-section-content-t1 .h2-section-content {
-    text-align: center;
-    padding: 40px 20%;
-    font-size: 2em;
-} 
 
-section .div-section-content-t1 .h3-section-content {
-    text-align: center;
-    font-size: 1.25em;
-    padding: 0px 20%;
-}
-
-section .div-section-content-t2 {
+.div-section-content-t2 {
     transition: .3s ease-in-out;
     color: rgb(255, 255, 255);
 }
 
-section .div-section-content-t2 .h2-section-content-skills {
+.h2-section-content-skills {
     text-align: center;
     font-size: 2em;
 }
 
 .div-section-content-skills {
+    display: flex;
+    justify-content: space-between;
     margin: 5% 15%;
     border: 1px solid rgb(113, 158, 219);
     border-radius: 10px;
 }
 
-section .div-section-content-t2 .div-section-content-skills {
-    display: flex;
-    justify-content: space-between;
-}
-
-section .div-section-content-skills .sub-collum-skills {
+.sub-collum-skills {
     display: flex;
 }
 
-section .div-section-content-t3 .h2-section-content {
-    text-align: center;
-    font-size: 2em;
-}
 
-section .div-section-content-t3 .h3-section-content {
-    text-align: center;
-    font-size: 1.25em;
-}
-
-section .div-section-content-t3 .div-section-content-works {
+.div-section-content-works {
     display: flex;
     justify-content: center;
 }
 
-section .div-section-content-t3 .div-section-content-works .sub-collum-works {
+.sub-collum-works {
     background-color: rgb(113, 158, 219, 0.7);
     width: 220px;
     height: 200px;
@@ -488,36 +479,12 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgb(113, 158, 219, 0.5));
 }
 
-section .div-section-content-t3 .div-section-content-works .sub-collum-works h3 {
+.sub-collum-works h3 {
     font-size: 1.7em;
     transition: .2s ease-in-out;
 }
 
-.div-section-content-works .sub-collum-works .p-works-description1, .div-section-content-works .sub-collum-works .a-link-collum-work {
-    font-size: 0.1em;
-    opacity: 0;
-}
-
-section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover .p-works-description1, .div-section-content-works .sub-collum-works:hover .a-link-collum-work {
-    font-size: 1em;
-    opacity: 1;
-}
-
-section .div-section-content-t3 .div-section-content-works .sub-collum-works:hover {
-    background-color: rgb(113, 158, 219, 0.5);
-    background-image: none;
-}
-
-.div-section-content-works .sub-collum-works:hover .p-works-description2, .div-section-content-works .sub-collum-works:hover .p-works-description3 {
-    display: none;
-}
-
-.div-section-content-works .sub-collum-works:hover .h3-title-collum-work {
-    font-size: 1.17em;
-    margin-top: 0px;
-}
-
-section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work {
+.a-link-collum-work {
     display: inline-block;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -530,31 +497,34 @@ section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-
     transition: .2s ease-in-out;
 }
 
-section .div-section-content-t3 .div-section-content-works .sub-collum-works .a-link-collum-work:hover {
-    background-color: rgb(113, 158, 219, 0.7);
-}
 
-section .div-section-content-t3 .h3-section-content-c {
+.h3-section-content-c {
     text-align: center;
     margin: 4% 20% 0%;
 }
 
-section .div-section-content-t3 .h2-section-content-c {
+.h2-section-content-c {
     text-align: center;
     margin: 4% 0% 2% 0%;
 }
 
-section .div-section-content-t3 .div-section-content-works .p-works-description3 {
+
+.p-works-description3 {
     font-weight: 600;
 }
 
-section .div-section-content-t3 .div-section-content-works-services {
+
+.div-section-content-works-services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-section .div-section-content-t3 .sub-collum-works-services {
+.div-section-content-t3 .h2-section-content-c {
+    margin: 2.5em 0em;
+}
+
+.sub-collum-works-services {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 25%;
@@ -562,7 +532,7 @@ section .div-section-content-t3 .sub-collum-works-services {
     padding: 10px;
 }
 
-section .div-section-content-t3 .sub-collum-works-services label {
+.sub-collum-works-services label {
     color: rgb(3, 14, 28);
     font-weight: 600;
     display: block;
@@ -571,12 +541,12 @@ section .div-section-content-t3 .sub-collum-works-services label {
     border-bottom: 1px solid rgb(3, 14, 28);
 }
 
-section .div-section-content-t3 .sub-collum-works-services p {
-    color: rgb(41, 41, 41);
+.sub-collum-works-services p {
+    color: rgb(100, 100, 100);
     text-align: center;
 }
 
-section .div-section-content-t3 .sub-collum-works-services .p-works-services-item {
+.p-works-services-item {
     font-weight: 600;
     background-color: rgb(235, 235, 235);
     padding: 5px;
@@ -584,7 +554,7 @@ section .div-section-content-t3 .sub-collum-works-services .p-works-services-ite
     margin: 8px auto;
 }
 
-section .div-section-content-t3 .div-contact-works-services-item {
+.div-contact-works-services-item {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px;
@@ -592,7 +562,7 @@ section .div-section-content-t3 .div-contact-works-services-item {
     margin: 20px auto;
 }
 
-section .div-section-content-t3 .div-contact-works-services-item span {
+.div-contact-works-services-item span {
     padding: 10px;
     border-radius: 50%;
     background-color: rgb(113, 158, 219);
@@ -603,11 +573,53 @@ section .div-section-content-t3 .div-contact-works-services-item span {
     margin: 0px 2.5px;
 }
 
-section .div-section-content-t3 .div-contact-works-services-item span:hover {
+/* modifier */
+.switch-theme:hover {
+    background-color: rgba(113, 158, 219, 0.8);
+    cursor: pointer;
+}
+
+
+.sub-collum-works:hover {
+    background-color: rgb(113, 158, 219, 0.5);
+    background-image: none;
+}
+
+.sub-collum-works:hover .h3-title-collum-work {
+    font-size: 1.17em;
+    margin-top: 0px;
+}
+
+
+.a-link-collum-work:hover {
+    background-color: rgb(113, 158, 219, 0.7);
+}
+
+
+.div-contact-works-services-item span:hover {
     color: rgb(108, 146, 199);
     cursor: pointer;
     border-color: rgb(108, 146, 199);
     background-color: rgb(255, 255, 255);
+}
+
+
+/* Group Settings */
+/* element */
+.p-works-description1, .a-link-collum-work {
+    font-size: 0.1em;
+    opacity: 0;
+}
+
+
+/* modifier */
+.sub-collum-works:hover .p-works-description1, .sub-collum-works:hover .a-link-collum-work {
+    font-size: 1em;
+    opacity: 1;
+}
+
+.sub-collum-works:hover .p-works-description2, .sub-collum-works:hover .p-works-description3 {
+    display: none;
 }
 
 section .div-section-content-t4 .h2-section-content {
@@ -1199,6 +1211,12 @@ footer .div-footer-info .div-footer-location p {
         padding: 12px;
     }
 
+
+    .div-section-content-t1 .h3-section-content {
+        padding: 0em 2em;
+    }
+
+
     section .div-section-content-t2 .div-section-content-skills  {
         margin: 5%;
     }
@@ -1207,6 +1225,7 @@ footer .div-footer-info .div-footer-location p {
         flex-direction: column;
         align-items: center;
     }
+
 
     section .div-section-content-t3 .h3-section-content {
         margin: 1em;
