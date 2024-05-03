@@ -381,7 +381,6 @@ section .h1-emphasis .span-title-emphasis, .h2-emphasis .span-title-emphasis {
 }
 
 
-
 /* Individual Settings */
 /* block */
 section {
@@ -409,7 +408,7 @@ section {
 }
 
 /* element */
-.div-section-titles {
+section .div-section-titles {
     display: flex;
     justify-content: space-between;
     transition: .2s ease-in-out;
@@ -417,7 +416,7 @@ section {
 }
 
 
-.buttons-config {
+section .buttons-config {
     margin: 10px 20px;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -427,7 +426,7 @@ section {
     align-items: end;
 }
 
-.switch-theme {
+section .switch-theme {
     height: 2.5em;
     width: 2.5em;
     display: flex;
@@ -451,12 +450,12 @@ section {
     color: rgb(255, 255, 255);
 }
 
-.h2-section-content-skills {
+.div-section-content-t2 .h2-section-content-skills {
     text-align: center;
     font-size: 2em;
 }
 
-.div-section-content-skills {
+.div-section-content-t2 .div-section-content-skills {
     display: flex;
     justify-content: space-between;
     margin: 5% 15%;
@@ -464,17 +463,17 @@ section {
     border-radius: 10px;
 }
 
-.sub-collum-skills {
+.div-section-content-t2 .sub-collum-skills {
     display: flex;
 }
 
 
-.div-section-content-works {
+.div-section-content-t3 .div-section-content-works {
     display: flex;
     justify-content: center;
 }
 
-.sub-collum-works {
+.div-section-content-t3 .sub-collum-works {
     background-color: rgb(113, 158, 219, 0.7);
     width: 220px;
     height: 200px;
@@ -486,12 +485,12 @@ section {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.095), rgb(113, 158, 219, 0.5));
 }
 
-.sub-collum-works h3 {
+.div-section-content-t3 .sub-collum-works h3 {
     font-size: 1.7em;
     transition: .2s ease-in-out;
 }
 
-.a-link-collum-work {
+.div-section-content-t3 .a-link-collum-work {
     display: inline-block;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -505,23 +504,23 @@ section {
 }
 
 
-.h3-section-content-c {
+.div-section-content-t3 .h3-section-content-c {
     text-align: center;
     margin: 4% 20% 0%;
 }
 
-.h2-section-content-c {
+.div-section-content-t3 .h2-section-content-c {
     text-align: center;
     margin: 4% 0% 2% 0%;
 }
 
 
-.p-works-description3 {
+.div-section-content-t3 .p-works-description3 {
     font-weight: 600;
 }
 
 
-.div-section-content-works-services {
+.div-section-content-t3 .div-section-content-works-services {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -531,7 +530,7 @@ section {
     margin: 2.5em 0em;
 }
 
-.sub-collum-works-services {
+.div-section-content-t3 .sub-collum-works-services {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 25%;
@@ -539,7 +538,7 @@ section {
     padding: 10px;
 }
 
-.sub-collum-works-services label {
+.div-section-content-t3 .sub-collum-works-services label {
     color: rgb(3, 14, 28);
     font-weight: 600;
     display: block;
@@ -548,12 +547,12 @@ section {
     border-bottom: 1px solid rgb(3, 14, 28);
 }
 
-.sub-collum-works-services p {
+.div-section-content-t3 .sub-collum-works-services p {
     color: rgb(100, 100, 100);
     text-align: center;
 }
 
-.p-works-services-item {
+.div-section-content-t3 .p-works-services-item {
     font-weight: 600;
     background-color: rgb(235, 235, 235);
     padding: 5px;
@@ -561,7 +560,7 @@ section {
     margin: 8px auto;
 }
 
-.div-contact-works-services-item {
+.div-section-content-t3 .div-contact-works-services-item {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 10px;
@@ -569,7 +568,7 @@ section {
     margin: 20px auto;
 }
 
-.div-contact-works-services-item span {
+.div-section-content-t3 .div-contact-works-services-item span {
     padding: 10px;
     border-radius: 50%;
     background-color: rgb(113, 158, 219);
@@ -641,7 +640,7 @@ section {
 .div-section-content-t4 .div-contact-content-email {
     display: flex;
     flex-direction: column;
-    margin: 0px 20%;
+    margin: 0px 8%;
 }
 
 .div-section-content-t4 .div-user-data {
@@ -871,7 +870,9 @@ section .button-up:hover span {
 
 
 /* FOOTER */
-/* individual settings */
+
+/* Individual Settings */
+/* block */
 
 footer {
     display: flex;
@@ -883,6 +884,13 @@ footer {
     background-color: rgb(3, 14, 28);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
 }
+
+
+/* element */
+footer h3 {
+    color: rgb(255, 255, 255);
+}
+
 
 footer .message {
     margin: 0px;
@@ -896,9 +904,6 @@ footer .message a {
     color: rgb(113, 158, 219);
 }
 
-footer .message a:hover {
-    text-decoration: underline;
-}
 
 footer .div-footer-shortcuts {
     margin: 8em 5em;
@@ -909,6 +914,11 @@ footer .div-footer-shortcuts div {
     margin: 0px 20px;
 }
 
+footer .div-footer-shortcuts ul {
+    list-style: none;
+    color: rgb(255, 255, 255);
+}
+
 footer .div-footer-shortcuts span {
     color: rgb(255, 255, 255);
     font-size: 1.3em;
@@ -916,14 +926,6 @@ footer .div-footer-shortcuts span {
     padding: 5px;
 }
 
-footer h3 {
-    color: rgb(255, 255, 255);
-}
-
-footer .div-footer-shortcuts ul {
-    list-style: none;
-    color: rgb(255, 255, 255);
-}
 
 footer .li-links {
     display: flex;
@@ -935,25 +937,15 @@ footer .li-links {
     justify-content: flex-start;
 }
 
-footer .div-footer-shortcuts ul .li-links:hover {
-    background-color:  rgb(113, 158, 219, 0.2);
-}
-
-footer .div-footer-shortcuts ul .li-links a:hover span {
-    color: rgb(113, 158, 219);
-}
-
 footer .li-links a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
     width: 100%;
-}
-
-footer .div-footer-shortcuts ul .li-links a {
     cursor: pointer;
 }
+
 
 footer .div-footer-info {
     display: flex;
@@ -965,18 +957,34 @@ footer .div-footer-info {
     border-top: 1px solid rgb(255, 255, 255, 0.5);
 }
 
-footer .div-footer-info .div-footer-location {
+footer .div-footer-location {
     display: flex;
     align-items: center;
 }
 
-footer .div-footer-info .div-footer-location span {
+footer .div-footer-location span {
     margin: 0px 5px 0px 0px;
 }
 
-footer .div-footer-info .div-footer-location p {
+footer .div-footer-location p {
     margin: 5px;
 }
+
+
+/* modifier */
+footer .message a:hover {
+    text-decoration: underline;
+}
+
+footer ul .li-links a:hover span {
+    color: rgb(113, 158, 219);
+}
+
+
+footer .div-footer-shortcuts ul .li-links:hover {
+    background-color:  rgb(113, 158, 219, 0.2);
+}
+
 
 /* MEDIA QUERY SETTINGS */
 
@@ -991,8 +999,8 @@ footer .div-footer-info .div-footer-location p {
         margin: 11em 10em;
     }
 
-    .div-section-content-t4 .div-contact-content .div-contact-content-email {
-        margin: 0px 27%;
+    .div-section-content-t4 .div-contact-content-email {
+        margin: 0px 25%;
     }
 
     .div-section-content-t3 .div-section-content-works-services .sub-collum-works-services {
@@ -1004,13 +1012,6 @@ footer .div-footer-info .div-footer-location p {
 
 @media (max-width: 1280px) {
 
-    /* MENU */
-    /* individual settings */
-
-    .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
-        right: -1.2em;
-    }
-
     /* MAIN */
     /* individual settings */
 
@@ -1021,46 +1022,81 @@ footer .div-footer-info .div-footer-location p {
 
 @media (min-width: 651px) and (max-width: 880px) {
 
-    .article-menu .nav-article-menu .menu-ul-itens .icon-expand {
-        right: -1.2em;
-    }
-
     /* MAIN */
-    /* individual settings */
 
-    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1, .collum-skills-t2 {
-        margin: 3em 0.5em;
+    /* Individual Settings */
+    /* element */
+
+    .div-section-content-t1 .h3-section-content  {
+        padding: 0em 2em;
     }
 
-    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
-        height: 7em;
+
+    .div-section-content-t2 .div-section-content-skills {
+        margin: 5%;
     }
 
-    main .div-section-content-t2 .div-section-content-skills .collum-skills-t1 .collum-skills-t1-div1 label , .collum-skills-t2 .collum-skills-t1-div2 label {
-        width: 88%;
+
+    .div-section-content-t4 .div-contact-content-itens  {
+        flex-wrap: wrap;
     }
 
-    main .div-section-content-t4 .div-contact-content .div-contact-content-email .div-user-data {
+    .div-section-content-t4 .div-user-data {
         flex-direction: column;
     }
 
-    /* FOOTER */
-    /* individual settings */  
-     footer .div-footer-shortcuts {
-        margin: 8em 0em;
-     }
+
+    /* Group Settings */
+    /* element */
+
+    .div-section-content-t2 .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
+        width: 88%;
+    }
+
+    .div-section-content-t2 .collum-skills-t1, .collum-skills-t2 {
+        margin: 3em 0.5em;
+    }
+
+
+    /* modifier */
+    .div-section-content-t2 .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
+        height: 7em;
+    }
 }
 
 /* mobile settings */
 
 @media (max-width: 1024px) {
 
-    section .div-section-content-t4 .div-contact-content-email .div-user-data {
+    /* MENU */
+
+    /* Individual Settings */
+    /* element */
+    .article-menu-expanded {
+        width: 30%;
+    }
+
+
+    /* SECTION */
+
+    /* Individual Settings */
+    /*element */
+    .div-section-content-t1 .h3-section-content {
+        padding: 0em 5em;
+    }
+
+
+    .div-section-content-t2 .div-section-content-skills {
+        margin: 5%;
+    }
+
+    
+    .div-section-content-t4 .div-contact-content-email .div-user-data {
         justify-content: center;
 
     }
 
-    section .div-section-content-t4 .div-contact-content-email .div-user-data .p-user-data {
+    .div-section-content-t4 .p-user-data {
         margin: 1em;
     }
 }
@@ -1289,7 +1325,7 @@ footer .div-footer-info .div-footer-location p {
     /* individual settings */
 
     footer {
-        padding: 1em;
+        padding: 2em 1em 3em 1em;
     }
 
     footer .div-footer-shortcuts  {

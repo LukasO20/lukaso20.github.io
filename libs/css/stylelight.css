@@ -151,6 +151,7 @@ section .div-section-titles .buttons-config .switch-type span.fa-lightbulb {
 .section-theme-light .div-section-content-t3 .div-contact-works-services-item span:hover {
     color: rgb(5, 69, 153); 
     border-color: rgb(5, 69, 153);
+    background-color: rgb(255, 255, 255);
 }
 
 .section-theme-light .div-section-content-t4 {
