@@ -1214,7 +1214,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
     /* Group Settings */
     /* element */
     .div-section-content-t2 .collum-skills-t1, .collum-skills-t2 {
-        margin: 5em 1em;
+        margin: 5em 0.5em;
     }
 
     .div-section-content-t2 .collum-skills-t1-div1, .collum-skills-t1-div2  {
@@ -1230,7 +1230,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     /* modifier */
     .div-section-content-t2 .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
-        height: 9em;
+        height: 10em;
     }
 
 
@@ -1348,7 +1348,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
     }
 
     footer .div-footer-info p {
-        margin: 1em;
+        margin: 1em 0.3em;
     }
 }
 
