@@ -19,6 +19,7 @@ body {
     margin: 0px;
 }
 
+
 /* element */
 
 body .span-title-emphasis {
@@ -46,7 +47,7 @@ body .h2-emphasis {
 /* block */
 .article-menu {
     transition: .3s ease-in-out;
-    width: 10%;
+    width: 12%;
     display: flex;
 }
 
@@ -89,9 +90,29 @@ body .h2-emphasis {
     font-size: 1.2em;
 }
 
-.article-menu .li-profile-menu .span-item2-h1-style {
-    font-size: 1.2em;
+.article-menu .li-profile-menu .span-title-emphasis {
+    display: inline-flex;
+    width: 0.5em;
+    transition: .2s ease-in-out;
 }
+
+.article-menu .li-profile-menu .span-item1-h1-style {
+    display: inline-block;
+    width: 0em;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .2s ease-in-out;
+}
+
+.article-menu .li-profile-menu .span-item2-h1-style {
+    display: inline-block;
+    width: 0em;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.2em;
+    transition: .2s ease-in-out;
+}
+
 
 .article-menu .li-profile-menu .icon-expand {
     position: absolute;
@@ -226,6 +247,19 @@ body .h2-emphasis {
 
 .article-menu .nav-article-menu-expanded .icon-expand span.fa-solid {
     transform: rotate(180deg);
+}
+
+
+.article-menu .nav-article-menu-expanded .li-profile-menu .span-title-emphasis {
+    width: 4em;
+}
+
+.article-menu .nav-article-menu-expanded .li-profile-menu .span-item1-h1-style {
+    width: 4em;
+}
+
+.article-menu .nav-article-menu-expanded .li-profile-menu .span-item2-h1-style {
+    width: 7em;
 }
 
 
@@ -1171,10 +1205,22 @@ footer .div-footer-shortcuts ul .li-links:hover {
         margin: 0.5em;
     }
 
+    .article-menu .li-profile-menu .span-title-emphasis {
+        width: 4em;
+    }
+    
+    .article-menu .li-profile-menu .span-item1-h1-style {
+        width: 4em;
+    }
+    
+    .article-menu .li-profile-menu .span-item2-h1-style {
+        width: 7em;
+    }
+
 
     .nav-article-menu .group-li-links {
         user-select: none;
-        padding: 0.5em 0em;
+        padding: 0.25em 0em;
     }
 
     .nav-article-menu .ul-li-links {

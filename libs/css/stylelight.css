@@ -247,14 +247,16 @@
 }
 
 /* element */
-.footer-light .div-footer-shortcuts .ul-li-links .li-links:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.footer-light .div-footer-shortcuts .ul-li-links .li-links:hover a span {
+.footer-light .div-footer-info .div-footer-dev .message a {
     color: rgb(245, 165, 15);
 }
 
-.footer-light .div-footer-info .div-footer-dev .message a {
+
+/* modifer */
+.footer-light .ul-li-links .li-links:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-light .ul-li-links .li-links:hover a span {
     color: rgb(245, 165, 15);
 }
