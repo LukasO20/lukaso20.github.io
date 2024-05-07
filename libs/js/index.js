@@ -6,7 +6,6 @@ var screen_user_g = $(window)
 // -- MENU FUNCTIONS --
 const menu = $('.article-menu')
 const navegate_itens_menu = menu.find('.li-links')
-const li_profile_details = menu.find('.li-profile-menu')
 const h1_menu = menu.find('.li-profile-menu .h1-emphasis')
 
 const span_item_menu = '<span class="span-item minimize-menu-open"><span class="fa-solid fa-chevron-right"></span></span>'
@@ -27,7 +26,6 @@ button_expand_menu.on('click', function(){
 
     let menu = $('.article-menu')
     let menu_items = $('.article-menu .nav-article-menu')
-    let button_status = $('.nav-article-menu .menu-ul-itens .group-li-items .expand-menu')
     let menu_contact = $('body .article-menu .menu-ul-itens .group-li-contacts')
 
     if (!menu.hasClass('article-menu-expanded')) {
@@ -119,32 +117,19 @@ button_up.on('click', function (){
 })
 
 // -- EMAIL FUNCTIONS --
-const navegate_email = $('body .fa-envelope')
-const navegate_email_footer = $('body footer .email-footer')
+const navegate_email = $('body .email-section, .email-footer')
 const formEmail = $('section .form-email')
 const contentEmail = $('section .form-email .div-contact-content-email')
 const sendEmail = $('section .div-section-content-t4 .a-contact-send-email')
 
-navegate_email.on('click', function (){ 
+navegate_email.on('click', function (){
     const divs = $('section .div-section')
 
     if (divs.length){
         const divScroll = divs.eq(4)
 
         $('html, body').animate({
-            scrollTop: divScroll.offset().top + 10
-        }, 700)
-    }
-})
-
-navegate_email_footer.on('click', function(){
-    const divs = $('section .div-section')
-
-    if (divs.length){
-        const divScroll = divs.eq(4)
-
-        $('html, body').animate({
-            scrollTop: divScroll.offset().top + 10
+            scrollTop: divScroll.offset().top
         }, 700)
     }
 })
@@ -180,9 +165,8 @@ sendEmail.on('click', function (){
             }
         }
 
-
     } catch (e) {
-        console.log(`Erro ao enviar e-mail: ${e}`)
+        console.log(`Error to send e-mail: ${e}`)
     }
 })
 
@@ -207,31 +191,21 @@ screen_scroll.on('scroll', function (){
                 const divHeight = $(this).outerHeight()
                 const divBottom = divTop + divHeight
 
-                if (scrollTop >= divTop && scrollTop < divBottom){
-                    const itemDynamic = itemCssDynamic(index)
-                  
-                    section.find('.h1-principal').css('font-size', itemDynamic.textSizeH1)
-                    section.find('.h2-principal').css('font-size', itemDynamic.textSizeH2)  
+                if (scrollTop >= divTop && scrollTop < divBottom){ 
                     
                     menu.find('.li-links').each(function (){
                         let item = $(this)
-
+                        console.log(item)
                         switch (index) {
                             case 1:
-                                if (item.hasClass('li1')){
-                                    item.addClass('li-links-selected')
-                                } else {
-                                    item.removeClass('li-links-selected')       
-                                }
+                                if (item.hasClass('li1')){ item.addClass('li-links-selected') }
+                                else { item.removeClass('li-links-selected') }
                                 break
                             case 2:
                             case 3:
                             case 4:
-                                if (item.hasClass(`li${index}`)){
-                                    item.addClass('li-links-selected')
-                                } else {
-                                    item.removeClass('li-links-selected')       
-                                }
+                                if (item.hasClass(`li${index}`)){ item.addClass('li-links-selected') }
+                                else { item.removeClass('li-links-selected') }
                                 break
                             default:
                                 item.removeClass('li-links-selected')       
@@ -293,24 +267,6 @@ $(document).ready(function(){
 
     Theme()
 })
-
-function itemCssDynamic(index) {
-    const itemStyle = {
-        textSizeH1: '',
-        textSizeH2: '',
-    }
-
-    switch (index) {
-        case 0:
-            itemStyle.textSizeH1 = '2.5em'
-            itemStyle.textSizeH2 = '2.1em'
-            return itemStyle
-        default:
-            itemStyle.textSizeH1 = '0em'
-            itemStyle.textSizeH2 = '0em'
-            return itemStyle
-    }
-}
 
 function ResponsiveComponents(window_size) {
 

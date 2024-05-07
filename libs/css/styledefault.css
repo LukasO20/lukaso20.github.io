@@ -1401,5 +1401,5 @@ footer .div-footer-shortcuts ul .li-links:hover {
 /* CHANGE CSS SETTINGS (JAVASCRIPT) */
 
 .nav-article-menu ul .li-links-selected {
-    background-color: rgb(113, 158, 219, 0.8);
+    background-color: rgb(113, 158, 219, 0.8) !important;
 }
