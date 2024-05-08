@@ -47,8 +47,10 @@ body .h2-emphasis {
 /* block */
 .article-menu {
     transition: .3s ease-in-out;
-    width: 12%;
+    width: 10%;
     display: flex;
+    position: sticky;
+    top: 0;
 }
 
 
@@ -914,7 +916,7 @@ footer {
     justify-content: space-between;
     padding: 1em 1em;
     margin: 0px;
-    height: 100dvh;
+    height: 100%;
     background-color: rgb(3, 14, 28);
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28, 1));
 }
@@ -1189,7 +1191,6 @@ footer .div-footer-shortcuts ul .li-links:hover {
     /* Individual Settings */
     /* element */
     .article-menu {
-        position: sticky;
         width: auto;
         top: -101px;
         z-index: 2;
@@ -1366,7 +1367,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
     /* Individual Settings */
     /* block */
     footer {
-        padding: 2em 1em 3em 1em;
+        padding: 2em 1.5em 3em 1.5em;
     }
 
 
