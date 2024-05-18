@@ -149,7 +149,6 @@ sendEmail.on('click', function (){
             if (validator.isEmail(email)) {
                 parentMessage.find('.message-email-inputs').remove()
                 parentMessage.find('.message-email-validation').remove()
-                console.log('Email enviado! (Teste)')
 
                 formEmail.submit()
             } else {
@@ -195,7 +194,6 @@ screen_scroll.on('scroll', function (){
                     
                     menu.find('.li-links').each(function (){
                         let item = $(this)
-                        console.log(item)
                         switch (index) {
                             case 1:
                                 if (item.hasClass('li1')){ item.addClass('li-links-selected') }
