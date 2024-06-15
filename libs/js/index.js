@@ -99,8 +99,6 @@ const screen_width = () => {
 
 screen_width()
 
-
-
 // -- SECTION FUNCTIONS -- 
 const button_up = $('section .button-up')
 
@@ -169,6 +167,14 @@ sendEmail.on('click', function (){
     }
 })
 
+$('body').on('click', function () {
+    $('section .div-section-content-t4 .p-user-data').find('label, input').hasClass('type-active') ? 
+    ($('section .div-section-content-t4 .p-user-data').find('label, input').removeClass('type-active'), $('section .div-section-content-t4 .p-user-data').find('input').attr('placeholder', ''))
+     : undefined
+
+    $('.p-user-data input').each(function () { ResponsiveComponents(undefined, $(this)) })
+})
+
 // -- FOOTER FUNCTIONS --
 const footer_year = $('footer .div-footer-info .message .footer-year')
 const data_now = new Date()
@@ -235,14 +241,16 @@ switch_theme.on('click', function (){
 function Theme() {
     localStorage.theme === 'themelight' ? 
     
-    ($('main section .button-up').addClass('button-up-light'),
+    ($('body').addClass('light-body'),
+    $('main section .button-up').addClass('button-up-light'),
     $('.nav-article-menu').addClass('nav-article-menu-light'),
     $('section').addClass('section-theme-light'), 
     $('footer').addClass('footer-light'))  
 
     :
 
-    ($('main section .button-up').removeClass('button-up-light'),
+    ($('body').removeClass('light-body'),
+    $('main section .button-up').removeClass('button-up-light'),
     $('.nav-article-menu').removeClass('nav-article-menu-light'),
     $('section').removeClass('section-theme-light'),
     $('footer').removeClass('footer-light'))    
@@ -266,13 +274,16 @@ $(document).ready(function(){
     Theme()
 })
 
-function ResponsiveComponents(window_size) {
+function ResponsiveComponents(window_size, component) {
 
     //Type Screen
     if (window_size !== undefined && window_size !== null) {
         window_size <= 650 ? NameStyleMenu(h1_menu, true) 
         : NameStyleMenu(h1_menu, false), menu.hasClass('article-menu-expanded') ? menu.removeClass('article-menu-expanded') : undefined, menu.find('.nav-article-menu').hasClass('nav-article-menu-expanded') ? menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded') : undefined
     }
+
+    //Type Input
+    if (component !== undefined) { component.val() !== '' ? (component.parent().find('label').addClass('type-active'), component.addClass('type-active')) : undefined }
 }
 
 function NameStyleMenu(element, custom_setting = undefined) {

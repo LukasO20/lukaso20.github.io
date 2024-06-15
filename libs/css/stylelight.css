@@ -260,3 +260,26 @@
 .footer-light .ul-li-links .li-links:hover a span {
     color: rgb(245, 165, 15);
 }
+
+
+/* OTHER SETTINGS */
+
+.light-body::-webkit-scrollbar-track {
+    background: rgb(5, 69, 153);
+}
+
+.light-body::-webkit-scrollbar-thumb {
+    background: rgb(245, 165, 15);
+}
+
+.light-body::-webkit-scrollbar-thumb:hover {
+    background: rgb(214, 142, 8);
+}
+
+.light-body::-webkit-scrollbar-button:increment {
+    background-color: rgb(5, 69, 153);
+}
+
+.light-body::-webkit-scrollbar-button:decrement {
+    background-color: rgb(5, 69, 153);
+}
