@@ -879,7 +879,9 @@ section .button-up:hover span {
 
 
 .div-section-content-t4 .message-email-inputs, .message-email-validation {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 20px 10px;
 }
 
@@ -892,6 +894,11 @@ section .button-up:hover span {
     border:1px solid rgb(187, 64, 64);
 }
 
+.div-section-content-t4 .message-email-inputs .close-message, .message-email-validation .close-message {
+    margin: 0em 0em 0em 1em;
+    transition: .2s ease-in-out;
+}
+
 
 /* modifier */
 .sub-collum-works:hover .p-works-description1, .sub-collum-works:hover .a-link-collum-work {
@@ -901,6 +908,11 @@ section .button-up:hover span {
 
 .sub-collum-works:hover .p-works-description2, .sub-collum-works:hover .p-works-description3 {
     display: none;
+}
+
+.close-message:hover {
+    cursor: pointer;
+    font-weight: 700;
 }
 
 
@@ -1458,7 +1470,6 @@ footer .div-footer-shortcuts ul .li-links:hover {
     border-radius: 0px;
     transition: .2s ease-in-out;
 }
-
 
 ::-webkit-scrollbar-button:increment:hover, ::-webkit-scrollbar-button:decrement:hover {
     cursor: pointer;
