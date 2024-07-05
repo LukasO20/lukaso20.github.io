@@ -77,8 +77,9 @@ body .h2-emphasis {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 1.5em 0.8em;
+    margin: 2.5em 0.8em 0em 0.8em;
     width: 100%;
+    height: 4.1em;
     font-size: 1.2em;
 }
 
@@ -109,8 +110,9 @@ body .h2-emphasis {
 .article-menu .li-profile-menu .icon-expand {
     position: absolute;
     right: -1em;
-    width: 2.5em;
-    height: 2.5em;
+    top: 3em;
+    width: 2em;
+    height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,13 +122,10 @@ body .h2-emphasis {
 }
 
 .article-menu .li-profile-menu .icon-expand span.fa-solid {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 
-.article-menu .group-li-links {
-    padding: 0em 0.5em;
-}
 
 .article-menu .ul-li-links {
     display: flex;
@@ -147,13 +146,13 @@ body .h2-emphasis {
 .article-menu .group-li-contacts {
     height: 0px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.1);
     transition: .3s ease-in-out;
 }
 
 .article-menu .ul-li-contacts {
     display: flex;
     flex-direction: column;
+    margin: 0em 1em;
 }
 
 
@@ -176,8 +175,10 @@ body .h2-emphasis {
 }
 
 
-.article-menu .socialmedia-open {
-    background-color: rgba(255, 255, 255, 0.2)
+.article-menu .socialmedia-open ul {
+    margin: 0em 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 .article-menu .icon-socialmedia-open .fa-solid {
@@ -198,6 +199,11 @@ body .h2-emphasis {
 .article-menu .group-li-contacts-open {
     height: 15em;
 }
+
+.article-menu .group-li-contacts-open ul{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+ }
 
 /* menu compact - Group Settings */
 /* element (nav) */
@@ -238,9 +244,14 @@ body .h2-emphasis {
 /* element (nav) */
 
 .article-menu .nav-article-menu-expanded .icon-expand span.fa-solid {
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
+    opacity: 1;
+    transition: .2s ease-in-out;
 }
 
+.article-menu .nav-article-menu-expanded .li-profile-menu .h1-emphasis {
+    margin: 2.5em 0.8em 1em 0.8em;
+}
 
 .article-menu .nav-article-menu-expanded .li-profile-menu .span-title-emphasis {
     width: 4em;

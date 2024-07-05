@@ -24,7 +24,7 @@ buttonMenuContact.on('click', function(){
 
 buttonExpandMenu.on('click', function(){
     shiftMenu($(this))
-    nameStyleMenu(h1Menu)
+    Theme(disableThis = undefined, enableAll = true)
 })
 
 function shiftMenu(event) { 
@@ -32,6 +32,7 @@ function shiftMenu(event) {
     const menuContact = menu.find('.group-li-contacts')
  
     menu.toggleClass('article-menu-expanded')
+    menu.find('.icon-expand').html('<span class="fa-solid fa-chevron-left"></span>') //INSERIR EFEITOS FADE IN E FADE OUT (ANIMAÇÃO DESVANDESCER)
     menuItens.toggleClass('nav-article-menu-expanded')
     menuContact.toggleClass('group-li-contacts-expanded')
     $(event).attr('title', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
@@ -75,7 +76,7 @@ function shiftNavegateItensMenu(classTypeName) {
 
 // -- MAIN FUNCTIONS --
 const main = $('main')
-const footer = $('footer')
+const mainfooter = $('footer')
 
 const buttonUpMain = main.find('.button-up')
 buttonUpMain.on('click', function (){
@@ -84,7 +85,7 @@ buttonUpMain.on('click', function (){
 })
 
 // email functions
-const buttonEmailFooter = footer.find('.email-footer')
+const buttonEmailFooter = mainfooter.find('.email-footer')
 const buttonEmailSection = main.find('.email-section')
 const contentHTMLtarget = main.find('.div-section-content-t4')
 
@@ -122,7 +123,7 @@ function sendEmail () {
         let messageAtention = $('<div class="message-email-inputs"><span>Oops! Check if all the data has been filled out, try again. </span> <span class="fa-regular fa-circle-xmark close-message"></span></div>')
         let messageAtentionEmail = $('<div class="message-email-validation"><span>E-mail provided is invalid. Check the typed credentials and try again!</span></span> <span class="fa-regular fa-circle-xmark close-message"></span></div>')
 
-        let parentMessage = $('body section .div-section-content-t4 .div-contact-content .div-user-data-textarea')
+        let parentMessage = $('.div-user-data-textarea')
 
         if (name !== '' && email !== '' && message !== '') {
             if (validator.isEmail(email)) {
@@ -136,6 +137,7 @@ function sendEmail () {
                     parentMessage.find('.message-email-inputs').remove()
                 }
             }
+
         } else {
             if (!parentMessage.find('.message-email-inputs').hasClass('message-email-inputs')) {
                 parentMessage.append(messageAtention)
@@ -143,153 +145,194 @@ function sendEmail () {
             }
         }
 
+        const buttonCloseMessage = $('.message-email-inputs, .message-email-validation').find('.close-message')
+        buttonCloseMessage.on('click', function() {
+            removeDivs($(this).parent())
+        })
+
     } catch (e) {
         console.log(`Error to send e-mail: ${e}`)
     }
 }
 
-// scroll functions NOVAS APLICAÇÕES AQUI (REFATORAR CÓDIGO)
+function removeDivs(elementJquery) {
+    elementJquery.remove()
+}
+
+// scroll functions
 const screenScroll = $(window)
-const section = $('section')
-
 screenScroll.on('scroll', function (){
-    const scrollTop = $(this).scrollTop()
+    changeLiStatusScroll($(this).scrollTop())
+})
 
-    if (section.length){     
-        const divs = section.children('.div-section') 
+function changeLiStatusScroll (scrollData) {
+    const scrollTop = scrollData
+
+    if (main.length){     
+        const divs = main.find('.div-section')
 
         if(divs.length){
             divs.each(function (index){
-                const divTop = $(this).offset().top
-                const divHeight = $(this).outerHeight()
+                const div = $(this)
+                const divTop = div.offset().top
+                const divHeight = div.outerHeight()
                 const divBottom = divTop + divHeight
 
-                if (scrollTop >= divTop && scrollTop < divBottom){ 
-                    
+                if (scrollTop >= divTop && scrollTop < divBottom){         
                     menu.find('.li-links').each(function (){
                         let item = $(this)
-                        switch (index) {
-                            case 1:
-                                if (item.hasClass('li1')){ item.addClass('li-links-selected') }
-                                else { item.removeClass('li-links-selected') }
-                                break
-                            case 2:
-                            case 3:
-                            case 4:
-                                if (item.hasClass(`li${index}`)){ item.addClass('li-links-selected') }
-                                else { item.removeClass('li-links-selected') }
-                                break
-                            default:
-                                item.removeClass('li-links-selected')       
-                        }
+                        if (item.hasClass(`li${index}`)){ item.addClass('li-links-selected') }
+                        else { item.removeClass('li-links-selected') }
 
-                        index > 1 ? section.find('.button-up').css('opacity', '1') : section.find('.button-up').css('opacity', '0')
+                        index > 1 ? main.find('.button-up').css('opacity', '1') : main.find('.button-up').css('opacity', '0')
                     })
+                    return false
                 }
             })
         }
     }
-})
+}
 
 // -- FOOTER FUNCTIONS --
-const footerYear = $('footer .div-footer-info .message .footer-year')
-const dataNow = new Date()
-footerYear.text(dataNow.getFullYear())
+const footer = $('footer')
+const footerYear = footer.find('.footer-year')
 
-// -- THEMER FUNCTIONS --
-const switchTheme = $('section .div-section-titles .buttons-config .switch-theme')
+const catchDataNowFooter = (dataNow = new Date()) => {
+    footerYear.text(dataNow.getFullYear())
+}
+catchDataNowFooter()
 
+
+// -- THEME FUNCTIONS --
+const switchTheme = $('.switch-theme')
 switchTheme.on('click', function (){
     localStorage.setItem('theme', '')
-    $(this).toggleClass('dark light')
+    switchTheme.toggleClass('dark light')
     switchTheme.find('.icon-current-theme').toggleClass('fa-moon fa-sun')
 
-    if ($(this).hasClass('light')) { localStorage.theme = 'themelight', $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to dark')} 
-    else { localStorage.theme = 'themedark', $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to light')
-}
+    if (switchTheme.hasClass('light')) { localStorage.theme = 'themelight', switchTheme.attr('title', 'Change theme to dark')} 
+    else { localStorage.theme = 'themedark', switchTheme.attr('title', 'Change theme to light') }
 
-    Theme()
+    Theme(disableThis = undefined, enableAll = true)
 })
 
-function Theme() {
-    localStorage.theme === 'themelight' ? 
-    
-    ($('body').addClass('light-body'),
-    $('main section .button-up').addClass('button-up-light'),
-    $('.nav-article-menu').addClass('nav-article-menu-light'),
-    $('section').addClass('section-theme-light'), 
-    $('footer').addClass('footer-light'))  
+function Theme(disableThis, enableAll) { 
 
-    :
+    const themeBody = $('body')
+    const themeMenu = $('article')
+    const themebuttonUpMain = main.find('.button-up')
+    const themeSidebarMenu = themeBody.find('.nav-article-menu')
+    const themeSection = main.find('section')
+    const themeFooter = footer
 
-    ($('body').removeClass('light-body'),
-    $('main section .button-up').removeClass('button-up-light'),
-    $('.nav-article-menu').removeClass('nav-article-menu-light'),
-    $('section').removeClass('section-theme-light'),
-    $('footer').removeClass('footer-light'))    
-}
-
-$(document).ready(function(){
-    try {
-        if(localStorage.theme === 'themelight') {
-            switchTheme.addClass('light')
-            switchTheme.find('.icon-current-theme').addClass('fa-sun')
-            $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to dark')
-        } else {
-            switchTheme.addClass('dark')
-            switchTheme.find('.icon-current-theme').addClass('fa-moon')
-            $('section .div-section-titles .buttons-config .switch-theme').attr('title', 'Change theme to light')
-        }
-    } catch(e) {
-        console.log(`Error change theme of page ${e}`)
-    }
-
-    Theme()
-})
-
-function ResponsiveComponents(windowSize, component) {
-
-    //Type Screen
-    if (windowSize !== undefined && windowSize !== null) {
-        windowSize <= 650 ? nameStyleMenu(h1Menu, true) 
-        : nameStyleMenu(h1Menu, false), menu.hasClass('article-menu-expanded') ? menu.removeClass('article-menu-expanded') : undefined, menu.find('.nav-article-menu').hasClass('nav-article-menu-expanded') ? menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded') : undefined
-    }
-
-    //Type Input
-    if (component !== undefined) { component.val() !== '' ? (component.parent().find('label').addClass('type-active'), component.addClass('type-active')) : undefined }
-}
-
-function nameStyleMenu(element, customSetting = undefined) {
-    const styleH1 = $(element)
-    const styleH1Span = styleH1.find('.span-title-emphasis')
-
-    if (menu.hasClass('article-menu-expanded')) {
-        styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
-    } else {
-        styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
-    }
-
-    // -- responsive settings
-    if (!menu.hasClass('article-menu-expanded')) {
-        if (customSetting === true) {
-            styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
-        } 
+    const load = {
         
-        if (customSetting === false) {
-            styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
+        loadTheme: () => {
+    
+            localStorage.theme === undefined ? localStorage.theme = 'themedark' : undefined
+        
+            localStorage.theme === 'themelight' ? 
+            
+            (themeBody.addClass('light-body'),
+            switchTheme.addClass('light'),
+            switchTheme.find('.icon-current-theme').addClass('fa-sun'),
+            switchTheme.attr('title', 'Change theme to dark'),
+            themebuttonUpMain.addClass('button-up-light'),
+            themeSidebarMenu.addClass('nav-article-menu-light'),
+            themeSection.addClass('section-theme-light'), 
+            themeFooter.addClass('footer-light'))  
+        
+            :
+        
+            (themeBody.removeClass('light-body'),
+            switchTheme.addClass('dark'),
+            switchTheme.find('.icon-current-theme').addClass('fa-moon'),
+            switchTheme.attr('title', 'Change theme to light'),
+            themebuttonUpMain.removeClass('button-up-light'),
+            themeSidebarMenu.removeClass('nav-article-menu-light'),
+            themeSection.removeClass('section-theme-light'),
+            themeFooter.removeClass('footer-light')) 
+        },
+        
+        changeThemeContent: () => {
+    
+            const spanStyleItem1 = $('<span class="span-item1-h1-style">ucas .O</span>')
+            const spanStyleItem2 = $('<span class="span-item2-h1-style">Web Developer</span>')
+    
+            //Content to mobile devices
+            if (screenUserG.width() <= 650 || themeMenu.hasClass('article-menu-expanded')) {
+                const h1Title = themeMenu.find('.li-profile-menu .h1-emphasis')
+                const styleH1Span = h1Title.find('.span-title-emphasis')
+                
+                h1Title.find($('.span-item1-h1-style')).length < 1 ? (styleH1Span.append(spanStyleItem1), h1Title.append(spanStyleItem2)) : undefined 
+            }
+            else if (screenUserG.width() > 650 || !themeMenu.hasClass('article-menu-expanded')) {
+                $('.span-item1-h1-style, .span-item2-h1-style').remove()
+            }
         }
+    }  
+    
+    const disableFunction = (namef) => {
+        if (load[namef]) { load[namef] = () => { /* console.log(`Function ${namef} is disable`) */ }
+        }
+    }
+
+    const enableFunction = () => {
+        load.loadTheme()
+        load.changeThemeContent()
+    }
+
+    if (disableThis) {
+        disableFunction(disableThis)
+    }
+
+    if (enableAll) {
+        enableFunction()
     }
 }
 
-// -- menu mobile settings --
+Theme(disableThis = undefined, enableAll = true)
 
-const screen_width = () => {
+
+// -- MOBILE SETTINGS -- 
+function ScreenWidthMobile() {
+
+    const responsiveComponentsMobile = (windowSize) => {
+
+        //Type Screen
+        if (windowSize !== undefined && windowSize !== null) {
+            windowSize <= 650 ? nameStyleMenu(h1Menu, true) 
+            : nameStyleMenu(h1Menu, false), menu.hasClass('article-menu-expanded') ? menu.removeClass('article-menu-expanded') : undefined, menu.find('.nav-article-menu').hasClass('nav-article-menu-expanded') ? menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded') : undefined
+        }
+    }
 
     let permission = false
-    screenUserG.resize(function () { permission = true,  ResponsiveComponents($(this).width()) })
+    screenUserG.resize(function () { permission = true,  responsiveComponentsMobile($(this).width()) })
 
     // If user don't move the window and current resolution under 650px
-    !permission ? ResponsiveComponents(screenUserG.width()) : undefined
+    !permission ? responsiveComponentsMobile(screenUserG.width()) : undefined
 }
 
-screen_width()
+//ScreenWidthMobile()
+
+// function nameStyleMenu(element, customSetting = undefined) {
+//     const styleH1 = $(element)
+//     const styleH1Span = styleH1.find('.span-title-emphasis')
+
+//     if (menu.hasClass('article-menu-expanded')) {
+//         styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
+//     } else {
+//         styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
+//     }
+
+//     // -- responsive settings
+//     if (!menu.hasClass('article-menu-expanded')) {
+//         if (customSetting === true) {
+//             styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
+//         } 
+        
+//         if (customSetting === false) {
+//             styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
+//         }
+//     }
+// }
