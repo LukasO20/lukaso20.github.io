@@ -314,6 +314,7 @@ body .h2-emphasis {
     border: 0px;
     padding: 0px 10px;
     transition: .3s ease-in-out;
+    background-color: transparent;
 }
 
 .article-menu .nav-article-menu-expanded .li-contact {
