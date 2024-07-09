@@ -23,16 +23,18 @@ buttonMenuContact.on('click', function(){
 })
 
 buttonExpandMenu.on('click', function(){
+    const iconButtonExpand = createElement($(this), 'menu')
+
+    shiftAnimationElement($(this), iconButtonExpand, false, true)
     shiftMenu($(this))
-    Theme(disableThis = undefined, enableAll = true)
+    Theme(disableThis = 'loadTheme', enableAll = true)
 })
 
 function shiftMenu(event) { 
     const menuItens = menu.find('.nav-article-menu')
     const menuContact = menu.find('.group-li-contacts')
- 
+
     menu.toggleClass('article-menu-expanded')
-    menu.find('.icon-expand').html('<span class="fa-solid fa-chevron-left"></span>') //INSERIR EFEITOS FADE IN E FADE OUT (ANIMAÇÃO DESVANDESCER)
     menuItens.toggleClass('nav-article-menu-expanded')
     menuContact.toggleClass('group-li-contacts-expanded')
     $(event).attr('title', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
@@ -73,6 +75,42 @@ function shiftNavegateItensMenu(classTypeName) {
         }
     }
 }
+
+function shiftAnimationElement(element, icon, animateThis, animateAll) {
+
+    const typeShift = { 
+        shiftIcon: (icon) => {
+            if (icon !== '' && typeof icon === 'string' && element.jquery) {
+                element.html(icon)
+            }
+        },
+
+        shiftToggle: () => {
+
+        }
+    }
+
+    const enableOnlyFunction = (namef) => {
+        if (typeShift[namef]) { 
+            typeShift[namef]()
+            animateAll = false
+        }
+    }
+
+    const enableFunction = () => {
+        typeShift.shiftIcon(icon)
+        typeShift.shiftToggle()
+    }
+
+    if (animateThis) {
+        enableOnlyFunction(animateThis)
+    }
+
+    if (animateAll) {
+        enableFunction()
+    }
+}
+
 
 // -- MAIN FUNCTIONS --
 const main = $('main')
@@ -193,6 +231,7 @@ function changeLiStatusScroll (scrollData) {
     }
 }
 
+
 // -- FOOTER FUNCTIONS --
 const footer = $('footer')
 const footerYear = footer.find('.footer-year')
@@ -225,8 +264,7 @@ function Theme(disableThis, enableAll) {
     const themeSection = main.find('section')
     const themeFooter = footer
 
-    const load = {
-        
+    const load = {       
         loadTheme: () => {
     
             localStorage.theme === undefined ? localStorage.theme = 'themedark' : undefined
@@ -253,7 +291,7 @@ function Theme(disableThis, enableAll) {
             themeSection.removeClass('section-theme-light'),
             themeFooter.removeClass('footer-light')) 
         },
-        
+
         changeThemeContent: () => {
     
             const spanStyleItem1 = $('<span class="span-item1-h1-style">ucas .O</span>')
@@ -296,43 +334,36 @@ Theme(disableThis = undefined, enableAll = true)
 
 // -- MOBILE SETTINGS -- 
 function ScreenWidthMobile() {
+    screenUserG.resize(function () { Theme(disableThis = 'loadTheme', enableAll = true) })
+}
 
-    const responsiveComponentsMobile = (windowSize) => {
+ScreenWidthMobile()
 
-        //Type Screen
-        if (windowSize !== undefined && windowSize !== null) {
-            windowSize <= 650 ? nameStyleMenu(h1Menu, true) 
-            : nameStyleMenu(h1Menu, false), menu.hasClass('article-menu-expanded') ? menu.removeClass('article-menu-expanded') : undefined, menu.find('.nav-article-menu').hasClass('nav-article-menu-expanded') ? menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded') : undefined
+
+// -- GENERAL AUXILIARY FUNCTIONS --
+function createElement(element, fromElement) {
+
+    let newElement = undefined
+
+    const typeParent = {
+        menu: () => {
+
+            let iconFontAwesome = undefined
+
+            if (element.jquery) {
+                element.find('span').hasClass('fa-chevron-right') ? 
+                iconFontAwesome = '<span class="fa-solid fa-chevron-left"></span>' :
+                iconFontAwesome = '<span class="fa-solid fa-chevron-right"></span>'
+
+                newElement = iconFontAwesome
+            }
         }
     }
 
-    let permission = false
-    screenUserG.resize(function () { permission = true,  responsiveComponentsMobile($(this).width()) })
+    const enableTypeParent = (nameParent) => {
+        if (typeParent[nameParent]) { typeParent[nameParent]() }
+    }
 
-    // If user don't move the window and current resolution under 650px
-    !permission ? responsiveComponentsMobile(screenUserG.width()) : undefined
+    if (fromElement) { enableTypeParent(fromElement) }
+    return newElement
 }
-
-//ScreenWidthMobile()
-
-// function nameStyleMenu(element, customSetting = undefined) {
-//     const styleH1 = $(element)
-//     const styleH1Span = styleH1.find('.span-title-emphasis')
-
-//     if (menu.hasClass('article-menu-expanded')) {
-//         styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
-//     } else {
-//         styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
-//     }
-
-//     // -- responsive settings
-//     if (!menu.hasClass('article-menu-expanded')) {
-//         if (customSetting === true) {
-//             styleH1.find('.span-item1-h1-style').length < 1 ? (styleH1Span.append('<span class="span-item1-h1-style">ucas .O</span>'), styleH1.append('<span class="span-item2-h1-style">Web Developer</span>')) : undefined
-//         } 
-        
-//         if (customSetting === false) {
-//             styleH1.find('.span-item1-h1-style').length === 1 ? styleH1.find('.span-item1-h1-style, .span-item2-h1-style').remove() : undefined
-//         }
-//     }
-// }
