@@ -157,9 +157,7 @@ function sendEmail () {
         let name = contentEmail.find('input[name="name"]').val()
         let email = contentEmail.find('input[name="email"]').val()
         let message = contentEmail.find('textarea[name="message"]').val()
-
-        let messageAtention = $('<div class="message-email-inputs"><span>Oops! Check if all the data has been filled out, try again. </span> <span class="fa-regular fa-circle-xmark close-message"></span></div>')
-        let messageAtentionEmail = $('<div class="message-email-validation"><span>E-mail provided is invalid. Check the typed credentials and try again!</span></span> <span class="fa-regular fa-circle-xmark close-message"></span></div>')
+        let messageAtention = createElement(contentEmail, 'main')
 
         let parentMessage = $('.div-user-data-textarea')
 
@@ -167,11 +165,11 @@ function sendEmail () {
             if (validator.isEmail(email)) {
                 parentMessage.find('.message-email-inputs').remove()
                 parentMessage.find('.message-email-validation').remove()
-
                 formEmail.submit()
+
             } else {
                 if (!parentMessage.find('.message-email-validation').hasClass('message-email-validation')) {
-                    parentMessage.append(messageAtentionEmail)
+                    parentMessage.append(messageAtention)
                     parentMessage.find('.message-email-inputs').remove()
                 }
             }
@@ -347,7 +345,6 @@ function createElement(element, fromElement) {
 
     const typeParent = {
         menu: () => {
-
             let iconFontAwesome = undefined
 
             if (element.jquery) {
@@ -356,6 +353,30 @@ function createElement(element, fromElement) {
                 iconFontAwesome = '<span class="fa-solid fa-chevron-right"></span>'
 
                 newElement = iconFontAwesome
+            }
+        },
+
+        main: () => {
+            let dataEmpty = undefined
+
+            if (element.jquery) {
+                element.find('input[name="name"], input[name="email"], textarea[name="message"]').each(function () {
+                    if (!$(this).val()) {
+                        dataEmpty = true
+                        return false
+                    }
+                })
+
+                if (dataEmpty) {
+                    newElement = '<div class="message-email-inputs"><span>Oops! Check if all the data has been filled out, try again. </span> <span class="fa-regular fa-circle-xmark close-message"></span></div>'
+                } 
+                else {
+                    let messageCheckEmail = element.find('.message-email-inputs').length
+
+                    if (messageCheckEmail === 0 || messageCheckEmail === 1) {
+                        newElement = '<div class="message-email-validation"><span>E-mail provided is invalid. Check the typed credentials and try again!</span></span> <span class="fa-regular fa-circle-xmark close-message"></span></div>'
+                    }
+                } 
             }
         }
     }
