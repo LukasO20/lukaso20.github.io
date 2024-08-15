@@ -326,7 +326,6 @@ function Theme(disableThis, enableAll) {
         enableFunction()
     }
 }
-
 Theme(disableThis = undefined, enableAll = true)
 
 
@@ -334,7 +333,6 @@ Theme(disableThis = undefined, enableAll = true)
 function ScreenWidthMobile() {
     screenUserG.resize(function () { Theme(disableThis = 'loadTheme', enableAll = true) })
 }
-
 ScreenWidthMobile()
 
 

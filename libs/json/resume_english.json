@@ -3,7 +3,7 @@
         "chld_h3": [
             "Technologies", 
             "Others", 
-            "Contacs"
+            "Contacts"
         ],
         "chld_li":  [
             "Management project with Azure DevOps", 
@@ -16,7 +16,7 @@
         "Head": {
             "chld_h1": "Lucas de Oliveira",
             "chld_h2": "Front-end Developer",
-            "chld_p": "I worked on web projects that use JavaScript as the principal technologie on the front-end. I have gained more experience and knowledge in creating resposive web screens, dynamic interfaces, and enchacing the overall user experience. Also, I built websites with structure ASP.NET MVC, C# technology to build components and use of technologies that are part of .NET Core. My principal skills contains HTML, CSS, Scss, JavaScript (ES6), jQuery, .NET Core and C#."
+            "chld_p": "I worked on web projects that use JavaScript as the principal technologie on the front-end. I have gained more experience and knowledge in creating resposive web screens, dynamic interfaces, and enchacing the overall user experience. Also, I built websites with structure ASP.NET MVC, C# technology to build components and use of technologies that are part of .NET Core. My principal skills contains HTML, CSS, Scss, JavaScript, React JS, jQuery, .NET Core and C#."
         },
 
         "Body": {

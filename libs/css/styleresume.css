@@ -30,6 +30,10 @@ article .article-contacs {
     list-style: none;
 }
 
+.article-contacs .li-item.alt {
+    display: none;
+}
+
 .items-socialmedia {
     display: flex;
     margin: 0em 2em;
@@ -117,13 +121,13 @@ section .div-section-head, .div-section-body {
     cursor: pointer;
 }
 
-.div-section-container span.tl-portuguese-content-active, span.tl-english-content-active {
+.div-section-container .button-translate.active {
     font-weight: 600;
     color: rgb(5, 69, 153);
 }
 
-.div-section-container span.tl-portuguese-content:hover, span.tl-english-content:hover {
-    color: rgb(5, 69, 153);
+.div-section-container .button-translate:hover {
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -185,4 +189,57 @@ section .div-section-head, .div-section-body {
 
 .div-section-container-print {
     display: none;
+}
+
+/* MEDIA QUERY SETTINGS */
+
+/* print settings */
+
+@page {
+    size: A3;
+    margin: 0cm;
+}
+
+@media print {
+
+    /* BODY */
+
+    /* Individual Settings */
+    /* block */
+    body {
+        background-color: rgb(212, 212, 212);
+    }
+
+    main {
+        width: 65em;
+    }
+
+    section {
+        width: 75%;
+    }
+
+    /* element */
+    .div-section-container {
+        opacity: 0;
+    }
+
+    .div-section-head, .div-section-body {
+        padding: 0em 0em 0em 3em;
+    }
+
+    .content-sb1 .company1  {
+        margin: 0em;
+    }
+
+    .about.chld-p {
+        margin: 1em 0em 1em 0em;
+    }
+
+    .article-contacs .li-item.alt {
+        display: block;
+    }    
+
+    .items-socialmedia {
+        display: none;
+    }
 }

@@ -1,87 +1,94 @@
-//RESUME PAGE
-
-function DownloadResume(resume_details) {
-    return new Promise((resolve, reject) => {
-        resolve(resume_details)
-    })
-}
-
-const resume = $('.resume-page-body main section .div-section-container .download')
+// -- RESUME FUNCTIONS --
+const resume = $('.resume-page-body .download')
 
 resume.on('click', function(){
-    
-    //Apply modifications to PDF
-    let resume_details = {
-        main: $('main'),
-        section: $('section'),
-        article: $('article'),
-        sc_div_container: $('.div-section-container')
-    }
-
-    resume_details.main.addClass('main-print')
-    resume_details.section.addClass('section-print')
-    resume_details.article.addClass('article-print')
-    resume_details.sc_div_container.addClass('div-section-container-print')
-
-    let TransformContent = () => {
-        const articlecontacs_ul = $('.article-contacs')
-        articlecontacs_ul.append('<li class="li-item append">Github: /LukasO20</li>')
-    } 
-
-    TransformContent()
-    
-    //Config e Save PDF
-    let body_resume = $('.resume-page-body').html()
-    let resume_pdf = html2pdf()
-
-    let options = {
-        margin: [0.5, 0],
-        filename: 'Lucas_Oliveira_resume.pdf',
-        image: {type: 'jpeg', quality: 0.98},
-        html2canvas: {scale: 2},
-        jsPDF: {unit: 'em', format: 'a4', orientation: 'portrait'}
-    }
-
-    resume_pdf.set(options).from(body_resume).save()
-
-    DownloadResume(resume_details)
-    .then(
-        resume => (resume.main.removeClass('main-print'), resume.article.removeClass('article-print'),
-         resume.sc_div_container.removeClass('div-section-container-print'), resume.section.removeClass('section-print'),
-         resume.article.find('.li-item.append').remove())
-    )
-    .catch(e => console.log(`Download Error: ${e}`))
+    DownloadArchive()
 })
+
+function DownloadArchive () {
+    const link = document.createElement('a')
+    const language = LanguageLocalStorage(undefined, 'getLanguage', false)
+    link.href = `../libs/doc/${language === 'pt' ? 'resumept.pdf' : 'resumeen.pdf'}`
+    link.download = 'Lucas_Oliveira_resume'
+    
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+}
+
+function LanguageLocalStorage (e, nameCallOnly, callAllStatus) {
+
+    const action = {
+        setLanguage: (typeButton) => {
+            if (typeButton !== undefined) {
+                typeButton.hasClass('pt') ? localStorage.setItem('languageResume', 'pt') : localStorage.setItem('languageResume', 'en')
+            }
+        },
+        getLanguage: () => {
+            if (localStorage.languageResume === undefined) {
+                localStorage.setItem('languageResume', 'pt')
+            }
+
+            const language = localStorage.languageResume
+            $('.button-translate').removeClass('active')
+            
+            if (language === 'pt') {
+                ContentLanguageJSON(ptbr = true, en = false)
+                $(`.button-translate.${language}`).addClass('active')
+            }
+            else {
+                ContentLanguageJSON(ptbr = false, en = true)
+                $(`.button-translate.${language}`).addClass('active')
+            }
+
+            return language
+        }
+    }
+
+    const callOnly = (namef) => {
+        if (e === undefined && namef === 'getLanguage') {
+            return action.getLanguage()
+        }
+        else if (action[namef]) {  action[namef](e) }
+    }
+
+    const callAll = () => {
+        action.setLanguage(e)
+        action.getLanguage()
+    }
+
+    if (nameCallOnly) { return callOnly(nameCallOnly) }
+    if (callAllStatus) { return callAll() }
+}
+LanguageLocalStorage(undefined, 'getLanguage', false)
 
 //TRANSLATE (PT-EN)
+const buttonTranslate = $('.button-translate')
 
-const button_translate_pt = $('.resume-page-body main section .div-section-container .tl-portuguese-content')
+buttonTranslate.on('click', function () {
+    //change activity
+    $(this).parent().find('.button-translate').removeClass('active') 
+    $(this).toggleClass('active')
 
-button_translate_pt.on('click', function(){
-    button_translate_en.removeClass('tl-english-content-active')
-    $(this).toggleClass('tl-portuguese-content-active')
-    ContentLanguageJSON(ptbr = true, en = false)
-})
+    //Change language content
+    const typeButton = $(this)
+    typeButton.hasClass('pt') ? ContentLanguageJSON(ptbr = true, en = false)
+        : ContentLanguageJSON(ptbr = false, en = true)
 
-const button_translate_en = $('.resume-page-body main section .div-section-container .tl-english-content')
-
-button_translate_en.on('click', function (){
-    button_translate_pt.removeClass('tl-portuguese-content-active')
-    $(this).toggleClass('tl-english-content-active')
-    ContentLanguageJSON(ptbr = false, en = true)
+    LanguageLocalStorage(typeButton, 'setLanguage', false)
 })
 
 function ContentLanguageJSON (ptbr = undefined, en = undefined) {    
 
     const article = $('article')
     const section = $('section')
-    let type_resume_content = ''
+    let typeResumeContent = ''
     
-    ptbr === true ? type_resume_content = 'resume_portuguese' : undefined 
-    en === true ? type_resume_content = 'resume_english' : undefined 
+    ptbr === true ? typeResumeContent = 'resume_portuguese' : undefined 
+    en === true ? typeResumeContent = 'resume_english' : undefined 
 
     //LOAD TRANSLATE CONTENT
-    $.getJSON(`/libs/json/${type_resume_content}.json`, function (data) {  
+    $.getJSON(`/libs/json/${typeResumeContent}.json`, function (data) {  
 
         const article_navegate = () => {    
             article.find('.chld-h3').eq(0).text(data.Article.chld_h3[0])
@@ -93,7 +100,6 @@ function ContentLanguageJSON (ptbr = undefined, en = undefined) {
 
             article.find('.chld-p').eq(0).text(data.Article.chld_p)
         }
-
         article_navegate()
 
         const section_navegate = () => {
@@ -126,7 +132,6 @@ function ContentLanguageJSON (ptbr = undefined, en = undefined) {
             section.find('.div-section-body .chld-label').eq(0).text(data.Section.Body.chld_label[0])
             section.find('.div-section-body .chld-label').eq(1).text(data.Section.Body.chld_label[1])
         }
-
         section_navegate()
     })
 }
