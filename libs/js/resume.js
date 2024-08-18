@@ -66,7 +66,7 @@ LanguageLocalStorage(undefined, 'getLanguage', false)
 const buttonTranslate = $('.button-translate')
 
 buttonTranslate.on('click', function () {
-    //change activity
+    //Change activity
     $(this).parent().find('.button-translate').removeClass('active') 
     $(this).toggleClass('active')
 
@@ -79,59 +79,75 @@ buttonTranslate.on('click', function () {
 })
 
 function ContentLanguageJSON (ptbr = undefined, en = undefined) {    
-
-    const article = $('article')
-    const section = $('section')
-    let typeResumeContent = ''
+    let typearchive = ''
     
-    ptbr === true ? typeResumeContent = 'resume_portuguese' : undefined 
-    en === true ? typeResumeContent = 'resume_english' : undefined 
+    ptbr === true ? typearchive = 'resume_portuguese' : undefined 
+    en === true ? typearchive = 'resume_english' : undefined 
 
     //LOAD TRANSLATE CONTENT
-    $.getJSON(`/libs/json/${typeResumeContent}.json`, function (data) {  
+    $.getJSON(`/libs/json/${typearchive}.json`, function (data) {  
 
-        const article_navegate = () => {    
-            article.find('.chld-h3').eq(0).text(data.Article.chld_h3[0])
-            article.find('.chld-h3').eq(1).text(data.Article.chld_h3[1])
-            article.find('.chld-h3').eq(2).text(data.Article.chld_h3[2])
+        //Structure base
+        const structureAction = (selector, item, i) => $(selector).eq(i).html(item)
+             
+        const createArticleContent = (data) => {   
+            const selectorMap = {
+                //key (object json), values(selector html to jquery)
+                'titles': 'article h3',
+                'others': 'article .chld-li',
+                'contacts': 'article .article-contacs li:nth-of-type(2)',
+                'last_p': 'article .article-country'
+            }
 
-            article.find('.chld-li').eq(0).text(data.Article.chld_li[0])
-            article.find('.chld-li').eq(1).text(data.Article.chld_li[1])
+            const actions = {
+                //return values according index e selector from 'selectorMap'
+                titles: structureAction,
+                others: structureAction,
+                contacts: structureAction,
+                last_p: structureAction
+            } 
 
-            article.find('.chld-p').eq(0).text(data.Article.chld_p)
+            apply(selectorMap, actions, data.Article)
         }
-        article_navegate()
+        const createSectionContent = (data) => {
+            const selectorMap = {
+                //key (object json), values(selector html to jquery)
+                'titles_h2': 'section h2',
+                'titles_h3': 'section h3',
+                'titles_h4': 'section h4',
+                'p_section': '.chld-p-lv1',
+                'li_section': 'section li > p',
+                'label_section': 'section label'
+            } 
 
-        const section_navegate = () => {
-            section.find('.div-section-head .chld-h1').text(data.Section.Head.chld_h1)
-            section.find('.div-section-head .chld-h2').text(data.Section.Head.chld_h2)
-            section.find('.div-section-head .chld-p').text(data.Section.Head.chld_p)
+            const actions = {
+                //return values according index e selector from 'selectorMap'
+                titles_h2: structureAction,
+                titles_h3: structureAction,
+                titles_h4: structureAction,
+                p_section: structureAction,
+                li_section: structureAction,
+                label_section: structureAction
+            } 
 
-            section.find('.div-section-body .chld-h3').eq(0).text(data.Section.Body.chld_h3[0])
-            section.find('.div-section-body .chld-h3').eq(1).text(data.Section.Body.chld_h3[1])
-            section.find('.div-section-body .chld-h3').eq(2).text(data.Section.Body.chld_h3[2])
-
-            section.find('.div-section-body .chld-h4').eq(0).text(data.Section.Body.chld_h4[0])
-            section.find('.div-section-body .chld-h4').eq(1).text(data.Section.Body.chld_h4[1])
-            section.find('.div-section-body .chld-h4').eq(2).text(data.Section.Body.chld_h4[2])
-            section.find('.div-section-body .chld-h4').eq(3).text(data.Section.Body.chld_h4[3])
-
-            section.find('.div-section-body .chld-p-lv1').eq(0).text(data.Section.Body.chld_p_lv1[0])
-            section.find('.div-section-body .chld-p-lv1').eq(1).text(data.Section.Body.chld_p_lv1[1])
-            section.find('.div-section-body .chld-p-lv1').eq(2).text(data.Section.Body.chld_p_lv1[2])
-            section.find('.div-section-body .chld-p-lv1').eq(3).text(data.Section.Body.chld_p_lv1[3])
-
-            section.find('.div-section-body .chld-p-lv2').eq(0).text(data.Section.Body.chld_p_lv2[0])
-            section.find('.div-section-body .chld-p-lv2').eq(1).text(data.Section.Body.chld_p_lv2[1])
-            section.find('.div-section-body .chld-p-lv2').eq(2).text(data.Section.Body.chld_p_lv2[2])
-            section.find('.div-section-body .chld-p-lv2').eq(3).text(data.Section.Body.chld_p_lv2[3])
-            section.find('.div-section-body .chld-p-lv2').eq(4).text(data.Section.Body.chld_p_lv2[4])
-            section.find('.div-section-body .chld-p-lv2').eq(5).text(data.Section.Body.chld_p_lv2[5])
-            section.find('.div-section-body .chld-p-lv2').eq(6).text(data.Section.Body.chld_p_lv2[6])
-
-            section.find('.div-section-body .chld-label').eq(0).text(data.Section.Body.chld_label[0])
-            section.find('.div-section-body .chld-label').eq(1).text(data.Section.Body.chld_label[1])
+            apply(selectorMap, actions, data.Section)
         }
-        section_navegate()
+
+        //Apply content
+        const apply = (map, objectReference, objectJson) => {
+            Object.entries(objectJson).forEach(([keyJson, contentJson]) => {
+                const selector = map[keyJson]
+                if (selector) {
+                    contentJson.forEach((item, i) => {
+                        objectReference[keyJson]?.(selector, item, i)
+                    })  
+                }
+            })
+        }
+
+        //data
+        const content = data
+        createArticleContent(content)
+        createSectionContent(content)
     })
 }
