@@ -1,5 +1,5 @@
 {
-    "Article": {
+    "article": {
         "titles": [
             "Tecnologias", "Outros", "Contatos"
         ],
@@ -9,7 +9,7 @@
         "contacts": ["Celular: (55)1198542-5030"],
         "last_p": ["São Paulo - SP, Brasil"]
     },
-    "Section": {
+    "section": {
         "titles_h2": ["Desenvolvedor Front-end"],
         "titles_h3": ["Experiência", "Afixcode Soluções Administrativas Ltda", "Educação"],
         "titles_h4": [

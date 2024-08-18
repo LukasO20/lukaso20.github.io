@@ -27,7 +27,7 @@ buttonExpandMenu.on('click', function(){
 
     shiftAnimationElement($(this), iconButtonExpand, false, true)
     shiftMenu($(this))
-    Theme(disableThis = 'loadTheme', enableAll = true)
+    theme(disableThis = 'loadTheme', enableAll = true)
 })
 
 function shiftMenu(event) { 
@@ -250,10 +250,10 @@ switchTheme.on('click', function (){
     if (switchTheme.hasClass('light')) { localStorage.theme = 'themelight', switchTheme.attr('title', 'Change theme to dark')} 
     else { localStorage.theme = 'themedark', switchTheme.attr('title', 'Change theme to light') }
 
-    Theme(disableThis = undefined, enableAll = true)
+    theme(disableThis = undefined, enableAll = true)
 })
 
-function Theme(disableThis, enableAll) { 
+function theme(disableThis, enableAll) { 
 
     const themeBody = $('body')
     const themeMenu = $('article')
@@ -326,14 +326,14 @@ function Theme(disableThis, enableAll) {
         enableFunction()
     }
 }
-Theme(disableThis = undefined, enableAll = true)
+theme(disableThis = undefined, enableAll = true)
 
 
 // -- MOBILE SETTINGS -- 
-function ScreenWidthMobile() {
-    screenUserG.resize(function () { Theme(disableThis = 'loadTheme', enableAll = true) })
+function screenWidthMobile() {
+    screenUserG.resize(function () { theme(disableThis = 'loadTheme', enableAll = true) })
 }
-ScreenWidthMobile()
+screenWidthMobile()
 
 
 // -- GENERAL AUXILIARY FUNCTIONS --
