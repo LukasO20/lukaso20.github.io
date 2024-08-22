@@ -86,11 +86,11 @@ function contentLanguageJSON (ptbr = undefined, en = undefined) {
 
     //LOAD TRANSLATE CONTENT
     $.getJSON(`/libs/json/${typearchive}.json`, function (data) {  
-        setContentJSON(undefined, data)
+        setContentJSON(data)
     })
 }
 
-function setContentJSON (language, data) {
+function setContentJSON (data) {
     //map selector jquery
     const mapJquery = (selector, item, i) => $(selector).eq(i).html(item)
 

@@ -38,6 +38,14 @@ function shiftMenu(event) {
     menuItens.toggleClass('nav-article-menu-expanded')
     menuContact.toggleClass('group-li-contacts-expanded')
     $(event).attr('title', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
+
+    const buttonTitle = menu.find('.li-links')
+    buttonTitle.each(function () {
+        const button = $(this)
+
+        menu.hasClass('article-menu-expanded') ? menu.find(button).attr('title', '')
+            :   menu.find(button).attr('title', button.find('label').text())
+    }) 
 }
 
 function shiftMenuContact() {

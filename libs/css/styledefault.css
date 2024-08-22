@@ -1,6 +1,23 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
+:root {
+    /* Colors */
+    --color-primary: rgb(3, 14, 28);
+    --color-secondary: rgb(41, 45, 51);
+    --color-accent: rgb(113, 158, 219);
+    --color-text: rgb(255, 255, 255);
+    --color-white-st: rgb(192, 192, 192);
+    --color-red-st: rgb(187, 64, 64);
+    --color-gradient-primary: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28));
+    /* opacity */
+    --color-accent-o: rgba(113, 158, 219, 0.2);
+    --color-white-st-o: rgba(255, 255, 255, 0.2);
+    --color-red-st-o: rgba(187, 64, 64, 0.5);
+    --color-accent-medium-o: rgba(113, 158, 219, 0.7);
+    --color-accent-weak-o: rgba(113, 158, 219, 0.4);
+}
+
 /* BODY */
 
 /* Individual Settings */
@@ -11,9 +28,8 @@ body {
 }
 
 /* element */
-
 body .span-title-emphasis {
-    color: rgb(113, 158, 219);
+    color: var(--color-accent);
     font-size: 2em;
 }
 
@@ -37,7 +53,7 @@ body .h2-emphasis {
 /* block */
 .article-menu {
     transition: .3s ease-in-out;
-    width: 10%;
+    width: 5%;
     display: flex;
     position: sticky;
     top: 0;
@@ -47,9 +63,9 @@ body .h2-emphasis {
 .nav-article-menu {
     height: 100%;
     width: 100%;
-    background-color: rgb(3, 14, 28);
+    background-color: var(--color-primary);
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: var(--color-text);
     transition: .3s ease-in-out;
 }
 
@@ -62,6 +78,7 @@ body .h2-emphasis {
     align-items: center;
     list-style: none;
     top: 0;
+    margin: 0em 0.5em;
 }
 
 
@@ -118,13 +135,12 @@ body .h2-emphasis {
     justify-content: center;
     border-radius: 50%;
     transition: .2s ease-in-out;
-    background-color: rgb(113, 158, 219, 0.7);
+    background-color: var(--color-accent-medium-o);
 }
 
 .article-menu .li-profile-menu .icon-expand span.fa-solid {
     font-size: 1em;
 }
-
 
 
 .article-menu .ul-li-links {
@@ -152,20 +168,19 @@ body .h2-emphasis {
 .article-menu .ul-li-contacts {
     display: flex;
     flex-direction: column;
-    margin: 0em 1em;
 }
 
 
 /* modifier (nav) */
 .article-menu .li-profile-menu .icon-expand:hover {
     cursor: pointer;
-    background-color: rgb(113, 158, 219, 0.4);
+    background-color: var(--color-accent-weak-o);
 }
 
 
 .article-menu .li-links:hover {
     cursor: pointer;
-    background-color: rgb(113, 158, 219, 0.7);
+    background-color: var(--color-accent-medium-o);
 }
 
 
@@ -176,7 +191,6 @@ body .h2-emphasis {
 
 
 .article-menu .socialmedia-open ul {
-    margin: 0em 1em;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
@@ -220,11 +234,10 @@ body .h2-emphasis {
     justify-content: center;
     transition: .3s ease-in-out;
     border-radius: 10px;
-    margin: 5px auto;
+    margin: 0.25em 0em;
 }
 
 .menu-ul-itens, .ul-li-links, .ul-li-items, .ul-li-contacts {
-    margin: 0em;
     padding: 0em;
 }
 
@@ -238,7 +251,11 @@ body .h2-emphasis {
 /* block */
 
 .article-menu-expanded {
-    width: 20%;
+    width: 15%;
+}
+
+.article-menu-expanded .menu-ul-itens {
+    margin: 0em;
 }
 
 /* element (nav) */
@@ -312,19 +329,19 @@ body .h2-emphasis {
     width: 82%;
     color: rgb(255, 255, 255);
     border: 0px;
-    padding: 0px 10px;
     transition: .3s ease-in-out;
     background-color: transparent;
 }
 
 .article-menu .nav-article-menu-expanded .li-contact {
-    margin: 0.5em 0.25em;
+    margin: 0.5em 0.125em;
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.article-menu .nav-article-menu-expanded .li-contacts a {
-    margin: 0px 10px;
+.article-menu .nav-article-menu-expanded .li-contact a span {
+    margin-top: 0.2em;
 }
+
 
 /* modifier (nav) */
 .article-menu .nav-article-menu-expanded .li-contact:hover {
@@ -1046,6 +1063,16 @@ footer .div-footer-shortcuts ul .li-links:hover {
 /* MEDIA QUERY SETTINGS */
 
 /* desktop settings */
+
+@media (min-width: 1850px) {
+    .article-menu {
+        width: 3%;
+    }
+
+    .article-menu-expanded {
+        width: 10%;
+    }
+}
 
 @media (min-width: 1500px) {
     footer .div-footer-info {
