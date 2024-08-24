@@ -354,9 +354,9 @@ function createElement(element, fromElement) {
             let iconFontAwesome = undefined
 
             if (element.jquery) {
-                element.find('span').hasClass('fa-chevron-right') ? 
-                iconFontAwesome = '<span class="fa-solid fa-chevron-left"></span>' :
-                iconFontAwesome = '<span class="fa-solid fa-chevron-right"></span>'
+                element.find('i').hasClass('fa-chevron-right') ? 
+                iconFontAwesome = '<i class="fa-solid fa-chevron-left icon"></i>' :
+                iconFontAwesome = '<i class="fa-solid fa-chevron-right icon"></i>'
 
                 newElement = iconFontAwesome
             }
