@@ -268,7 +268,7 @@ body .icon {
 /* menu expanded - Group Settings */
 /* element (nav) */
 .article-menu-expanded .group-li-contacts, .group-li-links {
-    width: 100%;
+    width: 98%;
 }
 
 /* menu expanded - Individual Settings */
@@ -512,7 +512,8 @@ section .switch-theme {
 .div-section-content-t2 .div-section-content-skills {
     display: flex;
     justify-content: space-between;
-    margin: 5% 15%;
+    margin: auto;
+    width: 70%;
     border: 1px solid rgb(113, 158, 219);
     border-radius: 10px;
 }
@@ -1063,7 +1064,6 @@ footer ul .li-links a:hover span {
     color: var(--color-accent);
 }
 
-
 footer .div-footer-shortcuts ul .li-links:hover {
     background-color:  var(--color-accent-o);
 }
@@ -1081,23 +1081,27 @@ footer .div-footer-shortcuts ul .li-links:hover {
     .article-menu-expanded {
         width: 10%;
     }
+
+    .div-section-content-t1 .h3-section-content {
+        padding: 0em 35em;;
+    }
+
+    .div-section-content-t2 .div-section-content-skills {
+        width: 50%;
+    }
+
+    .div-section-content-t3 .sub-collum-works-services  {
+        width: 20%;
+    }
+
+    .section-content .div-contact-content {
+        width: 50%;
+    }
 }
 
 @media (min-width: 1500px) {
-    footer .div-footer-info {
-        margin: 5em 10em;
-    }
-
-    footer .div-footer-shortcuts {
-        margin: 11em 10em;
-    }
-
     .div-section-content-t4 .div-contact-content-email {
         margin: 0px 25%;
-    }
-
-    .div-section-content-t3 .div-section-content-works-services .sub-collum-works-services {
-        width: 20%;
     }
 }
 
@@ -1127,50 +1131,6 @@ footer .div-footer-shortcuts ul .li-links:hover {
     }
 }
 
-@media (min-width: 651px) and (max-width: 880px) {
-
-    /* MAIN */
-
-    /* Individual Settings */
-    /* element */
-
-    .div-section-content-t1 .h3-section-content  {
-        padding: 0em 2em;
-    }
-
-
-    .div-section-content-t2 .div-section-content-skills {
-        margin: 5%;
-    }
-
-
-    .div-section-content-t4 .div-contact-content-itens  {
-        flex-wrap: wrap;
-    }
-
-    .div-section-content-t4 .div-user-data {
-        flex-direction: column;
-    }
-
-
-    /* Group Settings */
-    /* element */
-
-    .div-section-content-t2 .collum-skills-t1-div1 label, .collum-skills-t1-div2 label {
-        width: 88%;
-    }
-
-    .div-section-content-t2 .collum-skills-t1, .collum-skills-t2 {
-        margin: 3em 0.5em;
-    }
-
-
-    /* modifier */
-    .div-section-content-t2 .collum-skills-t1 p:nth-last-of-type(2), .collum-skills-t2 p:nth-last-of-type(2) {
-        height: 7em;
-    }
-}
-
 /* mobile settings */
 
 @media (max-width: 1024px) {
@@ -1192,12 +1152,12 @@ footer .div-footer-shortcuts ul .li-links:hover {
         padding: 0em 5em;
     }
 
-
-    .div-section-content-t2 .div-section-content-skills {
-        margin: 5%;
-    }
-
     
+    .div-section-content-t2 .div-section-content-skills  {
+        width: 90.5%;
+    }
+    
+
     .div-section-content-t4 .div-contact-content-email .div-user-data {
         justify-content: center;
 
@@ -1205,35 +1165,6 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     .div-section-content-t4 .p-user-data {
         margin: 1em;
-    }
-}
-
-@media (max-width: 800px) {
-
-    /* MENU */
-
-    /* menu expanded - Individual Settings */
-    /* block */
-    .article-menu-expanded {
-        width: 35%;
-    }
-
-
-    /* SECTION */
-
-    /* Individual Settings */
-    /* element */
-    .div-section-content-skills {
-        margin: 5%;
-    }
-
-
-    /* FOOTER */
-
-    /* Individual Settings */
-    /* element */
-    .div-footer-shortcuts {
-        margin: 8em 0em;
     }
 }
 
@@ -1258,7 +1189,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     .article-menu {
         width: auto;
-        top: -14vh;
+        top: -13vh;
     }
 
     .article-menu .icon {
@@ -1302,6 +1233,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     .nav-article-menu .li-links {
         background-color: var(--color-accent-weak-o);
+        margin: 0em 0.5em;
     }
 
     .nav-article-menu .li-links label {
@@ -1369,10 +1301,6 @@ footer .div-footer-shortcuts ul .li-links:hover {
         padding: 0em 2em;
     }
 
-
-    .div-section-content-t2 .div-section-content-skills  {
-        margin: 5%;
-    }
 
     .div-section-content-t2 .sub-collum-skills  {
         flex-direction: column;
