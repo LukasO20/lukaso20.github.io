@@ -30,7 +30,6 @@
     background-color: var(--color-light-primary);
 }
 
-
 .nav-article-menu-light .h1-emphasis .span-title-emphasis {
     color: var(--color-light-accent);
 }
@@ -41,15 +40,17 @@
     color: var(--color-light-accent);
 }
 
-.article-menu-expanded .nav-article-menu-light .group-li-contacts {
-    background-color: var(--color-light-primary);
-}
-
-
 .nav-article-menu-light .li-profile-menu .icon-expand {
     background-color: var(--color-light-accent-medium-o);
 }
 
+.nav-article-menu-light .socialmedia-open ul {
+    background-color: var(--color-light-accent-weak-o);
+}
+
+.article-menu-expanded .nav-article-menu-light .group-li-contacts {
+    background-color: var(--color-light-primary);
+}
 
 /* modifier */
 .nav-article-menu-light .li-profile-menu .icon-expand:hover {
@@ -115,7 +116,7 @@
     color: var(--color-light-primary);
 }
 
-.section-theme-light .collum-skills-t1 .p-highlighted, .section-theme-light .collum-skills-t2 .p-highlighted {
+.section-theme-light .p-highlighted {
     color: var(--color-light-primary);
 }
 
@@ -140,15 +141,15 @@
     color: var(--color-light-smoke-st);
 }
 
-.section-theme-light .div-section-content-t2 .h2-section-content-skills {
+.section-theme-light .h2-section-content-skills {
     color: var(--color-light-smoke-st);
 }
 
-.section-theme-light .div-section-content-t2 .div-section-content-skills {
+.section-theme-light .div-section-content-skills {
     border: 1px solid var(--color-light-primary);
 }
 
-.section-theme-light .div-section-content-t2 .sub-collum-skills label {
+.section-theme-light .sub-collum-skills label {
     color: var(--color-light-primary);
     border-color: var(--color-light-primary-weak-o);
 }

@@ -1073,6 +1073,26 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
 /* desktop settings */
 
+@media (min-width: 1280px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 1500px) {
+    .div-section-content-t4 .div-contact-content-email {
+        margin: 0px 25%;
+    }
+}
+
 @media (min-width: 1850px) {
     .article-menu {
         width: 3%;
@@ -1087,7 +1107,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
     }
 
     .div-section-content-t2 .div-section-content-skills {
-        width: 50%;
+        width: 45%;
     }
 
     .div-section-content-t3 .sub-collum-works-services  {
@@ -1099,23 +1119,17 @@ footer .div-footer-shortcuts ul .li-links:hover {
     }
 }
 
-@media (min-width: 1500px) {
-    .div-section-content-t4 .div-contact-content-email {
-        margin: 0px 25%;
-    }
-}
-
-@media (min-width: 1280px) {
-    h2 {
-        font-size: 2.5em;
+@media (min-width: 3600px) {
+    .div-section-content-t2 .div-section-content-skills  {
+        width: 40%;
     }
 
-    h3 {
-        font-size: 1.25em;
+    .div-section-content-t3 .sub-collum-works-services  {
+        width: 15%;
     }
 
-    p {
-        font-size: 1.1em;
+    .section-content .div-contact-content {
+        width: 35%;
     }
 }
 
@@ -1189,7 +1203,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     .article-menu {
         width: auto;
-        top: -13vh;
+        top: -12vh;
     }
 
     .article-menu .icon {
@@ -1233,7 +1247,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
 
     .nav-article-menu .li-links {
         background-color: var(--color-accent-weak-o);
-        margin: 0em 0.5em;
+        margin: 0em 0.1em;
     }
 
     .nav-article-menu .li-links label {
