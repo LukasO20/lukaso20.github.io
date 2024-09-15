@@ -37,14 +37,13 @@ function shiftMenu(event) {
     menu.toggleClass('article-menu-expanded')
     menuItens.toggleClass('nav-article-menu-expanded')
     menuContact.toggleClass('group-li-contacts-expanded')
-    $(event).attr('title', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
+    $(event).attr('title-custom', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
 
     const buttonTitle = menu.find('.li-links')
     buttonTitle.each(function () {
         const button = $(this)
-
-        menu.hasClass('article-menu-expanded') ? menu.find(button).attr('title', '')
-            :   menu.find(button).attr('title', button.find('label').text())
+        menu.hasClass('article-menu-expanded') ? menu.find(button).removeAttr('title-custom')
+            :   menu.find(button).attr('title-custom', button.find('label').text())
     }) 
 }
 
@@ -55,7 +54,7 @@ function shiftMenuContact() {
     menuContact.toggleClass('group-li-contacts-open')
     iconButtonStatus.toggleClass('icon-socialmedia-open')
     iconButtonStatus.parents('.group-li-items').toggleClass('socialmedia-open')
-    iconButtonStatus.attr('title', menuContact.hasClass('group-li-contacts-open') ? 'Close social media details' : 'Open social media details')
+    iconButtonStatus.attr('title-custom', menuContact.hasClass('group-li-contacts-open') ? 'Close social media details' : 'Open social media details')
 }
 
 function shiftNavegateItensMenu(classTypeName) {
@@ -255,8 +254,8 @@ switchTheme.on('click', function (){
     switchTheme.toggleClass('dark light')
     switchTheme.find('.icon-current-theme').toggleClass('fa-moon fa-sun')
 
-    if (switchTheme.hasClass('light')) { localStorage.theme = 'themelight', switchTheme.attr('title', 'Change theme to dark')} 
-    else { localStorage.theme = 'themedark', switchTheme.attr('title', 'Change theme to light') }
+    if (switchTheme.hasClass('light')) { localStorage.theme = 'themelight', switchTheme.attr('title-custom', 'Change theme to dark')} 
+    else { localStorage.theme = 'themedark', switchTheme.attr('title-custom', 'Change theme to light') }
 
     theme(disableThis = undefined, enableAll = true)
 })
@@ -280,7 +279,7 @@ function theme(disableThis, enableAll) {
             (themeBody.addClass('light-body'),
             switchTheme.addClass('light'),
             switchTheme.find('.icon-current-theme').addClass('fa-sun'),
-            switchTheme.attr('title', 'Change theme to dark'),
+            switchTheme.attr('title-custom', 'Change theme to dark'),
             themebuttonUpMain.addClass('button-up-light'),
             themeSidebarMenu.addClass('nav-article-menu-light'),
             themeSection.addClass('section-theme-light'), 
@@ -291,7 +290,7 @@ function theme(disableThis, enableAll) {
             (themeBody.removeClass('light-body'),
             switchTheme.addClass('dark'),
             switchTheme.find('.icon-current-theme').addClass('fa-moon'),
-            switchTheme.attr('title', 'Change theme to light'),
+            switchTheme.attr('title-custom', 'Change theme to light'),
             themebuttonUpMain.removeClass('button-up-light'),
             themeSidebarMenu.removeClass('nav-article-menu-light'),
             themeSection.removeClass('section-theme-light'),
@@ -312,6 +311,14 @@ function theme(disableThis, enableAll) {
             }
             else if (screenUserG.width() > 650 || !themeMenu.hasClass('article-menu-expanded')) {
                 $('.span-item1-h1-style, .span-item2-h1-style').remove()
+            }
+
+            if (screenUserG.width() <= 650) {
+                menu.removeClass('article-menu-expanded')
+                menu.find('.nav-article-menu').removeClass('nav-article-menu-expanded')
+                menu.find('.group-li-contacts').removeClass('group-li-contacts-expanded')
+                buttonExpandMenu.find('.icon').removeClass('fa-chevron-left').addClass('fa-chevron-right')
+                buttonExpandMenu.attr('title-custom', menu.hasClass('article-menu-expanded') ? 'Minimize menu' : 'Expand menu')
             }
         }
     }  
@@ -394,3 +401,14 @@ function createElement(element, fromElement) {
     if (fromElement) { enableTypeParent(fromElement) }
     return newElement
 }
+
+$(document).ready(function () {
+    //remove title
+    main.closest('body').find('*').removeAttr('title')
+    
+    const buttonTitleSocial = menu.find('.li-contact')
+    buttonTitleSocial.each(function () {
+        const button = $(this)
+        menu.find(button).removeAttr('title-custom')
+    }) 
+})

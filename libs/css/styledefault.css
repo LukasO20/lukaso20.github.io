@@ -22,6 +22,7 @@
 
     /* Fonts */
     --font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
+    --font-size-smallest: 0.85em;
     --font-size-st: 1.1rem;
     --font-size-medium: 1.3rem;
     --font-size-big: 1.5rem;
@@ -75,6 +76,53 @@ body .icon {
     transition: .3s ease-in-out;
 }
 
+/* adjustments of title-custom */
+body [title-custom]:hover::after {
+    content: attr(title-custom);
+    height: 1.25em;
+    position: absolute;
+    bottom: 100%; 
+    transform: translateX(-50%);
+    background-color: var(--color-smoke-dark-st);
+    color: var(--color-white-st);
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 0.25em;
+    font-size: var(--font-size-smallest);
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 1;
+}
+
+body .li-links[title-custom]:hover::after {
+    left: 7em;
+    top: -2em;
+}
+
+body .li-links[title-custom]:hover::after {
+    left: 7em;
+    top: -2em;
+}
+
+body .icon-expand[title-custom]:hover::after {
+    left: 5.2em;
+}
+
+body .social-media-itens[title-custom]:hover::after {
+    left: 10em;
+}
+
+body .button-up[title-custom]:hover::after {
+    top: -3em;
+    right: 1em;
+}
+
+body .switch-theme[title-custom]:hover::after  {
+    bottom: 0;
+    transform: translateX(-70%);
+} 
+
 /* MENU */
 
 /* menu compact - Individual Settings */
@@ -114,6 +162,7 @@ body .icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
 }
 
 .article-menu .li-profile-menu .h1-emphasis {
@@ -247,6 +296,7 @@ body .icon {
     height: 3em;
     width: 4em;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     transition: .3s ease-in-out;
@@ -273,7 +323,6 @@ body .icon {
 
 /* menu expanded - Individual Settings */
 /* element (nav) */
-
 .article-menu .nav-article-menu-expanded .li-profile-menu .h1-emphasis {
     margin: 2.5em 0.8em 1em 0.8em;
 }
@@ -482,6 +531,7 @@ section .buttons-config {
 }
 
 section .switch-theme {
+    position: relative;
     height: 2.5em;
     width: 2.5em;
     display: flex;
@@ -1140,8 +1190,20 @@ footer .div-footer-shortcuts ul .li-links:hover {
     /* MAIN */
     /* individual settings */
 
-    .div-contact-content-email .p-user-data input {
+    section .div-contact-content-email .p-user-data input {
         width: 180px;   
+    }
+
+    section .button-up {
+        top: 30em;
+    }
+
+    footer .div-footer-shortcuts {
+        margin: 7em 5em;
+    }
+
+    footer .div-footer-info {
+        margin: 0em 5em;
     }
 }
 
@@ -1196,6 +1258,7 @@ footer .div-footer-shortcuts ul .li-links:hover {
     .nav-article-menu .li-contact, .li-links {
         width: 7em;
         height: 2.5em;
+        user-select: none;
     }
 
     /* Individual Settings */
@@ -1204,6 +1267,8 @@ footer .div-footer-shortcuts ul .li-links:hover {
     .article-menu {
         width: auto;
         top: -12vh;
+        z-index: 2;
+        overflow: hidden;
     }
 
     .article-menu .icon {
