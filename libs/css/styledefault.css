@@ -967,6 +967,10 @@ section .button-up:hover .icon {
 
 /* Group Settings */
 /* element */
+.p-works-description1 {
+    transition: 0s ease-in-out;
+}
+
 .p-works-description1, .a-link-collum-work {
     font-size: 0.1em;
     opacity: 0;
