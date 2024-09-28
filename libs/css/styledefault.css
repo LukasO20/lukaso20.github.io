@@ -41,6 +41,12 @@
     /* Section dimensions */
 }
 
+/* APLICAR A ESTRUTURA BEM PARA ESSE CSS & CLASS */
+
+* {
+    transition: .3s ease-in-out;
+}
+
 /* BODY */
 
 /* Individual Settings */
