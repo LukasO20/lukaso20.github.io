@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+:root {
+    /* Colors */
+    --color-primary: rgb(3, 14, 28);
+    --color-secondary: rgb(41, 45, 51);
+    --color-accent: rgb(113, 158, 219);
+    --color-text: rgb(255, 255, 255);
+    --color-white-st: rgb(255, 255, 255);
+    --color-smoke-st: rgb(235, 235, 235);
+    --color-smoke-dark-st: rgb(85, 85, 85);
+    --color-red-st: rgb(187, 64, 64);
+    --color-gradient-primary: radial-gradient(circle, rgba(255, 255, 255, 0.035), rgb(3, 14, 28));
+    /* opacity */
+    --color-primary-o: rgba(3, 14, 28, 0.9);
+    --color-accent-o: rgba(113, 158, 219, 0.2);
+    --color-white-st-o: rgba(255, 255, 255, 0.2);
+    --color-red-st-o: rgba(187, 64, 64, 0.5);
+    --color-accent-medium-o: rgba(113, 158, 219, 0.7);
+    --color-accent-weak-o: rgba(113, 158, 219, 0.4);
+
+    /* Fonts */
+    --font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
+    --font-size-smallest: 0.85em;
+    --font-size-st: 1.1rem;
+    --font-size-medium: 1.3rem;
+    --font-size-big: 1.5rem;
+    --font-size-large: 1.7rem;
+    --font-size-e-small: 1.7rem;
+    --font-size-e-mini: 2rem;
+    --font-size-e-st: 2.3rem;
+    --font-size-e-medium: 2.5rem;
+    --font-size-e-big: 2.7rem;
+    /* icons */
+    --icon-size-st: 1rem;
+    --icon-size-small: 0.85rem;
+    --icon-margin-st: 0em 0.5em;
+    --icon-margin-big: 0em 1em;
+
+    /* Section dimensions */
+}
+
+* {
+    transition: .3s ease-in-out;
+}
+
