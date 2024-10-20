@@ -45,3 +45,98 @@
     transition: .3s ease-in-out;
 }
 
+body {
+    font-family: var(--font-family);
+    margin: 0px;
+}
+
+body .h1-content {
+    font-size: var(--font-size-e-medium);
+}
+
+body .h2-content {
+    font-size: var(--font-size-e-small);
+}
+
+body .icon {
+    font-size: var(--icon-size-st);
+    margin: var(--icon-margin-st);
+}
+
+/* adjustments of title-custom */
+body [title-custom]:hover::after {
+    content: attr(title-custom);
+    height: 1.25em;
+    position: absolute;
+    bottom: 100%; 
+    transform: translateX(-50%);
+    background-color: var(--color-smoke-dark-st);
+    color: var(--color-white-st);
+    padding: 0.5em;
+    margin: 0.25em;
+    border-radius: 0.25em;
+    font-size: var(--font-size-smallest);
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 1;
+}
+
+body .li-links[title-custom]:hover::after {
+    left: 7em;
+    top: -2em;
+}
+
+body .li-links[title-custom]:hover::after {
+    left: 7em;
+    top: -2em;
+}
+
+body .icon-expand[title-custom]:hover::after {
+    left: 5.2em;
+}
+
+body .social-media-itens[title-custom]:hover::after {
+    left: 10em;
+}
+
+body .button-up[title-custom]:hover::after {
+    top: -3em;
+    right: 1em;
+}
+
+body .switch-theme[title-custom]:hover::after  {
+    bottom: 0;
+    transform: translateX(-70%);
+} 
+
+/* MENU */
+.menu {
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+
+.menu--nav .menu--nav--ul {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    top: 0;
+    margin: 0em 0.5em;
+}
+
+.menu--nav .menu--nav--ul--li1.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
