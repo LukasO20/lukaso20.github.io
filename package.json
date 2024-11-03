@@ -1,0 +1,16 @@
+{
+  "name": "lukaso20.github.io",
+  "version": "1.0.0",
+  "description": "**https://lukaso20.github.io**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass redesign/src/libs/style:redesign/public/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.80.6",
+    "font-awesome": "^4.7.0"  
+  }
+}

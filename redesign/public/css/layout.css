@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+body {
+  margin: 0em;
+  background-color: #030e1c;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #030e1c);
+}
+body .header {
+  background-color: #030e1c;
+  padding: 2.5em;
+}
+body .header .header--section-right .section-right--nav .nav--ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=layout.css.map */
