@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
 
+//FONTS
+$font-family: 'Red Hat Display', 'Segoe UI', sans-serif;
+
 //COLORS
 $color-primary: #030e1c;
 $color-secondary: #3865A0;
@@ -15,19 +18,29 @@ $color-white-o03: rgba($color-white, 0.035);
 //GRADIENT
 $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primary);
 
-//PADDING LEVEL
-$padding-lv3: 3em;
-$padding-lv3-075: 2.75em;
-$padding-lv3-05: 2.5em;
-$padding-lv2: 2em;
-$padding-lv2-075: 1.75em;
-$padding-lv2-05: 1.5em;
-$padding-lv1: 1em;
-$padding-lv1-075: 0.75em;
-$padding-lv1-05: 0.5em;
+//SPACING LEVELS
+$spacing-levels: (
+    lv3: 3em,
+    lv3-075: 2.75em,
+    lv3-05: 2.5em,
+    lv2: 2em,
+    lv2-075: 1.75em,
+    lv2-05: 1.5em,
+    lv1: 1em,
+    lv1-075: 0.75em,
+    lv1-05: 0.5em,
+    lv0-025: 0.25em,
+    lv0-015: 0.15em,
+);
 
+@function apply-spacing($level) {
+    @return map-get($spacing-levels, $level);
+}
 
-//MARGIN LEVEL
+* {
+    transition: .3s ease-in-out;
+    font-family: $font-family;
+}
 
 body {
     margin: 0em;
@@ -35,17 +48,35 @@ body {
     background-image: $color-gradient-primary;
 
     .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: $color-primary;
-        padding: $padding-lv3-05;
+        padding: apply-spacing(lv2-05);
 
         .header--section-right {
 
             .section-right--nav {
 
                 .nav--ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     list-style: none;
+                    gap: apply-spacing(lv2-05);
+
+                    .ul--li {
+
+                        label {
+                            color: $color-white;
+                        }
+                    }
                 }
             }
         }
+    }
+
+    .footer {
+        
     }
 }
