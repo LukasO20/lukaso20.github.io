@@ -6,25 +6,77 @@
 
 body {
   margin: 0em;
+  height: 100vh;
   background-color: #030e1c;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #030e1c);
 }
-body .header {
+body .icon {
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+body .icon:hover {
+  background-color: rgba(3, 14, 28, 0.7);
+}
+body .container {
+  display: grid;
+  grid-template-rows: 1fr 9.25fr 9.25fr;
+}
+body .container .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #030e1c;
   padding: 1.5em;
 }
-body .header .header--section-right .section-right--nav .nav--ul {
+body .container .header .header--section-right .section-right--nav .nav--ul {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
   gap: 1.5em;
 }
-body .header .header--section-right .section-right--nav .nav--ul .ul--li label {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label {
   color: #fff;
+}
+body .container .main {
+  display: flex;
+}
+body .container .main .main--section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .container .main .main--section .section--title {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .main .main--section .section--title h1 {
+  color: #fff;
+}
+body .container .main .main--section .section--title h2 {
+  color: #4E90E6;
+}
+body .container .main .main--section .section--title .title-left .title-sec1 h1 {
+  font-size: 3.5em;
+}
+body .container .main .main--section .section--title .title-left .title-sec2 h1, body .container .main .main--section .section--title .title-left .title-sec2 h2 {
+  font-size: 2.5em;
+}
+body .container .main .main--section .section--title .title-right p {
+  font-size: 2em;
+  color: #fff;
+  width: 20em;
+}
+body .container .main .main--section .section--title .title-left, body .container .main .main--section .section--title .title-right {
+  padding: 5em;
+}
+body .container .main .main--section .section--social-media {
+  flex-grow: 5;
+  display: flex;
+  align-items: center;
+  gap: 0em 1.5em;
+  padding: 0em 5em;
 }
 
 /*# sourceMappingURL=layout.css.map */
