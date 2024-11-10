@@ -15,6 +15,8 @@ $color-primary-o9: rgba($color-primary-dark, 0.97);
 $color-primary-o7: rgba($color-primary-dark, 0.7);
 $color-secondary-o7: rgba($color-secondary, 0.7);
 $color-white-o03: rgba($color-white, 0.035);
+$color-white-o05: rgba($color-white, 0.055);
+$color-white-o07: rgba($color-white, 0.075);
 
 //GRADIENT
 $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primary-dark);
@@ -52,6 +54,7 @@ $spacing-levels: (
     lv1-05: 0.5em,
     lv0-025: 0.25em,
     lv0-015: 0.15em,
+    lv0-01: 0.1em,
 );
 
 @function apply-spacing($level) {
@@ -68,16 +71,18 @@ body {
     height: 100vh;
     background-color: $color-primary-dark;
     background-image: $color-gradient-primary;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .icon {
         color: $color-white;
         font-size: apply-font-size(lv2-05);
-        cursor: pointer;
     }
 
     .container {
         display: grid;
         grid-template-rows: 1fr 9.25fr 9.25fr;
+        background-color: $color-primary-o7;
 
         .header {
             display: flex;
@@ -146,11 +151,27 @@ body {
                     }
     
                     .title-right {
-    
+                        display: flex;
+                        align-items: center;
+
                         p {
-                            font-size: 2em;
+                            font-size: apply-font-size(lv2-075);
                             color: #fff;
                             width: 20em;
+
+                            .title-right--title {
+                                background-color: $color-white-o07;
+                                color: $color-accent;
+                                padding: apply-spacing(lv0-01) apply-spacing(lv1-05);
+                                border-radius: apply-spacing(lv1);
+                                font-weight: 600;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $color-white;
+                                    color: $color-accent;
+                                }
+                            }
                         }
                     }
     
@@ -170,7 +191,118 @@ body {
         }
     
         .footer {
-            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $color-primary-dark;
+            background-image: $color-gradient-primary;
+
+            h3 {
+                color: $color-white;
+                margin: apply-spacing(lv1) apply-spacing(lv0-025);
+            }
+
+            .icon {
+                margin-right: apply-spacing(lv0-025);
+                font-size: apply-font-size(lv1);
+            }
+
+            .footer--shortcuts, .footer--info {
+                display: flex;
+                padding: apply-spacing(lv5);
+                flex: 1;
+            }
+
+            .footer--shortcuts {
+                gap: apply-spacing(lv2-05);
+                align-items: center;
+
+                > div {
+                    margin-top: apply-spacing(lv5);
+                    display: flex;
+                    flex-direction: column;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0em;
+                        list-style: none;
+                        height: 10em;
+                        gap: 0.5em;
+
+                        li {
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                padding: apply-spacing(lv1) apply-spacing(lv1-05);
+                                border-radius: apply-spacing(lv1-05);
+                                color: $color-white;
+                                text-decoration: none;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: $color-secondary-o7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer--info {
+                justify-content: space-between;
+                flex: 1;
+                align-items: end;
+
+                .info--info-left {
+
+                    p {
+                        color: $color-white;
+
+                        a {
+                            text-decoration: none;
+                            font-weight: 600;
+                            color: $color-white;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .info--info-right {
+                    display: flex;
+                    align-items: center;
+                    gap: apply-spacing(lv1-05);
+
+                    * {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        .container-scroll-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+            width: 5em;
+            height: 5em;
+            position: fixed;
+            bottom: 10%;
+            right: 10%;
+            gap: apply-spacing(lv1-05);
+
+            > label {
+                padding: apply-spacing(lv1-05);
+                border-radius: 50%;
+                background-color: $color-accent;
+                border: solid 2px $color-accent;
+                cursor: pointer;
+            }
         }
     }
 }
