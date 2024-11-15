@@ -1,3 +1,74 @@
-
+body {
+  margin: 0em;
+  height: 100vh;
+  background-color: #030e1c;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #030e1c);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .icon {
+  color: #fff;
+}
+body .btn-bg-round:hover {
+  background-color: rgba(56, 101, 160, 0.3);
+}
+body .btn-bg-round:hover * {
+  color: #4E90E6;
+}
+body .header {
+  background-color: #030e1c;
+}
+body .header .header--section-right .section-right--nav .nav--ul .ul--li label {
+  color: #fff;
+}
+body .header .header--section-right .section-right--nav .nav--ul .ul--li label:hover {
+  border-color: #fff;
+}
+body .container {
+  background-color: rgba(3, 14, 28, 0.7);
+}
+body .container .container-content .main[type=home] .main--section .section--title h1 {
+  color: #fff;
+}
+body .container .container-content .main[type=home] .main--section .section--title h2 {
+  color: #4E90E6;
+}
+body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
+  background-color: rgba(255, 255, 255, 0.075);
+  color: #4E90E6;
+}
+body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title:hover {
+  background-color: #fff;
+  color: #4E90E6;
+}
+body .container .container-scroll-indicator > label {
+  background-color: #4E90E6;
+  border: solid 2px #4E90E6;
+}
+body .container .container-scroll-indicator > label:hover {
+  border-color: #3865A0;
+}
+body .footer {
+  background-color: #030e1c;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #030e1c);
+}
+body .footer h3 {
+  color: #fff;
+}
+body .footer .footer--shortcuts > div ul li a {
+  color: #fff;
+}
+body .footer .footer--shortcuts > div ul li a:hover {
+  background-color: rgba(56, 101, 160, 0.3);
+}
+body .footer .footer--info .info--info-left p {
+  color: #fff;
+}
+body .footer .footer--info .info--info-left p a {
+  color: #fff;
+}
+body .footer .footer--info .info--info-right * {
+  color: #fff;
+}
 
 /*# sourceMappingURL=darktheme.css.map */
