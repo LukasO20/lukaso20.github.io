@@ -21,35 +21,36 @@ body .btn-bg-round {
   width: 2.5em;
   border-radius: 50%;
 }
-body .header {
+body .container {
+  display: grid;
+  grid-template-rows: 1fr 8.25fr 9.25fr;
+}
+body .container .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1em 5em;
 }
-body .header .header--section-right .section-right--nav .nav--ul {
+body .container .header .header--section-right .section-right--nav .nav--ul {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
   gap: 1.5em;
 }
-body .header .header--section-right .section-right--nav .nav--ul .ul--li * {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li * {
   cursor: pointer;
 }
-body .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a {
   text-decoration: none;
 }
-body .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a label {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a label {
   padding-bottom: 0.25em;
   border-bottom: solid 2px transparent;
 }
-body .container {
-  display: grid;
-  grid-template-rows: 1fr 9.25fr 9.25fr;
-}
 body .container .container-content .main {
   display: flex;
+  height: 100%;
 }
 body .container .container-content .main[type=home] .main--section {
   display: flex;
@@ -59,6 +60,7 @@ body .container .container-content .main[type=home] .main--section {
 body .container .container-content .main[type=home] .main--section .section--title {
   display: flex;
   justify-content: space-between;
+  flex: 2;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-left .title-sec1 h1 {
   font-size: 3.5em;
@@ -85,7 +87,7 @@ body .container .container-content .main[type=home] .main--section .section--tit
   padding: 5em;
 }
 body .container .container-content .main[type=home] .main--section .section--social-media {
-  flex-grow: 5;
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0em 1em;
@@ -112,33 +114,33 @@ body .container .container-scroll-indicator > label {
   cursor: pointer;
   border: solid 2px transparent;
 }
-body .footer {
+body .container .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body .footer h3 {
+body .container .footer h3 {
   margin: 1em 0.25em;
 }
-body .footer .icon {
+body .container .footer .icon {
   margin-right: 0.25em;
   font-size: 1em;
 }
-body .footer .footer--shortcuts, body .footer .footer--info {
+body .container .footer .footer--shortcuts, body .container .footer .footer--info {
   display: flex;
   padding: 5em;
   flex: 1;
 }
-body .footer .footer--shortcuts {
+body .container .footer .footer--shortcuts {
   gap: 1.5em;
   align-items: center;
 }
-body .footer .footer--shortcuts > div {
+body .container .footer .footer--shortcuts > div {
   margin-top: 5em;
   display: flex;
   flex-direction: column;
 }
-body .footer .footer--shortcuts > div ul {
+body .container .footer .footer--shortcuts > div ul {
   display: flex;
   flex-direction: column;
   padding: 0em;
@@ -146,7 +148,7 @@ body .footer .footer--shortcuts > div ul {
   height: 10em;
   gap: 0.5em;
 }
-body .footer .footer--shortcuts > div ul li a {
+body .container .footer .footer--shortcuts > div ul li a {
   display: flex;
   align-items: center;
   padding: 1em 0.5em;
@@ -154,19 +156,19 @@ body .footer .footer--shortcuts > div ul li a {
   text-decoration: none;
   cursor: pointer;
 }
-body .footer .footer--info {
+body .container .footer .footer--info {
   justify-content: space-between;
   flex: 1;
   align-items: end;
 }
-body .footer .footer--info .info--info-left p a {
+body .container .footer .footer--info .info--info-left p a {
   text-decoration: none;
   font-weight: 600;
 }
-body .footer .footer--info .info--info-left p a:hover {
+body .container .footer .footer--info .info--info-left p a:hover {
   text-decoration: underline;
 }
-body .footer .footer--info .info--info-right {
+body .container .footer .footer--info .info--info-right {
   display: flex;
   align-items: center;
   gap: 0.5em;

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass redesign/src/libs/style:redesign/public/css"
+    "build": "sass redesign/libs/style:redesign/public/css"
   },
   "author": "",
   "license": "ISC",

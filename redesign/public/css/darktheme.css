@@ -15,17 +15,17 @@ body .btn-bg-round:hover {
 body .btn-bg-round:hover * {
   color: #4E90E6;
 }
-body .header {
-  background-color: #030e1c;
-}
-body .header .header--section-right .section-right--nav .nav--ul .ul--li label {
-  color: #fff;
-}
-body .header .header--section-right .section-right--nav .nav--ul .ul--li label:hover {
-  border-color: #fff;
-}
 body .container {
   background-color: rgba(3, 14, 28, 0.7);
+}
+body .container .header {
+  background-color: #030e1c;
+}
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label {
+  color: #fff;
+}
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label:hover {
+  border-color: #fff;
 }
 body .container .container-content .main[type=home] .main--section .section--title h1 {
   color: #fff;
@@ -48,26 +48,26 @@ body .container .container-scroll-indicator > label {
 body .container .container-scroll-indicator > label:hover {
   border-color: #3865A0;
 }
-body .footer {
+body .container .footer {
   background-color: #030e1c;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #030e1c);
 }
-body .footer h3 {
+body .container .footer h3 {
   color: #fff;
 }
-body .footer .footer--shortcuts > div ul li a {
+body .container .footer .footer--shortcuts > div ul li a {
   color: #fff;
 }
-body .footer .footer--shortcuts > div ul li a:hover {
+body .container .footer .footer--shortcuts > div ul li a:hover {
   background-color: rgba(56, 101, 160, 0.3);
 }
-body .footer .footer--info .info--info-left p {
+body .container .footer .footer--info .info--info-left p {
   color: #fff;
 }
-body .footer .footer--info .info--info-left p a {
+body .container .footer .footer--info .info--info-left p a {
   color: #fff;
 }
-body .footer .footer--info .info--info-right * {
+body .container .footer .footer--info .info--info-right * {
   color: #fff;
 }
 

@@ -40,33 +40,33 @@ body {
         }
     }
 
-    .header {
-        background-color: $color-primary-dark;
-
-        .header--section-right {
-
-            .section-right--nav {
-
-                .nav--ul {
-
-                    .ul--li {
-
-                        label {
-                            color: $color-white;
-
-                            &:hover {
-                                border-color: $color-white;
+    .container {
+        background-color: $color-primary-o7;
+        
+        .header {
+            background-color: $color-primary-dark;
+    
+            .header--section-right {
+    
+                .section-right--nav {
+    
+                    .nav--ul {
+    
+                        .ul--li {
+    
+                            label {
+                                color: $color-white;
+    
+                                &:hover {
+                                    border-color: $color-white;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
 
-    .container {
-        background-color: $color-primary-o7;
-        
         .container-content {
 
             .main {
@@ -117,53 +117,53 @@ body {
                 }
             }
         }
-    }
 
-    .footer {
-        background-color: $color-primary-dark;
-        background-image: $color-gradient-primary;
-
-        h3 {
-            color: $color-white;
-        }
-
-        .footer--shortcuts {
-
-            > div {
-
-                ul {
-
-                    li {
-
-                        a {
-                            color: $color-white;
-
-                            &:hover {
-                                background-color: $color-secondary-o3;
+        .footer {
+            background-color: $color-primary-dark;
+            background-image: $color-gradient-primary;
+    
+            h3 {
+                color: $color-white;
+            }
+    
+            .footer--shortcuts {
+    
+                > div {
+    
+                    ul {
+    
+                        li {
+    
+                            a {
+                                color: $color-white;
+    
+                                &:hover {
+                                    background-color: $color-secondary-o3;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-
-        .footer--info {
-
-            .info--info-left {
-
-                p {
-                    color: $color-white;
-
-                    a {
+    
+            .footer--info {
+    
+                .info--info-left {
+    
+                    p {
                         color: $color-white;
+    
+                        a {
+                            color: $color-white;
+                        }
                     }
                 }
-            }
-
-            .info--info-right {
-
-                * {
-                    color: $color-white;
+    
+                .info--info-right {
+    
+                    * {
+                        color: $color-white;
+                    }
                 }
             }
         }

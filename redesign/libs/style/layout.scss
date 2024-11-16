@@ -52,7 +52,6 @@ $spacing-levels: (
 body {
     margin: 0em;
     height: 100vh;
-
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -69,37 +68,42 @@ body {
         border-radius: 50%;
     }
 
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: apply-spacing(lv1) apply-spacing(lv5);
-
-        .header--section-right {
-
-            .section-right--nav {
-
-                .nav--ul {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    list-style: none;
-                    gap: apply-spacing(lv2-05);
-
-                    .ul--li {
-                        
-                        * {
-                            cursor: pointer;
-                        }
-
-                        &:nth-child(-n + 3) {
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 8.25fr 9.25fr;
+       
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: apply-spacing(lv1) apply-spacing(lv5);
+    
+            .header--section-right {
+    
+                .section-right--nav {
+    
+                    .nav--ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        list-style: none;
+                        gap: apply-spacing(lv2-05);
+    
+                        .ul--li {
                             
-                            a {
-                                text-decoration: none;
-
-                                label {
-                                    padding-bottom: apply-spacing(lv0-025);
-                                    border-bottom: solid 2px transparent;
+                            * {
+                                cursor: pointer;
+                            }
+    
+                            &:nth-child(-n + 3) {
+                                
+                                a {
+                                    text-decoration: none;
+    
+                                    label {
+                                        padding-bottom: apply-spacing(lv0-025);
+                                        border-bottom: solid 2px transparent;
+                                    }
                                 }
                             }
                         }
@@ -107,17 +111,13 @@ body {
                 }
             }
         }
-    }
 
-    .container {
-        display: grid;
-        grid-template-rows: 1fr 9.25fr 9.25fr;
-    
         .container-content {
 
             .main {
                 display: flex;
-        
+                height: 100%;
+
                 &[type="home"] {
                     
                     .main--section {
@@ -128,7 +128,8 @@ body {
                         .section--title {
                             display: flex;
                             justify-content: space-between;
-            
+                            flex: 2;
+
                             .title-left {
             
                                 .title-sec1 {
@@ -170,7 +171,7 @@ body {
                         }
             
                         .section--social-media {
-                            flex-grow: 5;
+                            flex: 1;
                             display: flex;
                             align-items: center;
                             gap: 0em apply-spacing(lv1);
@@ -204,84 +205,84 @@ body {
                 border: solid 2px transparent;
             }
         }
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        h3 {
-            margin: apply-spacing(lv1) apply-spacing(lv0-025);
-        }
-
-        .icon {
-            margin-right: apply-spacing(lv0-025);
-            font-size: apply-font-size(lv1);
-        }
-
-        .footer--shortcuts, .footer--info {
+    
+        .footer {
             display: flex;
-            padding: apply-spacing(lv5);
-            flex: 1;
-        }
-
-        .footer--shortcuts {
-            gap: apply-spacing(lv2-05);
-            align-items: center;
-
-            > div {
-                margin-top: apply-spacing(lv5);
+            flex-direction: column;
+            justify-content: center;
+    
+            h3 {
+                margin: apply-spacing(lv1) apply-spacing(lv0-025);
+            }
+    
+            .icon {
+                margin-right: apply-spacing(lv0-025);
+                font-size: apply-font-size(lv1);
+            }
+    
+            .footer--shortcuts, .footer--info {
                 display: flex;
-                flex-direction: column;
-
-                ul {
+                padding: apply-spacing(lv5);
+                flex: 1;
+            }
+    
+            .footer--shortcuts {
+                gap: apply-spacing(lv2-05);
+                align-items: center;
+    
+                > div {
+                    margin-top: apply-spacing(lv5);
                     display: flex;
                     flex-direction: column;
-                    padding: 0em;
-                    list-style: none;
-                    height: 10em;
-                    gap: 0.5em;
-
-                    li {
-
+    
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0em;
+                        list-style: none;
+                        height: 10em;
+                        gap: 0.5em;
+    
+                        li {
+    
+                            a {
+                                display: flex;
+                                align-items: center;
+                                padding: apply-spacing(lv1) apply-spacing(lv1-05);
+                                border-radius: apply-spacing(lv1-05);
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .footer--info {
+                justify-content: space-between;
+                flex: 1;
+                align-items: end;
+    
+                .info--info-left {
+    
+                    p {
+    
                         a {
-                            display: flex;
-                            align-items: center;
-                            padding: apply-spacing(lv1) apply-spacing(lv1-05);
-                            border-radius: apply-spacing(lv1-05);
                             text-decoration: none;
-                            cursor: pointer;
+                            font-weight: 600;
+    
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
-            }
-        }
-
-        .footer--info {
-            justify-content: space-between;
-            flex: 1;
-            align-items: end;
-
-            .info--info-left {
-
-                p {
-
-                    a {
-                        text-decoration: none;
-                        font-weight: 600;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
+    
+                .info--info-right {
+                    display: flex;
+                    align-items: center;
+                    gap: apply-spacing(lv1-05);
                 }
-            }
-
-            .info--info-right {
-                display: flex;
-                align-items: center;
-                gap: apply-spacing(lv1-05);
             }
         }
     }
