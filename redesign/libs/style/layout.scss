@@ -68,6 +68,26 @@ body {
         border-radius: 50%;
     }
 
+    .btn-bg-round-flat {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        padding: 0em apply-spacing(lv0-025);
+        border-radius: apply-spacing(lv1-05);
+        cursor: pointer;
+
+        * {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .icon {
+            font-size: apply-font-size(lv1-085);
+            margin: 0em apply-spacing(lv0-025);
+            margin-top: apply-spacing(lv0-025);
+        }
+    }
+
     .container {
         display: grid;
         grid-template-rows: 1fr 8.25fr 9.25fr;
@@ -183,6 +203,25 @@ body {
                         }
                     }
                 }
+
+                &[type="about"] {
+                    flex-direction: column;
+                    width: 50%;
+                    margin: apply-spacing(lv1) auto;
+                
+                    .card {
+                        margin: apply-spacing(lv1) 0em;
+                        border-radius: apply-spacing(lv1);
+                        padding: 0em apply-spacing(lv1);
+
+                        p {
+                            text-align: start;
+                            line-height: apply-spacing(lv2-075);
+                            font-size: apply-font-size(lv1);
+                            text-shadow: 0em 0em 1em black;
+                        }
+                    }
+                }
             }
         }
 
@@ -252,6 +291,10 @@ body {
                                 border-radius: apply-spacing(lv1-05);
                                 text-decoration: none;
                                 cursor: pointer;
+
+                                .icon {
+                                    margin-right: apply-spacing(lv1-05);
+                                }
                             }
                         }
                     }

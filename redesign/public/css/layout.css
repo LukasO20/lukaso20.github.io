@@ -21,6 +21,23 @@ body .btn-bg-round {
   width: 2.5em;
   border-radius: 50%;
 }
+body .btn-bg-round-flat {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 0em 0.25em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+body .btn-bg-round-flat * {
+  cursor: pointer;
+  text-decoration: none;
+}
+body .btn-bg-round-flat .icon {
+  font-size: 0.85em;
+  margin: 0em 0.25em;
+  margin-top: 0.25em;
+}
 body .container {
   display: grid;
   grid-template-rows: 1fr 8.25fr 9.25fr;
@@ -96,6 +113,22 @@ body .container .container-content .main[type=home] .main--section .section--soc
 body .container .container-content .main[type=home] .main--section .section--social-media * {
   cursor: pointer;
 }
+body .container .container-content .main[type=about] {
+  flex-direction: column;
+  width: 50%;
+  margin: 1em auto;
+}
+body .container .container-content .main[type=about] .card {
+  margin: 1em 0em;
+  border-radius: 1em;
+  padding: 0em 1em;
+}
+body .container .container-content .main[type=about] .card p {
+  text-align: start;
+  line-height: 1.75em;
+  font-size: 1em;
+  text-shadow: 0em 0em 1em black;
+}
 body .container .container-scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -155,6 +188,9 @@ body .container .footer .footer--shortcuts > div ul li a {
   border-radius: 0.5em;
   text-decoration: none;
   cursor: pointer;
+}
+body .container .footer .footer--shortcuts > div ul li a .icon {
+  margin-right: 0.5em;
 }
 body .container .footer .footer--info {
   justify-content: space-between;

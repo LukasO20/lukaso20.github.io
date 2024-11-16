@@ -1,7 +1,6 @@
 const renderPage = (route) => {
     const container = document.getElementById('container-content')
     const page = `pages/${route}.html`
-    console.log('PAGE ', page)
     fetch(page)
         .then(response => response.text())
         .then(html => container.innerHTML = html)
@@ -12,20 +11,28 @@ const renderPage = (route) => {
         })
 }
 
-const handleRouteChange = (event) => {
-    console.log('FROM CLICK - ', event)
-
-    const route = location.hash.replace('#', '') || 'home'
-    renderPage(route)
+const handleRouteChange = (route) => {
+    // Update history to navegator
+    const currentState = history.state?.route;
+    if (currentState !== route) {
+        history.pushState({ route }, '', `#${route}`);
+    }
 }
 
 const linkPage = document.querySelectorAll('.link-page')
 linkPage.forEach(link => 
     link.addEventListener('click', () => {
         const route = link.getAttribute('href').replace('#', '')
-        renderPage(route)
+        handleRouteChange(route)
     })
 )
 
-window.addEventListener('hashchange', handleRouteChange())
-window.addEventListener('load', handleRouteChange())
+window.addEventListener('popstate', (e) => {
+    const route = e.state?.route || history.state?.route || 'home'
+    renderPage(route)
+})
+
+window.addEventListener('load', () => {
+    const route = location.hash.replace('#', '') || 'home'
+    renderPage(route)
+})

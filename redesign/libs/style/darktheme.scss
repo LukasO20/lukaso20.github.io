@@ -14,6 +14,7 @@ $color-white-o03: rgba($color-white, 0.035);
 $color-white-o05: rgba($color-white, 0.055);
 $color-white-o07: rgba($color-white, 0.075);
 
+
 //GRADIENT
 $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primary-dark);
 
@@ -40,9 +41,33 @@ body {
         }
     }
 
+    .btn-bg-round-flat {
+        background-color: $color-white;
+    
+        * {
+            color: $color-accent;
+        }
+
+        &:hover {
+            background-color: $color-accent;
+
+            * {
+                color: $color-white;
+            }
+        } 
+     }
+
     .container {
         background-color: $color-primary-o7;
         
+        h1 {
+            color: $color-white;
+        }
+
+        h2 {
+            color: $color-accent;
+        }
+
         .header {
             background-color: $color-primary-dark;
     
@@ -76,14 +101,6 @@ body {
                     .main--section {
     
                         .section--title {
-        
-                            h1 {
-                                color: $color-white;
-                            }
-            
-                            h2 {
-                                color: $color-accent;
-                            }
             
                             .title-right {
         
@@ -100,6 +117,18 @@ body {
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+
+                &[type="about"] {
+                    
+                    .card {
+                        color: $color-white;
+                        background-color: $color-white-o07;
+
+                        .btn-bg-round-flat {
+                            text-shadow: none;
                         }
                     }
                 }

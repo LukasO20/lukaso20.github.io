@@ -15,8 +15,26 @@ body .btn-bg-round:hover {
 body .btn-bg-round:hover * {
   color: #4E90E6;
 }
+body .btn-bg-round-flat {
+  background-color: #fff;
+}
+body .btn-bg-round-flat * {
+  color: #4E90E6;
+}
+body .btn-bg-round-flat:hover {
+  background-color: #4E90E6;
+}
+body .btn-bg-round-flat:hover * {
+  color: #fff;
+}
 body .container {
   background-color: rgba(3, 14, 28, 0.7);
+}
+body .container h1 {
+  color: #fff;
+}
+body .container h2 {
+  color: #4E90E6;
 }
 body .container .header {
   background-color: #030e1c;
@@ -27,12 +45,6 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label:hover {
   border-color: #fff;
 }
-body .container .container-content .main[type=home] .main--section .section--title h1 {
-  color: #fff;
-}
-body .container .container-content .main[type=home] .main--section .section--title h2 {
-  color: #4E90E6;
-}
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
   background-color: rgba(255, 255, 255, 0.075);
   color: #4E90E6;
@@ -40,6 +52,13 @@ body .container .container-content .main[type=home] .main--section .section--tit
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title:hover {
   background-color: #fff;
   color: #4E90E6;
+}
+body .container .container-content .main[type=about] .card {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
+}
+body .container .container-content .main[type=about] .card .btn-bg-round-flat {
+  text-shadow: none;
 }
 body .container .container-scroll-indicator > label {
   background-color: #4E90E6;
