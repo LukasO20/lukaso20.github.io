@@ -33,10 +33,10 @@ body {
     .btn-bg-round {
 
         &:hover {
-            background-color: $color-secondary-o3;
+            background-color: $color-secondary-o3 !important;
             
             * {
-                color: $color-accent;
+                color: $color-accent !important;
             }
         }
     }
@@ -49,13 +49,17 @@ body {
         }
 
         &:hover {
-            background-color: $color-accent;
+            background-color: $color-accent !important;
 
             * {
-                color: $color-white;
+                color: $color-white !important;
             }
         } 
-     }
+    }
+
+    a {
+        color: $color-accent;
+    }
 
     .container {
         background-color: $color-primary-o7;
@@ -79,11 +83,14 @@ body {
     
                         .ul--li {
     
-                            label {
-                                color: $color-white;
-    
-                                &:hover {
-                                    border-color: $color-white;
+                            a {
+
+                                label {
+                                    color: $color-white;
+        
+                                    &:hover {
+                                        border-color: $color-white;
+                                    }
                                 }
                             }
                         }
@@ -95,7 +102,11 @@ body {
         .container-content {
 
             .main {
-    
+
+                .btn-bg-round {
+                    background-color: $color-white-o07;
+                }
+
                 &[type="home"] {
     
                     .main--section {
@@ -129,6 +140,24 @@ body {
 
                         .btn-bg-round-flat {
                             text-shadow: none;
+                        }
+                    }
+                }
+
+                &[type="contact"] {
+
+                    .card {
+                        color: $color-white;
+                        background-color: $color-white-o07;
+                        
+                        .card--body {
+
+                            .body--section-bottom-info {
+
+                                .line {
+                                    background-color: $color-white;
+                                }
+                            }
                         }
                     }
                 }
@@ -176,7 +205,11 @@ body {
             }
     
             .footer--info {
-    
+
+                .line {
+                    background-color: $color-white-o05;
+                }
+
                 .info--info-left {
     
                     p {

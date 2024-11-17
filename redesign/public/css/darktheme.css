@@ -10,10 +10,10 @@ body .icon {
   color: #fff;
 }
 body .btn-bg-round:hover {
-  background-color: rgba(56, 101, 160, 0.3);
+  background-color: rgba(56, 101, 160, 0.3) !important;
 }
 body .btn-bg-round:hover * {
-  color: #4E90E6;
+  color: #4E90E6 !important;
 }
 body .btn-bg-round-flat {
   background-color: #fff;
@@ -22,10 +22,13 @@ body .btn-bg-round-flat * {
   color: #4E90E6;
 }
 body .btn-bg-round-flat:hover {
-  background-color: #4E90E6;
+  background-color: #4E90E6 !important;
 }
 body .btn-bg-round-flat:hover * {
-  color: #fff;
+  color: #fff !important;
+}
+body a {
+  color: #4E90E6;
 }
 body .container {
   background-color: rgba(3, 14, 28, 0.7);
@@ -39,11 +42,14 @@ body .container h2 {
 body .container .header {
   background-color: #030e1c;
 }
-body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a label {
   color: #fff;
 }
-body .container .header .header--section-right .section-right--nav .nav--ul .ul--li label:hover {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a label:hover {
   border-color: #fff;
+}
+body .container .container-content .main .btn-bg-round {
+  background-color: rgba(255, 255, 255, 0.075);
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
   background-color: rgba(255, 255, 255, 0.075);
@@ -59,6 +65,13 @@ body .container .container-content .main[type=about] .card {
 }
 body .container .container-content .main[type=about] .card .btn-bg-round-flat {
   text-shadow: none;
+}
+body .container .container-content .main[type=contact] .card {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info .line {
+  background-color: #fff;
 }
 body .container .container-scroll-indicator > label {
   background-color: #4E90E6;
@@ -79,6 +92,9 @@ body .container .footer .footer--shortcuts > div ul li a {
 }
 body .container .footer .footer--shortcuts > div ul li a:hover {
   background-color: rgba(56, 101, 160, 0.3);
+}
+body .container .footer .footer--info .line {
+  background-color: rgba(255, 255, 255, 0.055);
 }
 body .container .footer .footer--info .info--info-left p {
   color: #fff;

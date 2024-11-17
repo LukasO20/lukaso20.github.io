@@ -19,13 +19,13 @@ const handleRouteChange = (route) => {
     }
 }
 
-const linkPage = document.querySelectorAll('.link-page')
-linkPage.forEach(link => 
-    link.addEventListener('click', () => {
-        const route = link.getAttribute('href').replace('#', '')
+document.addEventListener('click', function (e) {
+    const linkPage = e.target.closest('.link-page')
+    if (linkPage) {
+        const route = linkPage.getAttribute('href').replace('#', '')
         handleRouteChange(route)
-    })
-)
+    }
+})
 
 window.addEventListener('popstate', (e) => {
     const route = e.state?.route || history.state?.route || 'home'

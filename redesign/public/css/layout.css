@@ -31,12 +31,14 @@ body .btn-bg-round-flat {
 }
 body .btn-bg-round-flat * {
   cursor: pointer;
-  text-decoration: none;
 }
 body .btn-bg-round-flat .icon {
   font-size: 0.85em;
   margin: 0em 0.25em;
   margin-top: 0.25em;
+}
+body a {
+  text-decoration: none;
 }
 body .container {
   display: grid;
@@ -68,6 +70,16 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .container-content .main {
   display: flex;
   height: 100%;
+  position: relative;
+}
+body .container .container-content .main .btn-bg-round.back-home {
+  position: absolute;
+  left: -7em;
+  margin: 1.5em 1.34em 1.34em 1.34em;
+  cursor: pointer;
+}
+body .container .container-content .main .btn-bg-round.back-home .icon {
+  font-size: 1.15em;
 }
 body .container .container-content .main[type=home] .main--section {
   display: flex;
@@ -95,7 +107,7 @@ body .container .container-content .main[type=home] .main--section .section--tit
   width: 20em;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
-  padding: 0.1em 0.5em;
+  padding: 0em 0.5em;
   border-radius: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -122,12 +134,66 @@ body .container .container-content .main[type=about] .card {
   margin: 1em 0em;
   border-radius: 1em;
   padding: 0em 1em;
+  backdrop-filter: blur(1em);
 }
 body .container .container-content .main[type=about] .card p {
   text-align: start;
   line-height: 1.75em;
   font-size: 1em;
   text-shadow: 0em 0em 1em black;
+}
+body .container .container-content .main[type=contact] {
+  flex-direction: column;
+  width: 50%;
+  margin: 1em auto;
+}
+body .container .container-content .main[type=contact] .card {
+  margin: 1em 0em;
+  border-radius: 1em;
+  padding: 0em 1em;
+  backdrop-filter: blur(1em);
+}
+body .container .container-content .main[type=contact] .card h3 {
+  text-align: center;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info .line {
+  display: inline-flex;
+  height: 1px;
+  width: 35%;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat h3 {
+  width: 100%;
+  margin-top: 0em;
+  margin-bottom: 2em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0em 1.5em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label > span {
+  margin-bottom: 0.5em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label > span .icon {
+  font-size: 1rem;
+  margin: 0em 0.5em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label a:hover {
+  text-decoration: underline;
 }
 body .container .container-scroll-indicator {
   display: flex;
@@ -194,8 +260,14 @@ body .container .footer .footer--shortcuts > div ul li a .icon {
 }
 body .container .footer .footer--info {
   justify-content: space-between;
-  flex: 1;
+  flex: 0.25;
   align-items: end;
+  flex-wrap: wrap;
+}
+body .container .footer .footer--info .line {
+  display: inline-flex;
+  width: 100%;
+  height: 1px;
 }
 body .container .footer .footer--info .info--info-left p a {
   text-decoration: none;

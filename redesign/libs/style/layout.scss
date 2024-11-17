@@ -13,6 +13,7 @@ $font-size-levels: (
     lv2: 2em,
     lv2-075: 1.75em,
     lv2-05: 1.5em,
+    lv1-015: 1.15em,
     lv1: 1em,
     lv1-085: 0.85em,
 );
@@ -78,7 +79,6 @@ body {
 
         * {
             cursor: pointer;
-            text-decoration: none;
         }
 
         .icon {
@@ -86,6 +86,10 @@ body {
             margin: 0em apply-spacing(lv0-025);
             margin-top: apply-spacing(lv0-025);
         }
+    }
+
+    a {
+        text-decoration: none;
     }
 
     .container {
@@ -137,6 +141,18 @@ body {
             .main {
                 display: flex;
                 height: 100%;
+                position: relative;
+
+                .btn-bg-round.back-home {
+                    position: absolute;
+                    left: -7em;
+                    margin: apply-spacing(lv2-05) 1.34em 1.34em 1.34em;
+                    cursor: pointer;
+
+                    .icon {
+                        font-size: apply-font-size(lv1-015);
+                    }
+                }
 
                 &[type="home"] {
                     
@@ -177,7 +193,7 @@ body {
                                     width: 20em;
         
                                     .title-right--title {
-                                        padding: apply-spacing(lv0-01) apply-spacing(lv1-05);
+                                        padding: 0em apply-spacing(lv1-05);
                                         border-radius: apply-spacing(lv1);
                                         font-weight: 600;
                                         cursor: pointer;
@@ -213,12 +229,82 @@ body {
                         margin: apply-spacing(lv1) 0em;
                         border-radius: apply-spacing(lv1);
                         padding: 0em apply-spacing(lv1);
+                        backdrop-filter: blur(1em);
 
                         p {
                             text-align: start;
                             line-height: apply-spacing(lv2-075);
                             font-size: apply-font-size(lv1);
                             text-shadow: 0em 0em 1em black;
+                        }
+                    }
+                }
+
+                &[type="contact"] {
+                    flex-direction: column;
+                    width: 50%;
+                    margin: apply-spacing(lv1) auto;
+
+                    .card {
+                        margin: apply-spacing(lv1) 0em;
+                        border-radius: apply-spacing(lv1);
+                        padding: 0em apply-spacing(lv1);
+                        backdrop-filter: blur(1em);
+
+                        h3 {
+                            text-align: center;
+                        }
+
+                        .card--body {
+
+                            .body--section-bottom-info {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: apply-spacing(lv1);
+                                margin: apply-spacing(lv3);
+
+                                .line {
+                                    display: inline-flex;
+                                    height: 1px;
+                                    width: 35%;
+                                }
+                            }
+
+                            .body--section-bottom-chat {
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                justify-content: center;
+
+                                h3 {
+                                    width: 100%;
+                                    margin-top: 0em;
+                                    margin-bottom: apply-spacing(lv2);
+                                }
+
+                                > label {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin: 0em apply-spacing(lv2-05);
+
+                                    > span {
+                                        margin-bottom: apply-spacing(lv1-05);
+
+                                        .icon {
+                                            font-size: 1rem;
+                                            margin: 0em apply-spacing(lv1-05);
+                                        }
+                                    }
+
+                                    a {
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -303,9 +389,16 @@ body {
     
             .footer--info {
                 justify-content: space-between;
-                flex: 1;
+                flex: 0.25;
                 align-items: end;
-    
+                flex-wrap: wrap;
+                
+                .line {
+                    display: inline-flex;
+                    width: 100%;
+                    height: 1px;
+                }
+
                 .info--info-left {
     
                     p {
