@@ -152,6 +152,51 @@ body {
                         
                         .card--body {
 
+                            .body--section-top {
+
+                                .p-user-data {
+
+                                    input {
+                                        border-color: $color-white;
+                                        outline-color: $color-accent;
+                                        color: $color-white;
+
+                                        &::placeholder {
+                                            color: $color-white;
+                                        }
+
+                                        &:focus {
+                                            caret-color: $color-accent;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .body--section-bottom {
+
+                                .div-user-data-textarea {
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 8em;
+
+                                    .p-textarea {
+                                        margin-top: 0em;
+                                        font-weight: 600;
+                                    }
+    
+                                    textarea {
+                                        border-color: $color-white;
+                                        outline: $color-accent;
+                                        caret-color: $color-accent;
+                                        color: $color-white;
+    
+                                        &::placeholder {
+                                            color: $color-white;
+                                        }
+                                    }
+                                }
+                            }
+
                             .body--section-bottom-info {
 
                                 .line {

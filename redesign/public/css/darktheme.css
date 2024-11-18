@@ -70,6 +70,35 @@ body .container .container-content .main[type=contact] .card {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.075);
 }
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input {
+  border-color: #fff;
+  outline-color: #4E90E6;
+  color: #fff;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input::placeholder {
+  color: #fff;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input:focus {
+  caret-color: #4E90E6;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea {
+  display: flex;
+  flex-direction: column;
+  height: 8em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea .p-textarea {
+  margin-top: 0em;
+  font-weight: 600;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea {
+  border-color: #fff;
+  outline: #4E90E6;
+  caret-color: #4E90E6;
+  color: #fff;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea::placeholder {
+  color: #fff;
+}
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info .line {
   background-color: #fff;
 }

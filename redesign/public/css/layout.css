@@ -156,6 +156,48 @@ body .container .container-content .main[type=contact] .card {
 body .container .container-content .main[type=contact] .card h3 {
   text-align: center;
 }
+body .container .container-content .main[type=contact] .card .card--body > div {
+  padding: 0em 1em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top {
+  padding: 0em 1em;
+  margin-top: 2.5em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 0em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data label {
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input {
+  padding: 0.75em;
+  background-color: transparent;
+  border: solid 2px;
+  border-radius: 0.5em;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom {
+  display: flex;
+  flex-direction: column;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea .p-textarea {
+  margin-top: 0em;
+  font-weight: 600;
+}
+body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea {
+  border-radius: 0.5em;
+  background-color: transparent;
+  padding: 0.75em;
+  border: solid 2px;
+  resize: vertical;
+  transition: none;
+}
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info {
   display: flex;
   align-items: center;
@@ -183,7 +225,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0em 1.5em;
+  margin: 0em 1.5em 1.5em 1.5em;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label > span {
   margin-bottom: 0.5em;
