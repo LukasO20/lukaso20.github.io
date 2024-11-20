@@ -154,6 +154,19 @@ body {
                     }
                 }
 
+                &[type="about"], &[type="contact"], &[type="experience"] {
+                    flex-direction: column;
+                    width: 50%;
+                    margin: apply-spacing(lv1) auto;
+
+                    .card {
+                        margin: apply-spacing(lv1) 0em;
+                        border-radius: apply-spacing(lv1);
+                        padding: 0em apply-spacing(lv1);
+                        backdrop-filter: blur(1em);
+                    }
+                }
+
                 &[type="home"] {
                     
                     .main--section {
@@ -221,15 +234,8 @@ body {
                 }
 
                 &[type="about"] {
-                    flex-direction: column;
-                    width: 50%;
-                    margin: apply-spacing(lv1) auto;
                 
                     .card {
-                        margin: apply-spacing(lv1) 0em;
-                        border-radius: apply-spacing(lv1);
-                        padding: 0em apply-spacing(lv1);
-                        backdrop-filter: blur(1em);
 
                         p {
                             text-align: start;
@@ -241,15 +247,8 @@ body {
                 }
 
                 &[type="contact"] {
-                    flex-direction: column;
-                    width: 50%;
-                    margin: apply-spacing(lv1) auto;
 
                     .card {
-                        margin: apply-spacing(lv1) 0em;
-                        border-radius: apply-spacing(lv1);
-                        padding: 0em apply-spacing(lv1);
-                        backdrop-filter: blur(1em);
 
                         h3 {
                             text-align: center;
@@ -357,6 +356,21 @@ body {
                                         }
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+
+                &[type="experience"] {
+                
+                    .card {
+
+                        h3 {                       
+                            cursor: pointer;
+
+                            .icon {
+                                font-size: apply-font-size(lv1-085);
+                                margin: apply-spacing(lv0-025);
                             }
                         }
                     }

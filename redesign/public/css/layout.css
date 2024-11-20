@@ -81,6 +81,17 @@ body .container .container-content .main .btn-bg-round.back-home {
 body .container .container-content .main .btn-bg-round.back-home .icon {
   font-size: 1.15em;
 }
+body .container .container-content .main[type=about], body .container .container-content .main[type=contact], body .container .container-content .main[type=experience] {
+  flex-direction: column;
+  width: 50%;
+  margin: 1em auto;
+}
+body .container .container-content .main[type=about] .card, body .container .container-content .main[type=contact] .card, body .container .container-content .main[type=experience] .card {
+  margin: 1em 0em;
+  border-radius: 1em;
+  padding: 0em 1em;
+  backdrop-filter: blur(1em);
+}
 body .container .container-content .main[type=home] .main--section {
   display: flex;
   flex-direction: column;
@@ -125,33 +136,11 @@ body .container .container-content .main[type=home] .main--section .section--soc
 body .container .container-content .main[type=home] .main--section .section--social-media * {
   cursor: pointer;
 }
-body .container .container-content .main[type=about] {
-  flex-direction: column;
-  width: 50%;
-  margin: 1em auto;
-}
-body .container .container-content .main[type=about] .card {
-  margin: 1em 0em;
-  border-radius: 1em;
-  padding: 0em 1em;
-  backdrop-filter: blur(1em);
-}
 body .container .container-content .main[type=about] .card p {
   text-align: start;
   line-height: 1.75em;
   font-size: 1em;
   text-shadow: 0em 0em 1em black;
-}
-body .container .container-content .main[type=contact] {
-  flex-direction: column;
-  width: 50%;
-  margin: 1em auto;
-}
-body .container .container-content .main[type=contact] .card {
-  margin: 1em 0em;
-  border-radius: 1em;
-  padding: 0em 1em;
-  backdrop-filter: blur(1em);
 }
 body .container .container-content .main[type=contact] .card h3 {
   text-align: center;
@@ -236,6 +225,13 @@ body .container .container-content .main[type=contact] .card .card--body .body--
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label a:hover {
   text-decoration: underline;
+}
+body .container .container-content .main[type=experience] .card h3 {
+  cursor: pointer;
+}
+body .container .container-content .main[type=experience] .card h3 .icon {
+  font-size: 0.85em;
+  margin: 0.25em;
 }
 body .container .container-scroll-indicator {
   display: flex;

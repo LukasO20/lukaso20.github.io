@@ -107,6 +107,17 @@ body {
                     background-color: $color-white-o07;
                 }
 
+                &[type="about"], &[type="contact"], &[type="experience"] {
+                    flex-direction: column;
+                    width: 50%;
+                    margin: apply-spacing(lv1) auto;
+
+                    .card {
+                        color: $color-white;
+                        background-color: $color-white-o03;
+                    }
+                }
+
                 &[type="home"] {
     
                     .main--section {
@@ -135,8 +146,6 @@ body {
                 &[type="about"] {
                     
                     .card {
-                        color: $color-white;
-                        background-color: $color-white-o07;
 
                         .btn-bg-round-flat {
                             text-shadow: none;
@@ -147,9 +156,7 @@ body {
                 &[type="contact"] {
 
                     .card {
-                        color: $color-white;
-                        background-color: $color-white-o07;
-                        
+
                         .card--body {
 
                             .body--section-top {
@@ -202,6 +209,19 @@ body {
                                 .line {
                                     background-color: $color-white;
                                 }
+                            }
+                        }
+                    }
+                }
+
+                &[type="experience"] {
+                
+                    .card {
+
+                        h3 {
+
+                            * {
+                                color: $color-accent;
                             }
                         }
                     }

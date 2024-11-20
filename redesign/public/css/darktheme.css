@@ -51,6 +51,15 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .container-content .main .btn-bg-round {
   background-color: rgba(255, 255, 255, 0.075);
 }
+body .container .container-content .main[type=about], body .container .container-content .main[type=contact], body .container .container-content .main[type=experience] {
+  flex-direction: column;
+  width: 50%;
+  margin: apply-spacing(lv1) auto;
+}
+body .container .container-content .main[type=about] .card, body .container .container-content .main[type=contact] .card, body .container .container-content .main[type=experience] .card {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.035);
+}
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
   background-color: rgba(255, 255, 255, 0.075);
   color: #4E90E6;
@@ -59,16 +68,8 @@ body .container .container-content .main[type=home] .main--section .section--tit
   background-color: #fff;
   color: #4E90E6;
 }
-body .container .container-content .main[type=about] .card {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
-}
 body .container .container-content .main[type=about] .card .btn-bg-round-flat {
   text-shadow: none;
-}
-body .container .container-content .main[type=contact] .card {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input {
   border-color: #fff;
@@ -101,6 +102,9 @@ body .container .container-content .main[type=contact] .card .card--body .body--
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info .line {
   background-color: #fff;
+}
+body .container .container-content .main[type=experience] .card h3 * {
+  color: #4E90E6;
 }
 body .container .container-scroll-indicator > label {
   background-color: #4E90E6;
