@@ -2,6 +2,8 @@
 $color-primary-dark: #030e1c;
 $color-secondary: #3865A0;
 $color-accent: #4E90E6;
+$color-accent-shadow: #436CA2;
+$color-accent-complementary-primary: #786A50;
 $color-white: #fff;
 
 //COLORS OPACITY
@@ -13,7 +15,10 @@ $color-secondary-o3: rgba($color-secondary, 0.3);
 $color-white-o03: rgba($color-white, 0.035);
 $color-white-o05: rgba($color-white, 0.055);
 $color-white-o07: rgba($color-white, 0.075);
-
+$color-accent-o03: rgba($color-accent, 0.035);
+$color-accent-o05: rgba($color-accent, 0.055);
+$color-accent-o07: rgba($color-accent, 0.075);
+$color-accent-o15: rgba($color-accent, 0.15);
 
 //GRADIENT
 $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primary-dark);
@@ -216,12 +221,51 @@ body {
 
                 &[type="experience"] {
                 
-                    .card {
+                    .main-experience {
 
-                        h3 {
+                        .card {
 
-                            * {
+                            a {
                                 color: $color-accent;
+
+                                * {
+                                    color: $color-accent;
+                                }
+
+                                &:hover {
+                                    color: $color-accent-shadow;
+
+                                    * {
+                                        color: $color-accent-shadow;
+                                    }
+                                }
+                            }
+
+                            &.main-experience--aside {
+    
+                                .aside-professional--skills {
+    
+                                    .skills-division {
+    
+                                        p {
+    
+                                            label {
+                                                background-color: $color-accent-o15;
+                                                color: $color-accent;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.main-experience--body {
+
+                                .experiences--bottom {
+
+                                    a {
+                                        background-color: $color-accent-o15;
+                                    }
+                                }
                             }
                         }
                     }

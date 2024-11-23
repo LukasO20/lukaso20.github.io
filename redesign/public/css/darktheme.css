@@ -103,8 +103,24 @@ body .container .container-content .main[type=contact] .card .card--body .body--
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-info .line {
   background-color: #fff;
 }
-body .container .container-content .main[type=experience] .card h3 * {
+body .container .container-content .main[type=experience] .main-experience .card a {
   color: #4E90E6;
+}
+body .container .container-content .main[type=experience] .main-experience .card a * {
+  color: #4E90E6;
+}
+body .container .container-content .main[type=experience] .main-experience .card a:hover {
+  color: #436CA2;
+}
+body .container .container-content .main[type=experience] .main-experience .card a:hover * {
+  color: #436CA2;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--aside .aside-professional--skills .skills-division p label {
+  background-color: rgba(78, 144, 230, 0.15);
+  color: #4E90E6;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--body .experiences--bottom a {
+  background-color: rgba(78, 144, 230, 0.15);
 }
 body .container .container-scroll-indicator > label {
   background-color: #4E90E6;

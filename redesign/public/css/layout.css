@@ -89,7 +89,7 @@ body .container .container-content .main[type=about], body .container .container
 body .container .container-content .main[type=about] .card, body .container .container-content .main[type=contact] .card, body .container .container-content .main[type=experience] .card {
   margin: 1em 0em;
   border-radius: 1em;
-  padding: 0em 1em;
+  padding: 1em;
   backdrop-filter: blur(1em);
 }
 body .container .container-content .main[type=home] .main--section {
@@ -226,12 +226,42 @@ body .container .container-content .main[type=contact] .card .card--body .body--
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom-chat > label a:hover {
   text-decoration: underline;
 }
-body .container .container-content .main[type=experience] .card h3 {
-  cursor: pointer;
+body .container .container-content .main[type=experience] {
+  width: 65% !important;
 }
-body .container .container-content .main[type=experience] .card h3 .icon {
+body .container .container-content .main[type=experience] .main-experience {
+  display: flex;
+  gap: 3em;
+}
+body .container .container-content .main[type=experience] .main-experience .card:last-child {
+  padding: 0em;
+}
+body .container .container-content .main[type=experience] .main-experience .card .icon {
   font-size: 0.85em;
   margin: 0.25em;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--aside {
+  flex: 2;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--aside .aside-professional--skills .skills-division p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--aside .aside-professional--skills .skills-division p label {
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-radius: 2em;
+  font-weight: 600;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--body {
+  flex: 5;
+}
+body .container .container-content .main[type=experience] .main-experience .card.main-experience--body .experiences--bottom a {
+  border-radius: 2em;
+  padding: 0.25em 0.5em;
+  font-weight: 600;
 }
 body .container .container-scroll-indicator {
   display: flex;
