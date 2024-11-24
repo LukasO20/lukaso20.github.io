@@ -187,14 +187,6 @@ body {
                             .body--section-bottom {
 
                                 .div-user-data-textarea {
-                                    display: flex;
-                                    flex-direction: column;
-                                    height: 8em;
-
-                                    .p-textarea {
-                                        margin-top: 0em;
-                                        font-weight: 600;
-                                    }
     
                                     textarea {
                                         border-color: $color-white;

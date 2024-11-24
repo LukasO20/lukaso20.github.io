@@ -169,7 +169,9 @@ body {
                 }
 
                 &[type="home"] {
-                    
+                    width: 75%;
+                    margin: 0em auto;
+
                     .main--section {
                         display: flex;
                         flex-direction: column;
@@ -293,6 +295,9 @@ body {
                                 flex-direction: column;
 
                                 .div-user-data-textarea {
+                                    display: flex;
+                                    flex-direction: column;
+                                    max-height: 30em;
 
                                     .p-textarea {
                                         margin-top: 0em;
@@ -306,6 +311,17 @@ body {
                                         border: solid 2px;
                                         resize: vertical;
                                         transition: none;
+                                    }
+                                }
+
+                                .div-user-data-send {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .send-email {
+                                        padding: apply-spacing(lv1-075) apply-spacing(lv2-05);
+                                        margin: apply-spacing(lv2) 0em 0em 0em;
                                     }
                                 }
                             }
@@ -363,7 +379,6 @@ body {
                 }
 
                 &[type="experience"] {
-                    width: 65% !important;
 
                     .main-experience {
                         display: flex;
