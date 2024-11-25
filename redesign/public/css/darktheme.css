@@ -48,6 +48,12 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a label:hover {
   border-color: #fff;
 }
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a.active label {
+  border-color: #fff;
+}
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a.active label:hover {
+  border-color: #4E90E6;
+}
 body .container .container-content .main .btn-bg-round {
   background-color: rgba(255, 255, 255, 0.075);
 }
@@ -144,6 +150,49 @@ body .container .footer .footer--info .info--info-left p a {
 }
 body .container .footer .footer--info .info--info-right * {
   color: #fff;
+}
+
+/* SCROLL BAR SETTINGS */
+::-webkit-scrollbar {
+  width: 0.35em;
+}
+
+::-webkit-scrollbar-track {
+  background: #030e1c;
+  transition: 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(160, 160, 160);
+}
+
+::-webkit-scrollbar-button:increment {
+  background-image: url("../icon/caret-down-solid.svg");
+  background-color: #030e1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2em;
+  border-radius: 0px;
+  transition: 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-button:decrement {
+  background-image: url("../icon/caret-up-solid.svg");
+  background-color: #030e1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 2em;
+  border-radius: 0px;
+  transition: 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-button:increment:hover, ::-webkit-scrollbar-button:decrement:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=darktheme.css.map */

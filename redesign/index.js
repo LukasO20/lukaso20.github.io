@@ -21,7 +21,16 @@ const handleRouteChange = (route) => {
 
 document.addEventListener('click', function (e) {
     const linkPage = e.target.closest('.link-page')
+    const otherLink = document.querySelectorAll('.section-right--nav .link-page')
+
+    if (otherLink) {
+        otherLink.forEach(linkRemoveClass => {
+            linkRemoveClass.classList.remove('active')
+        })
+    }
+
     if (linkPage) {
+        linkPage.classList.add('active')
         const route = linkPage.getAttribute('href').replace('#', '')
         handleRouteChange(route)
     }
