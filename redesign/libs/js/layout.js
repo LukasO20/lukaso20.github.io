@@ -11,21 +11,10 @@ window.addEventListener('scroll', () => {
 
 const scrollToElement = (el) => {
     el.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: 'smooth'
     })
-
-    //spacing adjustments
-    const styles = window.getComputedStyle(el)
-    const marginTop = parseInt(styles.marginTop)
-    const paddingTop = parseInt(styles.paddingTop)
-
-    if (marginTop + paddingTop > 0) {
-        window.scrollBy(0, -(marginTop + paddingTop))
-    }
 }
 
-let lastTopScroll = 0
 const shiftScrollView = () => {
     const currentScroll = document.documentElement.scrollTop
     if (currentScroll > lastTopScroll) {     
@@ -40,3 +29,5 @@ const shiftScrollView = () => {
     console.log('VALUES - ', ' CURRENT - ', currentScroll, ' LAST - ', lastTopScroll)
     lastTopScroll = currentScroll <= 0 ? 0 : currentScroll
 }
+
+let lastTopScroll = 0

@@ -25,11 +25,10 @@ $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primar
 
 body {
     margin: 0em;
-    height: 100vh;
     background-color: $color-primary-dark;
     background-image: $color-gradient-primary;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     .icon {
         color: $color-white;

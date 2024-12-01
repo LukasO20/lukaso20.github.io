@@ -53,9 +53,8 @@ $spacing-levels: (
 
 body {
     margin: 0em;
-    height: 100vh;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     .icon {
         font-size: apply-font-size(lv2-05);
