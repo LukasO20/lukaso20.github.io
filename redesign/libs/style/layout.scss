@@ -103,6 +103,17 @@ body {
             justify-content: space-between;
             padding: apply-spacing(lv1) apply-spacing(lv5);
     
+            .header--section-left {
+
+                .section-left--logo {
+
+                    img {
+                        border-radius: 0.7em;
+                        padding: 0.35em 0.15em;
+                    }
+                }
+            }
+
             .header--section-right {
     
                 .section-right--nav {

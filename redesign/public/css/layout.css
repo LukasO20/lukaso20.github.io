@@ -50,6 +50,10 @@ body .container .header {
   justify-content: space-between;
   padding: 1em 5em;
 }
+body .container .header .header--section-left .section-left--logo img {
+  border-radius: 0.7em;
+  padding: 0.35em 0.15em;
+}
 body .container .header .header--section-right .section-right--nav .nav--ul {
   display: flex;
   align-items: center;

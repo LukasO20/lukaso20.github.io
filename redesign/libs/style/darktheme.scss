@@ -37,12 +37,20 @@ body {
 
     .btn-bg-round {
 
+        * {
+            user-select: none;
+        }
+
         &:hover {
             background-color: $color-secondary-o3 !important;
             
             * {
                 color: $color-accent !important;
             }
+        }
+
+        &:active {
+            background-color: $color-secondary-o5 !important;
         }
     }
 
@@ -51,6 +59,7 @@ body {
     
         * {
             color: $color-accent;
+            user-select: none;
         }
 
         &:hover {
@@ -60,6 +69,10 @@ body {
                 color: $color-white !important;
             }
         } 
+
+        &:active {
+            background-color: $color-primary-o7 !important; 
+        }
     }
 
     a {
@@ -80,6 +93,19 @@ body {
         .header {
             background-color: $color-primary-dark;
     
+            .header--section-left {
+
+                .section-left--logo {
+
+                    img {
+                        
+                        &:hover {
+                            background-color: $color-accent-o15;
+                        }
+                    }
+                }
+            }
+
             .header--section-right {
     
                 .section-right--nav {
