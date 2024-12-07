@@ -51,6 +51,11 @@ $spacing-levels: (
     font-family: $font-family;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0em;
     background-repeat: no-repeat;
@@ -94,14 +99,14 @@ body {
 
     .container {
         display: grid;
-        // grid-template-rows: 1fr 8.25fr 9.25fr;
-        grid-template-rows: 1fr 8.5fr 8.9fr;
+        grid-template-rows: 1fr 8.25fr 9.25fr;
 
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: apply-spacing(lv1) apply-spacing(lv5);
+            scroll-snap-align: start;
 
             .header--section-left {
 
@@ -472,6 +477,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            scroll-snap-align: start;
 
             h3 {
                 margin: apply-spacing(lv1) apply-spacing(lv0-025);

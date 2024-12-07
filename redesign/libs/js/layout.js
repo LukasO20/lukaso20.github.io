@@ -24,24 +24,10 @@ const shiftStyleIndicator = (scrollDataBefore, scrollDataCurrent, element) => {
     }
 }
 
-const scrollToElement = (el) => {
-    el.scrollIntoView({
-        behavior: 'smooth'
-    })
-}
-
 let lastTopScroll = 0
 const shiftScrollView = () => {
     const currentScroll = document.documentElement.scrollTop
-    if (currentScroll > lastTopScroll) {     
-        if (toScrollBottom !== undefined) {
-            scrollToElement(toScrollBottom)
-        }
-    } else if (currentScroll < lastTopScroll) {
-        if (toScrollTop !== undefined) {
-            scrollToElement(toScrollTop)
-        }
-    } 
+
     shiftStyleIndicator(lastTopScroll, currentScroll, scrollIndicator)
     lastTopScroll = currentScroll <= 0 ? 0 : currentScroll
 }
