@@ -41,7 +41,7 @@ body a {
 }
 body .container {
   display: grid;
-  grid-template-rows: 1fr 8.25fr 9.25fr;
+  grid-template-rows: 1fr 8.5fr 8.9fr;
 }
 body .container .header {
   display: flex;

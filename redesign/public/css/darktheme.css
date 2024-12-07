@@ -132,11 +132,16 @@ body .container .container-content .main[type=experience] .main-experience .card
   background-color: rgba(78, 144, 230, 0.15);
 }
 body .container .container-scroll-indicator > label {
-  background-color: #4E90E6;
   border: solid 2px #4E90E6;
 }
 body .container .container-scroll-indicator > label:hover {
   border-color: #3865A0;
+}
+body .container .container-scroll-indicator > label:active {
+  background-color: rgba(78, 144, 230, 0.035);
+}
+body .container .container-scroll-indicator > label.on {
+  background-color: #4E90E6;
 }
 body .container .footer {
   background-color: #030e1c;

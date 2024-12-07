@@ -304,11 +304,18 @@ body {
         .container-scroll-indicator {
 
             > label {
-                background-color: $color-accent;
                 border: solid 2px $color-accent;
 
                 &:hover {
                     border-color: $color-secondary;
+                }
+
+                &:active {
+                    background-color: $color-accent-o03;
+                }
+
+                &.on {
+                    background-color: $color-accent;
                 }
             }
         }

@@ -94,14 +94,15 @@ body {
 
     .container {
         display: grid;
-        grid-template-rows: 1fr 8.25fr 9.25fr;
-       
+        // grid-template-rows: 1fr 8.25fr 9.25fr;
+        grid-template-rows: 1fr 8.5fr 8.9fr;
+
         .header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: apply-spacing(lv1) apply-spacing(lv5);
-    
+
             .header--section-left {
 
                 .section-left--logo {
@@ -471,7 +472,7 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-    
+
             h3 {
                 margin: apply-spacing(lv1) apply-spacing(lv0-025);
             }
