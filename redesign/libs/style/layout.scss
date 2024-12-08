@@ -51,11 +51,6 @@ $spacing-levels: (
     font-family: $font-family;
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0em;
     background-repeat: no-repeat;
@@ -106,7 +101,6 @@ body {
             align-items: center;
             justify-content: space-between;
             padding: apply-spacing(lv1) apply-spacing(lv5);
-            scroll-snap-align: start;
 
             .header--section-left {
 
@@ -470,6 +464,10 @@ body {
                 border-radius: 50%;
                 cursor: pointer;
                 border: solid 2px transparent;
+
+                &:active {
+                    padding: apply-spacing(lv1-075);
+                }
             }
         }
     
@@ -477,7 +475,6 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            scroll-snap-align: start;
 
             h3 {
                 margin: apply-spacing(lv1) apply-spacing(lv0-025);

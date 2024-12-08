@@ -4,11 +4,6 @@
   font-family: "Red Hat Display", "Segoe UI", sans-serif;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0em;
   background-repeat: no-repeat;
@@ -53,7 +48,6 @@ body .container .header {
   align-items: center;
   justify-content: space-between;
   padding: 1em 5em;
-  scroll-snap-align: start;
 }
 body .container .header .header--section-left .section-left--logo img {
   border-radius: 0.7em;
@@ -305,11 +299,13 @@ body .container .container-scroll-indicator > label {
   cursor: pointer;
   border: solid 2px transparent;
 }
+body .container .container-scroll-indicator > label:active {
+  padding: 0.75em;
+}
 body .container .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
 }
 body .container .footer h3 {
   margin: 1em 0.25em;

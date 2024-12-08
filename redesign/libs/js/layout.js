@@ -10,6 +10,17 @@ window.addEventListener('scroll', () => {
     shiftScrollView()
 })
 
+scrollIndicator.forEach(item => {
+    item.addEventListener('click', function (e) {
+        const indicator = e.target.attributes.class.value.split(' ')[0]
+        if (indicator === 'indicator-1') {
+            autoScroll(toScrollTop)
+        } else {
+            autoScroll(toScrollBottom)
+        }
+    })
+})
+
 const shiftStyleIndicator = (scrollDataBefore, scrollDataCurrent, element) => {
     if (element !== undefined) {
         element.forEach((item, i) => {
@@ -22,6 +33,13 @@ const shiftStyleIndicator = (scrollDataBefore, scrollDataCurrent, element) => {
             } 
         })
     }
+}
+
+const autoScroll = (scrollData) => {
+    scrollData.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+    })
 }
 
 let lastTopScroll = 0

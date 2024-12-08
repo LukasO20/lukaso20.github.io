@@ -19,21 +19,18 @@ const handleRouteChange = (route) => {
     }
 }
 
-document.addEventListener('click', function (e) {
-    const linkPage = e.target.closest('.link-page')
-    const otherLink = document.querySelectorAll('.section-right--nav .link-page')
+const linkPage = document.querySelectorAll('.section-right--nav .link-page')
+linkPage.forEach(item => {
+    item.addEventListener('click', e => {
 
-    if (otherLink) {
-        otherLink.forEach(linkRemoveClass => {
-            linkRemoveClass.classList.remove('active')
-        })
-    }
+        if (e) {
+            linkPage.forEach(removeclass => removeclass.classList.remove('active'))
+            e.currentTarget.classList.add('active')
 
-    if (linkPage) {
-        linkPage.classList.add('active')
-        const route = linkPage.getAttribute('href').replace('#', '')
-        handleRouteChange(route)
-    }
+            const route = e.currentTarget.getAttribute('href').replace('#', '')
+            handleRouteChange(route)
+        }
+    })
 })
 
 window.addEventListener('popstate', (e) => {
