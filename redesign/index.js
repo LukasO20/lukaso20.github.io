@@ -19,18 +19,25 @@ const handleRouteChange = (route) => {
     }
 }
 
-const linkPage = document.querySelectorAll('.section-right--nav .link-page')
-linkPage.forEach(item => {
-    item.addEventListener('click', e => {
+const linkManipulate = document.querySelectorAll('.link-page')
+const linkPage = document.body
+linkPage.addEventListener('click', function (e) {
+    const link = e.target.closest('.link-page')
 
-        if (e) {
-            linkPage.forEach(removeclass => removeclass.classList.remove('active'))
-            e.currentTarget.classList.add('active')
+    if (link) {
+        if (link.matches('.link-page')) {
+            linkManipulate.forEach(e => {
+                e.classList.remove('active')   
 
-            const route = e.currentTarget.getAttribute('href').replace('#', '')
+                //manipulated class of navbar button when link event is external 
+                e.classList.toggle('active', e.getAttribute('href') === link.getAttribute('href'))
+            })
+            link.classList.add('active')
+
+            const route = link.getAttribute('href').replace('#', '')
             handleRouteChange(route)
         }
-    })
+    }
 })
 
 window.addEventListener('popstate', (e) => {
