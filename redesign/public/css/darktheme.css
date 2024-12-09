@@ -102,7 +102,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea {
   border-color: #fff;
-  outline: #4E90E6;
+  outline-color: #4E90E6;
   caret-color: #4E90E6;
   color: #fff;
 }

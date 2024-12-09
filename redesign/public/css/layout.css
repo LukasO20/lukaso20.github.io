@@ -127,7 +127,6 @@ body .container .container-content .main[type=home] .main--section .section--tit
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
   padding: 0em 0.5em;
   border-radius: 1em;
-  font-weight: 600;
   cursor: pointer;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-left, body .container .container-content .main[type=home] .main--section .section--title .title-right {
@@ -147,7 +146,6 @@ body .container .container-content .main[type=about] .card p {
   text-align: start;
   line-height: 1.75em;
   font-size: 1em;
-  text-shadow: 0em 0em 1em black;
 }
 body .container .container-content .main[type=contact] .card h3 {
   text-align: center;
