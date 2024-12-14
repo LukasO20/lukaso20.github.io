@@ -5,6 +5,13 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+body .loader {
+  background-color: #fff;
+  color: #4E90E6;
+}
+body .loader.light .loader-spinner {
+  border-top-color: #444;
+}
 body .icon {
   color: #444;
 }

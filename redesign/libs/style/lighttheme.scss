@@ -34,6 +34,18 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 
+    .loader {
+        background-color: $color-primary-light;
+        color: $color-accent;
+
+        &.light {
+
+            .loader-spinner {
+                border-top-color: $color-accent-complementary-primary;
+            }
+        }
+    }
+
     .icon {
         color: $color-accent-complementary-primary;
     }

@@ -30,6 +30,18 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 
+    .loader {
+        background-color: $color-primary-dark;
+        color: $color-accent-shadow;
+
+        &.dark {
+
+            .loader-spinner {
+                border-top-color: $color-white;
+            }
+        }
+    }
+
     .icon {
         color: $color-white;
     }

@@ -62,8 +62,8 @@ themeButton.addEventListener('click', function (e) {
 const mapTheme = {
     lightlayout: 'public/css/lighttheme.css',
     darklayout: 'public/css/darktheme.css',
-    lightbg: `url('public/img/background_white_theme.svg')`,
-    darkbg: `url('public/img/background_black_theme.svg')`
+    lightbg: `public/img/background_white_theme.svg`,
+    darkbg: `public/img/background_black_theme.svg`
 }
 
 const setThemeLocalStorage = (e) => {
@@ -77,10 +77,53 @@ const applyTheme = (linkElement) => {
     localStorage.setItem('theme', theme)
 
     linkElement.href = mapTheme[`${theme}layout`]
-    body.style.backgroundImage = mapTheme[`${theme}bg`]
 
     themeButton.classList.remove('dark', 'light');
     themeButton.classList.add(theme)
+
+    const iconButtonTheme = themeButton.querySelector('i')
+    const iconTheme = localStorage.theme === 'dark' ? 'fa-moon' : 'fa-sun'
+    
+    iconButtonTheme.classList.remove('fa-moon', 'fa-sun')
+    iconButtonTheme.classList.add(iconTheme)
+
+    loader('show')
+
+    const img = new Image()
+    img.src = mapTheme[`${theme}bg`]
+
+    img.onload = () => {
+        body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
+        setTimeout(() => {
+            loader('hide')
+        }, 3500)
+    }
+}
+
+const loader = (action) => {
+    const loader = {
+        show() {
+            const loader = document.createElement('div')
+            const spinner = document.createElement('div')
+            loader.classList.add('loader')
+            loader.classList.add(localStorage.theme === 'dark' ? 'dark' : 'light')
+            spinner.classList.add('loader-spinner')
+            loader.appendChild(spinner)
+            body.appendChild(loader)
+        },
+        hide() {
+            const loader = document.querySelector('.loader')
+            if (loader) {
+                loader.remove()
+            }
+        }
+    }
+
+    if (loader[action]) {
+        return loader[action]()
+    } else {
+        return console.error('Loader: Method not found...')
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
