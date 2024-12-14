@@ -37,13 +37,13 @@ body .btn-bg-round-flat:hover * {
   color: #fff !important;
 }
 body .btn-bg-round-flat:active {
-  background-color: rgba(255, 255, 255, 0.75) !important;
+  background-color: #436CA2 !important;
 }
 body a {
   color: #4E90E6;
 }
 body .container {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 body .container h1 {
   color: #444;
@@ -111,7 +111,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
   color: #444;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input::placeholder {
-  color: #436CA2;
+  color: #4E90E6;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input:focus {
   caret-color: #4E90E6;
@@ -123,7 +123,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
   color: #444;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea::placeholder {
-  color: #436CA2;
+  color: #4E90E6;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea:focus {
   caret-color: #4E90E6;

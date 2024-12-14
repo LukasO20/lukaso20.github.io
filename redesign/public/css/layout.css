@@ -298,7 +298,7 @@ body .container .container-scroll-indicator > label {
   border: solid 2px transparent;
 }
 body .container .container-scroll-indicator > label:active {
-  padding: 0.75em;
+  padding: 0.6em;
 }
 body .container .footer {
   display: flex;

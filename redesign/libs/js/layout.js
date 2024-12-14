@@ -1,5 +1,6 @@
 // variables
 const container = document.querySelector('.container')
+const body = document.querySelector('body')
 
 // scroll functions
 const toScrollTop = document.querySelector('.scroll.top')
@@ -49,3 +50,39 @@ const shiftScrollView = () => {
     shiftStyleIndicator(lastTopScroll, currentScroll, scrollIndicator)
     lastTopScroll = currentScroll <= 0 ? 0 : currentScroll
 }
+
+// change themes
+const themeButton = document.querySelector('.theme--title')
+const linkThemeHref = document.querySelector('#themelink')
+
+themeButton.addEventListener('click', function (e) {
+    setThemeLocalStorage(e), applyTheme(linkThemeHref)
+})
+
+const mapTheme = {
+    lightlayout: 'public/css/lighttheme.css',
+    darklayout: 'public/css/darktheme.css',
+    lightbg: `url('public/img/background_white_theme.svg')`,
+    darkbg: `url('public/img/background_black_theme.svg')`
+}
+
+const setThemeLocalStorage = (e) => {
+    const themeButton = e.currentTarget
+    const newTheme = themeButton.classList.toggle('dark') ? 'dark' : 'light'
+    localStorage.setItem('theme', newTheme)
+}
+
+const applyTheme = (linkElement) => {
+    const theme = localStorage.getItem('theme') || 'dark'
+    localStorage.setItem('theme', theme)
+
+    linkElement.href = mapTheme[`${theme}layout`]
+    body.style.backgroundImage = mapTheme[`${theme}bg`]
+
+    themeButton.classList.remove('dark', 'light');
+    themeButton.classList.add(theme)
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    applyTheme(linkThemeHref)
+})
