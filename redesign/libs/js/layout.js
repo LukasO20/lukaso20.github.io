@@ -96,7 +96,7 @@ const applyTheme = (linkElement) => {
         body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
         setTimeout(() => {
             loader('hide')
-        }, 3500)
+        }, 3000)
     }
 }
 
