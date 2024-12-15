@@ -1,6 +1,7 @@
 // variables
-const container = document.querySelector('.container')
 const body = document.querySelector('body')
+const container = document.querySelector('.container')
+const footer = container.querySelector('.footer')
 
 // scroll functions
 const toScrollTop = document.querySelector('.scroll.top')
@@ -82,22 +83,31 @@ const applyTheme = (linkElement) => {
     themeButton.classList.add(theme)
 
     const iconButtonTheme = themeButton.querySelector('i')
-    const iconTheme = localStorage.theme === 'dark' ? 'fa-moon' : 'fa-sun'
+    const iconTheme = theme === 'dark' ? 'fa-moon' : 'fa-sun'
     
     iconButtonTheme.classList.remove('fa-moon', 'fa-sun')
     iconButtonTheme.classList.add(iconTheme)
 
     loader('show')
+    loadImg(mapTheme[`${theme}bg`], (error, imageURL) => {
+        if (error) {
+            console.error(`Error on change imagem: ${error.message}`)
+        } else {
+            body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
+        }
 
-    const img = new Image()
-    img.src = mapTheme[`${theme}bg`]
-
-    img.onload = () => {
-        body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
         setTimeout(() => {
             loader('hide')
-        }, 3000)
-    }
+        }, 2500)
+    })
+}
+
+const loadImg = (imageURL, callback) => {
+    const img = new Image()
+    img.src = imageURL
+
+    img.onload = () => callback(null, imageURL)
+    img.onerror = () => callback(new Error(`Fail to load image: ${imageURL}`))
 }
 
 const loader = (action) => {
@@ -105,15 +115,21 @@ const loader = (action) => {
         show() {
             const loader = document.createElement('div')
             const spinner = document.createElement('div')
+
             loader.classList.add('loader')
             loader.classList.add(localStorage.theme === 'dark' ? 'dark' : 'light')
             spinner.classList.add('loader-spinner')
+
             loader.appendChild(spinner)
+            footer.classList.add('hide')
+            body.style.overflowY = 'hidden'
             body.appendChild(loader)
         },
         hide() {
             const loader = document.querySelector('.loader')
             if (loader) {
+                body.style.overflowY = 'auto'
+                footer.classList.remove('hide')
                 loader.remove()
             }
         }
