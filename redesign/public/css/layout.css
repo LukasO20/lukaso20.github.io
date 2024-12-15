@@ -62,8 +62,9 @@ body a {
 }
 body .container {
   display: grid;
-  grid-template-rows: 7em 7.55fr 8fr;
+  grid-template-rows: auto 100vh 100vh;
   animation: fade 3s;
+  height: 100vh;
 }
 body .container .header {
   display: flex;
@@ -91,6 +92,9 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a label {
   padding-bottom: 0.25em;
   border-bottom: solid 2px transparent;
+}
+body .container .container-content {
+  scroll-snap-align: start;
 }
 body .container .container-content .main {
   display: flex;
@@ -154,7 +158,7 @@ body .container .container-content .main[type=home] .main--section .section--tit
   cursor: pointer;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-left, body .container .container-content .main[type=home] .main--section .section--title .title-right {
-  padding: 2.5em 5em;
+  padding: 2.5em 3em;
 }
 body .container .container-content .main[type=home] .main--section .section--social-media {
   flex: 1;
@@ -303,27 +307,6 @@ body .container .container-content .main[type=experience] .main-experience .card
   padding: 0.25em 0.5em;
   font-weight: 600;
 }
-body .container .container-scroll-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: transparent;
-  width: 5em;
-  height: 5em;
-  position: fixed;
-  bottom: 10%;
-  right: 10%;
-  gap: 0.5em;
-}
-body .container .container-scroll-indicator > label {
-  padding: 0.5em;
-  border-radius: 50%;
-  cursor: pointer;
-  border: solid 2px transparent;
-}
-body .container .container-scroll-indicator > label:active {
-  padding: 0.6em;
-}
 body .container .footer {
   display: flex;
   flex-direction: column;
@@ -395,6 +378,27 @@ body .container .footer .footer--info .info--info-right {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+body .container-scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  width: 5em;
+  height: 5em;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  gap: 0.5em;
+}
+body .container-scroll-indicator > label {
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: solid 2px transparent;
+}
+body .container-scroll-indicator > label:active {
+  padding: 0.6em;
 }
 
 @keyframes spin {

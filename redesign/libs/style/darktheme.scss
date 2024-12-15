@@ -312,25 +312,6 @@ body {
                 }
             }
         }
-    
-        .container-scroll-indicator {
-
-            > label {
-                border: solid 2px $color-accent;
-
-                &:hover {
-                    border-color: $color-secondary;
-                }
-
-                &:active {
-                    background-color: $color-accent-o03;
-                }
-
-                &.on {
-                    background-color: $color-accent;
-                }
-            }
-        }
 
         .footer {
             background-color: $color-primary-dark;
@@ -383,6 +364,25 @@ body {
                         color: $color-white;
                     }
                 }
+            }
+        }
+    }
+
+    .container-scroll-indicator {
+
+        > label {
+            border: solid 2px $color-accent;
+
+            &:hover {
+                border-color: $color-secondary;
+            }
+
+            &:active {
+                background-color: $color-accent-o03;
+            }
+
+            &.on {
+                background-color: $color-accent;
             }
         }
     }

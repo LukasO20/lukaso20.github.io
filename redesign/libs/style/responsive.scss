@@ -1,0 +1,163 @@
+@use 'layout';
+
+// Media Quiries
+
+// Desktop
+
+// -- 1280px
+@media (max-width: 1280px) {
+    body {
+    
+        .container {
+    
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: apply-spacing(lv1) apply-spacing(lv5);
+    
+                .header--section-left {
+    
+                    .section-left--logo {
+    
+                        img {
+                            border-radius: 0.7em;
+                            padding: 0.35em 0.15em;
+                        }
+                    }
+                }
+    
+                .header--section-right {
+        
+                    .section-right--nav {
+        
+                        .nav--ul {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            list-style: none;
+                            gap: apply-spacing(lv2-05);
+        
+                            .ul--li {
+                                
+                                * {
+                                    cursor: pointer;
+                                }
+        
+                                &:nth-child(-n + 3) {
+                                    
+                                    a {
+                                        text-decoration: none;
+        
+                                        label {
+                                            padding-bottom: apply-spacing(lv0-025);
+                                            border-bottom: solid 2px transparent;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .container-content {
+    
+                .main {
+    
+                    &[type="about"], &[type="contact"], &[type="experience"] {
+    
+                        .card {
+
+                        }
+                    }
+    
+                    &[type="home"] {
+                        width: 85%;
+
+                        .main--section {
+                
+                            .section--title {
+    
+                                .title-left, .title-right {
+                                    padding: layout.apply-spacing(lv3-05) layout.apply-spacing(lv2);
+                                }
+                            }
+                        }
+                    }
+    
+                    &[type="about"] {
+                    
+                        .card {
+    
+                            p {
+
+                            }
+                        }
+                    }
+    
+                    &[type="contact"] {
+    
+                        .card {
+    
+                            .card--body {
+    
+                                .body--section-top {
+    
+                                    .p-user-data {
+    
+                                    }
+                                }
+    
+                                .body--section-bottom {
+    
+                                    .div-user-data-textarea {
+
+                                    }
+    
+                                    .div-user-data-send {
+
+                                    }
+                                }
+    
+                                .body--section-bottom-info {
+
+                                }
+    
+                                .body--section-bottom-chat {
+
+                                }
+                            }
+                        }
+                    }
+    
+                    &[type="experience"] {
+    
+                        .main-experience {
+    
+                            .card {
+    
+                                &.main-experience--aside {
+    
+                                    .aside-professional--skills {
+    
+                                        .skills-division {
+        
+                                        }
+                                    }
+                                }
+    
+                                &.main-experience--body {
+    
+                                    .experiences--bottom {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

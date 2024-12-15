@@ -338,25 +338,6 @@ body {
                 }
             }
         }
-    
-        .container-scroll-indicator {
-
-            > label {
-                border: solid 2px $color-accent;
-
-                &:hover {
-                    border-color: $color-accent-shadow;
-                }
-
-                &:active {
-                    background-color: $color-accent-o03;
-                }
-
-                &.on {
-                    background-color: $color-accent;
-                }
-            }
-        }
 
         .footer {
             background-color: $color-secondary;
@@ -409,6 +390,25 @@ body {
                         color: $color-accent-complementary-primary;
                     }
                 }
+            }
+        }
+    }
+
+    .container-scroll-indicator {
+
+        > label {
+            border: solid 2px $color-accent;
+
+            &:hover {
+                border-color: $color-accent-shadow;
+            }
+
+            &:active {
+                background-color: $color-accent-o03;
+            }
+
+            &.on {
+                background-color: $color-accent;
             }
         }
     }

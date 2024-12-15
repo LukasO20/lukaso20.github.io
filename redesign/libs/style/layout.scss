@@ -117,8 +117,9 @@ body {
 
     .container {
         display: grid;
-        grid-template-rows: 7em 7.55fr 8fr;
+        grid-template-rows: auto 100vh 100vh;
         animation: fade 3s;
+        height: 100vh;
 
         .header {
             display: flex;
@@ -172,6 +173,7 @@ body {
         }
 
         .container-content {
+            scroll-snap-align: start;
 
             .main {
                 display: flex;
@@ -253,7 +255,7 @@ body {
                             }
             
                             .title-left, .title-right {
-                                padding: apply-spacing(lv3-05) apply-spacing(lv5);
+                                padding: apply-spacing(lv3-05) apply-spacing(lv3);
                             }
                         }
             
@@ -470,30 +472,6 @@ body {
                 }
             }
         }
-
-        .container-scroll-indicator {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: transparent;
-            width: 5em;
-            height: 5em;
-            position: fixed;
-            bottom: 10%;
-            right: 10%;
-            gap: apply-spacing(lv1-05);
-
-            > label {
-                padding: apply-spacing(lv1-05);
-                border-radius: 50%;
-                cursor: pointer;
-                border: solid 2px transparent;
-
-                &:active {
-                    padding: 0.6em;
-                }
-            }
-        }
     
         .footer {
             display: flex;
@@ -591,6 +569,30 @@ body {
             }
         }
     }
+
+    .container-scroll-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        width: 5em;
+        height: 5em;
+        position: fixed;
+        bottom: 10%;
+        right: 10%;
+        gap: apply-spacing(lv1-05);
+
+        > label {
+            padding: apply-spacing(lv1-05);
+            border-radius: 50%;
+            cursor: pointer;
+            border: solid 2px transparent;
+
+            &:active {
+                padding: 0.6em;
+            }
+        }
+    }
 }
 
 // Animations
@@ -615,4 +617,4 @@ body {
     100% {
         backdrop-filter: blur(0.5em);
     }
-  }
+}

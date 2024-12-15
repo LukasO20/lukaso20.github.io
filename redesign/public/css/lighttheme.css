@@ -163,18 +163,6 @@ body .container .container-content .main[type=experience] .main-experience .card
 body .container .container-content .main[type=experience] .main-experience .card.main-experience--body .experiences--bottom a {
   background-color: rgba(78, 144, 230, 0.15);
 }
-body .container .container-scroll-indicator > label {
-  border: solid 2px #4E90E6;
-}
-body .container .container-scroll-indicator > label:hover {
-  border-color: #436CA2;
-}
-body .container .container-scroll-indicator > label:active {
-  background-color: rgba(78, 144, 230, 0.035);
-}
-body .container .container-scroll-indicator > label.on {
-  background-color: #4E90E6;
-}
 body .container .footer {
   background-color: #e1e1e1;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035), #fff);
@@ -199,6 +187,18 @@ body .container .footer .footer--info .info--info-left p a {
 }
 body .container .footer .footer--info .info--info-right * {
   color: #444;
+}
+body .container-scroll-indicator > label {
+  border: solid 2px #4E90E6;
+}
+body .container-scroll-indicator > label:hover {
+  border-color: #436CA2;
+}
+body .container-scroll-indicator > label:active {
+  background-color: rgba(78, 144, 230, 0.035);
+}
+body .container-scroll-indicator > label.on {
+  background-color: #4E90E6;
 }
 
 /* SCROLL BAR SETTINGS */
