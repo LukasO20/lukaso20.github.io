@@ -12,6 +12,7 @@ $color-primary-o7: rgba($color-primary-dark, 0.7);
 $color-secondary-o7: rgba($color-secondary, 0.7);
 $color-secondary-o5: rgba($color-secondary, 0.5);
 $color-secondary-o3: rgba($color-secondary, 0.3);
+$color-secondary-o1: rgba($color-secondary, 0.15);
 $color-white-o03: rgba($color-white, 0.035);
 $color-white-o05: rgba($color-white, 0.055);
 $color-white-o07: rgba($color-white, 0.075);
@@ -145,6 +146,10 @@ body {
                                         }
                                     }
                                 }
+                            }
+
+                            .theme--title {
+                                background-color: $color-secondary-o1;
                             }
                         }
                     }
