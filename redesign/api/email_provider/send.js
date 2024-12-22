@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 
 const sendMail = async (req, res) => {
+    return console.log('I AM A FUNCTION')
     if (req.method === 'POST') {
         try {
 

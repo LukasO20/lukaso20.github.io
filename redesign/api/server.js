@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { sendMail } from './email_provider/send'
+import { sendMail } from './email_provider/send.js'
 import dotenv from 'dotenv'
 
 dotenv.config()
