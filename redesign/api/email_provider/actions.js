@@ -1,6 +1,6 @@
-const apiURL = process.env.test || 'http://localhost:5000'
+const apiURL = 'http://localhost:5000'
 
-export const sendEmail = async(form) => {
+const sendEmail = async(form, e) => {
     try {
         const response = await fetch(`${apiURL}/api/email_provider/send`, {
             method: 'POST',
@@ -10,13 +10,18 @@ export const sendEmail = async(form) => {
 
         if (!response.ok) {
             const error = await response.json()
+            //e.textContent = 'Ops something wrong to send e-mail, try again.'
             throw new Error(error.error || 'Failed to send e-mail.')
         }
         
         const data = await response.json()
+        //e.textContent = 'Message sent with successful!'
         return data
+
     } catch (error) {
-        console.error('Error to send e-mail: ', error.meessage)
+        console.error('Server connection failed: ', error.message)
         throw error
     }
 }
+
+export { sendEmail }

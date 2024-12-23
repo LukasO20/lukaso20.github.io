@@ -1,3 +1,7 @@
+import { sendEmail } from './api/email_provider/actions.js'
+
+const documentbody = document.body
+
 const renderPage = (route) => {
     const container = document.getElementById('container-content')
     const page = `pages/${route}.html`
@@ -20,7 +24,7 @@ const handleRouteChange = (route) => {
 }
 
 const linkManipulate = document.querySelectorAll('.link-page')
-const linkPage = document.body
+const linkPage = documentbody
 linkPage.addEventListener('click', function (e) {
     const link = e.target.closest('.link-page')
 
@@ -48,4 +52,13 @@ window.addEventListener('popstate', (e) => {
 window.addEventListener('load', () => {
     const route = location.hash.replace('#', '') || 'home'
     renderPage(route)
+})
+
+const buttonSendEmail = documentbody
+buttonSendEmail.addEventListener('click', function (e) {
+    const filter = e.target.closest('.send-email') || e.target.classList.contains('send-email')
+    
+    if (filter) {
+        sendEmail()
+    }
 })

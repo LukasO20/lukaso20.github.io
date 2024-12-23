@@ -1,7 +1,6 @@
 import fetch from 'node-fetch'
 
-const sendMail = async (req, res) => {
-    return console.log('I AM A FUNCTION')
+const send = async (req, res) => {
     if (req.method === 'POST') {
         try {
 
@@ -51,4 +50,4 @@ const sendMail = async (req, res) => {
     }
 } 
 
-export { sendMail }
+export { send }
