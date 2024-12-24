@@ -2,6 +2,7 @@
   "name": "lukaso20.github.io",
   "version": "1.0.0",
   "description": "**https://lukaso20.github.io**",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sass redesign/libs/style:redesign/public/css"

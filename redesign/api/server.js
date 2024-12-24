@@ -12,6 +12,11 @@ app.use(express.json())
 
 // routes set
 app.post('/api/email_provider/send', send)
+app.get('/config', (req, res) => {
+    res.json({
+        apiURL: process.env.test || 'http://localhost:5000'
+    })
+})
 
 // server status
 app.get('/', (req, res) => {
