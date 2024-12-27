@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'
 
-const send = async (req, res) => {
+const sendEmail = async (req, res) => {
+    console.log('HE CALL ME')
     if (req.method === 'POST') {
         try {
 
@@ -50,4 +51,4 @@ const send = async (req, res) => {
     }
 } 
 
-export { send }
+export { sendEmail }

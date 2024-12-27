@@ -1,16 +1,8 @@
-let apiURL = ''
-
-const fetchConfig = async () => {
-    const response = await fetch('/config')
-    const config = await response.json()
-    api = config.apiURL
-}
-
-await fetchConfig()
+const API_URL = 'http://localhost:5000'
 
 const sendEmail = async (form, e) => {
     try {
-        const response = await fetch(`${apiURL}/api/email_provider/send`, {
+        const response = await fetch(`${API_URL}/email_provider/send`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(form)

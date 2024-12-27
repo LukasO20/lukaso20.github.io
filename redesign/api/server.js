@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { send } from './email_provider/send.js'
+import { sendEmail } from './email_provider/send.js'
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -11,12 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 // routes set
-app.post('/api/email_provider/send', send)
-app.get('/config', (req, res) => {
-    res.json({
-        apiURL: process.env.test || 'http://localhost:5000'
-    })
-})
+app.post('/email_provider/send', sendEmail)
 
 // server status
 app.get('/', (req, res) => {
