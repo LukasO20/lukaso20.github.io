@@ -1,3 +1,4 @@
+import { createMessage } from '../../libs/js/interactivity_layout.js'
 const API_URL = 'http://localhost:5000'
 
 const sendEmail = async (form, element) => {
@@ -10,12 +11,11 @@ const sendEmail = async (form, element) => {
 
         if (!response.ok) {
             const error = await response.json()
-            //e.textContent = 'Ops something wrong to send e-mail, try again.'
             throw new Error(error.error || 'Failed to send e-mail.')
         }
         
         const data = await response.json()
-        //e.textContent = 'Message sent with successful!'
+        createMessage({elementCreate: 'label', elementTarget: '#emailForm', text: 'Message sent with successful!', add: true})
         return data
 
     } catch (error) {
