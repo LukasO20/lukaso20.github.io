@@ -8,27 +8,29 @@
             <h3>Contact me if you want my help in your web project, have a proposal or just say hello.</h3>
         </div>
         <div class="card--body">
-            <div class="body--section-top">
-                <p class="p-user-data">
-                    <label for="name">Your name</label>
-                    <input type="text" id="name"placeholder="Type your name here" autocomplete="name">
-                </p>
-                <p class="p-user-data">
-                    <label for="email">Your email</label>
-                    <input type="email" id="email" placeholder="Type your email here" autocomplete="email">
-                </p>
-            </div>
-            <div class="body--section-bottom">
-                <div class="div-user-data-textarea">
-                    <p class="p-textarea"><label>Your message</label></p>
-                    <textarea name="message" placeholder="Type your message here"></textarea>
+            <form id="emailForm">
+                <div class="body--section-top">
+                    <p class="p-user-data">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name"placeholder="Type your name here" autocomplete="name">
+                    </p>
+                    <p class="p-user-data">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" placeholder="Type your email here" autocomplete="email">
+                    </p>
                 </div>
-                <div class="div-user-data-send">
-                    <label class="btn-bg-round-flat send-email">
-                        <span>Send message</span>
-                    </label>
+                <div class="body--section-bottom">
+                    <div class="div-user-data-textarea">
+                        <p class="p-textarea"><label>Your message</label></p>
+                        <textarea name="message" placeholder="Type your message here"></textarea>
+                    </div>
+                    <div class="div-user-data-send">
+                        <label class="btn-bg-round-flat send-email" id="sendEmailForm" for="emailForm">
+                            <span>Send message</span>
+                        </label>
+                    </div>
                 </div>
-            </div>
+            </form>
             <div class="body--section-bottom-info">
                 <label class="line"></label>
                 <span>OR</span>

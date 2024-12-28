@@ -57,8 +57,14 @@ window.addEventListener('load', () => {
 const buttonSendEmail = documentbody
 buttonSendEmail.addEventListener('click', function (e) {
     const filter = e.target.closest('.send-email') || e.target.classList.contains('send-email')
-    
+    const formEmail = document.getElementById('emailForm')
+
     if (filter) {
-        sendEmail()
+        const formData = {
+            name: formEmail.name.value || null,
+            email: formEmail.email.value || null,
+            message: formEmail.message.value || null
+        }
+        sendEmail(formData)
     }
 })

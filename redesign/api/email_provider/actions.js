@@ -1,6 +1,6 @@
 const API_URL = 'http://localhost:5000'
 
-const sendEmail = async (form, e) => {
+const sendEmail = async (form, element) => {
     try {
         const response = await fetch(`${API_URL}/email_provider/send`, {
             method: 'POST',
