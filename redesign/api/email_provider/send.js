@@ -10,33 +10,50 @@ const mg = mailgun.client({
 })
 
 const sendEmail = async (req, res) => {
-    if (req.method === 'POST') {
-        try {
-            const { name, email, message } = req.body
-            if (!name || !email || !message) {
-                return res.status(400).json({ error: `Is necessary fill out all te fields.`})
-            }
+    if (req.method !== 'POST') {
+        return res.status(405).json({ 
+            success: false,
+            error: 'Method not allowed. Check the type of method sent.'
+        })
+    }
 
-            //Message's configuration
-            const data = {
-            from: `${name} <${email}>`,
-            to: process.env.RECIPIENT_EMAIL || 'lukinhaso2206@gmail.com',
-            subject: `Message from ${name}`,
-            text: message,
-            html: `<p>${message}</p>`,
-        };
-    
-            //Send E-mail
-            const response = await mg.messages.create(process.env. MAILGUN_DOMAIN, data);
-            if (response.id) {
-                res.status(200).json({ message: 'E-mail sended with successfull!' })
-                //console.log('E-mail sended with successfull!')
-            }
-        } 
-        catch (error) {
-            //console.error('Something was wrong to send e-mail: ', error)
-            res.status(500).json({ success: false, error: error.message })
+    try {
+        const { name, email, message } = req.body
+        if (!name || !email || !message) {
+            return res.status(400).json({ 
+                success: false,
+                error: 'Is necessary fill out all the fields.'
+            })
         }
+
+        //Message's configuration
+        const data = {
+        from: `${name} <${email}>`,
+        to: process.env.RECIPIENT_EMAIL || 'lukinhaso2206@gmail.com',
+        subject: `Message from ${name}`,
+        text: message,
+        html: `<p>${message}</p>`,
+    };
+
+        //Send E-mail
+        // const response = await mg.messages.create(process.env.MAILGUN_DOMAIN, data);
+        // if (response.id) {
+        //     res.status(200).json({ message: 'E-mail sended with successfull!' })
+        //     //console.log('E-mail sended with successfull!')
+        // }
+        res.status(200).json({ message: 'E-mail sended with successfull!' })
+        return res.status(400).json({ 
+            success: true,
+            message: 'Message sent with successful!'
+        })
+    } 
+    catch (error) {
+        //console.error('Something was wrong to send e-mail: ', error)
+        res.status(500).json({ success: false, error: error.message })
+    }
+
+    if (req.method === 'POST') {
+
     } else {
         return res.status(405).json({ error: 'Method not allowed. Check the type of method sended'})
     }

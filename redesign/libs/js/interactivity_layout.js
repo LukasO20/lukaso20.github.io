@@ -1,4 +1,4 @@
-const createMessage = ({ elementCreate, elementTarget, text = '', elementClass = '', visibility = null, add = null, remove = null } = {}) => {
+const createMessage = ({ elementCreate, elementTarget, elementClass = '', text = '', visibility = null, add = null, remove = null } = {}) => {
 
     if (typeof elementCreate !== 'string' || elementCreate === '') {
         return console.error('Parameter "element" needs to be a non-empty string to create elements...');
@@ -14,6 +14,8 @@ const createMessage = ({ elementCreate, elementTarget, text = '', elementClass =
     const popupmessage = document.createElement(elementCreate)
 
     popupmessage.textContent = text
+    popupmessage.classList.add(elementClass)
+
     if (add) {
         container.querySelector(elementTarget).appendChild(popupmessage)
     } else if (remove) {
