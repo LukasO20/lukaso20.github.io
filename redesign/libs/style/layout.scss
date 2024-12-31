@@ -299,6 +299,14 @@ body {
                                 padding: 0em apply-spacing(lv1);
                             }
 
+                            .message-pop-up {
+                                display: flex;
+                                padding: apply-spacing(lv1-05) apply-spacing(lv1);
+                                margin: apply-spacing(lv1) auto;
+                                width: max-content;
+                                border-radius: apply-spacing(lv1);
+                            }
+
                             .body--section-top {
                                 padding: 0em apply-spacing(lv1);
                                 margin-top: apply-spacing(lv3-05);

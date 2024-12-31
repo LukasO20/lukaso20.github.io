@@ -181,6 +181,13 @@ body .container .container-content .main[type=contact] .card h3 {
 body .container .container-content .main[type=contact] .card .card--body > div {
   padding: 0em 1em;
 }
+body .container .container-content .main[type=contact] .card .card--body .message-pop-up {
+  display: flex;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  width: max-content;
+  border-radius: 1em;
+}
 body .container .container-content .main[type=contact] .card .card--body .body--section-top {
   padding: 0em 1em;
   margin-top: 2.5em;

@@ -112,6 +112,14 @@ body .container .container-content .main[type=contact] .card {
 body .container .container-content .main[type=contact] .card h3, body .container .container-content .main[type=contact] .card label, body .container .container-content .main[type=contact] .card span {
   color: #444;
 }
+body .container .container-content .main[type=contact] .card .card--body .message-pop-up.valid {
+  background-color: rgba(67, 108, 162, 0.3);
+  color: #436CA2;
+}
+body .container .container-content .main[type=contact] .card .card--body .message-pop-up.invalid {
+  background-color: rgba(173, 46, 46, 0.35);
+  color: #ad2e2e;
+}
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input {
   border-color: #444;
   outline-color: #4E90E6;

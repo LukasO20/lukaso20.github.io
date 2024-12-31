@@ -5,6 +5,7 @@ $color-accent: #4E90E6;
 $color-accent-shadow: #436CA2;
 $color-accent-complementary-primary: #444;
 $color-white: #fff;
+$color-warning: #ad2e2e;
 
 //COLORS OPACITY
 $color-primary-o8: rgba($color-primary-light, 0.85);
@@ -16,6 +17,10 @@ $color-secondary-o3: rgba($color-secondary, 0.3);
 $color-accent-shadow-o7: rgba($color-accent-shadow, 0.7);
 $color-accent-shadow-o5: rgba($color-accent-shadow, 0.5);
 $color-accent-shadow-o3: rgba($color-accent-shadow, 0.3);
+$color-warning-o3: rgba($color-warning, 0.35);
+$color-warning-o5: rgba($color-warning, 0.55);
+$color-warning-o7: rgba($color-warning, 0.75);
+$color-warning-o15: rgba($color-warning, 0.15);
 $color-white-o03: rgba($color-white, 0.035);
 $color-white-o05: rgba($color-white, 0.055);
 $color-white-o07: rgba($color-white, 0.075);
@@ -228,6 +233,19 @@ body {
                         }
 
                         .card--body {
+
+                            .message-pop-up {
+                                
+                                &.valid {
+                                    background-color: $color-accent-shadow-o3;
+                                    color: $color-accent-shadow;
+                                }
+
+                                &.invalid {
+                                    background-color: $color-warning-o3;
+                                    color: $color-warning;
+                                }
+                            }
 
                             .body--section-top {
 
