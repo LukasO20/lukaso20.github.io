@@ -112,6 +112,9 @@ body .container .container-content .main[type=contact] .card {
 body .container .container-content .main[type=contact] .card h3, body .container .container-content .main[type=contact] .card label, body .container .container-content .main[type=contact] .card span {
   color: #444;
 }
+body .container .container-content .main[type=contact] .card .card--body form input[type=text].warning, body .container .container-content .main[type=contact] .card .card--body form input[type=email].warning, body .container .container-content .main[type=contact] .card .card--body form textarea.warning {
+  border-color: #ad2e2e !important;
+}
 body .container .container-content .main[type=contact] .card .card--body .message-pop-up.valid {
   background-color: rgba(67, 108, 162, 0.3);
   color: #436CA2;
@@ -126,7 +129,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
   color: #444;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input::placeholder {
-  color: #4E90E6;
+  color: rgba(68, 68, 68, 0.75);
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input:focus {
   caret-color: #4E90E6;
@@ -138,7 +141,7 @@ body .container .container-content .main[type=contact] .card .card--body .body--
   color: #444;
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea::placeholder {
-  color: #4E90E6;
+  color: rgba(68, 68, 68, 0.75);
 }
 body .container .container-content .main[type=contact] .card .card--body .body--section-bottom .div-user-data-textarea textarea:focus {
   caret-color: #4E90E6;

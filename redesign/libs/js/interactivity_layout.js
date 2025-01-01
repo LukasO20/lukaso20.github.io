@@ -1,4 +1,4 @@
-const createMessage = ({ elementCreate, elementTarget, elementClass = '', text = '', visibility = null, add = null, remove = null } = {}) => {
+const createMessage = ({ elementCreate, elementTarget, elementClass = '', text = '', add = null, remove = null } = {}) => {
 
     const multipleValidation = 
     (typeof elementTarget !== 'string' && !Array.isArray(elementTarget)) || 
@@ -28,7 +28,7 @@ const createMessage = ({ elementCreate, elementTarget, elementClass = '', text =
     }
 
     if (add) {
-        container.querySelector(elementTarget).appendChild(popupmessage)
+        return container.querySelector(elementTarget).appendChild(popupmessage)
     } else if (remove) {
         if (multipleValidation) {
             return console.error('Parameter "elementTarget" needs especificed to remove an element')
@@ -36,14 +36,53 @@ const createMessage = ({ elementCreate, elementTarget, elementClass = '', text =
 
         if (Array.isArray(elementTarget)) {
             elementTarget.forEach(item => {
-                const remove = container.querySelector(item)
-                console.log('ITEM TO REMOVE', remove ? true : false, ': ', remove)
-                //if (remove) { container.removeChild(remove) }
+                const remove = container.querySelectorAll(item)
+                if (remove) { 
+                    remove.forEach(removeFiltered => {
+                        removeFiltered.remove()
+                    })
+                }
             })
-        } else if (elementClass) {
-           // container.removeChild(elementTarget)
+        } else if (elementTarget) {
+            const remove = container.querySelector(elementTarget)
+            if (remove) { return remove.remove() }
         }
+    }
+
+    //Temporary remove to pop-up messages
+    setTimeout(() => {
+        createMessage({elementTarget: '.message-pop-up.valid', remove: true})
+    }, 6500)
+}
+
+const accentColors = (type, elements, classE) => {
+    const elementAccentColor = container.querySelectorAll(elements)
+    switch (type) {
+        case 'add':
+            elementAccentColor.forEach(item => {
+                item.classList.add(classE)
+            })
+            break
+        case 'remove':
+            elementAccentColor.forEach(item => {
+                item.classList.remove(classE)
+            })
+            break
     }
 }
 
-export { createMessage }
+const clearFields = (elements) => {
+    if (elements) {
+        elements.forEach(item => { item.value = '' })
+    }
+}
+
+const checkClass = (elements) => {
+    if (elements) {
+        return true
+    } else {
+        return false
+    }
+}
+
+export { createMessage, accentColors, clearFields, checkClass }

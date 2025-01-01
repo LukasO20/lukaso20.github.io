@@ -36,18 +36,14 @@ const sendEmail = async (req, res) => {
     };
 
         //Send E-mail
-        // const response = await mg.messages.create(process.env.MAILGUN_DOMAIN, data);
-        // if (response.id) {
-        //     res.status(200).json({ 
-        //         success: true,
-        //         message: 'Message sent successfully!' 
-        //     })            
-        //     //console.log('E-mail sended with successfull!')
-        // }
-        res.status(200).json({ 
-            success: true,
-            message: 'Message sent successfully!' 
-        })   
+        const response = await mg.messages.create(process.env.MAILGUN_DOMAIN, data);
+        if (response.id) {
+            res.status(200).json({ 
+                success: true,
+                message: 'Message sent successfully!' 
+            })            
+            //console.log('Message sent successfully!')
+        } 
     } 
     catch (error) {
         //console.error('Something was wrong to send e-mail: ', error)

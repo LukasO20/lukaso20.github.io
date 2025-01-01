@@ -28,6 +28,10 @@ $color-accent-o03: rgba($color-accent, 0.035);
 $color-accent-o05: rgba($color-accent, 0.055);
 $color-accent-o07: rgba($color-accent, 0.075);
 $color-accent-o15: rgba($color-accent, 0.15);
+$color-accent-complementary-primary-o7: rgba($color-accent-complementary-primary, 0.75);
+$color-accent-complementary-primary-o5: rgba($color-accent-complementary-primary, 0.55);
+$color-accent-complementary-primary-o3: rgba($color-accent-complementary-primary, 0.35);
+$color-accent-complementary-primary-o15: rgba($color-accent-complementary-primary, 0.15);
 
 //GRADIENT
 $color-gradient-primary: radial-gradient(circle, $color-white-o03, $color-primary-light);
@@ -234,6 +238,16 @@ body {
 
                         .card--body {
 
+                            form {
+
+                                input[type="text"], input[type="email"], textarea {
+
+                                    &.warning {
+                                        border-color: $color-warning !important;
+                                    }
+                                }
+                            }
+
                             .message-pop-up {
                                 
                                 &.valid {
@@ -257,7 +271,7 @@ body {
                                         color: $color-accent-complementary-primary;
 
                                         &::placeholder {
-                                            color: $color-accent;
+                                            color: $color-accent-complementary-primary-o7;
                                         }
 
                                         &:focus {
@@ -278,7 +292,7 @@ body {
                                         color: $color-accent-complementary-primary;
     
                                         &::placeholder {
-                                            color: $color-accent;
+                                            color: $color-accent-complementary-primary-o7;
                                         }
 
                                         &:focus {

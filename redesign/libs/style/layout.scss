@@ -59,15 +59,16 @@ body {
     overflow-x: hidden;
 
     .loader {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100dvh;
+        height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
 
         .loader-spinner {
             width: 50px;
@@ -119,7 +120,6 @@ body {
         display: grid;
         grid-template-rows: auto 100vh 100vh;
         animation: fade 3s;
-        height: 100vh;
 
         .header {
             display: flex;
@@ -300,6 +300,9 @@ body {
                             }
 
                             .message-pop-up {
+                                position: fixed;
+                                left: 50%;
+                                transform: translate(-50%, -25%);
                                 display: flex;
                                 padding: apply-spacing(lv1-05) apply-spacing(lv1);
                                 margin: apply-spacing(lv1) auto;
@@ -337,6 +340,7 @@ body {
                             .body--section-bottom {
                                 display: flex;
                                 flex-direction: column;
+                                padding: 0em apply-spacing(lv1);
 
                                 .div-user-data-textarea {
                                     display: flex;

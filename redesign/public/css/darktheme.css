@@ -99,6 +99,17 @@ body .container .container-content .main[type=home] .main--section .section--tit
 body .container .container-content .main[type=about] .card .btn-bg-round-flat {
   text-shadow: none;
 }
+body .container .container-content .main[type=contact] .card .card--body form input[type=text].warning, body .container .container-content .main[type=contact] .card .card--body form input[type=email].warning, body .container .container-content .main[type=contact] .card .card--body form textarea.warning {
+  border-color: #ad2e2e !important;
+}
+body .container .container-content .main[type=contact] .card .card--body .message-pop-up.valid {
+  background-color: rgba(56, 101, 160, 0.15);
+  color: #4E90E6;
+}
+body .container .container-content .main[type=contact] .card .card--body .message-pop-up.invalid {
+  background-color: rgba(173, 46, 46, 0.35);
+  color: #ad2e2e;
+}
 body .container .container-content .main[type=contact] .card .card--body .body--section-top .p-user-data input {
   border-color: #fff;
   outline-color: #4E90E6;

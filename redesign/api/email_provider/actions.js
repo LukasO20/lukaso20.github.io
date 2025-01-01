@@ -1,4 +1,4 @@
-import { createMessage } from '../../libs/js/interactivity_layout.js'
+import { createMessage, accentColors, clearFields, checkClass } from '../../libs/js/interactivity_layout.js'
 const API_URL = 'http://localhost:5000'
 
 const sendEmail = async (form) => {
@@ -21,14 +21,20 @@ const sendEmail = async (form) => {
             const error = await response.json()
             messageResult = typeof error.error === 'string' ? error.error : 'Something wrong!'
             createMessage({elementCreate: 'label', elementTarget: '#emailForm', elementClass: ['message-pop-up', 'invalid'], text: `${messageResult}`, add: true})
+            accentColors('add', 'input[type="text"], input[type="email"], textarea', 'warning')
+
             throw new Error(error.error || 'Failed to send e-mail.')
         }
         
         const data = await response.json()
         messageResult = typeof data.message === 'string' ? data.message : 'Successfully!'
         createMessage({elementCreate: 'label', elementTarget: '#emailForm', elementClass: ['message-pop-up', 'valid'], text: `${messageResult}`, add: true})
-        return data
+        clearFields(container.querySelectorAll('input[type="text"], input[type="email"], textarea'))        
 
+        const warningElements = checkClass(container.querySelectorAll('.warning'))
+        if (warningElements) { accentColors('remove', 'input[type="text"], input[type="email"], textarea', 'warning') }
+        return data
+        
     } catch (error) {
         console.error('Server connection failed: ', error.message)
         throw error
