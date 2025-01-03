@@ -137,17 +137,17 @@ body {
                                     color: $color-white;
         
                                     &:hover {
-                                        border-color: $color-white;
+                                        border-color: $color-white !important; 
                                     }
                                 }
 
                                 &.active {
 
                                     label {
-                                        border-color: $color-white;
+                                        border-color: $color-white !important;
 
                                         &:hover {
-                                            border-color: $color-accent;
+                                            border-color: $color-accent !important;
                                         }
                                     }
                                 }
@@ -190,7 +190,8 @@ body {
                             .title-right {
         
                                 p {
-        
+                                    color: $color-white;
+
                                     .title-right--title {
                                         background-color: $color-white-o07;
                                         color: $color-accent;
@@ -404,7 +405,7 @@ body {
     .container-scroll-indicator {
 
         > label {
-            border: solid 2px $color-accent;
+            border-color: $color-accent;
 
             &:hover {
                 border-color: $color-secondary;

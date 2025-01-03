@@ -65,13 +65,13 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
   color: #fff;
 }
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a label:hover {
-  border-color: #fff;
+  border-color: #fff !important;
 }
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a.active label {
-  border-color: #fff;
+  border-color: #fff !important;
 }
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a.active label:hover {
-  border-color: #4E90E6;
+  border-color: #4E90E6 !important;
 }
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li .theme--title {
   background-color: rgba(56, 101, 160, 0.15);
@@ -87,6 +87,9 @@ body .container .container-content .main[type=about], body .container .container
 body .container .container-content .main[type=about] .card, body .container .container-content .main[type=contact] .card, body .container .container-content .main[type=experience] .card {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.035);
+}
+body .container .container-content .main[type=home] .main--section .section--title .title-right p {
+  color: #fff;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
   background-color: rgba(255, 255, 255, 0.075);
@@ -178,7 +181,7 @@ body .container .footer .footer--info .info--info-right * {
   color: #fff;
 }
 body .container-scroll-indicator > label {
-  border: solid 2px #4E90E6;
+  border-color: #4E90E6;
 }
 body .container-scroll-indicator > label:hover {
   border-color: #3865A0;

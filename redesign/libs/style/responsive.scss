@@ -2,7 +2,7 @@
 
 // Media Quiries
 
-// Desktop
+// Desktop (standard resolution 1600px)
 
 // -- 1280px
 @media (max-width: 1280px) {
@@ -14,7 +14,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: apply-spacing(lv1) apply-spacing(lv5);
     
                 .header--section-left {
     
@@ -66,7 +65,8 @@
                 .main {
     
                     &[type="about"], &[type="contact"], &[type="experience"] {
-    
+                        width: 60%;
+
                         .card {
 
                         }
@@ -85,76 +85,28 @@
                             }
                         }
                     }
-    
-                    &[type="about"] {
-                    
-                        .card {
-    
-                            p {
+                }
+            }
+        }
+    }
+}
 
-                            }
-                        }
+// -- 1920px
+@media (min-width: 1651px) and (max-width: 1920px) {
+    body {
+    
+        .container {
+    
+            .container-content {
+    
+                .main {
+    
+                    &[type="about"], &[type="contact"], &[type="experience"] {
+                        width: 40%;
                     }
-    
-                    &[type="contact"] {
-    
-                        .card {
-    
-                            .card--body {
-    
-                                .body--section-top {
-    
-                                    .p-user-data {
-    
-                                    }
-                                }
-    
-                                .body--section-bottom {
-    
-                                    .div-user-data-textarea {
 
-                                    }
-    
-                                    .div-user-data-send {
-
-                                    }
-                                }
-    
-                                .body--section-bottom-info {
-
-                                }
-    
-                                .body--section-bottom-chat {
-
-                                }
-                            }
-                        }
-                    }
-    
-                    &[type="experience"] {
-    
-                        .main-experience {
-    
-                            .card {
-    
-                                &.main-experience--aside {
-    
-                                    .aside-professional--skills {
-    
-                                        .skills-division {
-        
-                                        }
-                                    }
-                                }
-    
-                                &.main-experience--body {
-    
-                                    .experiences--bottom {
-
-                                    }
-                                }
-                            }
-                        }
+                    &[type="home"] {
+                        width: 60%;
                     }
                 }
             }

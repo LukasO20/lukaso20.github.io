@@ -118,7 +118,7 @@ body {
 
     .container {
         display: grid;
-        grid-template-rows: auto 100vh 100vh;
+        grid-template-rows: auto minmax(100vh, auto) 100vh;
         animation: fade 3s;
 
         .header {
@@ -162,7 +162,9 @@ body {
     
                                     label {
                                         padding-bottom: apply-spacing(lv0-025);
-                                        border-bottom: solid 2px transparent;
+                                        border-bottom-style: solid;
+                                        border-bottom-width: 2px;
+                                        border-color: transparent;
                                     }
                                 }
                             }
@@ -218,6 +220,7 @@ body {
                         .section--title {
                             display: flex;
                             justify-content: space-between;
+                            align-items: center;
                             flex: 2;
 
                             .title-left {
@@ -243,7 +246,6 @@ body {
         
                                 p {
                                     font-size: apply-font-size(lv2-075);
-                                    color: #fff;
                                     width: 20em;
         
                                     .title-right--title {
@@ -598,7 +600,8 @@ body {
             padding: apply-spacing(lv1-05);
             border-radius: 50%;
             cursor: pointer;
-            border: solid 2px transparent;
+            border-width: 2px;
+            border-style: solid;
 
             &:active {
                 padding: 0.6em;

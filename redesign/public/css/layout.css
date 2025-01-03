@@ -63,7 +63,7 @@ body a {
 }
 body .container {
   display: grid;
-  grid-template-rows: auto 100vh 100vh;
+  grid-template-rows: auto minmax(100vh, auto) 100vh;
   animation: fade 3s;
 }
 body .container .header {
@@ -91,7 +91,9 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 }
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a label {
   padding-bottom: 0.25em;
-  border-bottom: solid 2px transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: transparent;
 }
 body .container .container-content {
   scroll-snap-align: start;
@@ -135,6 +137,7 @@ body .container .container-content .main[type=home] .main--section {
 body .container .container-content .main[type=home] .main--section .section--title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex: 2;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-left .title-sec1 h1 {
@@ -149,7 +152,6 @@ body .container .container-content .main[type=home] .main--section .section--tit
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-right p {
   font-size: 1.75em;
-  color: #fff;
   width: 20em;
 }
 body .container .container-content .main[type=home] .main--section .section--title .title-right p .title-right--title {
@@ -406,7 +408,8 @@ body .container-scroll-indicator > label {
   padding: 0.5em;
   border-radius: 50%;
   cursor: pointer;
-  border: solid 2px transparent;
+  border-width: 2px;
+  border-style: solid;
 }
 body .container-scroll-indicator > label:active {
   padding: 0.6em;
