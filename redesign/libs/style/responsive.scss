@@ -1,6 +1,8 @@
 @use 'layout';
 
-// Media Quiries
+// Media Queries
+
+// Mobile
 
 // Desktop (standard resolution 1600px)
 
@@ -9,7 +11,8 @@
     body {
     
         .container {
-    
+            grid-template-rows: auto minmax(100vh, auto) 90vh;
+
             .header {
                 display: flex;
                 align-items: center;
@@ -73,7 +76,7 @@
                     }
     
                     &[type="home"] {
-                        width: 85%;
+                        width: 95%;
 
                         .main--section {
                 
@@ -92,11 +95,16 @@
 }
 
 // -- 1920px
-@media (min-width: 1651px) and (max-width: 1920px) {
+@media (min-width: 1920px) {
     body {
     
         .container {
     
+            .header {
+                width: 85%;
+                margin: auto;
+            }
+
             .container-content {
     
                 .main {
@@ -107,6 +115,86 @@
 
                     &[type="home"] {
                         width: 60%;
+                    }
+                }
+            }
+
+            .footer {
+
+                > div {
+                    width: 85%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+// -- 2560px
+@media (min-width: 2560px) {
+    body {
+    
+        .container {
+            grid-template-rows: auto minmax(100vh, auto) 60vh;
+
+            .header {
+                width: 55%;
+                margin: auto;
+            }
+
+            .container-content {
+    
+                .main {
+    
+                    &[type="about"], &[type="contact"], &[type="experience"] {
+                        width: 35%;
+                    }
+
+                    &[type="home"] {
+                        width: 50%;
+
+                        .main--section {
+                
+                            .section--title {
+                                flex: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer {
+
+                > div {
+                    width: 55%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+// -- 3840px
+@media (min-width: 3840px) {
+    body {
+    
+        .container {
+    
+            .header {
+                width: 45%;
+                margin: auto;
+            }
+
+            .container-content {
+    
+                .main {
+    
+                    &[type="about"], &[type="contact"], &[type="experience"] {
+                        width: 25%;
+                    }
+
+                    &[type="home"] {
+                        width: 40%;
                     }
                 }
             }

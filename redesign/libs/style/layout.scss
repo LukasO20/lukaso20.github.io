@@ -118,7 +118,7 @@ body {
 
     .container {
         display: grid;
-        grid-template-rows: auto minmax(100vh, auto) 100vh;
+        grid-template-rows: auto minmax(100vh, auto) 82vh;
         animation: fade 3s;
 
         .header {
@@ -266,7 +266,7 @@ body {
                             display: flex;
                             align-items: baseline;
                             gap: 0em apply-spacing(lv1);
-                            padding: 0em apply-spacing(lv5);
+                            padding: 0em apply-spacing(lv3);
                                         
                             * {
                                 cursor: pointer;           
@@ -510,6 +510,10 @@ body {
                 display: flex;
                 padding: apply-spacing(lv5);
                 flex: 1;
+            }
+
+            .footer--info {
+                padding: apply-spacing(lv3) apply-spacing(lv5);
             }
     
             .footer--shortcuts {

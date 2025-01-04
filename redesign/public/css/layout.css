@@ -63,7 +63,7 @@ body a {
 }
 body .container {
   display: grid;
-  grid-template-rows: auto minmax(100vh, auto) 100vh;
+  grid-template-rows: auto minmax(100vh, auto) 82vh;
   animation: fade 3s;
 }
 body .container .header {
@@ -167,7 +167,7 @@ body .container .container-content .main[type=home] .main--section .section--soc
   display: flex;
   align-items: baseline;
   gap: 0em 1em;
-  padding: 0em 5em;
+  padding: 0em 3em;
 }
 body .container .container-content .main[type=home] .main--section .section--social-media * {
   cursor: pointer;
@@ -340,6 +340,9 @@ body .container .footer .footer--shortcuts, body .container .footer .footer--inf
   display: flex;
   padding: 5em;
   flex: 1;
+}
+body .container .footer .footer--info {
+  padding: 3em 5em;
 }
 body .container .footer .footer--shortcuts {
   gap: 1.5em;
