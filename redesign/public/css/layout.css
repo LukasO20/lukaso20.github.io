@@ -76,6 +76,10 @@ body .container .header .header--section-left .section-left--logo img {
   border-radius: 0.7em;
   padding: 0.35em 0.15em;
 }
+body .container .header .header--section-right {
+  display: flex;
+  align-items: center;
+}
 body .container .header .header--section-right .section-right--nav .nav--ul {
   display: flex;
   align-items: center;
@@ -86,14 +90,20 @@ body .container .header .header--section-right .section-right--nav .nav--ul {
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li * {
   cursor: pointer;
 }
-body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a {
   text-decoration: none;
 }
-body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:nth-child(-n+3) a label {
+body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a label {
   padding-bottom: 0.25em;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-color: transparent;
+}
+body .container .header .header--section-right .section-right--options {
+  margin: 0em 2em;
+}
+body .container .header .header--section-right .section-right--options .btn-bg-round {
+  cursor: pointer;
 }
 body .container .container-content {
   scroll-snap-align: start;

@@ -2,12 +2,48 @@
 
 // Media Queries
 
-// Mobile
+// Mobile (minimum resolution 640px)
+
+// -- 640px
+@media (max-width: 760px) {
+    body {
+
+        .container {
+            grid-template-rows: auto minmax(100vh, auto) 100vh;
+
+            .container-content {
+    
+                .main {
+    
+                    &[type="home"] {
+                        width: 95%;
+                        font-size: 0.8rem;
+
+                        .main--section {
+                
+                            .section--title {
+                                flex-direction: column;
+
+                                .title-left {
+                                    padding: layout.apply-spacing(lv1);
+                                }
+
+                                .title-right {
+                                    padding: 0em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // Desktop (standard resolution 1600px)
 
 // -- 1280px
-@media (max-width: 1280px) {
+@media (min-width: 800px) and (max-width: 1280px) {
     body {
     
         .container {

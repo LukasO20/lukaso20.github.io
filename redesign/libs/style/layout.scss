@@ -139,7 +139,9 @@ body {
             }
 
             .header--section-right {
-    
+                display: flex;
+                align-items: center;
+                
                 .section-right--nav {
     
                     .nav--ul {
@@ -155,20 +157,25 @@ body {
                                 cursor: pointer;
                             }
     
-                            &:nth-child(-n + 3) {
-                                
-                                a {
-                                    text-decoration: none;
-    
-                                    label {
-                                        padding-bottom: apply-spacing(lv0-025);
-                                        border-bottom-style: solid;
-                                        border-bottom-width: 2px;
-                                        border-color: transparent;
-                                    }
+                            a {
+                                text-decoration: none;
+
+                                label {
+                                    padding-bottom: apply-spacing(lv0-025);
+                                    border-bottom-style: solid;
+                                    border-bottom-width: 2px;
+                                    border-color: transparent;
                                 }
                             }
                         }
+                    }
+                }
+
+                .section-right--options {
+                    margin: 0em apply-spacing(lv2);
+
+                    .btn-bg-round {
+                        cursor: pointer;
                     }
                 }
             }
