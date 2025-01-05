@@ -76,6 +76,9 @@ body .container .header .header--section-left .section-left--logo img {
   border-radius: 0.7em;
   padding: 0.35em 0.15em;
 }
+body .container .header .header--section-middle {
+  display: none;
+}
 body .container .header .header--section-right {
   display: flex;
   align-items: center;

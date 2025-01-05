@@ -212,6 +212,26 @@ body .container-scroll-indicator > label.on {
   background-color: #4E90E6;
 }
 
+@media (max-width: 760px) {
+  body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:hover {
+    background-color: rgba(68, 68, 68, 0.35);
+  }
+  body .container .header .header--section-right .section-right--nav .nav--ul .ul--li:hover * {
+    color: #fff;
+  }
+  body .container .header .header--section-right .section-right--options.end .btn-bg-round {
+    background-color: transparent !important;
+  }
+  body .container .header .header--section-right .section-right--options.end .btn-bg-round:hover {
+    background-color: rgba(68, 68, 68, 0.35) !important;
+  }
+  body .container .header .header--section-right .section-right--options.end .btn-bg-round:hover * {
+    color: #fff !important;
+  }
+  body .container .header.expand .header--section-right {
+    background-color: #e1e1e1;
+  }
+}
 /* SCROLL BAR SETTINGS */
 ::-webkit-scrollbar {
   width: 0.35em;

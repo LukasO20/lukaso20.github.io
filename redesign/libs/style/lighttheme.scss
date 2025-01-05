@@ -446,6 +446,67 @@ body {
     }
 }
 
+// Media Queries
+
+// Mobile (minimum resolution 640px)
+
+// -- 640px
+@media (max-width: 760px) {
+    body {
+
+        .container {
+
+            .header {
+
+                .header--section-right {
+
+                    .section-right--nav {
+
+                        .nav--ul {
+
+                            .ul--li {
+
+                                &:hover {
+                                    background-color: $color-accent-complementary-primary-o3;
+
+                                    * {
+                                        color: $color-white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .section-right--options {
+
+                        &.end {
+
+                            .btn-bg-round {
+                                background-color: transparent !important;
+
+                                &:hover {
+                                    background-color: $color-accent-complementary-primary-o3 !important;
+            
+                                    * {
+                                        color: $color-white !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.expand {
+
+                    .header--section-right {
+                        background-color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* SCROLL BAR SETTINGS */
 
 ::-webkit-scrollbar {

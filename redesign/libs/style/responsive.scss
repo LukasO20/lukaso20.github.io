@@ -9,12 +9,83 @@
     body {
 
         .container {
+            overflow: hidden;
             grid-template-rows: auto minmax(100vh, auto) 100vh;
+            grid-template-columns: 99dvw;
+
+            .header {
+                position: relative;
+                padding: layout.apply-spacing(lv1);
+
+                .header--section-right {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    height: 0vh;
+                    width: 0;
+                    z-index: 1;
+                    overflow: hidden;
+                    opacity: 0;
+
+                    .section-right--nav {
+
+                        .nav--ul {
+                            display: flex ;
+                            flex-direction: column;
+                            padding: 0;
+                            text-transform: uppercase;
+
+                            .ul--li {
+                                padding: layout.apply-spacing(lv1);
+                                border-radius: layout.apply-spacing(lv1);
+
+                                &:hover {
+
+                                    a {
+
+                                        label {
+                                            border-color: transparent !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .section-right--options {
+
+                        &.end {
+
+                            .btn-bg-round {
+                                padding: layout.apply-spacing(lv1);
+                            }
+                        }
+                    }
+                }
+
+                .header--section-middle {
+                    display: flex;
+                }
+
+                &.expand {
+
+                    .header--section-right {
+                        padding: layout.apply-spacing(lv2-05);
+                        width: 90.1%;
+                        height: 100vh;
+                        opacity: 1;  
+                        top: 6em;
+                    }
+                }
+            }
 
             .container-content {
     
                 .main {
-    
+                    margin: 0;
+
                     &[type="home"] {
                         width: 95%;
                         font-size: 0.8rem;
@@ -35,6 +106,10 @@
                         }
                     }
                 }
+            }
+
+            .footer {
+                
             }
         }
     }
