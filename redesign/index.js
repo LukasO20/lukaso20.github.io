@@ -25,6 +25,8 @@ const handleRouteChange = (route) => {
 
 const linkManipulate = document.querySelectorAll('.link-page')
 const linkPage = documentbody
+const header = documentbody.querySelector('.header')
+
 linkPage.addEventListener('click', function (e) {
     const link = e.target.closest('.link-page')
 
@@ -37,6 +39,7 @@ linkPage.addEventListener('click', function (e) {
                 e.classList.toggle('active', e.getAttribute('href') === link.getAttribute('href'))
             })
             link.classList.add('active')
+            header.classList.remove('expand')
 
             const route = link.getAttribute('href').replace('#', '')
             handleRouteChange(route)
@@ -66,5 +69,14 @@ buttonSendEmail.addEventListener('click', function (e) {
             message: formEmail.message.value || null
         }
         sendEmail(formData)
+    }
+})
+
+const buttonExpandHeader = documentbody
+buttonExpandHeader.addEventListener('click', function (e) {
+    const filter = e.target.closest('.menu--bar') || e.target.classList.contains('menu--bar')
+
+    if (filter) {
+        header.classList.toggle('expand')
     }
 })

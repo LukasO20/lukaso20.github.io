@@ -60,6 +60,8 @@ themeButton.addEventListener('click', function (e) {
     setThemeLocalStorage(e), applyTheme(linkThemeHref)
 })
 
+
+
 const mapTheme = {
     lightlayout: 'public/css/lighttheme.css',
     darklayout: 'public/css/darktheme.css',

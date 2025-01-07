@@ -468,13 +468,14 @@ body .container-scroll-indicator > label:active {
   body .container .header .header--section-right {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 6em;
     display: flex;
     flex-direction: column;
     height: 0vh;
-    width: 0;
+    width: 90.1%;
     z-index: 1;
     overflow: hidden;
+    padding: 0em 1.5em;
     opacity: 0;
   }
   body .container .header .header--section-right .section-right--nav .nav--ul {
@@ -496,12 +497,13 @@ body .container-scroll-indicator > label:active {
   body .container .header .header--section-middle {
     display: flex;
   }
+  body .container .header .header--section-middle .btn-bg-round.menu--bar {
+    cursor: pointer;
+  }
   body .container .header.expand .header--section-right {
     padding: 1.5em;
-    width: 90.1%;
     height: 100vh;
     opacity: 1;
-    top: 6em;
   }
   body .container .container-content .main {
     margin: 0;
