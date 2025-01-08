@@ -8,10 +8,6 @@ const toScrollTop = document.querySelector('.scroll.top')
 const toScrollBottom = document.querySelector('.scroll.bottom')
 const scrollIndicator = document.querySelectorAll('.container-scroll-indicator label')
 
-window.addEventListener('scroll', () => {
-    shiftScrollView()
-})
-
 scrollIndicator.forEach(item => {
     item.addEventListener('click', function (e) {
         const indicator = e.target.attributes.class.value.split(' ')[0]
@@ -37,19 +33,19 @@ const shiftStyleIndicator = (scrollDataBefore, scrollDataCurrent, element) => {
     }
 }
 
-const autoScroll = (scrollData) => {
-    scrollData.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end'
-    })
-}
-
 let lastTopScroll = 0
 const shiftScrollView = () => {
     const currentScroll = document.documentElement.scrollTop
 
     shiftStyleIndicator(lastTopScroll, currentScroll, scrollIndicator)
     lastTopScroll = currentScroll <= 0 ? 0 : currentScroll
+}
+
+const autoScroll = (scrollData) => {
+    scrollData.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+    })
 }
 
 // change themes
@@ -60,13 +56,13 @@ themeButton.addEventListener('click', function (e) {
     setThemeLocalStorage(e), applyTheme(linkThemeHref)
 })
 
-
-
 const mapTheme = {
     lightlayout: 'public/css/lighttheme.css',
     darklayout: 'public/css/darktheme.css',
     lightbg: `public/img/background_white_theme.svg`,
-    darkbg: `public/img/background_black_theme.svg`
+    darkbg: `public/img/background_black_theme.svg`,
+    lightbgmobile: `public/img/background_white_theme(mobile).svg`,
+    darkbgmobile: `public/img/background_black_theme(mobile).svg`
 }
 
 const setThemeLocalStorage = (e) => {
@@ -89,6 +85,16 @@ const applyTheme = (linkElement) => {
     
     iconButtonTheme.classList.remove('fa-moon', 'fa-sun')
     iconButtonTheme.classList.add(iconTheme)
+
+    window.addEventListener('resize', function (e) {
+        const currentWidth = e.currentTarget.innerWidth
+    
+        if (currentWidth <= 760) {
+            body.style.backgroundImage = `url('${mapTheme[`${theme}bgmobile`]}')`
+        } else {
+            body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
+        }
+    })
 
     loader('show')
     loadImg(mapTheme[`${theme}bg`], (error, imageURL) => {
@@ -146,4 +152,7 @@ const loader = (action) => {
 
 document.addEventListener('DOMContentLoaded', function () {
     applyTheme(linkThemeHref)
+    window.addEventListener('scroll', () => {
+        shiftScrollView()
+    })
 })
