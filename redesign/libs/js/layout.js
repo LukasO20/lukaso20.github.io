@@ -2,6 +2,7 @@
 const body = document.querySelector('body')
 const container = document.querySelector('.container')
 const footer = container.querySelector('.footer')
+const events = ['resize', 'scroll']
 
 // scroll functions
 const toScrollTop = document.querySelector('.scroll.top')
@@ -74,7 +75,6 @@ const setThemeLocalStorage = (e) => {
 const applyTheme = (linkElement) => {
     const theme = localStorage.getItem('theme') || 'dark'
     localStorage.setItem('theme', theme)
-
     linkElement.href = mapTheme[`${theme}layout`]
 
     themeButton.classList.remove('dark', 'light');
@@ -86,27 +86,26 @@ const applyTheme = (linkElement) => {
     iconButtonTheme.classList.remove('fa-moon', 'fa-sun')
     iconButtonTheme.classList.add(iconTheme)
 
-    window.addEventListener('resize', function (e) {
-        const currentWidth = e.currentTarget.innerWidth
-    
-        if (currentWidth <= 760) {
-            body.style.backgroundImage = `url('${mapTheme[`${theme}bgmobile`]}')`
-        } else {
-            body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
-        }
-    })
-
     loader('show')
     loadImg(mapTheme[`${theme}bg`], (error, imageURL) => {
         if (error) {
             console.error(`Error on change imagem: ${error.message}`)
         } else {
-            body.style.backgroundImage = `url('${mapTheme[`${theme}bg`]}')`
+            changeBGGround(window.innerWidth, theme)
         }
 
         setTimeout(() => {
             loader('hide')
         }, 2500)
+    })
+
+    events.forEach(e => {
+        window.addEventListener(e, () => {
+            const currentWidth = window.innerWidth
+            if (e === 'resize') {
+                changeBGGround(currentWidth, theme)
+            }
+        })
     })
 }
 
@@ -150,9 +149,22 @@ const loader = (action) => {
     }
 }
 
+const changeBGGround = (windowSize, currentTheme) => {
+    if (windowSize <= 760) {
+        body.style.backgroundImage = `url('${mapTheme[`${currentTheme}bgmobile`]}')`
+    } else {
+        body.style.backgroundImage = `url('${mapTheme[`${currentTheme}bg`]}')`
+    }
+}
+
+// load document
 document.addEventListener('DOMContentLoaded', function () {
     applyTheme(linkThemeHref)
-    window.addEventListener('scroll', () => {
-        shiftScrollView()
+    events.forEach(e => {
+        window.addEventListener(e, () => {
+            if (e === 'scroll') {
+                shiftScrollView()
+            }
+        })
     })
 })
