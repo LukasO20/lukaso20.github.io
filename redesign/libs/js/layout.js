@@ -62,6 +62,8 @@ const mapTheme = {
     darklayout: 'public/css/darktheme.css',
     lightbg: `public/img/background_white_theme.svg`,
     darkbg: `public/img/background_black_theme.svg`,
+    lightbgsscreen: `public/img/background_white_theme(sscreen).svg`,
+    darkbgsscreen: `public/img/background_black_theme(sscreen).svg`, 
     lightbgmobile: `public/img/background_white_theme(mobile).svg`,
     darkbgmobile: `public/img/background_black_theme(mobile).svg`
 }
@@ -152,6 +154,8 @@ const loader = (action) => {
 const changeBGGround = (windowSize, currentTheme) => {
     if (windowSize <= 760) {
         body.style.backgroundImage = `url('${mapTheme[`${currentTheme}bgmobile`]}')`
+    } else if (windowSize <= 1280) {
+        body.style.backgroundImage = `url('${mapTheme[`${currentTheme}bgsscreen`]}')`
     } else {
         body.style.backgroundImage = `url('${mapTheme[`${currentTheme}bg`]}')`
     }

@@ -461,7 +461,7 @@ body .container-scroll-indicator > label:active {
   }
   body .container {
     overflow: hidden;
-    grid-template-rows: auto minmax(100vh, auto) 100vh;
+    grid-template-rows: auto minmax(100vh, auto) auto;
     grid-template-columns: 99dvw;
   }
   body .container .header {
@@ -544,7 +544,7 @@ body .container-scroll-indicator > label:active {
     gap: 1em;
   }
   body .container .footer .footer--shortcuts {
-    padding: 2em;
+    padding: 3em 2em;
     gap: 0em;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -560,9 +560,9 @@ body .container-scroll-indicator > label:active {
     margin: 0;
   }
 }
-@media (min-width: 800px) and (max-width: 1280px) {
-  body .container {
-    grid-template-rows: auto minmax(100vh, auto) 90vh;
+@media (max-width: 1024px) {
+  body {
+    background-size: auto;
   }
   body .container .header {
     display: flex;
@@ -591,13 +591,21 @@ body .container-scroll-indicator > label:active {
     border-bottom: solid 2px transparent;
   }
   body .container .container-content .main[type=about], body .container .container-content .main[type=contact], body .container .container-content .main[type=experience] {
-    width: 60%;
+    width: 70%;
   }
   body .container .container-content .main[type=home] {
     width: 95%;
   }
   body .container .container-content .main[type=home] .main--section .section--title .title-left, body .container .container-content .main[type=home] .main--section .section--title .title-right {
     padding: 2.5em 2em;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body {
+    background-size: auto;
+  }
+  body .container .container-content .main[type=about], body .container .container-content .main[type=contact], body .container .container-content .main[type=experience] {
+    width: 60%;
   }
 }
 @media (min-width: 1920px) {
