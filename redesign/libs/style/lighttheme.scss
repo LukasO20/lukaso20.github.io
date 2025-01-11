@@ -169,6 +169,10 @@ body {
 
             .main {
 
+                .btn-bg-round {
+                    background-color: $color-accent-o15;
+                }
+
                 &[type="about"], &[type="contact"], &[type="experience"] {
                     flex-direction: column;
                     width: 50%;

@@ -85,4 +85,21 @@ const checkClass = (elements) => {
     }
 }
 
-export { createMessage, accentColors, clearFields, checkClass }
+const iconChange = (iconFa, oldClass, newClass) => {
+    try {
+        if (!(iconFa instanceof Element)) {throw new Error(`Element ${iconFa} is not a DOM element. DOM element is necessary.`)}
+        if (!iconFa.classList.contains('icon')) {throw new Error(`Element ${iconFa} needs a 'icon' class.`)}
+
+        if (Array.isArray(oldClass) && Array.isArray(newClass)) {
+            iconFa.classList.remove(...oldClass)
+            iconFa.classList.add(...newClass)
+        } else {
+            iconFa.classList.remove(oldClass)
+            iconFa.classList.add(newClass)
+        }
+    } catch (error) {
+        console.error('Somethin was wrong: ', error.message)
+    }
+}
+
+export { createMessage, accentColors, clearFields, checkClass, iconChange }

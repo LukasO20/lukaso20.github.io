@@ -73,6 +73,9 @@ body .container .header .header--section-right .section-right--nav .nav--ul .ul-
 body .container .header .header--section-right .section-right--nav .nav--ul .ul--li a.active label:hover {
   border-color: #4E90E6 !important;
 }
+body .container .container-content .main .btn-bg-round {
+  background-color: rgba(78, 144, 230, 0.15);
+}
 body .container .container-content .main[type=about], body .container .container-content .main[type=contact], body .container .container-content .main[type=experience] {
   flex-direction: column;
   width: 50%;

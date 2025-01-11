@@ -1,4 +1,5 @@
 import { sendEmail } from './api/email_provider/actions.js'
+import { iconChange } from './libs/js/interactivity_layout.js'
 
 const documentbody = document.body
 
@@ -78,5 +79,12 @@ buttonExpandHeader.addEventListener('click', function (e) {
 
     if (filter) {
         header.classList.toggle('expand')
+        const iconChangeIcon = documentbody.querySelector('.menu--bar .icon')
+        
+        if (header.classList.contains('expand')) {
+            iconChange(iconChangeIcon, 'fa-bars', 'fa-circle-xmark')
+        } else {
+            iconChange(iconChangeIcon, 'fa-circle-xmark', 'fa-bars')
+        }
     }
 })

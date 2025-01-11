@@ -485,6 +485,7 @@ body .container-scroll-indicator > label:active {
     overflow: hidden;
     padding: 0em 1.5em;
     opacity: 0;
+    transition: 0.3s ease-in-out;
   }
   body .container .header .header--section-right .section-right--nav .nav--ul {
     display: flex;
