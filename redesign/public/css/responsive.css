@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
 * {
-  transition: 0.3s ease-in-out;
   font-family: "Red Hat Display", "Segoe UI", sans-serif;
 }
 
@@ -10,6 +9,12 @@ body {
   background-size: contain;
   position: relative;
   overflow-x: hidden;
+}
+body .smooth-el {
+  transition: 0.3s ease-in-out;
+}
+body .smooth-el * {
+  transition: 0.3s ease-in-out;
 }
 body .loader {
   position: fixed;

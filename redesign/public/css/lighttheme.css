@@ -15,9 +15,6 @@ body .loader.light .loader-spinner {
 body .icon {
   color: #444;
 }
-body .btn-bg-round {
-  background-color: rgba(78, 144, 230, 0.15);
-}
 body .btn-bg-round * {
   user-select: none;
 }
